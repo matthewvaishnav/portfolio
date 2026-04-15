@@ -1,20 +1,22 @@
-# Matthew Vaishnav - Programming Portfolio
+# Matthew Vaishnav - Comprehensive Portfolio
 
-Computational systems engineer building high fidelity labs to study how complex systems fail. Specializing in computational pathology, machine learning pipelines, and infrastructure automation.
+Computational systems engineer and security researcher building high fidelity labs to study how complex systems fail. Specializing in computational pathology, machine learning pipelines, defensive security operations, and infrastructure automation.
 
 **Contact:** matthew.vaishnav@gmail.com  
-**Portfolio:** [matthewvaishnav.github.io/programming-portfolio](https://matthewvaishnav.github.io/programming-portfolio)  
+**Portfolio:** [matthewvaishnav.github.io/comprehensive-portfolio](https://matthewvaishnav.github.io/comprehensive-portfolio)  
 **Location:** Kitchener-Waterloo, ON
 
 ---
 
 ## What This Is
 
-A programming portfolio showcasing computational pathology research, machine learning tooling, and systems engineering projects. Built with Next.js, React, and Three.js for interactive 3D experiences.
+A comprehensive portfolio showcasing the intersection of programming and security skills. Built with Next.js, React, and Three.js for interactive 3D experiences. Features both computational pathology research and defensive security projects, all tested on an 18-node home lab.
 
 ---
 
 ## Key Projects
+
+### Programming Projects
 
 **Computational Pathology Research**  
 Machine learning pipelines for analyzing histopathology images. Implements deep learning models for cancer detection and tissue classification. Includes data preprocessing, model training, and inference pipelines with MLflow tracking and experiment management.
@@ -25,8 +27,33 @@ Real-time data processing system for computational pathology workflows. Handles 
 **SENTINEL**  
 Infrastructure monitoring and alerting system. Tracks system health, performance metrics, and failure patterns across distributed environments. Provides predictive analytics for system reliability and automated incident response.
 
-**Agentic Coding Workflows**  
-AI-powered development tools that automate code generation, testing, and deployment. Integrates with existing CI/CD pipelines and provides intelligent code review and optimization suggestions.
+### Security Projects
+
+**Log Correlation Engine**  
+Python tool that parses auth.log and web access logs to detect attack patterns. Identifies brute-force attempts, reconnaissance, and credential stuffing. Maps findings to MITRE ATT&CK techniques with 0 false positives across 14,822 log entries.
+
+**Sigma Detection Rules**  
+15+ detection rules covering T1110.001, T1003.006, T1548.003. Each rule written after executing attacks in the lab environment. Process: run attack, capture logs, write rule, validate triggers, document false positive rate.
+
+**DevSecOps Pipeline**  
+GitHub Actions workflow with ESLint → Bandit SAST → Trivy container scan → Terraform validate → deploy. Pipeline fails on any vulnerability with CVSS ≥ 7. Caught 6 critical CVEs before production.
+
+**AWS Infrastructure**  
+Terraform code deploying hardened VPC with NAT gateway, bastion host, least-privilege security groups, VPC Flow Logs, and encrypted S3 buckets. Deployed in ca-central-1 with zero security findings.
+
+---
+
+## Lab Infrastructure
+
+**18-Node Home Lab**  
+- pfSense routing traffic between 6 isolated VLANs
+- Security Onion monitoring everything on SPAN port
+- 24/7 monitoring with Prometheus and Grafana
+- Version-controlled with Ansible and Terraform
+- Rebuilds in minutes if host fails
+
+**Security Testing Environment**  
+Every security project tested against running systems with real attack scenarios. Lab simulates enterprise infrastructure for realistic threat detection and response testing.
 
 ---
 
@@ -35,6 +62,7 @@ AI-powered development tools that automate code generation, testing, and deploym
 **Languages:** Python, JavaScript, TypeScript, Bash  
 **Frameworks:** Next.js, React, Three.js, FastAPI, Flask  
 **ML/AI:** PyTorch, TensorFlow, scikit-learn, OpenCV, MLflow  
+**Security:** SIEM, Sigma Rules, MITRE ATT&CK, Security Onion, pfSense  
 **Infrastructure:** Docker, Kubernetes, Terraform, Ansible  
 **Cloud:** AWS, Azure, Google Cloud Platform  
 **Databases:** PostgreSQL, MongoDB, Redis  
@@ -45,7 +73,7 @@ AI-powered development tools that automate code generation, testing, and deploym
 ## Education
 
 Computer Systems Technician, Conestoga College (2025-2027)  
-Focus: Systems programming, network infrastructure, and computational methods
+Focus: Systems programming, network infrastructure, computational methods, and security operations
 
 ---
 

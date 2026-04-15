@@ -1,16 +1,9 @@
-import {
-  Container,
-  Heading,
-  SimpleGrid,
-  Box,
-  Text,
-  Flex,
-  Badge
-} from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid, Box, Text, Flex, Badge } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
+import { WorkGridItem } from '../components/grid-item'
 
-const ProjectCard = ({ title, description, impact, status, tech }: any) => (
+const ProjectCard = ({ title, description, impact, tech }) => (
   <Box
     p="2rem 0"
     borderBottom="1px solid rgba(255,255,255,0.05)"
@@ -19,8 +12,8 @@ const ProjectCard = ({ title, description, impact, status, tech }: any) => (
     transition="padding-left 0.25s cubic-bezier(.16,1,.3,1)"
     _hover={{
       paddingLeft: '0.8rem',
-      '& .proj-title': { color: '#fff' },
-      '& .proj-arrow': { color: '#a0a8be', transform: 'translate(4px,-4px)' },
+      '& .proj-title': { color: 'red.300' },
+      '& .proj-arrow': { color: 'gray.400', transform: 'translate(4px,-4px)' },
       '&::before': { opacity: 0.6 }
     }}
     _before={{
@@ -30,7 +23,7 @@ const ProjectCard = ({ title, description, impact, status, tech }: any) => (
       top: 0,
       bottom: 0,
       width: '3px',
-      background: 'linear-gradient(to bottom, transparent, #c8d6f8, transparent)',
+      background: 'linear-gradient(to bottom, transparent, red.400, transparent)',
       opacity: 0,
       transition: 'opacity 0.3s'
     }}
@@ -38,11 +31,10 @@ const ProjectCard = ({ title, description, impact, status, tech }: any) => (
     <Flex justify="space-between" align="start" gap="2rem">
       <Box flex={1}>
         <Text
-          fontFamily="'JetBrains Mono', monospace"
           fontSize="12px"
           letterSpacing="0.08em"
           textTransform="uppercase"
-          color="#a0a8be"
+          color="gray.400"
           mb="0.4rem"
           opacity="0.85"
         >
@@ -51,10 +43,9 @@ const ProjectCard = ({ title, description, impact, status, tech }: any) => (
         
         <Heading
           className="proj-title"
-          fontFamily="'Space Grotesk', sans-serif"
           fontSize="1.35rem"
           fontWeight="700"
-          color="#e8ecf8"
+          color="gray.100"
           letterSpacing="-0.025em"
           mb="0.35rem"
           transition="color 0.2s"
@@ -67,9 +58,8 @@ const ProjectCard = ({ title, description, impact, status, tech }: any) => (
             align="center"
             gap="8px"
             flexWrap="wrap"
-            fontFamily="'JetBrains Mono', monospace"
             fontSize="12px"
-            color="#a0a8be"
+            color="gray.400"
             mb="0.6rem"
             letterSpacing="0.01em"
             _before={{
@@ -77,12 +67,12 @@ const ProjectCard = ({ title, description, impact, status, tech }: any) => (
               display: 'inline-block',
               width: '14px',
               height: '1px',
-              background: '#f5c842',
+              background: 'yellow.400',
               opacity: 0.6,
               flexShrink: 0
             }}
           >
-            <Text color="#f5c842" fontWeight="600">
+            <Text color="yellow.400" fontWeight="600">
               {impact}
             </Text>
           </Flex>
@@ -91,7 +81,7 @@ const ProjectCard = ({ title, description, impact, status, tech }: any) => (
         <Text
           fontSize="14px"
           fontWeight="300"
-          color="#6e7890"
+          color="gray.500"
           lineHeight="1.75"
           maxW="580px"
           mb="0.8rem"
@@ -101,16 +91,15 @@ const ProjectCard = ({ title, description, impact, status, tech }: any) => (
         
         {tech && (
           <Flex gap="6px" flexWrap="wrap">
-            {tech.map((item: string, index: number) => (
+            {tech.map((item, index) => (
               <Badge
                 key={index}
-                fontFamily="'JetBrains Mono', monospace"
                 fontSize="9px"
                 px="6px"
                 py="2px"
-                bg="rgba(200,214,248,0.06)"
-                color="#a0a8be"
-                border="1px solid rgba(200,214,248,0.18)"
+                bg="rgba(255,255,255,0.06)"
+                color="gray.400"
+                border="1px solid rgba(255,255,255,0.18)"
                 borderRadius="3px"
               >
                 {item}
@@ -134,17 +123,17 @@ const ProjectCard = ({ title, description, impact, status, tech }: any) => (
   </Box>
 )
 
-const Projects = () => (
-  <Layout title="Projects">
-    <Container maxW="860px">
+const Security = () => (
+  <Layout title="Security Projects">
+    <Container>
       <Heading as="h1" fontSize={20} mb={4}>
         Security Projects
       </Heading>
       
       <Section delay={0.1}>
-        <Text fontSize="15px" fontWeight="300" color="#6e7890" lineHeight="1.75" mb="2rem" maxW="540px">
+        <Text fontSize="15px" fontWeight="300" color="gray.500" lineHeight="1.75" mb="2rem" maxW="540px">
           Security tools and infrastructure projects built on an 18-node home lab. 
-          Every project tested against <Text as="strong" color="#a0a8be" fontWeight="400">running systems</Text> with real attack scenarios.
+          Every project tested against <Text as="strong" color="gray.400" fontWeight="400">running systems</Text> with real attack scenarios.
         </Text>
         
         <Box borderTop="1px solid rgba(255,255,255,0.05)">
@@ -191,8 +180,48 @@ const Projects = () => (
           />
         </Box>
       </Section>
+
+      <Section delay={0.2}>
+        <Heading as="h3" variant="section-title">
+          CTF Writeups
+        </Heading>
+        <Text fontSize="15px" fontWeight="300" color="gray.500" lineHeight="1.75" mb="1rem">
+          Each writeup documents the full attack chain with detection strategies.
+        </Text>
+        
+        <SimpleGrid columns={[1, 1, 2]} gap={6}>
+          <WorkGridItem 
+            id="blue-eternalblue" 
+            title="Blue — EternalBlue" 
+            thumbnail="/comprehensive-portfolio/images/works/ctf-thumb.svg"
+          >
+            TryHackMe - MS17-010 exploitation with Mimikatz credential dumping
+          </WorkGridItem>
+          <WorkGridItem 
+            id="linux-privesc" 
+            title="Linux PrivEsc Arena" 
+            thumbnail="/comprehensive-portfolio/images/works/ctf-thumb.svg"
+          >
+            TryHackMe - SUID binaries, sudo misconfigurations, kernel exploits
+          </WorkGridItem>
+          <WorkGridItem 
+            id="attacktive-directory" 
+            title="Attacktive Directory" 
+            thumbnail="/comprehensive-portfolio/images/works/ctf-thumb.svg"
+          >
+            TryHackMe - Kerberoasting, DCSync, Golden Ticket attacks
+          </WorkGridItem>
+          <WorkGridItem 
+            id="owasp-top10" 
+            title="OWASP Top 10" 
+            thumbnail="/comprehensive-portfolio/images/works/ctf-thumb.svg"
+          >
+            TryHackMe - SQL injection, XSS, command injection
+          </WorkGridItem>
+        </SimpleGrid>
+      </Section>
     </Container>
   </Layout>
 )
 
-export default Projects
+export default Security

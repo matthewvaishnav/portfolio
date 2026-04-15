@@ -85,9 +85,12 @@ const Navbar = props => {
           <LinkItem href="/posts" path={path} fontSize="16px">
             Posts
           </LinkItem>
+          <LinkItem href="/security" path={path} fontSize="16px">
+            Security
+          </LinkItem>
           <LinkItem
             target="_blank"
-            href="https://github.com/matthewvaishnav/programming-portfolio"
+            href="https://github.com/matthewvaishnav/comprehensive-portfolio"
             path={path}
             display="inline-flex"
             alignItems="center"
@@ -117,9 +120,12 @@ const Navbar = props => {
                 <MenuItem as={Link} href="/posts">
                   Posts
                 </MenuItem>
+                <MenuItem as={Link} href="/security">
+                  Security
+                </MenuItem>
                 <MenuItem
                   as={Link}
-                  href="https://github.com/matthewvaishnav/programming-portfolio"
+                  href="https://github.com/matthewvaishnav/comprehensive-portfolio"
                 >
                   View Source
                 </MenuItem>
