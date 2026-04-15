@@ -260,7 +260,7 @@ const terminalLines = [
 
 const Security = () => (
   <Layout title="Security Projects">
-    <Container maxW="1120px" p={0}>
+    <Box maxW="100vw" p={0}>
       {/* Hero Section */}
       <Box
         minH="calc(100vh - 58px)"
@@ -270,7 +270,7 @@ const Security = () => (
         position="relative"
         overflow="hidden"
       >
-        <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={0} w="100%" maxW="1120px" mx="auto">
+        <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={0} w="100%" maxW="100%" mx="auto">
           {/* Left Side - Content */}
           <Box pr={{ base: 0, lg: '5rem' }} display="flex" flexDirection="column" justifyContent="center">
             {/* Availability Indicator */}
@@ -443,11 +443,11 @@ const Security = () => (
           </Box>
         </SimpleGrid>
       </Box>
-    </Container>
+    </Box>
 
     {/* Projects Section */}
     <Box bg={useColorModeValue('gray.50', '#0c0d16')} borderTop="1px solid" borderTopColor={useColorModeValue('gray.200', 'rgba(255,255,255,0.065)')} position="relative">
-      <Container maxW="860px" py="4.5rem">
+      <Container maxW="100%" py="4.5rem" px="2.5rem">
         <Section delay={0.1}>
           <Heading as="h2" variant="section-title" color={useColorModeValue('gray.800', '#e8ecf8')} fontFamily="'Space Grotesk', sans-serif" fontSize="2.2rem" fontWeight="700" letterSpacing="-0.03em" mb="1.25rem" lineHeight="1.08">
             Security Projects
@@ -458,47 +458,49 @@ const Security = () => (
             Every project tested against <Text as="strong" color={useColorModeValue('gray.700', '#a0a8be')} fontWeight="400">running systems</Text> with real attack scenarios.
           </Text>
           
-          <ProjectCard
-            title="Log Correlation Engine"
-            description="Python tool that parses auth.log and web access logs to detect attack patterns. Identifies brute-force attempts followed by successful logins, scanner-to-admin-path reconnaissance, and credential stuffing. Maps all findings to MITRE ATT&CK techniques."
-            impact="14,822 log entries processed"
-            tech={['Python', 'MITRE ATT&CK', 'Log Analysis', 'Pattern Detection']}
-          />
-          
-          <ProjectCard
-            title="Sigma Detection Rules"
-            description="Detection rules written after executing each attack in the lab. Process: run the attack, capture logs, write the rule, validate it triggers, document false positive rate. Current coverage includes SSH brute force to root, DCSync attacks, and sudo interpreter abuse."
-            impact="15+ detection rules"
-            tech={['Sigma', 'SIEM', 'Detection Engineering', 'Threat Hunting']}
-          />
-          
-          <ProjectCard
-            title="DevSecOps Pipeline"
-            description="GitHub Actions workflow that runs on every commit: ESLint → Bandit SAST → Trivy container scan → Terraform validate → deploy. Pipeline fails on any vulnerability with CVSS ≥ 7."
-            impact="6 critical CVEs caught"
-            tech={['GitHub Actions', 'Bandit', 'Trivy', 'Terraform', 'SAST']}
-          />
-          
-          <ProjectCard
-            title="AWS Infrastructure"
-            description="Terraform code that deploys a hardened VPC across multiple availability zones. Includes NAT gateway, bastion host with key-only SSH, least-privilege security groups, VPC Flow Logs to CloudWatch, and encrypted S3 buckets for log storage."
-            impact="Zero security findings"
-            tech={['Terraform', 'AWS', 'VPC', 'Security Groups', 'CloudWatch']}
-          />
-          
-          <ProjectCard
-            title="Monitoring Stack"
-            description="Docker Compose configuration with Prometheus (metrics), Grafana (dashboards), Loki (logs), AlertManager (notifications), and Node Exporter (system metrics). Includes pre-configured alerting rules for CPU, memory, and disk usage."
-            impact="24/7 monitoring"
-            tech={['Prometheus', 'Grafana', 'Loki', 'Docker', 'AlertManager']}
-          />
-          
-          <ProjectCard
-            title="Linux Hardening"
-            description="Bash script that implements CIS Benchmark Level 1 controls for Ubuntu 22.04. Hardens SSH, disables unused services, configures firewall rules, sets file permissions, and enforces password policies. Includes --dry-run flag and backs up all configs before making changes."
-            impact="CIS Level 1 compliance"
-            tech={['Bash', 'CIS Benchmarks', 'Ubuntu', 'SSH Hardening', 'UFW']}
-          />
+          <SimpleGrid columns={{ base: 1, lg: 2, xl: 3 }} spacing={6} maxW="100%">
+            <ProjectCard
+              title="Log Correlation Engine"
+              description="Python tool that parses auth.log and web access logs to detect attack patterns. Identifies brute-force attempts followed by successful logins, scanner-to-admin-path reconnaissance, and credential stuffing. Maps all findings to MITRE ATT&CK techniques."
+              impact="14,822 log entries processed"
+              tech={['Python', 'MITRE ATT&CK', 'Log Analysis', 'Pattern Detection']}
+            />
+            
+            <ProjectCard
+              title="Sigma Detection Rules"
+              description="Detection rules written after executing each attack in the lab. Process: run the attack, capture logs, write the rule, validate it triggers, document false positive rate. Current coverage includes SSH brute force to root, DCSync attacks, and sudo interpreter abuse."
+              impact="15+ detection rules"
+              tech={['Sigma', 'SIEM', 'Detection Engineering', 'Threat Hunting']}
+            />
+            
+            <ProjectCard
+              title="DevSecOps Pipeline"
+              description="GitHub Actions workflow that runs on every commit: ESLint → Bandit SAST → Trivy container scan → Terraform validate → deploy. Pipeline fails on any vulnerability with CVSS ≥ 7."
+              impact="6 critical CVEs caught"
+              tech={['GitHub Actions', 'Bandit', 'Trivy', 'Terraform', 'SAST']}
+            />
+            
+            <ProjectCard
+              title="AWS Infrastructure"
+              description="Terraform code that deploys a hardened VPC across multiple availability zones. Includes NAT gateway, bastion host with key-only SSH, least-privilege security groups, VPC Flow Logs to CloudWatch, and encrypted S3 buckets for log storage."
+              impact="Zero security findings"
+              tech={['Terraform', 'AWS', 'VPC', 'Security Groups', 'CloudWatch']}
+            />
+            
+            <ProjectCard
+              title="Monitoring Stack"
+              description="Docker Compose configuration with Prometheus (metrics), Grafana (dashboards), Loki (logs), AlertManager (notifications), and Node Exporter (system metrics). Includes pre-configured alerting rules for CPU, memory, and disk usage."
+              impact="24/7 monitoring"
+              tech={['Prometheus', 'Grafana', 'Loki', 'Docker', 'AlertManager']}
+            />
+            
+            <ProjectCard
+              title="Linux Hardening"
+              description="Bash script that implements CIS Benchmark Level 1 controls for Ubuntu 22.04. Hardens SSH, disables unused services, configures firewall rules, sets file permissions, and enforces password policies. Includes --dry-run flag and backs up all configs before making changes."
+              impact="CIS Level 1 compliance"
+              tech={['Bash', 'CIS Benchmarks', 'Ubuntu', 'SSH Hardening', 'UFW']}
+            />
+          </SimpleGrid>
         </Section>
       </Container>
     </Box>
