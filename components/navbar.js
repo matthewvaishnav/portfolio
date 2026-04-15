@@ -82,9 +82,15 @@ const Navbar = props => {
           mt={{ base: 4, md: 0 }}
           spacing={1}
         >
-          <LinkItem href="/security" path={path} fontSize="16px">
+          <Link
+            href="/cst-portfolio/security.html"
+            p={2}
+            fontSize="16px"
+            color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+            _hover={{ textDecoration: 'none' }}
+          >
             Security
-          </LinkItem>
+          </Link>
           <LinkItem href="/posts" path={path} fontSize="16px">
             Posts
           </LinkItem>
