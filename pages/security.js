@@ -130,6 +130,9 @@ const Terminal = ({ lines, autoPlay = true, height = '380px' }) => {
 const ProjectCard = ({ title, description, impact, tech }) => {
   const cardBg = useColorModeValue('white', '#020408')
   const borderColor = useColorModeValue('gray.200', 'whiteAlpha.100')
+  const badgeBg = useColorModeValue('blue.50', 'rgba(200,214,248,0.06)')
+  const badgeColor = useColorModeValue('blue.600', '#c8d6f8')
+  const badgeBorderColor = useColorModeValue('blue.200', 'rgba(200,214,248,0.18)')
   
   return (
     <Box
@@ -224,10 +227,10 @@ const ProjectCard = ({ title, description, impact, tech }) => {
               fontSize="9px"
               px="6px"
               py="2px"
-              bg={useColorModeValue('blue.50', 'rgba(200,214,248,0.06)')}
-              color={useColorModeValue('blue.600', '#c8d6f8')}
+              bg={badgeBg}
+              color={badgeColor}
               border="1px solid"
-              borderColor={useColorModeValue('blue.200', 'rgba(200,214,248,0.18)')}
+              borderColor={badgeBorderColor}
               borderRadius="3px"
             >
               {technique}
