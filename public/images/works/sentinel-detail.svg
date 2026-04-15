@@ -1,0 +1,30 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" rx="28" fill="#17191D"/>
+  <rect x="60" y="72" width="1080" height="576" rx="24" fill="#1D2026" stroke="#2E3540"/>
+  <text x="94" y="132" fill="#F6F7FB" font-family="Arial, sans-serif" font-size="42" font-weight="700">system view</text>
+  <rect x="108" y="188" width="204" height="150" rx="18" fill="#101318" stroke="#333B47"/>
+  <rect x="360" y="188" width="204" height="150" rx="18" fill="#101318" stroke="#333B47"/>
+  <rect x="612" y="188" width="204" height="150" rx="18" fill="#101318" stroke="#333B47"/>
+  <rect x="864" y="188" width="204" height="150" rx="18" fill="#101318" stroke="#333B47"/>
+  <text x="150" y="252" fill="#8FB8FF" font-family="Arial, sans-serif" font-size="28" font-weight="700">ingest</text>
+  <text x="128" y="292" fill="#DCE6FF" font-family="Arial, sans-serif" font-size="20">traffic enters and</text>
+  <text x="128" y="320" fill="#DCE6FF" font-family="Arial, sans-serif" font-size="20">state hydrates fast</text>
+  <text x="394" y="252" fill="#7FE7D7" font-family="Arial, sans-serif" font-size="28" font-weight="700">filter</text>
+  <text x="380" y="292" fill="#DCE6FF" font-family="Arial, sans-serif" font-size="20">rate limits +</text>
+  <text x="380" y="320" fill="#DCE6FF" font-family="Arial, sans-serif" font-size="20">behavior scoring</text>
+  <text x="646" y="252" fill="#FFC977" font-family="Arial, sans-serif" font-size="28" font-weight="700">share</text>
+  <text x="632" y="292" fill="#DCE6FF" font-family="Arial, sans-serif" font-size="20">gossip mesh syncs</text>
+  <text x="632" y="320" fill="#DCE6FF" font-family="Arial, sans-serif" font-size="20">threat knowledge</text>
+  <text x="898" y="252" fill="#FF8DA1" font-family="Arial, sans-serif" font-size="28" font-weight="700">ship</text>
+  <text x="884" y="292" fill="#DCE6FF" font-family="Arial, sans-serif" font-size="20">binary and installer</text>
+  <text x="884" y="320" fill="#DCE6FF" font-family="Arial, sans-serif" font-size="20">ready workflow</text>
+  <path d="M312 264H360" stroke="#4B5565" stroke-width="6"/>
+  <path d="M564 264H612" stroke="#4B5565" stroke-width="6"/>
+  <path d="M816 264H864" stroke="#4B5565" stroke-width="6"/>
+  <rect x="108" y="408" width="984" height="160" rx="18" fill="#101318" stroke="#333B47"/>
+  <text x="144" y="458" fill="#F6F7FB" font-family="Arial, sans-serif" font-size="28" font-weight="700">benchmarks</text>
+  <text x="144" y="502" fill="#7FE7D7" font-family="Courier New, monospace" font-size="22">accuracy   96.00%</text>
+  <text x="430" y="502" fill="#8FB8FF" font-family="Courier New, monospace" font-size="22">recall   98.33%</text>
+  <text x="680" y="502" fill="#FFC977" font-family="Courier New, monospace" font-size="22">precision   96.41%</text>
+  <text x="144" y="544" fill="#A7B4C8" font-family="Arial, sans-serif" font-size="19">Presented as a security product, not just an algorithm demo.</text>
+</svg>
