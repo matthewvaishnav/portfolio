@@ -1,21 +1,22 @@
-import { useEffect } from 'react'
+import Head from 'next/head'
 
 const Security = () => {
-  useEffect(() => {
-    // Redirect to the security HTML page directly
-    window.location.href = '/cst-portfolio/security.html'
-  }, [])
-
   return (
-    <div style={{ 
-      display: 'flex', 
-      justifyContent: 'center', 
-      alignItems: 'center', 
-      height: '100vh',
-      fontSize: '18px'
-    }}>
-      Redirecting to security portfolio...
-    </div>
+    <>
+      <Head>
+        <meta httpEquiv="refresh" content="0; url=/cst-portfolio/security.html" />
+        <title>Redirecting...</title>
+      </Head>
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        height: '100vh',
+        fontSize: '18px'
+      }}>
+        Redirecting to security portfolio...
+      </div>
+    </>
   )
 }
 
