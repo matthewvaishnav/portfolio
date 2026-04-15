@@ -20,10 +20,10 @@ const Main = ({ children, router }) => {
         <meta name="author" content="Matthew Vaishnav" />
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <meta property="og:site_name" content="Matthew Vaishnav's Homepage" />
-        <meta name="og:title" content="Matthew Vaishnav's Homepage" />
+        <meta property="og:site_name" content="Matthew Vaishnav's Portfolio" />
+        <meta name="og:title" content="Matthew Vaishnav's Portfolio" />
         <meta property="og:type" content="website" />
-        <title>Matthew Vaishnav - Homepage</title>
+        <title>Matthew Vaishnav - Portfolio</title>
       </Head>
 
       <NavBar path={router.asPath} />

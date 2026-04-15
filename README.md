@@ -3,7 +3,7 @@
 Computational systems engineer and security researcher building high fidelity labs to study how complex systems fail. Specializing in computational pathology, machine learning pipelines, defensive security operations, and infrastructure automation.
 
 **Contact:** matthew.vaishnav@gmail.com  
-**Portfolio:** [matthewvaishnav.github.io/comprehensive-portfolio](https://matthewvaishnav.github.io/comprehensive-portfolio)  
+**Portfolio:** [matthewvaishnav.github.io/portfolio](https://matthewvaishnav.github.io/portfolio)  
 **Location:** Kitchener-Waterloo, ON
 
 ---

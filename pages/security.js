@@ -193,28 +193,28 @@ const Security = () => (
           <WorkGridItem 
             id="blue-eternalblue" 
             title="Blue — EternalBlue" 
-            thumbnail="/comprehensive-portfolio/images/works/ctf-thumb.svg"
+            thumbnail="/portfolio/images/works/ctf-thumb.svg"
           >
             TryHackMe - MS17-010 exploitation with Mimikatz credential dumping
           </WorkGridItem>
           <WorkGridItem 
             id="linux-privesc" 
             title="Linux PrivEsc Arena" 
-            thumbnail="/comprehensive-portfolio/images/works/ctf-thumb.svg"
+            thumbnail="/portfolio/images/works/ctf-thumb.svg"
           >
             TryHackMe - SUID binaries, sudo misconfigurations, kernel exploits
           </WorkGridItem>
           <WorkGridItem 
             id="attacktive-directory" 
             title="Attacktive Directory" 
-            thumbnail="/comprehensive-portfolio/images/works/ctf-thumb.svg"
+            thumbnail="/portfolio/images/works/ctf-thumb.svg"
           >
             TryHackMe - Kerberoasting, DCSync, Golden Ticket attacks
           </WorkGridItem>
           <WorkGridItem 
             id="owasp-top10" 
             title="OWASP Top 10" 
-            thumbnail="/comprehensive-portfolio/images/works/ctf-thumb.svg"
+            thumbnail="/portfolio/images/works/ctf-thumb.svg"
           >
             TryHackMe - SQL injection, XSS, command injection
           </WorkGridItem>

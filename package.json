@@ -1,7 +1,7 @@
 {
-  "name": "matthew-vaishnav-homepage",
+  "name": "matthew-vaishnav-portfolio",
   "version": "1.0.0",
-  "description": "Matthew Vaishnav's cybersecurity portfolio homepage",
+  "description": "Matthew Vaishnav's portfolio",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

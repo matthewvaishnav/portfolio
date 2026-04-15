@@ -49,7 +49,7 @@ const Home = () => (
             overflow="hidden"
           >
             <img
-              src="/comprehensive-portfolio/images/matthew.jpg"
+              src="/portfolio/images/matthew.jpg"
               alt="Profile image"
               style={{ 
                 borderRadius: '50%', 
