@@ -83,7 +83,7 @@ const Navbar = props => {
           spacing={1}
         >
           <Link
-            href="/cst-portfolio/security.html"
+            href="/cst-portfolio/index (2).html"
             p={2}
             fontSize="16px"
             color={useColorModeValue('gray.800', 'whiteAlpha.900')}
@@ -123,7 +123,7 @@ const Navbar = props => {
                 <MenuItem as={Link} href="/">
                   About
                 </MenuItem>
-                <MenuItem as="a" href="/cst-portfolio/security.html">
+                <MenuItem as="a" href="/cst-portfolio/index (2).html">
                   Security
                 </MenuItem>
                 <MenuItem as={Link} href="/posts">
