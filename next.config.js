@@ -2,7 +2,7 @@ module.exports = {
   reactStrictMode: true,
   swcMinify: true,
   output: 'export',
-  basePath: '/cst-portfolio',
+  basePath: '/programming-portfolio',
   images: {
     unoptimized: true
   }

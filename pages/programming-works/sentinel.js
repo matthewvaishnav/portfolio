@@ -82,7 +82,7 @@ const Sentinel = () => (
       </Box>
 
       <WorkImage
-        src="/cst-portfolio/images/works/sentinel-hero.svg"
+        src="/programming-portfolio/images/works/sentinel-hero.svg"
         alt="SENTINEL overview"
       />
 
@@ -123,7 +123,7 @@ const Sentinel = () => (
       </SimpleGrid>
 
       <WorkImage
-        src="/cst-portfolio/images/works/sentinel-detail.svg"
+        src="/programming-portfolio/images/works/sentinel-detail.svg"
         alt="SENTINEL architecture and benchmark callouts"
       />
 

@@ -3,7 +3,7 @@
 Computational systems engineer building high fidelity labs to study how complex systems fail. Specializing in computational pathology, machine learning pipelines, and infrastructure automation.
 
 **Contact:** matthew.vaishnav@gmail.com  
-**Portfolio:** [matthewvaishnav.github.io/cst-portfolio](https://matthewvaishnav.github.io/cst-portfolio)  
+**Portfolio:** [matthewvaishnav.github.io/programming-portfolio](https://matthewvaishnav.github.io/programming-portfolio)  
 **Location:** Kitchener-Waterloo, ON
 
 ---

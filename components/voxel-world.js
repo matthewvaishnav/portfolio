@@ -12,7 +12,7 @@ const VoxelWorld = () => {
   const refContainer = useRef()
   const [loading, setLoading] = useState(true)
   const refRenderer = useRef()
-  const urlVoxelWorld = '/cst-portfolio/boba.glb'
+  const urlVoxelWorld = '/programming-portfolio/boba.glb'
 
   const handleWindowResize = useCallback(() => {
     const { current: renderer } = refRenderer

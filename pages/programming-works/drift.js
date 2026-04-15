@@ -80,7 +80,7 @@ const Drift = () => (
       </Box>
 
       <WorkImage
-        src="/cst-portfolio/images/works/drift-hero.svg"
+        src="/programming-portfolio/images/works/drift-hero.svg"
         alt="drift hero overview"
       />
 
@@ -120,7 +120,7 @@ const Drift = () => (
       </SimpleGrid>
 
       <WorkImage
-        src="/cst-portfolio/images/works/drift-detail.svg"
+        src="/programming-portfolio/images/works/drift-detail.svg"
         alt="drift snapshot diff flow"
       />
 

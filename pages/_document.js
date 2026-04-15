@@ -7,7 +7,7 @@ export default function Document() {
         <style>{`
           @font-face {
             font-family: 'Dropline';
-            src: url('/cst-portfolio/fonts/DroplineRegular-Wpegz.otf') format('opentype');
+            src: url('/programming-portfolio/fonts/DroplineRegular-Wpegz.otf') format('opentype');
             font-weight: normal;
             font-style: normal;
           }
