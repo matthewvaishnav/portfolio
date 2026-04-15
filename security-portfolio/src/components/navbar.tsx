@@ -1,4 +1,3 @@
-import Logo from './logo'
 import NextLink from 'next/link'
 import {
   Container,
@@ -15,21 +14,21 @@ import {
   useColorModeValue
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import ThemeToggleButton from './theme-toggle-button'
 import { IoLogoGithub } from 'react-icons/io5'
 
-const LinkItem = ({ href, path, target, children, ...props }) => {
+const LinkItem = ({ href, path, target, children, ...props }: any) => {
   const active = path === href
-  const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
+  const inactiveColor = '#a0a8be'
   return (
     <Link
       as={NextLink}
       href={href}
       scroll={false}
       p={2}
-      bg={active ? 'grassTeal' : undefined}
-      color={active ? '#202023' : inactiveColor}
+      bg={active ? '#c8d6f8' : undefined}
+      color={active ? '#07080e' : inactiveColor}
       target={target}
+      fontSize="14px"
       {...props}
     >
       {children}
@@ -37,7 +36,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
   )
 }
 
-const Navbar = props => {
+const Navbar = (props: any) => {
   const { path } = props
 
   return (
@@ -45,9 +44,13 @@ const Navbar = props => {
       position="fixed"
       as="nav"
       w="100%"
-      bg={useColorModeValue('#ffffff40', '#20202380')}
-      css={{ backdropFilter: 'blur(10px)' }}
-      zIndex={2}
+      bg="rgba(7,8,14,0.85)"
+      css={{ 
+        backdropFilter: 'blur(20px) saturate(1.4)',
+        WebkitBackdropFilter: 'blur(20px) saturate(1.4)',
+        borderBottom: '1px solid rgba(255,255,255,0.05)'
+      }}
+      zIndex={200}
       {...props}
     >
       <Container
@@ -64,9 +67,11 @@ const Navbar = props => {
             href="/"
             scroll={false}
             p={2}
-            fontSize="16px"
-            fontWeight="bold"
-            color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+            fontSize="15px"
+            fontWeight="600"
+            color="#e8ecf8"
+            fontFamily="'Space Grotesk', sans-serif"
+            letterSpacing="0.01em"
             _hover={{ textDecoration: 'none' }}
           >
             Matthew Vaishnav
@@ -82,17 +87,29 @@ const Navbar = props => {
           mt={{ base: 4, md: 0 }}
           spacing={1}
         >
-          <LinkItem href="/posts" path={path} fontSize="16px">
-            Posts
+          <LinkItem href="/projects" path={path}>
+            Projects
+          </LinkItem>
+          <LinkItem href="/ctf" path={path}>
+            CTF
           </LinkItem>
           <LinkItem
             target="_blank"
-            href="https://github.com/matthewvaishnav/cst-portfolio"
+            href="https://matthewvaishnav.github.io/cst-portfolio"
             path={path}
             display="inline-flex"
             alignItems="center"
             style={{ gap: 4 }}
-            fontSize="16px"
+          >
+            Programming ↗
+          </LinkItem>
+          <LinkItem
+            target="_blank"
+            href="https://github.com/matthewvaishnav/security-portfolio"
+            path={path}
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
           >
             <IoLogoGithub />
             Source
@@ -100,8 +117,6 @@ const Navbar = props => {
         </Stack>
 
         <Box flex={1} align="right">
-          <ThemeToggleButton />
-
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
@@ -114,12 +129,21 @@ const Navbar = props => {
                 <MenuItem as={Link} href="/">
                   About
                 </MenuItem>
-                <MenuItem as={Link} href="/posts">
-                  Posts
+                <MenuItem as={Link} href="/projects">
+                  Projects
+                </MenuItem>
+                <MenuItem as={Link} href="/ctf">
+                  CTF
                 </MenuItem>
                 <MenuItem
                   as={Link}
-                  href="https://github.com/matthewvaishnav/cst-portfolio"
+                  href="https://matthewvaishnav.github.io/cst-portfolio"
+                >
+                  Programming
+                </MenuItem>
+                <MenuItem
+                  as={Link}
+                  href="https://github.com/matthewvaishnav/security-portfolio"
                 >
                   View Source
                 </MenuItem>
