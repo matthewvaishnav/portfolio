@@ -70,46 +70,16 @@ const Home = () => (
         <Paragraph>
           &nbsp;&nbsp;&nbsp;&nbsp;Matthew Vaishnav builds computational systems to understand failure modes in tissue morphology and network infrastructure. He writes PyTorch pipelines for whole-slide image analysis, implements MITRE ATT&CK detection logic in Sigma, and maintains an 18-node lab where pfSense routes traffic across 6 VLANs while Security Onion captures everything on a SPAN port. His work spans gigapixel pathology image segmentation, log correlation engines that parse 14,000+ entries, and defensive security tooling. Currently developing <Link href="/programming-works/drift" color="teal.500">drift</Link> (a computational pathology annotation system), <Link href="/programming-works/sentinel" color="teal.500">SENTINEL</Link> (SIEM correlation engine), and infrastructure-as-code for reproducible security environments. Every system is documented, version-controlled, and designed to fail predictably.
         </Paragraph>
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4} my={4}>
+        <Flex justify="center" my={4}>
           <Button
             as={NextLink}
             href="/programming-works"
             scroll={false}
             rightIcon={<ChevronRightIcon />}
             colorScheme="teal"
+            size="lg"
           >
-            Programming Projects
-          </Button>
-          <Button
-            as={NextLink}
-            href="/security"
-            scroll={false}
-            rightIcon={<ChevronRightIcon />}
-            colorScheme="red"
-            variant="outline"
-          >
-            Security Projects
-          </Button>
-        </SimpleGrid>
-        <Flex justify="center" gap={2} flexWrap="wrap">
-          <Button
-            as="a"
-            href="mailto:matthewvaishnav@gmail.com"
-            colorScheme="teal"
-            variant="outline"
-            size="sm"
-          >
-            Contact
-          </Button>
-          <Button
-            as={Link}
-            href="https://www.linkedin.com/in/matthew-vaishnav-279670229/"
-            target="_blank"
-            colorScheme="teal"
-            variant="outline"
-            size="sm"
-          >
-            LinkedIn ↗
+            My Portfolio
           </Button>
         </Flex>
       </Section>
