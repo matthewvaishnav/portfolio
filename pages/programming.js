@@ -55,7 +55,7 @@ const Programming = () => (
             overflow="hidden"
           >
             <img
-              src="/programming-portfolio/images/matthew.jpg"
+              src="/portfolio/images/matthew.jpg"
               alt="Profile image"
               style={{ 
                 borderRadius: '50%', 
