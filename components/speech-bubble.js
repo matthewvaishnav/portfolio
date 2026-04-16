@@ -9,7 +9,7 @@ const SpeechBubble = () => {
       px={6}
       py={3}
       borderRadius="lg"
-      maxW="640px"
+      maxW="500px"
       mx="auto"
       mt={4}
       mb={6}
