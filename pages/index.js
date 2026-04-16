@@ -20,12 +20,6 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import { SiTryhackme } from 'react-icons/si'
-import dynamic from 'next/dynamic'
-
-const LazyVoxelDog = dynamic(() => import('../components/voxel-dog'), {
-  ssr: false,
-  loading: () => <div>Loading...</div>
-})
 
 const Home = () => (
   <Layout>
@@ -79,18 +73,6 @@ const Home = () => (
           </Box>
         </Box>
       </Box>
-
-      <Section delay={0.1}>
-        <Box
-          borderRadius="lg"
-          bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-          p={3}
-          mb={6}
-          align="center"
-        >
-          <LazyVoxelDog />
-        </Box>
-      </Section>
 
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
