@@ -67,7 +67,7 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-          &nbsp;&nbsp;&nbsp;&nbsp;Matthew Vaishnav is a computational systems engineer and security researcher based in Kitchener with a passion for building labs that break in interesting ways. He has a knack for all things infrastructure, from designing segmented networks and writing detection rules all the way to solving real problems with PyTorch and Sigma. When not online, he loves documenting failure modes and reverse-engineering attack chains. Currently, he is working on <Link href="/programming-works/drift" color="teal.500">drift</Link> (a computational pathology annotation system) and <Link href="/programming-works/sentinel" color="teal.500">SENTINEL</Link> (a SIEM correlation engine). His 18-node home lab runs 24/7 with Security Onion watching everything.
+          &nbsp;&nbsp;&nbsp;&nbsp;Matthew Vaishnav is a computational systems engineer based in Kitchener who builds machine learning systems and research tools for computational pathology. He enjoys designing reproducible pipelines, high-fidelity test environments, and tooling that make complex systems easier to observe, understand, and improve. When he's not building research infrastructure, he's refining workflows and exploring better ways to make technical systems reliable and useful.
         </Paragraph>
         <Flex justify="center" my={4}>
           <Button
