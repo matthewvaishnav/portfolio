@@ -1,0 +1,12 @@
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradReplay" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ef4444;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="600" height="400" rx="20" fill="#0a0a0a" stroke="url(#gradReplay)" stroke-width="3"/>
+  
+  <text x="300" y="220" font-family="'Monaco', monospace" font-size="72" font-weight="bold" fill="url(#gradReplay)" text-anchor="middle">replay</text>
+</svg>
