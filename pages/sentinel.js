@@ -11,9 +11,9 @@ import {
   Box
 } from '@chakra-ui/react'
 import { ExternalLinkIcon, ChevronRightIcon } from '@chakra-ui/icons'
-import Layout from '../../components/layouts/article'
-import Paragraph from '../../components/paragraph'
-import { Title, WorkImage, Meta } from '../../components/work'
+import Layout from '../components/layouts/article'
+import Paragraph from '../components/paragraph'
+import { Title, WorkImage, Meta } from '../components/work'
 
 const Sentinel = () => (
   <Layout title="SENTINEL">
