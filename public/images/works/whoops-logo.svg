@@ -1,0 +1,30 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradWhoops1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <circle cx="200" cy="200" r="180" fill="#0a0a0a" stroke="url(#gradWhoops1)" stroke-width="3"/>
+  
+  <!-- Warning triangle -->
+  <polygon points="200,100 280,250 120,250" fill="none" stroke="url(#gradWhoops1)" stroke-width="4"/>
+  <text x="190" y="240" fill="url(#gradWhoops1)" font-size="60" font-weight="bold">!</text>
+  
+  <!-- Shield overlay -->
+  <path d="M 200 120 L 240 140 L 240 200 Q 240 230 200 250 Q 160 230 160 200 L 160 140 Z" 
+        fill="none" stroke="url(#gradWhoops1)" stroke-width="3" opacity="0.5"/>
+  
+  <!-- Terminal prompt -->
+  <g opacity="0.4" fill="url(#gradWhoops1)" font-family="monospace" font-size="16">
+    <text x="100" y="290">$ rm -rf /</text>
+    <rect x="95" y="295" width="150" height="2" fill="#ef4444"/>
+  </g>
+  
+  <!-- Stop hand -->
+  <g transform="translate(300, 150)" opacity="0.6">
+    <rect x="-15" y="0" width="30" height="40" rx="5" fill="url(#gradWhoops1)"/>
+    <rect x="-20" y="35" width="40" height="25" rx="5" fill="url(#gradWhoops1)"/>
+  </g>
+</svg>

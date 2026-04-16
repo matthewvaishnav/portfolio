@@ -43,24 +43,24 @@ const Works = () => (
           </WorkGridItem>
         </Section>
         <Section delay={0.1}>
-          <WorkGridItem id="safebot" thumbnail="/portfolio/images/works/ctf-thumb.svg" title="SafeBot v2">
+          <WorkGridItem id="safebot" href="/safebot" thumbnail="/portfolio/images/works/safebot-logo.svg" title="SafeBot v2">
             Local AI web agent, no API keys
           </WorkGridItem>
         </Section>
 
         <Section delay={0.2}>
-          <WorkGridItem id="out-of-orbit" thumbnail="/portfolio/images/works/sigma-thumb.svg" title="Out of Orbit">
+          <WorkGridItem id="out-of-orbit" href="/out-of-orbit" thumbnail="/portfolio/images/works/out-of-orbit-logo.svg" title="Out of Orbit">
             Vaporwave arcade shooter with object pooling
           </WorkGridItem>
         </Section>
         <Section delay={0.2}>
-          <WorkGridItem id="replay" thumbnail="/portfolio/images/works/soc-thumb.svg" title="replay">
+          <WorkGridItem id="replay" href="/replay" thumbnail="/portfolio/images/works/replay-logo.svg" title="replay">
             Record sessions → Ansible playbooks
           </WorkGridItem>
         </Section>
 
         <Section delay={0.3}>
-          <WorkGridItem id="whoops" thumbnail="/portfolio/images/works/ctf-thumb.svg" title="whoops">
+          <WorkGridItem id="whoops" href="/whoops" thumbnail="/portfolio/images/works/whoops-logo.svg" title="whoops">
             Intercepts dangerous shell commands
           </WorkGridItem>
         </Section>

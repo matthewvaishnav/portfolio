@@ -1,0 +1,45 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradReplay1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ef4444;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <circle cx="200" cy="200" r="180" fill="#0a0a0a" stroke="url(#gradReplay1)" stroke-width="3"/>
+  
+  <!-- Record button circle -->
+  <circle cx="200" cy="200" r="80" fill="none" stroke="url(#gradReplay1)" stroke-width="4"/>
+  <circle cx="200" cy="200" r="50" fill="url(#gradReplay1)" opacity="0.3"/>
+  
+  <!-- Play/Record icon -->
+  <circle cx="200" cy="200" r="25" fill="url(#gradReplay1)"/>
+  
+  <!-- Terminal lines -->
+  <g opacity="0.4" stroke="url(#gradReplay1)" stroke-width="2">
+    <line x1="100" y1="100" x2="180" y2="100"/>
+    <line x1="100" y1="120" x2="160" y2="120"/>
+    <line x1="100" y1="140" x2="170" y2="140"/>
+  </g>
+  
+  <!-- Ansible YAML structure -->
+  <g opacity="0.4" fill="url(#gradReplay1)" font-family="monospace" font-size="14">
+    <text x="240" y="110">- name:</text>
+    <text x="250" y="130">tasks:</text>
+    <text x="260" y="150">- apt:</text>
+  </g>
+  
+  <!-- Arrow transformation -->
+  <g stroke="url(#gradReplay1)" stroke-width="3" fill="url(#gradReplay1)">
+    <line x1="120" y1="200" x2="160" y2="200"/>
+    <polygon points="160,200 150,195 150,205"/>
+    <line x1="240" y1="200" x2="280" y2="200"/>
+    <polygon points="280,200 270,195 270,205"/>
+  </g>
+  
+  <!-- Playbook icon -->
+  <rect x="240" y="240" width="80" height="100" rx="5" fill="none" stroke="url(#gradReplay1)" stroke-width="3" opacity="0.6"/>
+  <line x1="260" y1="260" x2="300" y2="260" stroke="url(#gradReplay1)" stroke-width="2" opacity="0.6"/>
+  <line x1="260" y1="280" x2="300" y2="280" stroke="url(#gradReplay1)" stroke-width="2" opacity="0.6"/>
+  <line x1="260" y1="300" x2="290" y2="300" stroke="url(#gradReplay1)" stroke-width="2" opacity="0.6"/>
+</svg>
