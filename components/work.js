@@ -1,28 +1,29 @@
 import NextLink from 'next/link'
-import { Heading, Box, Image, Link, Badge } from '@chakra-ui/react'
-import { ChevronRightIcon } from '@chakra-ui/icons'
+import { Heading, Box, Image, Link, Badge, Flex, Text } from '@chakra-ui/react'
+import { ArrowBackIcon } from '@chakra-ui/icons'
 
 export const Title = ({ children }) => (
-  <Box>
-    <Link as={NextLink} href="/systems-engineering">
-      Works
-    </Link>
-    <span>
-      {' '}
-      <ChevronRightIcon />{' '}
-    </span>
-    <Heading display="inline-block" as="h3" fontSize={20} mb={4}>
+  <Box mb={6}>
+    <Flex align="center" mb={3}>
+      <Link as={NextLink} href="/systems-engineering" display="flex" alignItems="center" color="blue.400" _hover={{ color: "blue.300" }}>
+        <ArrowBackIcon mr={2} />
+        <Text fontSize="sm" fontWeight="medium">Back to Portfolio</Text>
+      </Link>
+    </Flex>
+    <Heading as="h1" fontSize={28} fontWeight="bold" color="white">
       {children}
     </Heading>
   </Box>
 )
 
 export const WorkImage = ({ src, alt }) => (
-  <Image borderRadius="lg" w="full" src={src} alt={alt} mb={4} />
+  <Box mb={6} borderRadius="xl" overflow="hidden" boxShadow="2xl">
+    <Image w="full" src={src} alt={alt} />
+  </Box>
 )
 
 export const Meta = ({ children }) => (
-  <Badge colorScheme="green" mr={2}>
+  <Badge colorScheme="blue" variant="solid" mr={3} mb={2} px={3} py={1} borderRadius="full" fontSize="xs" fontWeight="semibold">
     {children}
   </Badge>
 )
