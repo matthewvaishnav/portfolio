@@ -118,7 +118,7 @@ const Home = () => (
           I ♥
         </Heading>
         <Paragraph>
-          Systems design, computational pathology, machine learning, digital labs, security engineering, threat detection, log analysis, network security, automation, game development, sci‑fi industrial UI, photography, clean interfaces, CTF challenges, and anything that reveals how complex things actually work.
+          My dog, my family, music, art, and coffee.
         </Paragraph>
       </Section>
 
