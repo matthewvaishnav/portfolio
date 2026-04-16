@@ -101,6 +101,12 @@ const Work = () => (
 
       <Divider borderColor="gray.700" mb={8} />
 
+      <Box maxW="400px" mx="auto" mb={8}>
+        <WorkImage src="/portfolio/images/works/drift-logo.svg" alt="drift logo" />
+      </Box>
+      <Box maxW="400px" mx="auto" mb={8}>
+        <WorkImage src="/portfolio/images/works/drift-logo.svg" alt="drift logo" />
+      </Box>
       <WorkImage src="/portfolio/images/works/drift-hero.svg" alt="drift overview" />
       <WorkImage src="/portfolio/images/works/drift-detail.svg" alt="drift architecture" />
     </Container>
