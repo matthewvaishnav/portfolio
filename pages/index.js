@@ -125,69 +125,6 @@ const Home = () => (
         </Flex>
       </Section>
 
-      <Section delay={0.25}>
-        <Heading as="h3" variant="section-title">
-          Lab Infrastructure
-        </Heading>
-        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={4} mb={4}>
-          <Box
-            p={4}
-            borderRadius="lg"
-            bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-            textAlign="center"
-          >
-            <Text fontSize="2xl" fontWeight="bold" color="teal.500">18</Text>
-            <Text fontSize="sm">Lab Nodes</Text>
-          </Box>
-          <Box
-            p={4}
-            borderRadius="lg"
-            bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-            textAlign="center"
-          >
-            <Text fontSize="2xl" fontWeight="bold" color="teal.500">6</Text>
-            <Text fontSize="sm">VLANs</Text>
-          </Box>
-          <Box
-            p={4}
-            borderRadius="lg"
-            bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-            textAlign="center"
-          >
-            <Text fontSize="2xl" fontWeight="bold" color="teal.500">24/7</Text>
-            <Text fontSize="sm">Monitoring</Text>
-          </Box>
-        </SimpleGrid>
-        <Paragraph>
-          The entire lab is version-controlled with Ansible and Terraform—if the host fails, it rebuilds in minutes. 
-          Every security project is tested against running systems with real attack scenarios.
-        </Paragraph>
-      </Section>
-
-      <Section delay={0.27}>
-        <Heading as="h3" variant="section-title">
-          Technical Focus
-        </Heading>
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
-          <Box>
-            <Heading as="h4" size="md" mb={2} color="teal.500">Programming</Heading>
-            <Flex wrap="wrap" gap={2}>
-              {['Python', 'JavaScript', 'TypeScript', 'Machine Learning', 'PyTorch', 'Next.js', 'Docker', 'Kubernetes'].map((tech) => (
-                <Badge key={tech} colorScheme="teal" variant="subtle">{tech}</Badge>
-              ))}
-            </Flex>
-          </Box>
-          <Box>
-            <Heading as="h4" size="md" mb={2} color="red.500">Security</Heading>
-            <Flex wrap="wrap" gap={2}>
-              {['SIEM', 'Sigma Rules', 'MITRE ATT&CK', 'Log Analysis', 'Threat Detection', 'pfSense', 'Security Onion', 'Ansible'].map((tech) => (
-                <Badge key={tech} colorScheme="red" variant="subtle">{tech}</Badge>
-              ))}
-            </Flex>
-          </Box>
-        </SimpleGrid>
-      </Section>
-
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
           Bio
