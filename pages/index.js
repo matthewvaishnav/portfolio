@@ -72,7 +72,7 @@ const Home = () => (
         <Flex justify="center" my={4}>
           <Button
             as={NextLink}
-            href="/programming-works"
+            href="/systems-engineering"
             scroll={false}
             rightIcon={<ChevronRightIcon />}
             colorScheme="teal"
