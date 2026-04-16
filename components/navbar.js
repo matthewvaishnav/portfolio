@@ -85,6 +85,9 @@ const Navbar = props => {
           <LinkItem href="/posts" path={path} fontSize="16px">
             Posts
           </LinkItem>
+          <LinkItem href="/programming" path={path} fontSize="16px">
+            Programming
+          </LinkItem>
           <LinkItem href="/security" path={path} fontSize="16px">
             Security
           </LinkItem>
@@ -119,6 +122,9 @@ const Navbar = props => {
                 </MenuItem>
                 <MenuItem as={Link} href="/posts">
                   Posts
+                </MenuItem>
+                <MenuItem as={Link} href="/programming">
+                  Programming
                 </MenuItem>
                 <MenuItem as={Link} href="/security">
                   Security
