@@ -118,7 +118,7 @@ const Home = () => (
           I ♥
         </Heading>
         <Paragraph>
-          My dog, my family, music, art, and coffee.
+          Art, music, playing piano, my dog, and building systems that actually work when they need to.
         </Paragraph>
       </Section>
 
