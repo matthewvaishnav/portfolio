@@ -29,8 +29,7 @@ const Home = () => (
           <Heading as="h2" variant="page-title">
             Matthew Vaishnav
           </Heading>
-          <p style={{ fontSize: '20px', marginBottom: '4px' }}>Computational Systems Engineer & Security Researcher</p>
-          <p style={{ fontSize: '14px', color: '#888' }}>(Machine Learning / Computational Pathology / Defensive Security)</p>
+          <p style={{ fontSize: '20px', marginBottom: '4px' }}>Computational Systems Engineer ( ML / Pathology / Security )</p>
         </Box>
         <Box
           flexShrink={0}
