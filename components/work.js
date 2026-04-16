@@ -23,7 +23,7 @@ export const WorkImage = ({ src, alt }) => (
 )
 
 export const Meta = ({ children }) => (
-  <Badge colorScheme="blue" variant="solid" mr={3} mb={2} px={3} py={1} borderRadius="full" fontSize="xs" fontWeight="semibold">
+  <Text as="span" fontWeight="bold" mr={2}>
     {children}
-  </Badge>
+  </Text>
 )
