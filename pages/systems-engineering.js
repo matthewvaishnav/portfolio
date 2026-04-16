@@ -42,11 +42,6 @@ const Works = () => (
             Git-like server state tracker
           </WorkGridItem>
         </Section>
-        <Section delay={0.1}>
-          <WorkGridItem id="safebot" href="/safebot" thumbnail="/portfolio/images/works/safebot-logo.svg" title="SafeBot v2">
-            Local AI web agent, no API keys
-          </WorkGridItem>
-        </Section>
 
         <Section delay={0.2}>
           <WorkGridItem id="out-of-orbit" href="/out-of-orbit" thumbnail="/portfolio/images/works/out-of-orbit-logo.svg" title="Out of Orbit">
