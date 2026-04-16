@@ -6,7 +6,7 @@ const SpeechBubble = () => {
       position="relative"
       bg={useColorModeValue('rgba(0,0,0,0.6)', 'rgba(255,255,255,0.1)')}
       color="white"
-      px={6}
+      px={4}
       py={3}
       borderRadius="lg"
       maxW="500px"
