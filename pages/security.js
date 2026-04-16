@@ -1,15 +1,24 @@
 import { useEffect } from 'react'
-import { useRouter } from 'next/router'
 
 const Security = () => {
-  const router = useRouter()
-
   useEffect(() => {
     // Redirect to standalone HTML
-    window.location.href = '/portfolio/security-full.html'
+    window.location.replace('/portfolio/security-full.html')
   }, [])
 
-  return null
+  return (
+    <div style={{ 
+      minHeight: '100vh', 
+      display: 'flex', 
+      alignItems: 'center', 
+      justifyContent: 'center',
+      background: '#07080e',
+      color: '#a0a8be',
+      fontFamily: 'monospace'
+    }}>
+      Redirecting to security portfolio...
+    </div>
+  )
 }
 
 export default Security
