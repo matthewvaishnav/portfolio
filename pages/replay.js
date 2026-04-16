@@ -19,7 +19,8 @@ const Work = () => (
       <P>
         Record terminal sessions and automatically generate Ansible playbooks from your actions.
       </P>
-      <ListItem>
+      <List ml={4} my={4}>
+        <ListItem>
           <Meta>Platform</Meta>
           <span>Linux/macOS</span>
         </ListItem>
