@@ -10,7 +10,7 @@
     </linearGradient>
   </defs>
   
-  <rect width="600" height="400" rx="20" fill="#0a0a0a" stroke="url(#gradSent1)" stroke-width="3"/>
+  <rect width="600" height="400" rx="20" fill="#0a0a0a"/>
   
   <!-- Hexagon network -->
   <polygon points="300,80 380,140 380,260 300,320 220,260 220,140" 

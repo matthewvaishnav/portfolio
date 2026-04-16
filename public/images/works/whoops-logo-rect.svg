@@ -6,7 +6,7 @@
     </linearGradient>
   </defs>
   
-  <rect width="600" height="400" rx="20" fill="#0a0a0a" stroke="url(#gradWhoops)" stroke-width="3"/>
+  <rect width="600" height="400" rx="20" fill="#0a0a0a"/>
   
   <text x="300" y="220" font-family="'Impact', sans-serif" font-size="76" font-weight="bold" fill="url(#gradWhoops)" text-anchor="middle">whoops</text>
 </svg>

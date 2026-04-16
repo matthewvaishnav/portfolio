@@ -6,7 +6,7 @@
     </linearGradient>
   </defs>
   
-  <rect width="600" height="400" rx="20" fill="#0a0a0a" stroke="url(#gradReplay)" stroke-width="3"/>
+  <rect width="600" height="400" rx="20" fill="#0a0a0a"/>
   
   <text x="300" y="220" font-family="'Monaco', monospace" font-size="72" font-weight="bold" fill="url(#gradReplay)" text-anchor="middle">replay</text>
 </svg>
