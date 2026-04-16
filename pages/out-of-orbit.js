@@ -45,10 +45,6 @@ const Work = () => (
       </VStack>
 
       <Divider borderColor="gray.700" mb={8} />
-
-      <Box maxW="400px" mx="auto" mb={8}>
-        <WorkImage src="/portfolio/images/works/out-of-orbit-logo.svg" alt="Out of Orbit logo" />
-      </Box>
     </Container>
   </Layout>
 )

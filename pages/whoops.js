@@ -63,10 +63,6 @@ const Work = () => (
       </VStack>
 
       <Divider borderColor="gray.700" mb={8} />
-
-      <Box maxW="400px" mx="auto" mb={8}>
-        <WorkImage src="/portfolio/images/works/whoops-logo.svg" alt="whoops logo" />
-      </Box>
     </Container>
   </Layout>
 )

@@ -114,10 +114,6 @@ const Work = () => (
       </Box>
 
       <Divider borderColor="gray.700" mb={8} />
-
-      <Box maxW="400px" mx="auto" mb={8}>
-        <WorkImage src="/portfolio/images/works/pathml-logo.svg" alt="PathML Framework logo" />
-      </Box>
     </Container>
   </Layout>
 )
