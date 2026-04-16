@@ -13,9 +13,9 @@ const Works = () => (
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
           <WorkGridItem 
-            id="computational-pathology" 
-            href="https://matthewvaishnav.github.io/computational-pathology-research/"
-            thumbnail="/portfolio/images/works/soc-thumb.svg" 
+            id="computational-pathology"
+            href="/computational-pathology"
+            thumbnail="/portfolio/images/works/pathml-logo.svg" 
             title="Computational Pathology Research"
           >
             ML framework for histopathology image analysis
