@@ -24,6 +24,7 @@ const Works = () => (
         <Section>
           <WorkGridItem
             id="sentinel"
+            href="/sentinel"
             title="SENTINEL"
             thumbnail="/portfolio/images/works/sentinel-hero.svg"
           >
@@ -34,6 +35,7 @@ const Works = () => (
         <Section delay={0.1}>
           <WorkGridItem
             id="drift"
+            href="/drift"
             thumbnail="/portfolio/images/works/drift-hero.svg"
             title="drift"
           >
