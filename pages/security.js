@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 const Security = () => {
   useEffect(() => {
     // Redirect to standalone HTML
-    window.location.replace('/portfolio/security-full.html')
+    window.location.replace('/portfolio/defensive-security.html')
   }, [])
 
   return (
