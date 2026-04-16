@@ -20,10 +20,27 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import { SiTryhackme } from 'react-icons/si'
+import dynamic from 'next/dynamic'
+
+const LazyVoxelDog = dynamic(() => import('../components/voxel-dog'), {
+  ssr: false,
+  loading: () => <div>Loading...</div>
+})
 
 const Home = () => (
   <Layout>
     <Container>
+      <Box
+        borderRadius="lg"
+        mb={6}
+        p={3}
+        textAlign="center"
+        bg={useColorModeValue('whiteAlpha.200', 'whiteAlpha.200')}
+        css={{ backdropFilter: 'blur(10px)' }}
+      >
+        Hello, I&apos;m a computational systems engineer based in Canada!
+      </Box>
+
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
@@ -62,6 +79,18 @@ const Home = () => (
           </Box>
         </Box>
       </Box>
+
+      <Section delay={0.1}>
+        <Box
+          borderRadius="lg"
+          bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+          p={3}
+          mb={6}
+          align="center"
+        >
+          <LazyVoxelDog />
+        </Box>
+      </Section>
 
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
