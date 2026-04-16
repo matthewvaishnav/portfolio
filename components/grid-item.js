@@ -21,9 +21,7 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
 
 export const WorkGridItem = ({ children, id, href, title, thumbnail }) => {
   const destination = href || null
-  const imageSrc = thumbnail.startsWith('/programming-portfolio')
-    ? thumbnail
-    : `/programming-portfolio${thumbnail}`
+  const imageSrc = thumbnail
 
   const cardBody = (
     <>

@@ -95,7 +95,9 @@ const Work = () => (
 
       <Divider borderColor="gray.700" mb={8} />
 
-      <WorkImage src="/portfolio/images/works/sentinel-logo.svg" alt="SENTINEL logo" />
+      <Box maxW="400px" mx="auto" mb={8}>
+        <WorkImage src="/portfolio/images/works/sentinel-logo.svg" alt="SENTINEL logo" />
+      </Box>
       <WorkImage src="/portfolio/images/works/sentinel-hero.svg" alt="SENTINEL overview" />
       <WorkImage src="/portfolio/images/works/sentinel-detail.svg" alt="SENTINEL architecture" />
     </Container>
