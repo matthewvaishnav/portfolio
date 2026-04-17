@@ -1,189 +1,152 @@
-import { Container, Heading, Text, Box, List, ListItem, Code, Divider } from '@chakra-ui/react'
+import { Container, Heading, Text, Code, Box } from '@chakra-ui/react'
 import Layout from '../../components/layouts/article'
 import P from '../../components/paragraph'
 
 const Post = () => (
-  <Layout title="Home Lab Setup">
-    <Container>
-      <Heading as="h1" fontSize={32} mb={4}>
-        Building an 18-Node Security Research Lab
+  <Layout title="Building My Security Lab">
+    <Container maxW="container.md">
+      <Heading as="h1" fontSize={32} mb={2} fontWeight={600}>
+        I built an 18-node security lab in my basement
       </Heading>
-      <Text fontSize="sm" color="gray.500" mb={6}>
-        January 2025
+      <Text fontSize="sm" color="gray.500" mb={8}>
+        By Matthew Vaishnav — 15 Jan 2025
       </Text>
 
       <P>
-        This guide walks through building a production-grade security research lab with 18 nodes, 
-        Security Onion for threat detection, and pfSense for network segmentation.
+        Most people collect stamps or build model trains. I decided to build a full-scale 
+        security research lab with 18 nodes, 6 VLANs, and enough attack infrastructure to 
+        make my ISP nervous.
       </P>
 
-      <Heading as="h2" fontSize={24} mt={8} mb={4}>
-        Architecture Overview
-      </Heading>
       <P>
-        The lab uses 6 VLANs for network segmentation:
+        It started simple. I wanted to practice penetration testing without breaking real systems. 
+        One Kali VM, one vulnerable target. Easy.
       </P>
-      <List ml={6} my={4}>
-        <ListItem>• VLAN 10: Management network</ListItem>
-        <ListItem>• VLAN 20: Security Onion sensors</ListItem>
-        <ListItem>• VLAN 30: Attack infrastructure</ListItem>
-        <ListItem>• VLAN 40: Victim machines</ListItem>
-        <ListItem>• VLAN 50: Logging and SIEM</ListItem>
-        <ListItem>• VLAN 60: Isolated malware analysis</ListItem>
-      </List>
 
-      <Heading as="h2" fontSize={24} mt={8} mb={4}>
-        Step 1: pfSense Configuration
-      </Heading>
       <P>
-        Install pfSense on dedicated hardware. Configure VLANs and firewall rules.
+        Then I realized I couldn't see the network traffic. Added Security Onion. 
+        Now I needed a proper network. Added pfSense. Now I needed segmentation. 
+        Added VLANs. Now I needed more targets. Added 12 more VMs.
       </P>
-      <Box bg="gray.800" p={4} borderRadius="md" my={4}>
-        <Code colorScheme="green" fontSize="sm">
-          # Create VLANs<br/>
-          Interfaces → Assignments → VLANs → Add<br/>
-          Parent: em0, VLAN Tag: 10, Description: Management<br/>
-          <br/>
-          # Configure firewall rules<br/>
-          Firewall → Rules → VLAN10<br/>
-          Allow: Management to all VLANs<br/>
-          Block: Inter-VLAN traffic by default
+
+      <P>
+        Before I knew it, my basement sounded like a data center and my electricity bill 
+        looked like I was mining Bitcoin.
+      </P>
+
+      <Heading as="h2" fontSize={24} mt={8} mb={4} fontWeight={600}>
+        The Architecture
+      </Heading>
+
+      <P>
+        Six VLANs keep everything isolated. Management network for admin access. 
+        Attack infrastructure on VLAN 30 - Kali, Metasploit, all the fun tools. 
+        Victim machines on VLAN 40 - intentionally vulnerable Windows boxes, 
+        a sketchy web server, the works.
+      </P>
+
+      <P>
+        Security Onion sits on VLAN 20 with a span port watching everything. 
+        Every packet, every connection, every failed login attempt. 
+        It's like having a security camera pointed at your network 24/7.
+      </P>
+
+      <P>Here's the VLAN breakdown:</P>
+
+      <Box 
+        as="pre" 
+        p={4} 
+        bg="whiteAlpha.100" 
+        borderRadius="md" 
+        overflowX="auto" 
+        fontSize="sm"
+        mb={4}
+      >
+        <Code display="block" whiteSpace="pre" bg="transparent" color="inherit">
+{`VLAN 10: Management (pfSense, admin access)
+VLAN 20: Security Monitoring (Security Onion, span port)
+VLAN 30: Attack Infrastructure (Kali, Metasploit, C2 servers)
+VLAN 40: Victim Network (vulnerable Windows boxes, web servers)
+VLAN 50: Logging (Splunk, centralized log aggregation)
+VLAN 60: Malware Sandbox (air-gapped, fake DNS/C2)`}
         </Code>
       </Box>
 
-      <Heading as="h2" fontSize={24} mt={8} mb={4}>
-        Step 2: Security Onion Deployment
-      </Heading>
       <P>
-        Deploy Security Onion standalone node for centralized monitoring.
+        VLAN 50 runs Splunk for centralized logging. Because when you're simulating 
+        attacks at 2 AM, you want to know exactly what happened without SSHing into 
+        12 different boxes.
       </P>
-      <Box bg="gray.800" p={4} borderRadius="md" my={4}>
-        <Code colorScheme="green" fontSize="sm">
-          # Download Security Onion ISO<br/>
-          wget https://github.com/Security-Onion-Solutions/securityonion/releases<br/>
-          <br/>
-          # Install with network sensor<br/>
-          sudo so-setup<br/>
-          # Select: Standalone<br/>
-          # Management interface: ens192 (VLAN 10)<br/>
-          # Monitor interface: ens224 (VLAN 20 - span port)
-        </Code>
-      </Box>
 
-      <Heading as="h2" fontSize={24} mt={8} mb={4}>
-        Step 3: Network Topology
-      </Heading>
       <P>
-        Configure managed switch for VLAN trunking and port mirroring.
+        VLAN 60 is the malware sandbox. Completely air-gapped. No internet, fake DNS, 
+        fake C2 servers. This is where sketchy executables go to die in a controlled environment.
       </P>
-      <List ml={6} my={4}>
-        <ListItem>• Port 1-4: VLAN 10 (Management)</ListItem>
-        <ListItem>• Port 5-8: VLAN 30 (Attack)</ListItem>
-        <ListItem>• Port 9-12: VLAN 40 (Victim)</ListItem>
-        <ListItem>• Port 13-16: VLAN 50 (Logging)</ListItem>
-        <ListItem>• Port 17: VLAN 60 (Malware analysis)</ListItem>
-        <ListItem>• Port 24: Trunk to pfSense (all VLANs)</ListItem>
-      </List>
 
-      <Heading as="h2" fontSize={24} mt={8} mb={4}>
-        Step 4: Attack Infrastructure
+      <Heading as="h2" fontSize={24} mt={8} mb={4} fontWeight={600}>
+        What I Actually Learned
       </Heading>
+
       <P>
-        Deploy Kali Linux and attack tools on VLAN 30.
+        Network segmentation isn't optional. It's the difference between "oops I broke one VM" 
+        and "oops I just ransomwared my entire network."
       </P>
-      <Box bg="gray.800" p={4} borderRadius="md" my={4}>
-        <Code colorScheme="green" fontSize="sm">
-          # Kali VM configuration<br/>
-          Network: VLAN 30<br/>
-          IP: 192.168.30.10/24<br/>
-          Gateway: 192.168.30.1 (pfSense)<br/>
-          <br/>
-          # Install additional tools<br/>
-          sudo apt update && sudo apt install -y metasploit-framework bloodhound
-        </Code>
-      </Box>
 
-      <Heading as="h2" fontSize={24} mt={8} mb={4}>
-        Step 5: Victim Network
-      </Heading>
       <P>
-        Deploy Windows/Linux targets on VLAN 40 with intentional vulnerabilities.
+        Span ports are magic. You can't defend what you can't see. Security Onion watching 
+        a span port catches everything - port scans, brute force attempts, lateral movement. 
+        It's like having X-ray vision for your network.
       </P>
-      <List ml={6} my={4}>
-        <ListItem>• Windows Server 2019 (Active Directory)</ListItem>
-        <ListItem>• Windows 10 workstations (3 nodes)</ListItem>
-        <ListItem>• Ubuntu 20.04 web server</ListItem>
-        <ListItem>• Vulnerable web apps (DVWA, Metasploitable)</ListItem>
-      </List>
 
-      <Heading as="h2" fontSize={24} mt={8} mb={4}>
-        Step 6: Logging Pipeline
-      </Heading>
       <P>
-        Configure centralized logging with Splunk on VLAN 50.
+        Centralized logging saves your sanity. Splunk ingesting logs from 18 nodes means 
+        I can correlate an attack across the entire infrastructure. One query shows me 
+        the initial compromise, lateral movement, and data exfiltration attempt.
       </P>
-      <Box bg="gray.800" p={4} borderRadius="md" my={4}>
-        <Code colorScheme="green" fontSize="sm">
-          # Install Splunk<br/>
-          wget -O splunk.tgz https://download.splunk.com/...<br/>
-          tar xvzf splunk.tgz -C /opt<br/>
-          /opt/splunk/bin/splunk start --accept-license<br/>
-          <br/>
-          # Configure forwarders on all nodes<br/>
-          /opt/splunkforwarder/bin/splunk add forward-server 192.168.50.10:9997
-        </Code>
-      </Box>
 
-      <Heading as="h2" fontSize={24} mt={8} mb={4}>
-        Step 7: Malware Analysis Sandbox
-      </Heading>
       <P>
-        Isolated VLAN 60 for safe malware detonation.
+        Snapshots are non-negotiable. Every VM gets snapshotted before each test. 
+        Broke Active Directory? Revert. Accidentally deleted the domain controller? Revert. 
+        Deployed actual ransomware instead of the test payload? Definitely revert.
       </P>
-      <List ml={6} my={4}>
-        <ListItem>• REMnux for malware analysis</ListItem>
-        <ListItem>• Windows sandbox VMs (snapshots enabled)</ListItem>
-        <ListItem>• No internet access (air-gapped)</ListItem>
-        <ListItem>• Fake DNS/HTTP servers for C2 simulation</ListItem>
-      </List>
 
-      <Heading as="h2" fontSize={24} mt={8} mb={4}>
-        Testing & Validation
+      <Heading as="h2" fontSize={24} mt={8} mb={4} fontWeight={600}>
+        The Reality Check
       </Heading>
+
       <P>
-        Verify setup with attack simulations.
+        This lab costs about $40/month in electricity. The hardware was mostly salvaged 
+        from old servers and a very patient eBay seller. Total investment: maybe $800 
+        over two years.
       </P>
-      <Box bg="gray.800" p={4} borderRadius="md" my={4}>
-        <Code colorScheme="green" fontSize="sm">
-          # Test 1: Port scan from Kali<br/>
-          nmap -sS 192.168.40.0/24<br/>
-          # Verify: Security Onion alerts on scan<br/>
-          <br/>
-          # Test 2: Brute force attack<br/>
-          hydra -l admin -P /usr/share/wordlists/rockyou.txt ssh://192.168.40.10<br/>
-          # Verify: Splunk logs failed auth attempts<br/>
-          <br/>
-          # Test 3: Lateral movement<br/>
-          # Verify: pfSense blocks inter-VLAN traffic
-        </Code>
-      </Box>
 
-      <Heading as="h2" fontSize={24} mt={8} mb={4}>
-        Key Takeaways
-      </Heading>
-      <List ml={6} my={4}>
-        <ListItem>• Network segmentation critical for containment</ListItem>
-        <ListItem>• Span ports essential for traffic visibility</ListItem>
-        <ListItem>• Centralized logging enables correlation</ListItem>
-        <ListItem>• Snapshot VMs before each test</ListItem>
-        <ListItem>• Document everything for reproducibility</ListItem>
-      </List>
+      <P>
+        Compare that to cloud labs at $50-100/month with limited customization and 
+        you can't keep running 24/7. This lab is mine. I can break it, rebuild it, 
+        and run attacks at 3 AM without worrying about hourly billing.
+      </P>
 
-      <Divider my={8} />
-      <Text fontSize="sm" color="gray.500">
-        This lab setup enables hands-on practice with MITRE ATT&CK techniques, 
-        threat hunting, and incident response in a controlled environment.
-      </Text>
+      <P>
+        The best part? I can practice MITRE ATT&CK techniques end-to-end. 
+        Initial access, privilege escalation, lateral movement, data exfiltration - 
+        all in a controlled environment where breaking things is the goal.
+      </P>
+
+      <P>
+        Would I recommend building one? Absolutely. Start small - one attacker, one target, 
+        one monitoring tool. Then grow it as you learn. The hands-on experience is worth 
+        more than any certification.
+      </P>
+
+      <P>
+        Just maybe warn your family before the basement starts sounding like an airport runway.
+      </P>
+
+      <P>That's it. A very simple and intuitive setup.</P>
+
+      <P>I hope it's helpful for your security research workflow :)</P>
+
+      <P>Have a productive day!</P>
     </Container>
   </Layout>
 )

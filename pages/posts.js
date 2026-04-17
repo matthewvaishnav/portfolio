@@ -1,38 +1,35 @@
-import { Container, Heading, Box, SimpleGrid, Link } from '@chakra-ui/react'
+import { Container, Heading, Box, Link, Text } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import NextLink from 'next/link'
-import { ChevronRightIcon } from '@chakra-ui/icons'
 
 const Posts = () => (
   <Layout title="Posts">
-    <Container>
-      <Heading as="h3" fontSize={20} mb={4}>
-        Posts
-      </Heading>
-      <SimpleGrid columns={[1]} gap={6}>
-        <Box 
-          p={4} 
-          borderWidth="1px" 
-          borderRadius="lg" 
-          _hover={{ borderColor: "teal.500", transform: "translateY(-2px)", transition: "all 0.2s" }}
+    <Container maxW="container.md">
+      <Box mb={12}>
+        <Link 
+          as={NextLink} 
+          href="/posts/home-lab-setup" 
+          style={{ textDecoration: 'none' }}
+          display="block"
+          mb={8}
+          pb={8}
+          borderBottom="1px solid"
+          borderColor="whiteAlpha.200"
+          _hover={{ opacity: 0.8 }}
         >
-          <Link as={NextLink} href="/posts/home-lab-setup" style={{ textDecoration: 'none' }}>
-            <Heading as="h4" fontSize={18} mb={2}>
-              Building an 18-Node Security Research Lab
-            </Heading>
-            <Box fontSize="sm" color="gray.500" mb={2}>
-              January 2025
-            </Box>
-            <Box fontSize="sm">
-              Step-by-step guide to building a production-grade security lab with Security Onion, 
-              pfSense, and 6 VLANs for threat detection and attack simulation.
-            </Box>
-            <Box mt={2} color="teal.500" fontSize="sm">
-              Read more <ChevronRightIcon />
-            </Box>
-          </Link>
-        </Box>
-      </SimpleGrid>
+          <Heading as="h2" fontSize={28} mb={2} fontWeight={600}>
+            I built an 18-node security lab in my basement
+          </Heading>
+          <Text fontSize="sm" color="gray.500" mb={3}>
+            By Matthew Vaishnav — 15 Jan 2025
+          </Text>
+          <Text fontSize="md" color="gray.400">
+            Most people collect stamps or build model trains. I decided to build a full-scale 
+            security research lab with 18 nodes, 6 VLANs, and enough attack infrastructure to 
+            make my ISP nervous.
+          </Text>
+        </Link>
+      </Box>
     </Container>
   </Layout>
 )
