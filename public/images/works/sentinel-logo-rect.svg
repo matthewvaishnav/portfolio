@@ -1,12 +1,11 @@
 <svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
   <rect width="600" height="400" fill="#ede9fe"/>
   
-  <!-- Bigger shield -->
-  <path d="M 100 155 L 130 155 L 138 162 L 138 200 Q 138 215, 115 222 Q 92 215, 92 200 L 92 162 Z" 
+  <!-- Shield shape centered -->
+  <path d="M 300 160 L 330 170 L 330 200 Q 330 215, 300 225 Q 270 215, 270 200 L 270 170 Z" 
         fill="none" stroke="#5b6ee1" stroke-width="4"/>
-  <line x1="100" y1="180" x2="130" y2="180" stroke="#5b6ee1" stroke-width="3" opacity="0.5"/>
-  <line x1="100" y1="195" x2="130" y2="195" stroke="#5b6ee1" stroke-width="3" opacity="0.5"/>
+  <line x1="280" y1="190" x2="320" y2="190" stroke="#5b6ee1" stroke-width="3" opacity="0.5"/>
   
-  <!-- Text -->
-  <text x="155" y="200" font-family="'Inter', 'SF Pro Display', -apple-system, sans-serif" font-size="48" font-weight="600" fill="#1e293b" text-anchor="start">SENTINEL</text>
+  <!-- Text centered -->
+  <text x="300" y="270" font-family="'Inter', 'SF Pro Display', -apple-system, sans-serif" font-size="48" font-weight="600" fill="#1e293b" text-anchor="middle">SENTINEL</text>
 </svg>
