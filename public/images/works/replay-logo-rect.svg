@@ -1,18 +1,23 @@
 <svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
   <rect width="600" height="400" fill="#fee2e2"/>
   
-  <!-- Layered circles + play + arrows -->
-  <circle cx="300" cy="195" r="38" fill="none" stroke="#ef4444" stroke-width="3" opacity="0.3"/>
-  <circle cx="300" cy="195" r="32" fill="none" stroke="#ef4444" stroke-width="4"/>
-  <polygon points="288,180 288,210 318,195" fill="#ef4444"/>
+  <!-- Complex circular system -->
+  <circle cx="300" cy="170" r="42" fill="none" stroke="#ef4444" stroke-width="2.5" opacity="0.25"/>
+  <circle cx="300" cy="170" r="36" fill="none" stroke="#ef4444" stroke-width="3" opacity="0.4"/>
+  <circle cx="300" cy="170" r="30" fill="none" stroke="#ef4444" stroke-width="4"/>
   
-  <!-- Circular arrows -->
-  <path d="M 330 165 Q 350 155, 362 172" fill="none" stroke="#ef4444" stroke-width="4" stroke-linecap="round"/>
-  <polygon points="359,176 365,172 362,165" fill="#ef4444"/>
+  <!-- Play -->
+  <polygon points="288,155 288,185 318,170" fill="#ef4444"/>
   
-  <path d="M 270 225 Q 250 235, 238 218" fill="none" stroke="#ef4444" stroke-width="4" stroke-linecap="round"/>
-  <polygon points="241,214 235,218 238,225" fill="#ef4444"/>
+  <!-- Multiple arrows -->
+  <path d="M 332 142 Q 355 130, 370 148" fill="none" stroke="#ef4444" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="367,152 373,148 370,141" fill="#ef4444"/>
   
-  <!-- Text centered -->
+  <path d="M 268 198 Q 245 210, 230 192" fill="none" stroke="#ef4444" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="233,188 227,192 230,199" fill="#ef4444"/>
+  
+  <path d="M 330 198 Q 345 208, 355 195" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  
+  <!-- Text with more space -->
   <text x="300" y="280" font-family="'Inter', 'SF Pro Display', -apple-system, sans-serif" font-size="48" font-weight="600" fill="#1e293b" text-anchor="middle">replay</text>
 </svg>
