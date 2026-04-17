@@ -115,8 +115,8 @@ VLAN 60: Malware Sandbox (air-gapped, fake DNS/C2)`}
       </Heading>
 
       <P>
-        This lab costs about $40/month in electricity. The hardware was mostly salvaged 
-        from old servers and a very patient eBay seller. Total investment: maybe $800 
+        This lab costs about $15/month in electricity. The hardware was mostly salvaged 
+        from old servers and a very patient eBay seller. Total investment: maybe $300 
         over two years.
       </P>
 
