@@ -9,5 +9,5 @@
         fill="#00d9f5" opacity="0.3" stroke="#00d9f5" stroke-width="1.5"/>
   
   <!-- Text -->
-  <text x="220" y="195" font-family="'Inter', 'SF Pro Display', -apple-system, sans-serif" font-size="48" font-weight="600" fill="#1e293b" text-anchor="start">TissueLab</text>
+  <text x="220" y="195" font-family="'Inter', 'SF Pro Display', -apple-system, sans-serif" font-size="48" font-weight="600" fill="#1e293b" text-anchor="start">HistoCore</text>
 </svg>

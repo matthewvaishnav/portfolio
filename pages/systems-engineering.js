@@ -16,7 +16,7 @@ const Works = () => (
             id="computational-pathology"
             href="/computational-pathology"
             thumbnail="/portfolio/images/works/pathml-logo-rect.svg" 
-            title="TissueLab"
+            title="HistoCore"
           >
             ML framework for histopathology image analysis
           </WorkGridItem>

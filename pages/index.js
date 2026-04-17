@@ -67,7 +67,7 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-          &nbsp;&nbsp;&nbsp;&nbsp;Matthew Vaishnav is a computational systems engineer based in Kitchener who builds machine learning systems and research tools for computational pathology. He is currently building <Link href="https://matthewvaishnav.github.io/computational-pathology-research/" color="teal.500" target="_blank">TissueLab</Link>, a production-grade PyTorch framework with 1,083 tests, attention-based MIL models, and comprehensive WSI processing pipelines. When he&apos;s not coding, he&apos;s refining workflows and exploring new ways to build reliable and useful systems.
+          &nbsp;&nbsp;&nbsp;&nbsp;Matthew Vaishnav is a computational systems engineer based in Kitchener who builds machine learning systems and research tools for computational pathology. He is currently building <Link href="https://matthewvaishnav.github.io/computational-pathology-research/" color="teal.500" target="_blank">HistoCore</Link>, a production-grade PyTorch framework with 1,083 tests, attention-based MIL models, and comprehensive WSI processing pipelines. When he&apos;s not coding, he&apos;s refining workflows and exploring new ways to build reliable and useful systems.
         </Paragraph>
         <Flex justify="center" my={4}>
           <Button
