@@ -16,12 +16,14 @@ const CodeBlock = ({ children, language = 'bash' }) => {
       <Box
         as="pre"
         p={4}
-        bg="whiteAlpha.100"
+        bg="gray.50"
         borderRadius="md"
         overflowX="auto"
         fontSize="sm"
+        border="1px solid"
+        borderColor="gray.200"
       >
-        <Code display="block" whiteSpace="pre" bg="transparent" color="inherit">
+        <Code display="block" whiteSpace="pre" bg="transparent" color="gray.800">
           {children}
         </Code>
       </Box>
@@ -36,6 +38,8 @@ const CodeBlock = ({ children, language = 'bash' }) => {
         transition="opacity 0.2s"
         aria-label="Copy code"
         colorScheme={hasCopied ? 'green' : 'gray'}
+        bg="white"
+        _hover={{ bg: 'gray.100' }}
       />
     </Box>
   )

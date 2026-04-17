@@ -5,10 +5,10 @@ import NextLink from 'next/link'
 const Posts = () => (
   <BlogLayout title="Posts">
     <Box>
-      <Heading as="h1" fontSize={48} mb={2} fontWeight={700} color="white">
+      <Heading as="h1" fontSize={48} mb={2} fontWeight={700} color="black">
         Matthew Vaishnav
       </Heading>
-      <Box mb={12} fontSize="lg" color="gray.400">
+      <Box mb={12} fontSize="lg" color="gray.600">
         Security researcher, systems engineer, and lab builder
       </Box>
       
@@ -21,16 +21,16 @@ const Posts = () => (
           mb={8}
           pb={8}
           borderBottom="1px solid"
-          borderColor="whiteAlpha.200"
+          borderColor="gray.200"
           _hover={{ opacity: 0.8 }}
         >
-          <Box fontSize="xs" color="purple.400" mb={2} textTransform="uppercase" letterSpacing="wider">
+          <Box fontSize="xs" color="purple.600" mb={2} textTransform="uppercase" letterSpacing="wider">
             SECURITY
           </Box>
-          <Heading as="h2" fontSize={32} mb={3} fontWeight={700} color="white" lineHeight="1.2">
+          <Heading as="h2" fontSize={32} mb={3} fontWeight={700} color="black" lineHeight="1.2">
             Building an 18-node security research lab
           </Heading>
-          <Text fontSize="lg" color="gray.400" mb={3} lineHeight="1.6">
+          <Text fontSize="lg" color="gray.600" mb={3} lineHeight="1.6">
             Most people collect stamps or build model trains. I decided to build a full-scale 
             security research lab with 18 nodes, 6 VLANs, and comprehensive attack infrastructure.
           </Text>
