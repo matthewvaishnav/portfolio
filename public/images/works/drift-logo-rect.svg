@@ -1,13 +1,19 @@
 <svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
   <rect width="600" height="400" fill="#fae8ff"/>
   
-  <!-- Bigger git branch -->
-  <circle cx="85" cy="170" r="10" fill="#a855f7"/>
-  <line x1="95" y1="170" x2="115" y2="170" stroke="#a855f7" stroke-width="4"/>
-  <circle cx="125" cy="170" r="10" fill="#a855f7"/>
-  <line x1="125" y1="180" x2="125" y2="205" stroke="#a855f7" stroke-width="4"/>
-  <circle cx="125" cy="215" r="10" fill="#a855f7"/>
+  <!-- Git commit graph - horizontal with branch -->
+  <circle cx="75" cy="190" r="10" fill="#a855f7"/>
+  <line x1="85" y1="190" x2="105" y2="190" stroke="#a855f7" stroke-width="4"/>
+  <circle cx="115" cy="190" r="10" fill="#a855f7"/>
+  
+  <!-- Branch up -->
+  <line x1="115" y1="180" x2="115" y2="165" stroke="#a855f7" stroke-width="4"/>
+  <circle cx="115" cy="155" r="10" fill="#a855f7"/>
+  
+  <!-- Continue main -->
+  <line x1="125" y1="190" x2="145" y2="190" stroke="#a855f7" stroke-width="4"/>
+  <circle cx="155" cy="190" r="10" fill="#a855f7"/>
   
   <!-- Text -->
-  <text x="155" y="200" font-family="'Inter', 'SF Pro Display', -apple-system, sans-serif" font-size="48" font-weight="600" fill="#1e293b" text-anchor="start">drift</text>
+  <text x="185" y="200" font-family="'Inter', 'SF Pro Display', -apple-system, sans-serif" font-size="48" font-weight="600" fill="#1e293b" text-anchor="start">drift</text>
 </svg>
