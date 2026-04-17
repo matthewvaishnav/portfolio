@@ -1,11 +1,13 @@
 <svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
   <rect width="600" height="400" fill="#f5f7fa"/>
   
-  <!-- Simple wave/drift icon -->
-  <path d="M 120 170 Q 140 160, 160 170 T 200 170" fill="none" stroke="#a855f7" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 120 190 Q 140 180, 160 190 T 200 190" fill="none" stroke="#a855f7" stroke-width="3" stroke-linecap="round"/>
-  <circle cx="205" cy="180" r="3" fill="#a855f7"/>
+  <!-- Git branch visualization -->
+  <circle cx="145" cy="180" r="6" fill="#a855f7"/>
+  <line x1="151" y1="180" x2="165" y2="180" stroke="#a855f7" stroke-width="3"/>
+  <circle cx="171" cy="180" r="6" fill="#a855f7"/>
+  <line x1="171" y1="186" x2="171" y2="200" stroke="#a855f7" stroke-width="3"/>
+  <circle cx="171" cy="206" r="6" fill="#a855f7"/>
   
   <!-- Text -->
-  <text x="240" y="195" font-family="'Inter', 'SF Pro Display', -apple-system, sans-serif" font-size="48" font-weight="600" fill="#1e293b" text-anchor="start">drift</text>
+  <text x="200" y="200" font-family="'Inter', 'SF Pro Display', -apple-system, sans-serif" font-size="48" font-weight="600" fill="#1e293b" text-anchor="start">drift</text>
 </svg>

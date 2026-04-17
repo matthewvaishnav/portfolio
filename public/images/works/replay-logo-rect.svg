@@ -1,10 +1,12 @@
 <svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
   <rect width="600" height="400" fill="#f5f7fa"/>
   
-  <!-- Simple replay/circle arrow icon -->
-  <circle cx="160" cy="180" r="25" fill="none" stroke="#ef4444" stroke-width="3" stroke-dasharray="120 40"/>
-  <polygon points="185,165 195,175 185,185" fill="#ef4444"/>
+  <!-- Play button with circular arrow -->
+  <circle cx="165" cy="190" r="25" fill="none" stroke="#ef4444" stroke-width="3"/>
+  <polygon points="158,180 158,200 175,190" fill="#ef4444"/>
+  <path d="M 185 170 Q 195 165, 200 175" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="198,178 203,175 200,170" fill="#ef4444"/>
   
   <!-- Text -->
-  <text x="240" y="195" font-family="'Inter', 'SF Pro Display', -apple-system, sans-serif" font-size="48" font-weight="600" fill="#1e293b" text-anchor="start">replay</text>
+  <text x="220" y="200" font-family="'Inter', 'SF Pro Display', -apple-system, sans-serif" font-size="48" font-weight="600" fill="#1e293b" text-anchor="start">replay</text>
 </svg>
