@@ -1,5 +1,5 @@
 <svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
-  <rect width="600" height="400" fill="#f5f7fa"/>
+  <rect width="600" height="400" fill="#ede9fe"/>
   
   <!-- Shield with scan lines -->
   <path d="M 155 165 L 175 165 L 180 170 L 180 195 Q 180 205, 165 210 Q 150 205, 150 195 L 150 170 Z" 
@@ -8,5 +8,5 @@
   <line x1="155" y1="190" x2="175" y2="190" stroke="#5b6ee1" stroke-width="2" opacity="0.5"/>
   
   <!-- Text -->
-  <text x="200" y="200" font-family="'Inter', 'SF Pro Display', -apple-system, sans-serif" font-size="48" font-weight="600" fill="#1e293b" text-anchor="start">SENTINEL</text>
+  <text x="300" y="200" font-family="'Inter', 'SF Pro Display', -apple-system, sans-serif" font-size="48" font-weight="600" fill="#1e293b" text-anchor="middle">SENTINEL</text>
 </svg>
