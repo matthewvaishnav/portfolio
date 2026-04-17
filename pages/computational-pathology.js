@@ -11,10 +11,10 @@ import P from '../components/paragraph'
 import Layout from '../components/layouts/article'
 
 const Work = () => (
-  <Layout title="PathML Framework">
+  <Layout title="TissueLab">
     <Container>
       <Title>
-        PathML Framework <Badge>2024-</Badge>
+        TissueLab <Badge>2024-</Badge>
       </Title>
       <P>
         A production-grade PyTorch framework for computational pathology research.
@@ -37,7 +37,7 @@ const Work = () => (
         </ListItem>
       </List>
 
-      <WorkImage src="/portfolio/images/works/pathml-hero.svg" alt="PathML" />
+      <WorkImage src="/portfolio/images/works/pathml-hero.svg" alt="TissueLab" />
     </Container>
   </Layout>
 )

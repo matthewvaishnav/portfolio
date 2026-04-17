@@ -1,14 +1,13 @@
 <svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
   <rect width="600" height="400" fill="#f5f7fa"/>
   
-  <!-- Simple grid/pathology icon -->
-  <rect x="125" y="165" width="20" height="20" fill="none" stroke="#00d9f5" stroke-width="2.5"/>
-  <rect x="150" y="165" width="20" height="20" fill="none" stroke="#00d9f5" stroke-width="2.5"/>
-  <rect x="175" y="165" width="20" height="20" fill="#00d9f5" opacity="0.3"/>
-  <rect x="125" y="190" width="20" height="20" fill="none" stroke="#00d9f5" stroke-width="2.5"/>
-  <rect x="150" y="190" width="20" height="20" fill="#00d9f5" opacity="0.3"/>
-  <rect x="175" y="190" width="20" height="20" fill="none" stroke="#00d9f5" stroke-width="2.5"/>
+  <!-- Microscope slide icon -->
+  <rect x="130" y="165" width="60" height="50" fill="none" stroke="#00d9f5" stroke-width="3" rx="2"/>
+  
+  <!-- Tissue section (organic shape inside slide) -->
+  <path d="M 145 175 Q 150 172, 155 175 L 165 178 Q 170 180, 170 185 L 168 192 Q 165 195, 160 195 L 150 193 Q 145 190, 145 185 Z" 
+        fill="#00d9f5" opacity="0.3" stroke="#00d9f5" stroke-width="1.5"/>
   
   <!-- Text -->
-  <text x="240" y="195" font-family="'Inter', 'SF Pro Display', -apple-system, sans-serif" font-size="48" font-weight="600" fill="#1e293b" text-anchor="start">PathML</text>
+  <text x="220" y="195" font-family="'Inter', 'SF Pro Display', -apple-system, sans-serif" font-size="48" font-weight="600" fill="#1e293b" text-anchor="start">TissueLab</text>
 </svg>
