@@ -7,7 +7,7 @@ const Post = () => (
   <Layout title="Building My Security Lab">
     <Container maxW="container.md">
       <Heading as="h1" fontSize={32} mb={2} fontWeight={600}>
-        I built an 18-node security lab in my basement
+        Building an 18-node security research lab
       </Heading>
       <Text fontSize="sm" color="gray.500" mb={8}>
         By Matthew Vaishnav — 15 Jan 2025
@@ -15,8 +15,7 @@ const Post = () => (
 
       <P>
         Most people collect stamps or build model trains. I decided to build a full-scale 
-        security research lab with 18 nodes, 6 VLANs, and enough attack infrastructure to 
-        make my ISP nervous.
+        security research lab with 18 nodes, 6 VLANs, and comprehensive attack infrastructure.
       </P>
 
       <P>
@@ -25,14 +24,13 @@ const Post = () => (
       </P>
 
       <P>
-        Then I realized I couldn&apos;t see the network traffic. Added Security Onion. 
+        Then I realized I needed to see the network traffic. Added Security Onion. 
         Now I needed a proper network. Added pfSense. Now I needed segmentation. 
         Added VLANs. Now I needed more targets. Added 12 more VMs.
       </P>
 
       <P>
-        Before I knew it, my basement sounded like a data center and my electricity bill 
-        looked like I was mining Bitcoin.
+        The result is a comprehensive security research environment perfect for learning and testing.
       </P>
 
       <P>
@@ -383,7 +381,7 @@ Description: "Pre-attack baseline state"`}
       </P>
 
       <P>
-        Just maybe warn your family before the basement starts sounding like an airport runway.
+        Just make sure you have adequate cooling and power for your setup.
       </P>
 
       <P>That&apos;s it. A complete replication guide.</P>
