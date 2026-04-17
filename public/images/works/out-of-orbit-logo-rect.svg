@@ -2,11 +2,11 @@
   <rect width="600" height="400" fill="#f3e8ff"/>
   
   <!-- Bigger rocket -->
-  <path d="M 115 150 L 100 180 L 107 180 L 107 205 L 123 205 L 123 180 L 130 180 Z" fill="#8338ec"/>
-  <circle cx="115" cy="162" r="5" fill="#f3e8ff"/>
-  <polygon points="100,180 92,198 107,180" fill="#8338ec" opacity="0.6"/>
-  <polygon points="130,180 138,198 123,180" fill="#8338ec" opacity="0.6"/>
+  <path d="M 115 140 L 95 185 L 105 185 L 105 215 L 125 215 L 125 185 L 135 185 Z" fill="#8338ec"/>
+  <circle cx="115" cy="158" r="6" fill="#f3e8ff"/>
+  <polygon points="95,185 85,205 105,185" fill="#8338ec" opacity="0.6"/>
+  <polygon points="135,185 145,205 125,185" fill="#8338ec" opacity="0.6"/>
   
   <!-- Text -->
-  <text x="155" y="200" font-family="'Inter', 'SF Pro Display', -apple-system, sans-serif" font-size="48" font-weight="600" fill="#1e293b" text-anchor="start">Out of Orbit</text>
+  <text x="165" y="200" font-family="'Inter', 'SF Pro Display', -apple-system, sans-serif" font-size="48" font-weight="600" fill="#1e293b" text-anchor="start">Out of Orbit</text>
 </svg>
