@@ -4,7 +4,7 @@ import { Box, Container } from '@chakra-ui/react'
 const BlogLayout = ({ children, title }) => {
   const t = `${title} - Matthew Vaishnav`
   return (
-    <Box as="main" pb={8}>
+    <Box as="main" pb={8} bg="white" minH="100vh">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Matthew's blog" />
