@@ -1,12 +1,12 @@
 <svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
   <rect width="600" height="400" fill="#f3e8ff"/>
   
-  <!-- Rocket ship -->
-  <path d="M 165 165 L 155 185 L 160 185 L 160 200 L 170 200 L 170 185 L 175 185 Z" fill="#8338ec"/>
-  <circle cx="165" cy="172" r="3" fill="#f3e8ff"/>
-  <polygon points="155,185 150,195 160,185" fill="#8338ec" opacity="0.6"/>
-  <polygon points="175,185 180,195 170,185" fill="#8338ec" opacity="0.6"/>
+  <!-- Rocket left -->
+  <path d="M 100 165 L 90 185 L 95 185 L 95 200 L 105 200 L 105 185 L 110 185 Z" fill="#8338ec"/>
+  <circle cx="100" cy="172" r="3" fill="#f3e8ff"/>
+  <polygon points="90,185 85,195 95,185" fill="#8338ec" opacity="0.6"/>
+  <polygon points="110,185 115,195 105,185" fill="#8338ec" opacity="0.6"/>
   
   <!-- Text -->
-  <text x="300" y="200" font-family="'Inter', 'SF Pro Display', -apple-system, sans-serif" font-size="48" font-weight="600" fill="#1e293b" text-anchor="middle">Out of Orbit</text>
+  <text x="130" y="200" font-family="'Inter', 'SF Pro Display', -apple-system, sans-serif" font-size="48" font-weight="600" fill="#1e293b" text-anchor="start">Out of Orbit</text>
 </svg>
