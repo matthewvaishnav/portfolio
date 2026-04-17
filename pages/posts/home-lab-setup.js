@@ -24,7 +24,7 @@ const Post = () => (
       </P>
 
       <P>
-        Then I realized I couldn't see the network traffic. Added Security Onion. 
+        Then I realized I couldn&apos;t see the network traffic. Added Security Onion. 
         Now I needed a proper network. Added pfSense. Now I needed segmentation. 
         Added VLANs. Now I needed more targets. Added 12 more VMs.
       </P>
@@ -48,10 +48,10 @@ const Post = () => (
       <P>
         Security Onion sits on VLAN 20 with a span port watching everything. 
         Every packet, every connection, every failed login attempt. 
-        It's like having a security camera pointed at your network 24/7.
+        It&apos;s like having a security camera pointed at your network 24/7.
       </P>
 
-      <P>Here's the VLAN breakdown:</P>
+      <P>Here&apos;s the VLAN breakdown:</P>
 
       <Box 
         as="pre" 
@@ -73,7 +73,7 @@ VLAN 60: Malware Sandbox (air-gapped, fake DNS/C2)`}
       </Box>
 
       <P>
-        VLAN 50 runs Splunk for centralized logging. Because when you're simulating 
+        VLAN 50 runs Splunk for centralized logging. Because when you&apos;re simulating 
         attacks at 2 AM, you want to know exactly what happened without SSHing into 
         12 different boxes.
       </P>
@@ -88,14 +88,14 @@ VLAN 60: Malware Sandbox (air-gapped, fake DNS/C2)`}
       </Heading>
 
       <P>
-        Network segmentation isn't optional. It's the difference between "oops I broke one VM" 
-        and "oops I just ransomwared my entire network."
+        Network segmentation isn&apos;t optional. It&apos;s the difference between &ldquo;oops I broke one VM&rdquo; 
+        and &ldquo;oops I just ransomwared my entire network.&rdquo;
       </P>
 
       <P>
-        Span ports are magic. You can't defend what you can't see. Security Onion watching 
+        Span ports are magic. You can&apos;t defend what you can&apos;t see. Security Onion watching 
         a span port catches everything - port scans, brute force attempts, lateral movement. 
-        It's like having X-ray vision for your network.
+        It&apos;s like having X-ray vision for your network.
       </P>
 
       <P>
@@ -122,7 +122,7 @@ VLAN 60: Malware Sandbox (air-gapped, fake DNS/C2)`}
 
       <P>
         Compare that to cloud labs at $50-100/month with limited customization and 
-        you can't keep running 24/7. This lab is mine. I can break it, rebuild it, 
+        you can&apos;t keep running 24/7. This lab is mine. I can break it, rebuild it, 
         and run attacks at 3 AM without worrying about hourly billing.
       </P>
 
@@ -142,9 +142,9 @@ VLAN 60: Malware Sandbox (air-gapped, fake DNS/C2)`}
         Just maybe warn your family before the basement starts sounding like an airport runway.
       </P>
 
-      <P>That's it. A very simple and intuitive setup.</P>
+      <P>That&apos;s it. A very simple and intuitive setup.</P>
 
-      <P>I hope it's helpful for your security research workflow :)</P>
+      <P>I hope it&apos;s helpful for your security research workflow :)</P>
 
       <P>Have a productive day!</P>
     </Container>
