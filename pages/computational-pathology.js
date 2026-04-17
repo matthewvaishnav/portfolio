@@ -14,7 +14,7 @@ const Work = () => (
   <Layout title="HistoCore">
     <Container>
       <Title>
-        HistoCore <Badge>2024-</Badge>
+        HistoCore <Badge>2025-</Badge>
       </Title>
       <P>
         A production-grade PyTorch framework for computational pathology research.

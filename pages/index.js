@@ -96,15 +96,15 @@ const Home = () => (
           Studying Computer Systems Technician at Conestoga College.
         </BioSection>
         <BioSection>
-          <BioYear>2024</BioYear>
+          <BioYear>2025</BioYear>
           Built 18-node home lab with Security Onion and pfSense for security research.
         </BioSection>
         <BioSection>
-          <BioYear>2024 to present</BioYear>
+          <BioYear>2025 to present</BioYear>
           Building computational pathology tooling and ML pipelines.
         </BioSection>
         <BioSection>
-          <BioYear>2024 to present</BioYear>
+          <BioYear>2025 to present</BioYear>
           Developing security detection rules and log analysis tools.
         </BioSection>
         <BioSection>
