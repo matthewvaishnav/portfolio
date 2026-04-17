@@ -14,7 +14,7 @@ const Post = () => (
         Building an 18-node security research lab
       </Heading>
       
-      <Text fontSize="lg" color="gray.600" mb={8} lineHeight="1.6">
+      <Text fontSize="lg" color="gray.800" mb={8} lineHeight="1.6">
         Most people collect stamps or build model trains. I decided to build a full-scale 
         security research lab with 18 nodes, 6 VLANs, and comprehensive attack infrastructure.
       </Text>
@@ -23,11 +23,11 @@ const Post = () => (
         <Avatar size="sm" name="Matthew Vaishnav" src="/images/matthew.jpg" mr={3} />
         <Box>
           <Text fontSize="sm" fontWeight={600} color="black">Matthew Vaishnav</Text>
-          <Text fontSize="sm" color="gray.500">15 Jan 2025 — 8 min read</Text>
+          <Text fontSize="sm" color="gray.600">15 Jan 2025 — 8 min read</Text>
         </Box>
       </Flex>
 
-      <Box fontSize="lg" lineHeight="1.7" color="gray.700">
+      <Box fontSize="lg" lineHeight="1.7" color="gray.800">
         <P>
           It started simple. I wanted to practice penetration testing without breaking real systems. 
           One Kali VM, one vulnerable target. Easy.
