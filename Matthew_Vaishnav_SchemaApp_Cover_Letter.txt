@@ -1,0 +1,37 @@
+Matthew Vaishnav
+Kitchener-Waterloo, ON
+matthew.vaishnav@gmail.com | (226) 507-2047
+github.com/matthewvaishnav | matthewvaishnav.github.io/portfolio
+
+[Date]
+
+Hiring Manager
+Schema App
+Guelph, ON
+
+Dear Hiring Manager,
+
+I'm really excited about the Full Stack Developer role at Schema App. What drew me in was your mission to help search engines and AI actually understand web content—that's the kind of problem I love tackling. Plus, working with enterprise clients like SAP while staying focused on real ROI? That's exactly the type of impact-driven work I want to be part of.
+
+I'm currently studying Computer Systems at Conestoga, but honestly, most of my learning happens when I'm building things. I've been coding for years and have this habit of diving deep into projects that probably seem way too ambitious for a student—but that's how I learn best.
+
+**Why I think I'd fit well at Schema App**
+
+Last year, I built this anti-DDoS system called SENTINEL that I'm pretty proud of. It started as a "what if I could detect attacks in real-time?" idea and turned into a full Node.js application that actually works—96% accuracy on industry datasets. The whole thing taught me so much about backend architecture, real-time WebSocket communication, and how to make systems that don't fall over under pressure. It's the kind of project that made me realize I love the challenge of building things that need to be both smart and bulletproof.
+
+I've been working a lot with JavaScript lately, both frontend and backend. My portfolio site uses React and Next.js, and I even threw in some 3D elements with Three.js because, well, why not make a laptop spin around on the screen? I haven't used Vue.js specifically, but I've found that once you really understand one framework, picking up another is more about learning the quirks than starting from scratch.
+
+The AWS and DevOps stuff came naturally as my projects got more complex. You can't really build something production-ready without thinking about deployment, monitoring, and security from day one. I've been using Terraform for infrastructure and GitHub Actions for CI/CD, and I've gotten pretty good at catching security issues before they become problems.
+
+**What excites me about this opportunity**
+
+Your core values really resonate with me, especially the growth mindset piece. I'm always learning something new—right now I'm deep into computational pathology research, building ML frameworks for medical image analysis. It's completely different from web development, but that's what keeps things interesting.
+
+I love that Schema App is tackling something as fundamental as helping machines understand human content. There's something elegant about building the bridges between human creativity and machine intelligence. And doing it at scale, with real enterprise clients seeing real results? That's the kind of work that gets me up in the morning.
+
+I'm available for full-time remote work and would love to chat more about how I could contribute to what you're building. I have a feeling we'd work well together.
+
+Thanks for taking the time to read this—I hope we get to talk soon!
+
+Best,
+Matthew Vaishnav

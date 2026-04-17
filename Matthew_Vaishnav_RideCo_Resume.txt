@@ -1,0 +1,94 @@
+MATTHEW VAISHNAV
+Kitchener-Waterloo, ON  •  matthew.vaishnav@gmail.com  •  (226) 507-2047
+github.com/matthewvaishnav  •  matthewvaishnav.github.io/portfolio  •  LinkedIn
+
+PROFESSIONAL SUMMARY
+
+Computer Systems Technician with hands-on experience designing, securing, and operating enterprise-grade IT infrastructure. Proven expertise in network architecture, systems administration, cloud infrastructure (AWS), and security operations across mixed OS environments. Built and maintain an 18-node production lab with pfSense routing, Security Onion IDS, and full IaC deployment via Ansible and Terraform. Strong background in incident response, identity management, endpoint security, and DevSecOps automation. Seeking to leverage infrastructure and security expertise to support RideCo's operational excellence and scaling initiatives.
+
+TECHNICAL SKILLS
+
+Systems Administration: Linux (Ubuntu, Debian), Windows Server 2019, Active Directory, LDAP, VMware Workstation, mixed OS environments
+Network Architecture: pfSense, VLAN design/segmentation, VPN, TCP/IP, DNS, DHCP, subnetting, network security, intrusion detection
+Security & Compliance: Security Onion, Suricata, Zeek, MITRE ATT&CK, Sigma rules, CIS Benchmark hardening, incident response, vulnerability assessment
+Cloud Infrastructure: AWS (VPC, EC2, RDS, S3, GuardDuty, CloudWatch), Terraform, multi-AZ architecture, cloud security
+DevSecOps & Automation: Ansible, Docker, GitHub Actions CI/CD, Bandit SAST, Trivy, infrastructure-as-code, scripting automation
+Monitoring & Observability: Prometheus, Grafana, Loki, AlertManager, Node Exporter, log correlation, performance monitoring
+Programming & Scripting: Python, Bash, PowerShell, JavaScript (Node.js/Express), SQL
+Tools & Platforms: Git, Redis, Docker Compose, Splunk SPL, Elastic SIEM, Azure Sentinel, Wireshark
+
+RELEVANT PROJECTS & EXPERIENCE
+
+Enterprise IT Infrastructure Lab  |  github.com/matthewvaishnav/cst-portfolio  |  2025–2026
+
+• Designed and operate 18-node production lab across 6 isolated VLANs on VMware Workstation with pfSense 2.7.2 routing all traffic
+• Implemented Security Onion IDS passively monitoring SPAN port for intrusion detection and network security analysis
+• Deployed centralized Active Directory identity management with PowerShell audit tooling generating formatted HTML compliance reports
+• Built DevSecOps CI/CD pipeline: GitHub Actions → Bandit SAST → Trivy container scan → Terraform validate → deploy; caught 6 critical CVEs pre-production
+• Implemented CIS Benchmark Level 1 server hardening via Ansible playbooks for Ubuntu 22.04 systems
+• Developed Sigma detection rules covering SSH brute-force-to-root (T1110.001), DCSync (T1003.006), and sudo privilege escalation (T1548.003)
+• Built multi-source log correlation engine parsing 14,822+ entries across auth.log and web access logs, detecting attack chains mapped to MITRE ATT&CK
+• Deployed monitoring stack via Docker Compose: Prometheus + Grafana + Loki + AlertManager + Node Exporter with persistent storage and pre-built alerting rules
+
+AWS Cloud Infrastructure Deployment  |  Terraform IaC  |  2025–2026
+
+• Architected and deployed hardened AWS VPC in ca-central-1 using Terraform infrastructure-as-code
+• Implemented multi-AZ architecture with NAT gateway, bastion host, least-privilege security groups, and network segmentation
+• Configured VPC Flow Logs → CloudWatch integration with encrypted S3 log bucket for compliance and security monitoring
+• Designed scalable, secure, and cost-efficient cloud infrastructure following AWS best practices
+
+SENTINEL — Production Anti-DDoS System  |  github.com/matthewvaishnav/sentinel  |  2025–2026
+
+• Architected production-grade Node.js/Express anti-DDoS engine validated at 96% accuracy, 98.33% recall on CIC-DDoS2019 industry dataset
+• Implemented async math worker pool offloading O(N²) neural net backprop and FFT analysis off event loop, maintaining stable HTTP response times under volumetric attack
+• Designed dynamic Z-score + EMA self-learning baselines replacing static thresholds; 96.41% precision calibrated to minimize false positives
+• Built WebSocket P2P gossip mesh propagating threat blocks across regional instances with proof-of-threat consensus and no central authority
+• Implemented horizontal Redis clustering for cross-region state synchronization with L1/L2 cache for instant IP reputation lookups
+• Developed CI/CD pipeline with GitHub Actions for cross-platform binary builds and automated testing
+
+Computational Pathology Research Framework  |  github.com/matthewvaishnav/computational-pathology-research  |  2026
+
+• Built PyTorch ML framework for whole-slide image (WSI) analysis with OpenSlide integration supporting .svs/.tiff/.ndpi formats
+• Implemented CI/CD with Bandit SAST, isort, pre-commit hooks; achieved 62% test coverage; Docker + docker-compose deployment
+• Developed pyproject.toml packaging with ONNX model export for production deployment
+
+EDUCATION
+
+Computer Systems Technician — IT Infrastructure & Services  |  Conestoga College  |  Waterloo, ON
+Sept 2025 – Present
+• Curriculum: Hardware diagnostics, Linux/Windows administration, firmware, Docker, network infrastructure, systems security
+
+High School Diploma  |  Grand River Collegiate Institute  |  Kitchener, ON
+Sept 2020 – June 2025
+
+CERTIFICATIONS & TRAINING
+
+• CompTIA Security+ — In progress (62% complete)
+• TryHackMe SOC Level 2 — In progress (78% complete)
+• TryHackMe Pre-Security — Completed
+• Cisco Networking Essentials — Completed
+• First Aid Certification — March 2024 – Present
+• WHMIS 2015 — Certified
+• Class G Driver's Licence — Valid through Feb 2028
+
+WORK EXPERIENCE
+
+Marketing Co-op Student  |  United Way Waterloo Region  |  Kitchener, ON
+Apr – June 2024
+• Assisted planning and execution of fundraising events; conducted donor market research; contributed to social media campaigns
+• Demonstrated strong communication skills with cross-functional stakeholders and ability to manage multiple projects
+
+Adventure Specialist  |  Adventure Rooms Canada Inc.  |  Kitchener, ON
+Aug 2021 – Aug 2023
+• Managed technical operations including game room setup/reset, payment systems, and reservation management
+• Performed hands-on facility maintenance including hardware repairs, component replacement, and troubleshooting
+• Created social media content for X/Twitter and Facebook, demonstrating communication skills with non-technical audiences
+
+ADDITIONAL STRENGTHS
+
+• Strong problem-solving skills with ability to operate independently in complex technical environments
+• Proven project leadership and ownership experience through self-directed infrastructure projects
+• Excellent communication skills with both technical and non-technical stakeholders
+• Passion for learning and adopting new technologies; continuously expanding skillset through hands-on projects
+• Experience building and supporting distributed environments with remote access requirements
+• Demonstrated ability to translate complex technical requirements into scalable, secure solutions

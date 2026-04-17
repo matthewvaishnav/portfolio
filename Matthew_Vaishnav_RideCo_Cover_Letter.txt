@@ -1,0 +1,42 @@
+Matthew Vaishnav
+Kitchener-Waterloo, ON
+matthew.vaishnav@gmail.com | (226) 507-2047
+github.com/matthewvaishnav | matthewvaishnav.github.io/portfolio
+
+[Date]
+
+Hiring Manager
+RideCo
+Waterloo, ON
+
+Dear Hiring Manager,
+
+I am writing to express my strong interest in the IT Specialist (Intermediate/Senior) position at RideCo. As a Computer Systems Technician student with hands-on experience building and securing enterprise-grade infrastructure, I am excited about the opportunity to contribute to RideCo's mission of transforming public transit through technology.
+
+My background directly aligns with RideCo's infrastructure and security needs. I have designed and operate an 18-node home lab spanning 6 isolated VLANs with pfSense routing, Security Onion IDS, and full infrastructure-as-code deployment via Ansible and Terraform. This experience has given me practical expertise in network segmentation, security monitoring, and scalable system architecture—core competencies for this role.
+
+Key qualifications I bring to RideCo:
+
+**IT Infrastructure & Systems Leadership**
+I have hands-on experience with mixed OS environments (Linux Ubuntu/Debian, Windows Server 2019, Active Directory) and have implemented centralized identity management through Active Directory with PowerShell-based audit tooling. My home lab demonstrates my ability to design secure, scalable infrastructure from the ground up.
+
+**Network Architecture & Security**
+My pfSense deployment manages multi-VLAN routing with Security Onion passively monitoring all traffic via SPAN port. I have implemented network segmentation, VPN access, and intrusion detection while developing Sigma detection rules mapped to MITRE ATT&CK covering SSH brute-force, DCSync attacks, and privilege escalation techniques.
+
+**Cloud & Platform Operations**
+I have deployed production-grade AWS infrastructure using Terraform, including hardened VPCs with multi-AZ architecture, NAT gateways, bastion hosts, least-privilege security groups, and VPC Flow Logs integrated with CloudWatch. My DevSecOps pipeline integrates GitHub Actions with Bandit SAST and Trivy container scanning, catching 6 critical CVEs before deployment.
+
+**Security, Compliance & Risk Management**
+I have implemented CIS Benchmark Level 1 hardening via Ansible, developed multi-source log correlation engines parsing 14,822+ entries, and built comprehensive monitoring stacks using Prometheus, Grafana, Loki, and AlertManager with pre-configured alerting rules.
+
+**Operational Excellence & Problem-Solving**
+My SENTINEL anti-DDoS system demonstrates my ability to architect production-grade solutions validated at 96% accuracy on industry datasets. The system uses async worker pools, dynamic Z-score baselines, WebSocket P2P threat propagation, and horizontal Redis clustering—showcasing my understanding of scalable, high-availability architecture.
+
+I am particularly drawn to RideCo's fast-paced, small-team environment where individual contributions create meaningful impact. My experience working independently on complex technical projects, combined with my passion for learning new technologies, positions me well to thrive in this role.
+
+I am currently pursuing my Computer Systems Technician diploma at Conestoga College and am available for full-time employment. I would welcome the opportunity to discuss how my infrastructure, security, and systems administration experience can contribute to RideCo's continued growth and operational excellence.
+
+Thank you for considering my application. I look forward to speaking with you.
+
+Sincerely,
+Matthew Vaishnav

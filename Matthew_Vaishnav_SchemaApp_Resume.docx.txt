@@ -1,0 +1,105 @@
+MATTHEW VAISHNAV
+Full Stack Developer
+
+Kitchener-Waterloo, ON  •  matthew.vaishnav@gmail.com  •  (226) 507-2047
+github.com/matthewvaishnav  •  matthewvaishnav.github.io/portfolio  •  LinkedIn
+
+PROFESSIONAL SUMMARY
+
+Computer Systems student who loves building things that actually work. I've spent the last few years diving deep into full-stack development, creating everything from anti-DDoS systems to 3D portfolio sites. My approach is pretty hands-on—I learn by building, breaking things, and figuring out how to make them better. I'm passionate about writing clean code that solves real problems, and I'm always excited to tackle the next challenge.
+
+TECHNICAL SKILLS
+
+**Frontend Development:** JavaScript (ES6+), React, Next.js, HTML5, CSS3, responsive design, Three.js, component-based architecture
+**Backend Development:** Node.js, Express.js, RESTful APIs, server-side architecture, async programming, WebSocket real-time communication
+**Databases:** SQL, relational database design, query optimization, data modeling, database performance tuning
+**Cloud & Infrastructure:** AWS (EC2, RDS, S3, CloudWatch, Lambda), Terraform infrastructure-as-code, cloud architecture, scalable deployment
+**DevOps & CI/CD:** GitHub Actions, Docker, automated testing, deployment pipelines, code review processes, version control (Git)
+**Security & Testing:** Security best practices, automated security scanning (Bandit SAST, Trivy), vulnerability assessment, test-driven development
+**Programming Languages:** JavaScript, Python, C++, Bash, PowerShell, SQL
+**Tools & Platforms:** Docker, Redis, Prometheus, Grafana, Webpack, npm/yarn, Linux, Windows, agile development practices
+
+RELEVANT PROJECTS & EXPERIENCE
+
+SENTINEL — Anti-DDoS System  |  github.com/matthewvaishnav/sentinel  |  2025–2026
+
+• Built a Node.js system that detects DDoS attacks in real-time—started as a "what if" project and ended up hitting 96% accuracy on industry datasets
+• The tricky part was keeping the main server responsive while doing heavy math in the background, so I used worker pools to handle the neural network stuff
+• Added WebSocket communication so multiple instances can share threat intelligence instantly—kind of like a gossip network for security alerts
+• Spent a lot of time tuning the algorithms to catch real attacks without flagging legitimate users (96.41% precision, which I'm pretty proud of)
+• Used Redis clustering to sync state across regions and GitHub Actions to automate testing and deployment
+• This project taught me a ton about building systems that need to be both smart and fast under pressure
+
+Portfolio Website & Interactive Applications  |  matthewvaishnav.github.io/portfolio  |  2025–2026
+
+• Created my portfolio site with React and Next.js—wanted something that actually showed what I could build, not just talked about it
+• Added a spinning 3D laptop model with Three.js because I thought it would be fun (and it was a good excuse to learn 3D programming)
+• Made sure everything works smoothly on mobile and desktop—spent way too much time getting the animations just right
+• Set up automated deployment through GitHub Pages so updates happen seamlessly
+• The whole thing was a great way to practice frontend development while building something I actually use
+
+Computational Pathology Research Framework  |  github.com/matthewvaishnav/computational-pathology-research  |  2026
+
+• Got interested in how AI could help analyze medical images, so I built a PyTorch framework for processing whole-slide pathology images
+• The challenge was handling massive image files (we're talking gigabytes) and making the ML models actually useful for researchers
+• Built APIs that can work with different medical image formats and integrated various pre-trained models (ResNet, EfficientNet, etc.)
+• Set up proper testing and CI/CD because when you're dealing with medical data, things need to work reliably
+• This project pushed me into a completely different domain, but that's how I like to learn—jump in and figure it out
+
+AWS Cloud Infrastructure  |  Terraform IaC  |  2025–2026
+
+• Started learning AWS when my projects outgrew my laptop—turns out deploying to the cloud is its own skill set
+• Used Terraform to set up VPCs, databases, and monitoring because clicking through the AWS console gets old fast
+• Focused on security from the start—proper network isolation, encrypted storage, the works
+• Built deployment pipelines that catch security issues before they hit production
+• This whole experience taught me that infrastructure is just code, and it should be treated with the same care
+
+Out of Orbit — C++ Game  |  github.com/matthewvaishnav/out-of-orbit  |  2025
+
+• Wanted to try game development, so I built a space shooter in C++ using Raylib
+• The fun part was optimizing performance—used object pooling so the game wouldn't stutter when things got intense
+• Made it work on different platforms with cross-platform build scripts
+• This project was a nice break from web development and taught me a lot about memory management and performance
+
+EDUCATION
+
+Computer Systems Technician — IT Infrastructure & Services  |  Conestoga College  |  Waterloo, ON
+Sept 2025 – Present
+• Curriculum: Software development, system architecture, database design, network infrastructure, security practices
+• Hands-on experience with modern development tools, cloud platforms, and enterprise software systems
+
+High School Diploma  |  Grand River Collegiate Institute  |  Kitchener, ON
+Sept 2020 – June 2025
+
+WORK EXPERIENCE
+
+Marketing Co-op Student  |  United Way Waterloo Region  |  Kitchener, ON
+Apr – June 2024
+• Helped plan fundraising events and did research on donor engagement strategies
+• Worked on social media campaigns and learned how to communicate with different audiences
+• Got experience working with teams across different departments and managing multiple projects
+• This role taught me a lot about translating technical ideas into language that everyone can understand
+
+Adventure Specialist  |  Adventure Rooms Canada Inc.  |  Kitchener, ON
+Aug 2021 – Aug 2023
+• Ran the technical side of escape rooms—setting up games, handling payments, fixing things when they broke
+• Did a lot of troubleshooting on the fly and learned to think quickly when customers were waiting
+• Created social media content and got comfortable explaining technical stuff to people who just wanted to have fun
+• This job taught me how to stay calm under pressure and communicate clearly with all kinds of people
+
+WHAT I BRING TO THE TABLE
+
+• **Learning mindset:** I love diving into new technologies and figuring out how they work—currently exploring everything from ML to 3D graphics
+• **Problem-solving approach:** I like breaking down complex problems into smaller pieces and building solutions step by step
+• **Team collaboration:** Good at explaining technical stuff to non-technical people and working with different types of teams
+• **Security awareness:** Always thinking about what could go wrong and building defenses from the start
+• **Performance focus:** I care about making things fast and efficient—there's something satisfying about optimizing code that runs smoothly
+• **Documentation habits:** I write code like someone else will need to understand it later (because they usually do)
+• **Remote work ready:** Self-motivated and comfortable with distributed teams and async communication
+
+CERTIFICATIONS & TRAINING
+
+• CompTIA Security+ — In progress (62% complete)
+• TryHackMe SOC Level 2 — In progress (78% complete)
+• Cisco Networking Essentials — Completed
+• First Aid Certification — Current
