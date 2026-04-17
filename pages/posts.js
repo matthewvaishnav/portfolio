@@ -1,10 +1,17 @@
 import { Container, Heading, Box, Link, Text } from '@chakra-ui/react'
-import Layout from '../components/layouts/article'
+import BlogLayout from '../components/layouts/blog'
 import NextLink from 'next/link'
 
 const Posts = () => (
-  <Layout title="Posts">
-    <Container maxW="container.md">
+  <BlogLayout title="Posts">
+    <Box>
+      <Heading as="h1" fontSize={48} mb={2} fontWeight={700} color="white">
+        Matthew Vaishnav
+      </Heading>
+      <Box mb={12} fontSize="lg" color="gray.400">
+        Security researcher, systems engineer, and lab builder
+      </Box>
+      
       <Box mb={12}>
         <Link 
           as={NextLink} 
@@ -17,20 +24,23 @@ const Posts = () => (
           borderColor="whiteAlpha.200"
           _hover={{ opacity: 0.8 }}
         >
-          <Heading as="h2" fontSize={28} mb={2} fontWeight={600}>
+          <Box fontSize="xs" color="purple.400" mb={2} textTransform="uppercase" letterSpacing="wider">
+            SECURITY
+          </Box>
+          <Heading as="h2" fontSize={32} mb={3} fontWeight={700} color="white" lineHeight="1.2">
             Building an 18-node security research lab
           </Heading>
-          <Text fontSize="sm" color="gray.500" mb={3}>
-            By Matthew Vaishnav — 15 Jan 2025
-          </Text>
-          <Text fontSize="md" color="gray.400">
+          <Text fontSize="lg" color="gray.400" mb={3} lineHeight="1.6">
             Most people collect stamps or build model trains. I decided to build a full-scale 
             security research lab with 18 nodes, 6 VLANs, and comprehensive attack infrastructure.
           </Text>
+          <Box fontSize="sm" color="gray.500">
+            By Matthew Vaishnav — 15 Jan 2025
+          </Box>
         </Link>
       </Box>
-    </Container>
-  </Layout>
+    </Box>
+  </BlogLayout>
 )
 
 export default Posts
