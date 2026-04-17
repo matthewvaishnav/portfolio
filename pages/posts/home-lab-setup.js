@@ -1,6 +1,7 @@
-import { Container, Heading, Text, Code, Box } from '@chakra-ui/react'
+import { Container, Heading, Text } from '@chakra-ui/react'
 import Layout from '../../components/layouts/article'
 import P from '../../components/paragraph'
+import CodeBlock from '../../components/code-block'
 
 const Post = () => (
   <Layout title="Building My Security Lab">
@@ -53,24 +54,14 @@ const Post = () => (
 
       <P>Here&apos;s the VLAN breakdown:</P>
 
-      <Box 
-        as="pre" 
-        p={4} 
-        bg="whiteAlpha.100" 
-        borderRadius="md" 
-        overflowX="auto" 
-        fontSize="sm"
-        mb={4}
-      >
-        <Code display="block" whiteSpace="pre" bg="transparent" color="inherit">
+      <CodeBlock>
 {`VLAN 10: Management (pfSense, admin access)
 VLAN 20: Security Monitoring (Security Onion, span port)
 VLAN 30: Attack Infrastructure (Kali, Metasploit, C2 servers)
 VLAN 40: Victim Network (vulnerable Windows boxes, web servers)
 VLAN 50: Logging (Splunk, centralized log aggregation)
 VLAN 60: Malware Sandbox (air-gapped, fake DNS/C2)`}
-        </Code>
-      </Box>
+      </CodeBlock>
 
       <P>
         VLAN 50 runs Splunk for centralized logging. Because when you&apos;re simulating 
