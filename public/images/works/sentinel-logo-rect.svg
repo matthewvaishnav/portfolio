@@ -1,12 +1,14 @@
 <svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
   <rect width="600" height="400" fill="#ede9fe"/>
   
-  <!-- Shield with scan lines + glow -->
-  <path d="M 300 155 L 335 167 L 335 200 Q 335 218, 300 228 Q 265 218, 265 200 L 265 167 Z" 
+  <!-- Layered shield with geometric details -->
+  <path d="M 300 150 L 340 165 L 340 200 Q 340 220, 300 232 Q 260 220, 260 200 L 260 165 Z" 
+        fill="none" stroke="#5b6ee1" stroke-width="3" opacity="0.3"/>
+  <path d="M 300 160 L 330 172 L 330 200 Q 330 215, 300 224 Q 270 215, 270 200 L 270 172 Z" 
         fill="none" stroke="#5b6ee1" stroke-width="4"/>
-  <line x1="275" y1="185" x2="325" y2="185" stroke="#5b6ee1" stroke-width="2.5" opacity="0.5"/>
-  <line x1="275" y1="195" x2="325" y2="195" stroke="#5b6ee1" stroke-width="2.5" opacity="0.5"/>
-  <line x1="275" y1="205" x2="325" y2="205" stroke="#5b6ee1" stroke-width="2.5" opacity="0.3"/>
+  <line x1="280" y1="190" x2="320" y2="190" stroke="#5b6ee1" stroke-width="2.5" opacity="0.6"/>
+  <line x1="285" y1="200" x2="315" y2="200" stroke="#5b6ee1" stroke-width="2.5" opacity="0.4"/>
+  <circle cx="300" cy="185" r="5" fill="#5b6ee1"/>
   
   <!-- Text centered -->
   <text x="300" y="270" font-family="'Inter', 'SF Pro Display', -apple-system, sans-serif" font-size="48" font-weight="600" fill="#1e293b" text-anchor="middle">SENTINEL</text>
