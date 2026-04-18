@@ -18,7 +18,7 @@ const Work = () => (
       </Title>
       <P>
         A production-grade PyTorch framework for computational pathology research.
-        Built for whole slide image analysis with attention-based MIL models and 1,083 tests.
+        Built for whole slide image analysis with attention-based MIL models and 1,448 tests.
       </P>
       <List ml={4} my={4}>
         <ListItem>
