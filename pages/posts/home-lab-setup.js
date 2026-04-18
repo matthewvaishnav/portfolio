@@ -367,9 +367,8 @@ Description: "Pre-attack baseline state"`}
         </Heading>
 
         <P>
-          This lab costs about $15/month in electricity. The hardware was mostly salvaged 
-          from old servers and a very patient eBay seller. Total investment: maybe $300 
-          over two years.
+          This lab costs about $15/month in electricity. I just repurposed my old gaming PC 
+          instead of buying new hardware.
         </P>
 
         <P>
