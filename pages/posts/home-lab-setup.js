@@ -6,15 +6,15 @@ import CodeBlock from '../../components/code-block'
 const Post = () => (
   <BlogLayout title="Building My Security Lab">
     <Box>
-      <Box fontSize="xs" color="purple.600" mb={4} textTransform="uppercase" letterSpacing="wider">
+      <Box fontSize="xs" color="purple.400" mb={4} textTransform="uppercase" letterSpacing="wider">
         SECURITY
       </Box>
       
-      <Heading as="h1" fontSize={48} mb={6} fontWeight={700} color="black" lineHeight="1.2">
+      <Heading as="h1" fontSize={48} mb={6} fontWeight={700} lineHeight="1.2">
         Building an 18-node security research lab
       </Heading>
       
-      <Text fontSize="lg" color="gray.800" mb={8} lineHeight="1.6">
+      <Text fontSize="lg" mb={8} lineHeight="1.6">
         Most people collect stamps or build model trains. I decided to build a full-scale 
         security research lab with 18 nodes, 6 VLANs, and comprehensive attack infrastructure.
       </Text>
@@ -22,12 +22,12 @@ const Post = () => (
       <Flex align="center" mb={12}>
         <Avatar size="sm" name="Matthew Vaishnav" src="/images/matthew.jpg" mr={3} />
         <Box>
-          <Text fontSize="sm" fontWeight={600} color="black">Matthew Vaishnav</Text>
-          <Text fontSize="sm" color="gray.600">15 Jan 2025 — 8 min read</Text>
+          <Text fontSize="sm" fontWeight={600}>Matthew Vaishnav</Text>
+          <Text fontSize="sm" color="gray.400">15 Jan 2025 — 8 min read</Text>
         </Box>
       </Flex>
 
-      <Box fontSize="lg" lineHeight="1.7" color="gray.800">
+      <Box fontSize="lg" lineHeight="1.7">
         <P>
           It started simple. I wanted to practice penetration testing without breaking real systems. 
           One Kali VM, one vulnerable target. Easy.
@@ -47,7 +47,7 @@ const Post = () => (
           In this article, I&apos;ll show you exactly how to replicate my setup.
         </P>
 
-        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700} color="black">
+        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700}>
           Hardware Requirements
         </Heading>
 
@@ -71,7 +71,7 @@ Network: 2x Gigabit NICs (one for WAN, one for management)`}
           Install Proxmox VE as your hypervisor. It&apos;s free, stable, and handles VLANs beautifully.
         </P>
 
-        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700} color="black">
+        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700}>
           Step 1: Install Proxmox VE
         </Heading>
 
@@ -88,7 +88,7 @@ Network: 2x Gigabit NICs (one for WAN, one for management)`}
           Access the web UI at https://your-ip:8006
         </P>
 
-        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700} color="black">
+        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700}>
           Step 2: Configure VLANs in Proxmox
         </Heading>
 
@@ -114,7 +114,7 @@ VLAN 50: Logging (Splunk, centralized log aggregation)
 VLAN 60: Malware Sandbox (air-gapped, fake DNS/C2)`}
         </CodeBlock>
 
-        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700} color="black">
+        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700}>
           Step 3: Deploy pfSense Firewall
         </Heading>
 
@@ -160,7 +160,7 @@ VLAN 50 (Logging): 192.168.50.0/24
 VLAN 60 (Sandbox): 192.168.60.0/24`}
         </CodeBlock>
 
-        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700} color="black">
+        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700}>
           Step 4: Deploy Security Onion
         </Heading>
 
@@ -202,7 +202,7 @@ ovs-vsctl -- --id=@m create mirror name=span \\
           This mirrors all traffic on vmbr1 to Security Onion&apos;s monitoring interface.
         </P>
 
-        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700} color="black">
+        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700}>
           Step 5: Deploy Attack Infrastructure
         </Heading>
 
@@ -231,7 +231,7 @@ Network: vmbr1, VLAN tag 30`}
   impacket-scripts`}
         </CodeBlock>
 
-        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700} color="black">
+        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700}>
           Step 6: Deploy Victim Network
         </Heading>
 
@@ -261,7 +261,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
 net user Administrator Password123!`}
         </CodeBlock>
 
-        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700} color="black">
+        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700}>
           Step 7: Deploy Splunk for Logging
         </Heading>
 
@@ -291,7 +291,7 @@ sudo /opt/splunk/bin/splunk enable boot-start`}
           Configure Splunk forwarders on all VMs to send logs to 192.168.50.10:9997.
         </P>
 
-        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700} color="black">
+        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700}>
           Step 8: Deploy Malware Sandbox
         </Heading>
 
@@ -317,7 +317,7 @@ sudo systemctl start inetsim
 sudo systemctl enable inetsim`}
         </CodeBlock>
 
-        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700} color="black">
+        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700}>
           Step 9: Configure Firewall Rules
         </Heading>
 
@@ -343,7 +343,7 @@ Destination: any
 Action: Block`}
         </CodeBlock>
 
-        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700} color="black">
+        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700}>
           Step 10: Snapshot Everything
         </Heading>
 
@@ -362,7 +362,7 @@ Description: "Pre-attack baseline state"`}
           Now you can break things and revert instantly.
         </P>
 
-        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700} color="black">
+        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700}>
           The Reality Check
         </Heading>
 
