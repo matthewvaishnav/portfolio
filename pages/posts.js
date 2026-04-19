@@ -15,6 +15,32 @@ const Posts = () => (
       <Box mb={12}>
         <Link 
           as={NextLink} 
+          href="/posts/histocore-framework" 
+          style={{ textDecoration: 'none' }}
+          display="block"
+          mb={8}
+          pb={8}
+          borderBottom="1px solid"
+          borderColor="gray.600"
+          _hover={{ opacity: 0.8 }}
+        >
+          <Box fontSize="xs" color="purple.400" mb={2} textTransform="uppercase" letterSpacing="wider">
+            RESEARCH
+          </Box>
+          <Heading as="h2" fontSize={32} mb={3} fontWeight={700} lineHeight="1.2">
+            I built an AI framework to democratize cancer detection
+          </Heading>
+          <Text fontSize="lg" mb={3} lineHeight="1.6">
+            Cancer kills because we find it too late. What if we could change that with better tools 
+            that any researcher could use to build smarter diagnostic systems?
+          </Text>
+          <Box fontSize="sm" color="gray.400">
+            By Matthew Vaishnav — 18 Jan 2025
+          </Box>
+        </Link>
+
+        <Link 
+          as={NextLink} 
           href="/posts/home-lab-setup" 
           style={{ textDecoration: 'none' }}
           display="block"
