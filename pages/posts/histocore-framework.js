@@ -29,13 +29,15 @@ const Post = () => (
 
       <Box fontSize="lg" lineHeight="1.7">
         <P>
-          My grandmother died of cancer. The doctors found it too late. Stage 4. Nothing they could do.
+          Cancer kills because we find it too late. The technology exists to catch it earlier, 
+          but the tools are scattered, complex, and inaccessible to most researchers.
         </P>
 
         <P>
-          That was 2019. I was studying computer science, learning about machine learning, 
-          and wondering why we couldn&apos;t use AI to catch cancer earlier. The technology existed. 
-          The data existed. But the tools were scattered, complex, and inaccessible.
+          That was the problem I set out to solve. I was studying computer science, learning 
+          about machine learning, and wondering why we couldn&apos;t use AI to democratize 
+          cancer detection. The data existed. The algorithms existed. But nobody had built 
+          a framework that made it all work together.
         </P>
 
         <P>
@@ -224,11 +226,6 @@ histocore train --config configs/camelyon16_resnet50.yaml`}
           Every researcher who uses HistoCore to build better diagnostic systems is contributing 
           to a future where cancer is caught early, treated effectively, and defeated consistently. 
           Where timing stops being the difference between life and death.
-        </P>
-
-        <P>
-          My grandmother didn&apos;t get that chance. But maybe, with better tools in more hands, 
-          someone else&apos;s grandmother will.
         </P>
 
         <P>
