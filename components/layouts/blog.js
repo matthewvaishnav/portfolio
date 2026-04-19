@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import NavBar from '../navbar'
 import { Box, Container } from '@chakra-ui/react'
 
 const BlogLayout = ({ children, title }) => {
@@ -13,6 +14,8 @@ const BlogLayout = ({ children, title }) => {
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <title>{t}</title>
       </Head>
+
+      <NavBar path="/posts" />
 
       <Container maxW="container.md" pt={14}>
         {children}
