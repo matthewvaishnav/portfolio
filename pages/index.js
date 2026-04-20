@@ -109,7 +109,7 @@ const Home = () => (
         </BioSection>
         <BioSection>
           <BioYear>2026 to present</BioYear>
-          Developing agentic coding workflows and infrastructure automation.
+          Developing computational pathology research and ML infrastructure.
         </BioSection>
       </Section>
 

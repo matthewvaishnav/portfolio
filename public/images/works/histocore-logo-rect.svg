@@ -1,0 +1,43 @@
+<svg width="300" height="120" viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="redGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#991b1b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="lightRedGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="120" rx="15" fill="url(#redGradient)" stroke="#7f1d1d" stroke-width="2"/>
+  
+  <!-- Left side - microscope/cell icon -->
+  <circle cx="60" cy="60" r="25" fill="none" stroke="#fecaca" stroke-width="2" opacity="0.8"/>
+  <circle cx="60" cy="60" r="15" fill="none" stroke="#fca5a5" stroke-width="1.5" opacity="0.9"/>
+  <circle cx="60" cy="60" r="8" fill="url(#lightRedGradient)" opacity="0.7"/>
+  
+  <!-- DNA helix -->
+  <path d="M 25 80 Q 35 75 45 80 Q 55 85 65 80 Q 75 75 85 80 Q 95 85 105 80" stroke="#fecaca" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M 25 85 Q 35 90 45 85 Q 55 80 65 85 Q 75 90 85 85 Q 95 80 105 85" stroke="#fca5a5" stroke-width="2" fill="none" opacity="0.6"/>
+  
+  <!-- Main text -->
+  <text x="150" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#fecaca">HistoCore</text>
+  <text x="150" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#fca5a5" opacity="0.9">Computational Pathology Framework</text>
+  
+  <!-- Right side - neural network -->
+  <circle cx="220" cy="45" r="3" fill="#fca5a5" opacity="0.8"/>
+  <circle cx="240" cy="40" r="3" fill="#fecaca" opacity="0.8"/>
+  <circle cx="260" cy="45" r="3" fill="#fca5a5" opacity="0.8"/>
+  <circle cx="230" cy="65" r="3" fill="#fecaca" opacity="0.8"/>
+  <circle cx="250" cy="70" r="3" fill="#fca5a5" opacity="0.8"/>
+  
+  <!-- Neural connections -->
+  <line x1="220" y1="45" x2="240" y2="40" stroke="#fca5a5" stroke-width="1" opacity="0.5"/>
+  <line x1="240" y1="40" x2="260" y2="45" stroke="#fecaca" stroke-width="1" opacity="0.5"/>
+  <line x1="220" y1="45" x2="230" y2="65" stroke="#fca5a5" stroke-width="1" opacity="0.5"/>
+  <line x1="240" y1="40" x2="230" y2="65" stroke="#fecaca" stroke-width="1" opacity="0.5"/>
+  <line x1="260" y1="45" x2="250" y2="70" stroke="#fca5a5" stroke-width="1" opacity="0.5"/>
+  <line x1="230" y1="65" x2="250" y2="70" stroke="#fecaca" stroke-width="1" opacity="0.5"/>
+</svg>
