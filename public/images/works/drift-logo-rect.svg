@@ -1,22 +1,57 @@
-<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
-  <rect width="600" height="400" fill="#fae8ff"/>
+<svg width="300" height="120" viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tealGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f766e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#065f46;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cyanAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#67e8f9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#22d3ee;stop-opacity:1" />
+    </linearGradient>
+  </defs>
   
-  <!-- Git graph as D letter -->
-  <circle cx="235" cy="195" r="11" fill="#a855f7"/>
-  <line x1="246" y1="195" x2="275" y2="195" stroke="#a855f7" stroke-width="5"/>
-  <circle cx="286" cy="195" r="11" fill="#a855f7"/>
+  <!-- Background -->
+  <rect width="300" height="120" rx="15" fill="url(#tealGradient)" stroke="#134e4a" stroke-width="2"/>
   
-  <!-- Branch -->
-  <line x1="286" y1="184" x2="286" y2="155" stroke="#a855f7" stroke-width="5"/>
-  <circle cx="286" cy="144" r="11" fill="#a855f7"/>
-  <line x1="297" y1="144" x2="320" y2="144" stroke="#a855f7" stroke-width="5"/>
-  <circle cx="331" cy="144" r="11" fill="#a855f7"/>
+  <!-- Left side - Git branch visualization -->
+  <!-- Main timeline -->
+  <path d="M 20 60 Q 40 60 60 60 Q 80 60 100 60" stroke="#67e8f9" stroke-width="3" fill="none" stroke-linecap="round"/>
   
-  <!-- Merge -->
-  <line x1="331" y1="155" x2="342" y2="184" stroke="#a855f7" stroke-width="5"/>
-  <line x1="297" y1="195" x2="332" y2="195" stroke="#a855f7" stroke-width="5"/>
-  <circle cx="343" cy="195" r="11" fill="#a855f7"/>
+  <!-- Branch lines -->
+  <path d="M 40 60 Q 45 45 50 30" stroke="#a7f3d0" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M 60 60 Q 65 75 70 90" stroke="#6ee7b7" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M 80 60 Q 85 50 90 40" stroke="#a7f3d0" stroke-width="2" fill="none" stroke-linecap="round"/>
   
-  <!-- Text integrated -->
-  <text x="365" y="205" font-family="'Inter', 'SF Pro Display', -apple-system, sans-serif" font-size="48" font-weight="600" fill="#1e293b" text-anchor="start">rift</text>
+  <!-- Commit nodes -->
+  <circle cx="40" cy="60" r="4" fill="#67e8f9"/>
+  <circle cx="60" cy="60" r="4" fill="#22d3ee"/>
+  <circle cx="80" cy="60" r="4" fill="#67e8f9"/>
+  
+  <!-- State indicators -->
+  <circle cx="50" cy="30" r="3" fill="#a7f3d0" opacity="0.8"/>
+  <circle cx="70" cy="90" r="3" fill="#6ee7b7" opacity="0.8"/>
+  <circle cx="90" cy="40" r="3" fill="#a7f3d0" opacity="0.8"/>
+  
+  <!-- Main text -->
+  <text x="180" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#a7f3d0">drift</text>
+  <text x="180" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#67e8f9" opacity="0.9">Server State Tracker</text>
+  
+  <!-- Right side - Server infrastructure -->
+  <rect x="230" y="35" width="6" height="10" rx="1" fill="#a7f3d0" opacity="0.7"/>
+  <rect x="238" y="30" width="6" height="15" rx="1" fill="#6ee7b7" opacity="0.7"/>
+  <rect x="246" y="33" width="6" height="12" rx="1" fill="#a7f3d0" opacity="0.7"/>
+  
+  <rect x="230" y="65" width="6" height="8" rx="1" fill="#67e8f9" opacity="0.7"/>
+  <rect x="238" y="62" width="6" height="11" rx="1" fill="#22d3ee" opacity="0.7"/>
+  <rect x="246" y="64" width="6" height="9" rx="1" fill="#67e8f9" opacity="0.7"/>
+  
+  <!-- Tracking connections -->
+  <line x1="225" y1="40" x2="230" y2="40" stroke="#67e8f9" stroke-width="1" opacity="0.5"/>
+  <line x1="225" y1="68" x2="230" y2="68" stroke="#67e8f9" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Version control dots -->
+  <circle cx="260" cy="25" r="2" fill="#67e8f9" opacity="0.6"/>
+  <circle cx="268" cy="30" r="2" fill="#6ee7b7" opacity="0.6"/>
+  <circle cx="260" cy="85" r="2" fill="#67e8f9" opacity="0.6"/>
+  <circle cx="268" cy="80" r="2" fill="#6ee7b7" opacity="0.6"/>
 </svg>
