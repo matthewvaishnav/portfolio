@@ -1,59 +1,51 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
   <rect width="800" height="600" fill="#000000"/>
   
-  <!-- Pixelated "drift" text -->
+  <!-- Pixelated "drift" text (recreated to match your image exactly) -->
   <g fill="#FFFFFF">
     <!-- d -->
     <rect x="300" y="430" width="20" height="20"/>
     <rect x="320" y="430" width="20" height="20"/>
     <rect x="340" y="430" width="20" height="20"/>
-    <rect x="360" y="430" width="20" height="20"/>
     <rect x="300" y="450" width="20" height="20"/>
-    <rect x="380" y="450" width="20" height="20"/>
+    <rect x="360" y="450" width="20" height="20"/>
     <rect x="300" y="470" width="20" height="20"/>
-    <rect x="380" y="470" width="20" height="20"/>
+    <rect x="360" y="470" width="20" height="20"/>
     <rect x="300" y="490" width="20" height="20"/>
-    <rect x="380" y="490" width="20" height="20"/>
+    <rect x="360" y="490" width="20" height="20"/>
     <rect x="300" y="510" width="20" height="20"/>
-    <rect x="380" y="510" width="20" height="20"/>
-    <rect x="300" y="530" width="20" height="20"/>
-    <rect x="320" y="530" width="20" height="20"/>
-    <rect x="340" y="530" width="20" height="20"/>
-    <rect x="360" y="530" width="20" height="20"/>
+    <rect x="320" y="510" width="20" height="20"/>
+    <rect x="340" y="510" width="20" height="20"/>
     
     <!-- r -->
-    <rect x="420" y="470" width="20" height="20"/>
-    <rect x="420" y="490" width="20" height="20"/>
-    <rect x="420" y="510" width="20" height="20"/>
-    <rect x="420" y="530" width="20" height="20"/>
-    <rect x="440" y="470" width="20" height="20"/>
-    <rect x="460" y="470" width="20" height="20"/>
+    <rect x="400" y="450" width="20" height="20"/>
+    <rect x="420" y="450" width="20" height="20"/>
+    <rect x="400" y="470" width="20" height="20"/>
+    <rect x="400" y="490" width="20" height="20"/>
+    <rect x="400" y="510" width="20" height="20"/>
     
     <!-- i -->
-    <rect x="500" y="450" width="20" height="20"/>
-    <rect x="500" y="490" width="20" height="20"/>
-    <rect x="500" y="510" width="20" height="20"/>
-    <rect x="500" y="530" width="20" height="20"/>
+    <rect x="460" y="430" width="20" height="20"/>
+    <rect x="460" y="470" width="20" height="20"/>
+    <rect x="460" y="490" width="20" height="20"/>
+    <rect x="460" y="510" width="20" height="20"/>
     
     <!-- f -->
-    <rect x="540" y="430" width="20" height="20"/>
-    <rect x="540" y="450" width="20" height="20"/>
-    <rect x="540" y="470" width="20" height="20"/>
+    <rect x="500" y="430" width="20" height="20"/>
+    <rect x="500" y="450" width="20" height="20"/>
+    <rect x="480" y="470" width="20" height="20"/>
+    <rect x="500" y="470" width="20" height="20"/>
     <rect x="520" y="470" width="20" height="20"/>
-    <rect x="560" y="470" width="20" height="20"/>
-    <rect x="540" y="490" width="20" height="20"/>
-    <rect x="540" y="510" width="20" height="20"/>
-    <rect x="540" y="530" width="20" height="20"/>
+    <rect x="500" y="490" width="20" height="20"/>
+    <rect x="500" y="510" width="20" height="20"/>
     
     <!-- t -->
-    <rect x="600" y="450" width="20" height="20"/>
+    <rect x="560" y="450" width="20" height="20"/>
+    <rect x="540" y="470" width="20" height="20"/>
+    <rect x="560" y="470" width="20" height="20"/>
     <rect x="580" y="470" width="20" height="20"/>
-    <rect x="600" y="470" width="20" height="20"/>
-    <rect x="620" y="470" width="20" height="20"/>
-    <rect x="640" y="470" width="20" height="20"/>
-    <rect x="600" y="490" width="20" height="20"/>
-    <rect x="600" y="510" width="20" height="20"/>
-    <rect x="600" y="530" width="20" height="20"/>
-    <rect x="620" y="530" width="20" height="20"/>
+    <rect x="560" y="490" width="20" height="20"/>
+    <rect x="560" y="510" width="20" height="20"/>
+    <rect x="580" y="510" width="20" height="20"/>
   </g>
 </svg>
