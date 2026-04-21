@@ -9,13 +9,13 @@ const SpeechBubble = () => {
       px={4}
       py={3}
       borderRadius="lg"
-      maxW="450px"
+      maxW="fit-content"
       mx="auto"
       mt={4}
       mb={6}
       backdropFilter="blur(10px)"
     >
-      <Text fontSize="md" textAlign="center">
+      <Text fontSize="md" textAlign="center" whiteSpace="nowrap">
         Hello, I&apos;m a computational systems engineer based in Kitchener!
       </Text>
     </Box>
