@@ -1,44 +1,74 @@
-<svg width="300" height="120" viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1e40af;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:1" />
-    </linearGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 150" fill="none">
+  <rect width="600" height="150" fill="#000000"/>
   
-  <!-- Background -->
-  <rect width="300" height="120" rx="15" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <!-- EST. text -->
+  <text x="30" y="80" font-family="monospace" font-size="18" fill="#FFFFFF" font-weight="bold">EST.</text>
   
-  <!-- Shield shape -->
-  <path d="M 60 25 L 85 35 L 85 75 Q 85 85 60 95 Q 35 85 35 75 L 35 35 Z" fill="url(#blueGradient)"/>
+  <!-- Pixelated shield/S icon (scaled down) -->
+  <g fill="#FFFFFF">
+    <rect x="245" y="35" width="6" height="6"/>
+    <rect x="225" y="41" width="6" height="6"/>
+    <rect x="231" y="41" width="6" height="6"/>
+    <rect x="237" y="41" width="6" height="6"/>
+    <rect x="219" y="47" width="6" height="6"/>
+    <rect x="225" y="47" width="6" height="6"/>
+    <rect x="231" y="47" width="6" height="6"/>
+    <rect x="207" y="53" width="6" height="6"/>
+    <rect x="213" y="53" width="6" height="6"/>
+    <rect x="219" y="53" width="6" height="6"/>
+    <rect x="225" y="53" width="6" height="6"/>
+    <rect x="231" y="53" width="6" height="6"/>
+    <rect x="237" y="53" width="6" height="6"/>
+    <rect x="243" y="53" width="6" height="6"/>
+    <rect x="249" y="53" width="6" height="6"/>
+    <rect x="255" y="53" width="6" height="6"/>
+    <rect x="261" y="53" width="6" height="6"/>
+    <rect x="267" y="53" width="6" height="6"/>
+    <rect x="273" y="53" width="6" height="6"/>
+    <rect x="219" y="59" width="6" height="6"/>
+    <rect x="225" y="59" width="6" height="6"/>
+    <rect x="231" y="59" width="6" height="6"/>
+    <rect x="237" y="59" width="6" height="6"/>
+    <rect x="243" y="59" width="6" height="6"/>
+    <rect x="249" y="59" width="6" height="6"/>
+    <rect x="255" y="59" width="6" height="6"/>
+    <rect x="225" y="65" width="6" height="6"/>
+    <rect x="231" y="65" width="6" height="6"/>
+    <rect x="237" y="65" width="6" height="6"/>
+    <rect x="243" y="65" width="6" height="6"/>
+    <rect x="249" y="65" width="6" height="6"/>
+    <rect x="255" y="71" width="6" height="6"/>
+    <rect x="219" y="77" width="6" height="6"/>
+    <rect x="225" y="77" width="6" height="6"/>
+    <rect x="231" y="77" width="6" height="6"/>
+    <rect x="237" y="77" width="6" height="6"/>
+    <rect x="243" y="77" width="6" height="6"/>
+    <rect x="249" y="83" width="6" height="6"/>
+    <rect x="255" y="83" width="6" height="6"/>
+    <rect x="261" y="83" width="6" height="6"/>
+    <rect x="267" y="83" width="6" height="6"/>
+    <rect x="225" y="89" width="6" height="6"/>
+    <rect x="231" y="89" width="6" height="6"/>
+    <rect x="237" y="89" width="6" height="6"/>
+    <rect x="243" y="89" width="6" height="6"/>
+    <rect x="249" y="95" width="6" height="6"/>
+    <rect x="255" y="95" width="6" height="6"/>
+    <rect x="261" y="95" width="6" height="6"/>
+    <rect x="267" y="95" width="6" height="6"/>
+    <rect x="219" y="101" width="6" height="6"/>
+    <rect x="225" y="101" width="6" height="6"/>
+    <rect x="231" y="101" width="6" height="6"/>
+    <rect x="237" y="101" width="6" height="6"/>
+    <rect x="243" y="107" width="6" height="6"/>
+    <rect x="249" y="107" width="6" height="6"/>
+    <rect x="255" y="107" width="6" height="6"/>
+    <rect x="261" y="107" width="6" height="6"/>
+    <rect x="255" y="113" width="6" height="6"/>
+  </g>
   
-  <!-- Letter S -->
-  <path d="M 50 45 Q 50 42 52 42 L 68 42 Q 70 42 70 45 Q 70 47 68 47 L 55 47 Q 50 47 50 52 Q 50 57 55 57 L 68 57 Q 70 57 70 59 Q 70 62 68 62 L 52 62 Q 50 62 50 64 Q 50 67 52 67 L 68 67 Q 73 67 73 62 L 73 59" 
-        stroke="white" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- 2026 text -->
+  <text x="530" y="80" font-family="monospace" font-size="18" fill="#FFFFFF" font-weight="bold">2026</text>
   
-  <!-- Digital elements -->
-  <rect x="25" y="50" width="3" height="3" fill="white" opacity="0.9"/>
-  <rect x="25" y="55" width="3" height="3" fill="white" opacity="0.7"/>
-  <rect x="25" y="60" width="3" height="3" fill="white" opacity="0.5"/>
-  <rect x="30" y="52" width="2" height="2" fill="white" opacity="0.8"/>
-  <rect x="30" y="57" width="2" height="2" fill="white" opacity="0.6"/>
-  
-  <!-- Main text -->
-  <text x="150" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1e40af">SENTINEL</text>
-  <text x="150" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">Anti-DDoS Protection System</text>
-  
-  <!-- Right side - network/security elements -->
-  <circle cx="220" cy="40" r="2" fill="#1e40af" opacity="0.8"/>
-  <circle cx="240" cy="35" r="2" fill="#3b82f6" opacity="0.8"/>
-  <circle cx="260" cy="40" r="2" fill="#1e40af" opacity="0.8"/>
-  <circle cx="230" cy="55" r="2" fill="#3b82f6" opacity="0.8"/>
-  <circle cx="250" cy="60" r="2" fill="#1e40af" opacity="0.8"/>
-  
-  <!-- Network connections -->
-  <line x1="220" y1="40" x2="240" y2="35" stroke="#3b82f6" stroke-width="1" opacity="0.6"/>
-  <line x1="240" y1="35" x2="260" y2="40" stroke="#1e40af" stroke-width="1" opacity="0.6"/>
-  <line x1="220" y1="40" x2="230" y2="55" stroke="#3b82f6" stroke-width="1" opacity="0.6"/>
-  <line x1="240" y1="35" x2="230" y2="55" stroke="#1e40af" stroke-width="1" opacity="0.6"/>
-  <line x1="260" y1="40" x2="250" y2="60" stroke="#3b82f6" stroke-width="1" opacity="0.6"/>
-  <line x1="230" y1="55" x2="250" y2="60" stroke="#1e40af" stroke-width="1" opacity="0.6"/>
+  <!-- SENTINEL text -->
+  <text x="150" y="135" font-family="monospace" font-size="32" fill="#FFFFFF" font-weight="bold" letter-spacing="4">SENTINEL</text>
 </svg>

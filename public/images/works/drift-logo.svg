@@ -1,52 +1,59 @@
-<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="tealGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0f766e;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#065f46;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient id="cyanAccent" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#67e8f9;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#22d3ee;stop-opacity:1" />
-    </linearGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#000000"/>
   
-  <!-- Background circle -->
-  <circle cx="100" cy="100" r="95" fill="url(#tealGradient)" stroke="#134e4a" stroke-width="2"/>
-  
-  <!-- Git branch visualization -->
-  <!-- Main branch line -->
-  <path d="M 40 100 Q 70 100 100 100 Q 130 100 160 100" stroke="#67e8f9" stroke-width="4" fill="none" stroke-linecap="round"/>
-  
-  <!-- Branch lines showing drift/changes -->
-  <path d="M 70 100 Q 80 80 90 60" stroke="#a7f3d0" stroke-width="3" fill="none" stroke-linecap="round"/>
-  <path d="M 100 100 Q 110 120 120 140" stroke="#6ee7b7" stroke-width="3" fill="none" stroke-linecap="round"/>
-  <path d="M 130 100 Q 140 85 150 70" stroke="#a7f3d0" stroke-width="3" fill="none" stroke-linecap="round"/>
-  
-  <!-- Commit nodes -->
-  <circle cx="70" cy="100" r="6" fill="#67e8f9"/>
-  <circle cx="100" cy="100" r="6" fill="#22d3ee"/>
-  <circle cx="130" cy="100" r="6" fill="#67e8f9"/>
-  
-  <!-- State change indicators -->
-  <circle cx="90" cy="60" r="4" fill="#a7f3d0" opacity="0.8"/>
-  <circle cx="120" cy="140" r="4" fill="#6ee7b7" opacity="0.8"/>
-  <circle cx="150" cy="70" r="4" fill="#a7f3d0" opacity="0.8"/>
-  
-  <!-- Server/infrastructure elements -->
-  <rect x="45" y="130" width="8" height="12" rx="2" fill="#a7f3d0" opacity="0.7"/>
-  <rect x="55" y="125" width="8" height="17" rx="2" fill="#6ee7b7" opacity="0.7"/>
-  <rect x="65" y="128" width="8" height="14" rx="2" fill="#a7f3d0" opacity="0.7"/>
-  
-  <!-- Drift text -->
-  <text x="100" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#a7f3d0">drift</text>
-  
-  <!-- Tracking indicators -->
-  <circle cx="50" cy="70" r="2" fill="#67e8f9" opacity="0.6"/>
-  <circle cx="150" cy="130" r="2" fill="#67e8f9" opacity="0.6"/>
-  <circle cx="60" cy="160" r="2" fill="#6ee7b7" opacity="0.6"/>
-  <circle cx="140" cy="40" r="2" fill="#6ee7b7" opacity="0.6"/>
-  
-  <!-- Connection lines for tracking -->
-  <line x1="50" y1="70" x2="70" y2="100" stroke="#67e8f9" stroke-width="1" opacity="0.4"/>
-  <line x1="150" y1="130" x2="130" y2="100" stroke="#67e8f9" stroke-width="1" opacity="0.4"/>
+  <!-- Pixelated "drift" text -->
+  <g fill="#FFFFFF">
+    <!-- d -->
+    <rect x="300" y="430" width="20" height="20"/>
+    <rect x="320" y="430" width="20" height="20"/>
+    <rect x="340" y="430" width="20" height="20"/>
+    <rect x="360" y="430" width="20" height="20"/>
+    <rect x="300" y="450" width="20" height="20"/>
+    <rect x="380" y="450" width="20" height="20"/>
+    <rect x="300" y="470" width="20" height="20"/>
+    <rect x="380" y="470" width="20" height="20"/>
+    <rect x="300" y="490" width="20" height="20"/>
+    <rect x="380" y="490" width="20" height="20"/>
+    <rect x="300" y="510" width="20" height="20"/>
+    <rect x="380" y="510" width="20" height="20"/>
+    <rect x="300" y="530" width="20" height="20"/>
+    <rect x="320" y="530" width="20" height="20"/>
+    <rect x="340" y="530" width="20" height="20"/>
+    <rect x="360" y="530" width="20" height="20"/>
+    
+    <!-- r -->
+    <rect x="420" y="470" width="20" height="20"/>
+    <rect x="420" y="490" width="20" height="20"/>
+    <rect x="420" y="510" width="20" height="20"/>
+    <rect x="420" y="530" width="20" height="20"/>
+    <rect x="440" y="470" width="20" height="20"/>
+    <rect x="460" y="470" width="20" height="20"/>
+    
+    <!-- i -->
+    <rect x="500" y="450" width="20" height="20"/>
+    <rect x="500" y="490" width="20" height="20"/>
+    <rect x="500" y="510" width="20" height="20"/>
+    <rect x="500" y="530" width="20" height="20"/>
+    
+    <!-- f -->
+    <rect x="540" y="430" width="20" height="20"/>
+    <rect x="540" y="450" width="20" height="20"/>
+    <rect x="540" y="470" width="20" height="20"/>
+    <rect x="520" y="470" width="20" height="20"/>
+    <rect x="560" y="470" width="20" height="20"/>
+    <rect x="540" y="490" width="20" height="20"/>
+    <rect x="540" y="510" width="20" height="20"/>
+    <rect x="540" y="530" width="20" height="20"/>
+    
+    <!-- t -->
+    <rect x="600" y="450" width="20" height="20"/>
+    <rect x="580" y="470" width="20" height="20"/>
+    <rect x="600" y="470" width="20" height="20"/>
+    <rect x="620" y="470" width="20" height="20"/>
+    <rect x="640" y="470" width="20" height="20"/>
+    <rect x="600" y="490" width="20" height="20"/>
+    <rect x="600" y="510" width="20" height="20"/>
+    <rect x="600" y="530" width="20" height="20"/>
+    <rect x="620" y="530" width="20" height="20"/>
+  </g>
 </svg>
