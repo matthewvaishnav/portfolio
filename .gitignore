@@ -35,3 +35,7 @@ next-env.d.ts
 # kiro specs
 .kiro/
 
+# resume files
+resume.md
+resume.pdf
+
