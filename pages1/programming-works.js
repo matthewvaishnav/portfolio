@@ -20,7 +20,7 @@ const ProgrammingWorks = () => (
           <WorkGridItem 
             id="computational-pathology" 
             href="https://matthewvaishnav.github.io/computational-pathology-research/"
-            thumbnail="/images/works/soc-thumb.svg" 
+            thumbnail="/portfolio/images/works/soc-thumb.svg" 
             title="Computational Pathology Research"
           >
             ML framework for histopathology image analysis
@@ -30,19 +30,19 @@ const ProgrammingWorks = () => (
           <WorkGridItem
             id="sentinel"
             href="/programming-works/sentinel"
-            thumbnail="/images/works/sentinel-hero.svg"
+            thumbnail="/portfolio/images/works/sentinel-hero.svg"
             title="SENTINEL"
           >
             Hardened anti-DDoS architecture with verified benchmarks
           </WorkGridItem>
         </Section>
         <Section>
-          <WorkGridItem id="safebot" thumbnail="/images/works/ctf-thumb.svg" title="SafeBot v2">
+          <WorkGridItem id="safebot" thumbnail="/portfolio/images/works/ctf-thumb.svg" title="SafeBot v2">
             Local AI web agent, no API keys
           </WorkGridItem>
         </Section>
         <Section delay={0.1}>
-          <WorkGridItem id="out-of-orbit" thumbnail="/images/works/sigma-thumb.svg" title="Out of Orbit">
+          <WorkGridItem id="out-of-orbit" thumbnail="/portfolio/images/works/sigma-thumb.svg" title="Out of Orbit">
             Vaporwave arcade shooter with object pooling
           </WorkGridItem>
         </Section>
@@ -50,19 +50,19 @@ const ProgrammingWorks = () => (
           <WorkGridItem
             id="drift"
             href="/programming-works/drift"
-            thumbnail="/images/works/drift-hero.svg"
+            thumbnail="/portfolio/images/works/drift-hero.svg"
             title="drift 🔍"
           >
             Git-like server state tracker
           </WorkGridItem>
         </Section>
         <Section delay={0.2}>
-          <WorkGridItem id="replay" thumbnail="/images/works/soc-thumb.svg" title="replay 🎬">
+          <WorkGridItem id="replay" thumbnail="/portfolio/images/works/soc-thumb.svg" title="replay 🎬">
             Record sessions → Ansible playbooks
           </WorkGridItem>
         </Section>
         <Section delay={0.2}>
-          <WorkGridItem id="whoops" thumbnail="/images/works/ctf-thumb.svg" title="whoops">
+          <WorkGridItem id="whoops" thumbnail="/portfolio/images/works/ctf-thumb.svg" title="whoops">
             Intercepts dangerous shell commands
           </WorkGridItem>
         </Section>

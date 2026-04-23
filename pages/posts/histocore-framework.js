@@ -20,7 +20,7 @@ const Post = () => (
       </Text>
       
       <Flex align="center" mb={12}>
-        <Avatar size="sm" name="Matthew Vaishnav" src="/images/matthew.jpg" mr={3} />
+        <Avatar size="sm" name="Matthew Vaishnav" src="/portfolio/images/matthew.jpg" mr={3} />
         <Box>
           <Text fontSize="sm" fontWeight={600}>Matthew Vaishnav</Text>
           <Text fontSize="sm" color="gray.400">18 Jan 2025 — 6 min read</Text>
