@@ -7,11 +7,8 @@ import {
   Button,
   List,
   ListItem,
-  useColorModeValue,
-  SimpleGrid,
   Text,
-  Flex,
-  Badge
+  Flex
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
@@ -24,12 +21,14 @@ import { SiTryhackme } from 'react-icons/si'
 const Home = () => (
   <Layout>
     <Container>
-      <Box display={{ md: 'flex' }}>
+      <Box display={{ base: 'block', md: 'flex' }} alignItems="center" gap={{ base: 4, md: 6 }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
             Matthew Vaishnav
           </Heading>
-          <p style={{ fontSize: '20px', marginBottom: '4px' }}>Computational Systems Engineer ( ML / Pathology / Security )</p>
+          <Text fontSize={{ base: 'md', md: 'xl' }} mb={1}>
+            Computational Systems Engineer ( ML / Pathology / Security )
+          </Text>
         </Box>
         <Box
           flexShrink={0}
@@ -41,22 +40,21 @@ const Home = () => (
             borderColor="whiteAlpha.800"
             borderWidth={2}
             borderStyle="solid"
-            w="100px"
-            h="100px"
+            w={{ base: '88px', md: '100px' }}
+            h={{ base: '88px', md: '100px' }}
             display="inline-block"
             borderRadius="full"
             overflow="hidden"
           >
-            <img
+            <Box
+              as="img"
               src="/portfolio/images/matthew.jpg"
               alt="Profile image"
-              style={{ 
-                borderRadius: '50%', 
-                width: '100px', 
-                height: '100px',
-                objectFit: 'cover',
-                objectPosition: 'center'
-              }}
+              borderRadius="full"
+              w={{ base: '88px', md: '100px' }}
+              h={{ base: '88px', md: '100px' }}
+              objectFit="cover"
+              objectPosition="center"
             />
           </Box>
         </Box>
@@ -67,7 +65,7 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-          &nbsp;&nbsp;&nbsp;&nbsp;Matthew Vaishnav is a computational systems engineer based in Kitchener who builds machine learning systems and research tools for computational pathology. He is currently building <Link href="https://matthewvaishnav.github.io/computational-pathology-research/" color="teal.500" target="_blank">HistoCore</Link>, a production-grade PyTorch framework with 1,083 tests, attention-based MIL models, and comprehensive WSI processing pipelines. When he&apos;s not coding, he&apos;s refining workflows and exploring new ways to build reliable and useful systems.
+          Matthew Vaishnav is a computational systems engineer based in Kitchener who builds machine learning systems and research tools for computational pathology. He is currently building <Link href="https://matthewvaishnav.github.io/computational-pathology-research/" color="teal.500" target="_blank">HistoCore</Link>, a production-grade PyTorch framework with 1,083 tests, attention-based MIL models, and comprehensive WSI processing pipelines. When he&apos;s not coding, he&apos;s refining workflows and exploring new ways to build reliable and useful systems.
         </Paragraph>
         <Flex justify="center" my={4}>
           <Button
@@ -77,6 +75,7 @@ const Home = () => (
             rightIcon={<ChevronRightIcon />}
             colorScheme="teal"
             size="lg"
+            w={{ base: 'full', sm: 'auto' }}
           >
             My Portfolio
           </Button>

@@ -1,11 +1,9 @@
-import Logo from './logo'
 import NextLink from 'next/link'
 import {
   Container,
   Box,
   Link,
   Stack,
-  Heading,
   Flex,
   Menu,
   MenuItem,
@@ -52,20 +50,24 @@ const Navbar = props => {
     >
       <Container
         display="flex"
-        p={2}
+        py={2}
+        px={{ base: 4, md: 2 }}
         maxW="container.md"
         wrap="wrap"
         align="center"
         justify="space-between"
+        gap={2}
       >
-        <Flex align="center" mr={5}>
+        <Flex align="center" mr={{ base: 2, md: 5 }} minW={0}>
           <Link
             as={NextLink}
             href="/"
             scroll={false}
             p={2}
-            fontSize="16px"
+            fontSize={{ base: '15px', sm: '16px' }}
             fontWeight="bold"
+            lineHeight="shorter"
+            whiteSpace="nowrap"
             color={useColorModeValue('gray.800', 'whiteAlpha.900')}
             _hover={{ textDecoration: 'none' }}
           >
@@ -102,15 +104,16 @@ const Navbar = props => {
           </LinkItem>
         </Stack>
 
-        <Box flex={1} align="right">
+        <Box flex={1} display="flex" justifyContent="flex-end" alignItems="center">
           <ThemeToggleButton />
 
-          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+          <Box ml={2} display={{ base: 'inline-flex', md: 'none' }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
                 as={IconButton}
                 icon={<HamburgerIcon />}
                 variant="outline"
+                size="sm"
                 aria-label="Options"
               />
               <MenuList>

@@ -7,6 +7,8 @@ import {
   Button,
   List,
   ListItem,
+  Stack,
+  Text,
   useColorModeValue
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
@@ -31,12 +33,14 @@ const Programming = () => (
         Available for co-op / Summer / Fall 2026
       </Box>
 
-      <Box display={{ md: 'flex' }}>
+      <Box display={{ base: 'block', md: 'flex' }} alignItems="center" gap={{ base: 4, md: 6 }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
             Matthew Vaishnav
           </Heading>
-          <p>I build labs to learn how things break.</p>
+          <Text fontSize={{ base: 'md', md: 'lg' }}>
+            I build labs to learn how things break.
+          </Text>
         </Box>
         <Box
           flexShrink={0}
@@ -48,22 +52,21 @@ const Programming = () => (
             borderColor="whiteAlpha.800"
             borderWidth={2}
             borderStyle="solid"
-            w="100px"
-            h="100px"
+            w={{ base: '88px', md: '100px' }}
+            h={{ base: '88px', md: '100px' }}
             display="inline-block"
             borderRadius="full"
             overflow="hidden"
           >
-            <img
+            <Box
+              as="img"
               src="/portfolio/images/matthew.jpg"
               alt="Profile image"
-              style={{ 
-                borderRadius: '50%', 
-                width: '100px', 
-                height: '100px',
-                objectFit: 'cover',
-                objectPosition: 'center'
-              }}
+              borderRadius="full"
+              w={{ base: '88px', md: '100px' }}
+              h={{ base: '88px', md: '100px' }}
+              objectFit="cover"
+              objectPosition="center"
             />
           </Box>
         </Box>
@@ -73,14 +76,20 @@ const Programming = () => (
         <Paragraph>
           Software developer building automation tools, CLI utilities, and games.
         </Paragraph>
-        <Box align="center" my={4}>
+        <Stack
+          direction={{ base: 'column', sm: 'row' }}
+          spacing={3}
+          align="stretch"
+          justify="center"
+          my={4}
+        >
           <Button
             as={NextLink}
             href="/programming-works"
             scroll={false}
             rightIcon={<ChevronRightIcon />}
             colorScheme="teal"
-            mr={2}
+            w={{ base: 'full', sm: 'auto' }}
           >
             View Projects
           </Button>
@@ -89,7 +98,7 @@ const Programming = () => (
             href="mailto:matthewvaishnav@gmail.com"
             colorScheme="teal"
             variant="outline"
-            mr={2}
+            w={{ base: 'full', sm: 'auto' }}
           >
             Contact
           </Button>
@@ -99,10 +108,11 @@ const Programming = () => (
             target="_blank"
             colorScheme="teal"
             variant="outline"
+            w={{ base: 'full', sm: 'auto' }}
           >
             LinkedIn ↗
           </Button>
-        </Box>
+        </Stack>
       </Section>
 
       <Section delay={0.2}>

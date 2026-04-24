@@ -15,11 +15,12 @@ const CodeBlock = ({ children, language = 'bash' }) => {
     >
       <Box
         as="pre"
-        p={4}
+        p={{ base: 3, md: 4 }}
+        pr={{ base: 12, md: 4 }}
         bg="gray.50"
         borderRadius="md"
         overflowX="auto"
-        fontSize="sm"
+        fontSize={{ base: 'xs', md: 'sm' }}
         border="1px solid"
         borderColor="gray.200"
       >
@@ -34,7 +35,7 @@ const CodeBlock = ({ children, language = 'bash' }) => {
         top={2}
         right={2}
         onClick={onCopy}
-        opacity={isHovered ? 1 : 0}
+        opacity={{ base: 1, md: isHovered ? 1 : 0 }}
         transition="opacity 0.2s"
         aria-label="Copy code"
         colorScheme={hasCopied ? 'green' : 'gray'}

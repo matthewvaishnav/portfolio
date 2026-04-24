@@ -4,13 +4,13 @@ import { ArrowBackIcon } from '@chakra-ui/icons'
 
 export const Title = ({ children }) => (
   <Box mb={6}>
-    <Flex align="center" mb={3}>
+    <Flex align="center" mb={3} wrap="wrap" rowGap={2}>
       <Link as={NextLink} href="/systems-engineering" display="flex" alignItems="center" _hover={{ textDecoration: "underline" }}>
         <ArrowBackIcon mr={2} />
         <Text fontSize="sm" fontWeight="medium">Back to Portfolio</Text>
       </Link>
     </Flex>
-    <Heading as="h1" fontSize={28} fontWeight="bold">
+    <Heading as="h1" fontSize={{ base: 24, md: 28 }} fontWeight="bold" lineHeight="1.2">
       {children}
     </Heading>
   </Box>

@@ -3,6 +3,26 @@ import BlogLayout from '../../components/layouts/blog'
 import P from '../../components/paragraph'
 import CodeBlock from '../../components/code-block'
 
+const articleHeadingProps = {
+  fontSize: { base: '3xl', md: '5xl' },
+  mb: { base: 4, md: 6 },
+  fontWeight: 700,
+  lineHeight: '1.2'
+}
+
+const leadTextProps = {
+  fontSize: { base: 'md', md: 'lg' },
+  mb: { base: 6, md: 8 },
+  lineHeight: '1.6'
+}
+
+const sectionHeadingProps = {
+  fontSize: { base: '2xl', md: '4xl' },
+  mt: { base: 10, md: 12 },
+  mb: { base: 4, md: 6 },
+  fontWeight: 700
+}
+
 const Post = () => (
   <BlogLayout title="Building HistoCore">
     <Box>
@@ -10,24 +30,24 @@ const Post = () => (
         RESEARCH
       </Box>
       
-      <Heading as="h1" fontSize={48} mb={6} fontWeight={700} lineHeight="1.2">
+      <Heading as="h1" {...articleHeadingProps}>
         I built an AI framework to democratize cancer detection
       </Heading>
       
-      <Text fontSize="lg" mb={8} lineHeight="1.6">
+      <Text {...leadTextProps}>
         Cancer kills because we find it too late. What if we could change that with better tools 
         that any researcher could use to build smarter diagnostic systems?
       </Text>
       
-      <Flex align="center" mb={12}>
-        <Avatar size="sm" name="Matthew Vaishnav" src="/portfolio/images/matthew.jpg" mr={3} />
+      <Flex align="center" wrap="wrap" gap={3} mb={{ base: 8, md: 12 }}>
+        <Avatar size="sm" name="Matthew Vaishnav" src="/portfolio/images/matthew.jpg" />
         <Box>
           <Text fontSize="sm" fontWeight={600}>Matthew Vaishnav</Text>
           <Text fontSize="sm" color="gray.400">18 Jan 2025 — 6 min read</Text>
         </Box>
       </Flex>
 
-      <Box fontSize="lg" lineHeight="1.7">
+      <Box fontSize={{ base: 'md', md: 'lg' }} lineHeight="1.7">
         <P>
           Cancer kills because we find it too late. The technology exists to catch it earlier, 
           but the tools are scattered, complex, and inaccessible to most researchers.
@@ -45,7 +65,7 @@ const Post = () => (
           accessible to anyone with a laptop and determination.
         </P>
 
-        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700}>
+        <Heading as="h2" {...sectionHeadingProps}>
           The Problem with Cancer Detection
         </Heading>
 
@@ -67,7 +87,7 @@ const Post = () => (
           knowledge that most researchers don&apos;t have.
         </P>
 
-        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700}>
+        <Heading as="h2" {...sectionHeadingProps}>
           What HistoCore Actually Does
         </Heading>
 
@@ -110,7 +130,7 @@ histocore predict --slides new_samples/ --output results.csv`}
           techniques to find those needles in haystacks.
         </P>
 
-        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700}>
+        <Heading as="h2" {...sectionHeadingProps}>
           Real Results on Real Data
         </Heading>
 
@@ -136,7 +156,7 @@ histocore predict --slides new_samples/ --output results.csv`}
           55% code coverage. If it breaks, you&apos;ll know immediately.
         </P>
 
-        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700}>
+        <Heading as="h2" {...sectionHeadingProps}>
           Why This Matters for Society
         </Heading>
 
@@ -162,7 +182,7 @@ histocore predict --slides new_samples/ --output results.csv`}
           No licensing fees. No vendor lock-in. Just better healthcare for everyone.
         </P>
 
-        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700}>
+        <Heading as="h2" {...sectionHeadingProps}>
           The Technical Foundation
         </Heading>
 
@@ -187,7 +207,7 @@ histocore predict --slides new_samples/ --output results.csv`}
           from any paper that uses HistoCore.
         </P>
 
-        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700}>
+        <Heading as="h2" {...sectionHeadingProps}>
           Getting Started
         </Heading>
 
@@ -209,7 +229,7 @@ histocore train --config configs/camelyon16_resnet50.yaml`}
           - no expensive cloud compute required.
         </P>
 
-        <Heading as="h2" fontSize={32} mt={12} mb={6} fontWeight={700}>
+        <Heading as="h2" {...sectionHeadingProps}>
           The Bigger Picture
         </Heading>
 
