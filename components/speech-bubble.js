@@ -6,10 +6,11 @@ const SpeechBubble = () => {
       position="relative"
       bg={useColorModeValue('rgba(0,0,0,0.6)', 'rgba(255,255,255,0.1)')}
       color="white"
-      px={{ base: 4, md: 5 }}
+      px={{ base: 3, md: 5 }}
       py={{ base: 2.5, md: 3 }}
       borderRadius={{ base: 'md', md: 'lg' }}
-      maxW={{ base: '26rem', md: '30rem' }}
+      w="fit-content"
+      maxW="calc(100vw - 1rem)"
       mx="auto"
       mt={4}
       mb={6}
@@ -17,8 +18,9 @@ const SpeechBubble = () => {
       textAlign="center"
     >
       <Text
-        fontSize={{ base: 'sm', md: 'md' }}
+        fontSize="clamp(0.65rem, 2vw, 1rem)"
         lineHeight="tall"
+        whiteSpace="nowrap"
       >
         Hello, I&apos;m a computational systems engineer based in Kitchener!
       </Text>
