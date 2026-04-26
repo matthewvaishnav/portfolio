@@ -117,18 +117,20 @@ const Navbar = props => {
                 aria-label="Options"
               />
               <MenuList>
-                <MenuItem as={Link} href="/">
+                <MenuItem as={NextLink} href="/" scroll={false}>
                   About
                 </MenuItem>
-                <MenuItem as={Link} href="/posts">
+                <MenuItem as={NextLink} href="/posts" scroll={false}>
                   Posts
                 </MenuItem>
-                <MenuItem as={Link} href="/security">
+                <MenuItem as={NextLink} href="/security" scroll={false}>
                   Security
                 </MenuItem>
                 <MenuItem
                   as={Link}
                   href="https://github.com/matthewvaishnav/portfolio"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   View Source
                 </MenuItem>
