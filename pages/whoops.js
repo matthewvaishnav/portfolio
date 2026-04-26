@@ -6,7 +6,7 @@ import {
   ListItem
 } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../components/work'
+import { Title, Meta } from '../components/work'
 import P from '../components/paragraph'
 import Layout from '../components/layouts/article'
 
@@ -29,8 +29,6 @@ const Work = () => (
           <span>Python, Shell Hooks, Bash</span>
         </ListItem>
       </List>
-
-      <WorkImage src="/portfolio/images/works/whoops-hero.svg" alt="whoops" />
     </Container>
   </Layout>
 )
