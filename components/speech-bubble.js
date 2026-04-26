@@ -6,10 +6,10 @@ const SpeechBubble = () => {
       position="relative"
       bg={useColorModeValue('rgba(0,0,0,0.6)', 'rgba(255,255,255,0.1)')}
       color="white"
-      px={{ base: 3, md: 4 }}
+      px={{ base: 4, md: 5 }}
       py={{ base: 2.5, md: 3 }}
       borderRadius={{ base: 'md', md: 'lg' }}
-      maxW={{ base: '90%', md: '500px' }}
+      maxW={{ base: '26rem', md: '30rem' }}
       mx="auto"
       mt={4}
       mb={6}
