@@ -18,7 +18,7 @@ const Works = () => (
             thumbnail="/portfolio/images/works/histocore-logo-rect.svg" 
             title="HistoCore"
           >
-            ML framework for histopathology image analysis
+            Production pathology AI with real-time WSI streaming
           </WorkGridItem>
         </Section>
         <Section>

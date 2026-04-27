@@ -17,8 +17,10 @@ const Work = () => (
         HistoCore <Badge>2025-</Badge>
       </Title>
       <P>
-        A production-grade PyTorch framework for computational pathology research.
-        Built for whole slide image analysis with attention-based MIL models and 1,448 tests.
+        HistoCore has grown from a research MIL framework into a production-oriented
+        pathology platform for real-time whole slide image streaming. Recent updates
+        added validated PCam benchmarks, a 1,483-test suite, and an in-progress
+        foundation-model track built around Phikon, UNI, and CONCH.
       </P>
       <List ml={4} my={4}>
         <ListItem>
@@ -28,12 +30,20 @@ const Work = () => (
           </Link>
         </ListItem>
         <ListItem>
+          <Meta>Status</Meta>
+          <span>Real-time WSI streaming complete; foundation-model benchmarking in progress</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Validation</Meta>
+          <span>85.26% PCam accuracy, 0.9394 AUC, 1,483 tests</span>
+        </ListItem>
+        <ListItem>
           <Meta>Platform</Meta>
           <span>Linux/macOS/Windows</span>
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
-          <span>PyTorch, Python, OpenSlide</span>
+          <span>PyTorch, OpenSlide, FastAPI, DICOM/HL7 FHIR</span>
         </ListItem>
       </List>
     </Container>
