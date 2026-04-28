@@ -17,10 +17,10 @@ const Work = () => (
         HistoCore <Badge>2025-</Badge>
       </Title>
       <P>
-        HistoCore has grown from a research MIL framework into a production-oriented
-        pathology platform for real-time whole slide image streaming. Recent updates
-        added validated PCam benchmarks, a 1,483-test suite, and an in-progress
-        foundation-model track built around Phikon, UNI, and CONCH.
+        Production-grade PyTorch framework for computational pathology research with
+        validated benchmarks on PatchCamelyon and CAMELYON16. Features 8-12x training
+        optimization, federated learning with differential privacy, production-ready
+        PACS integration, and comprehensive testing infrastructure.
       </P>
       <List ml={4} my={4}>
         <ListItem>
@@ -30,20 +30,24 @@ const Work = () => (
           </Link>
         </ListItem>
         <ListItem>
-          <Meta>Status</Meta>
-          <span>Real-time WSI streaming complete; foundation-model benchmarking in progress</span>
+          <Meta>Performance</Meta>
+          <span>100% validation AUC (epoch 10), 85.26% test accuracy, 0.9394 AUC on 32K test samples</span>
         </ListItem>
         <ListItem>
-          <Meta>Validation</Meta>
-          <span>85.26% PCam accuracy, 0.9394 AUC, 1,483 tests</span>
+          <Meta>Optimization</Meta>
+          <span>8-12x faster training (2-3 hours vs 20-40 hours), 85% GPU utilization</span>
         </ListItem>
         <ListItem>
-          <Meta>Platform</Meta>
-          <span>Linux/macOS/Windows</span>
+          <Meta>Testing</Meta>
+          <span>1,448 tests with 55% coverage, 100+ property-based correctness tests</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Clinical</Meta>
+          <span>PACS integration, HIPAA compliance, real-time inference (&lt;5s)</span>
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
-          <span>PyTorch, OpenSlide, FastAPI, DICOM/HL7 FHIR</span>
+          <span>PyTorch 2.0+, OpenSlide, DICOM/FHIR, Federated Learning</span>
         </ListItem>
       </List>
     </Container>
