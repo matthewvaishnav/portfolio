@@ -237,7 +237,7 @@ python experiments/evaluate_pcam.py --config experiments/configs/pcam_rtx4070_la
         <P>
           The framework now achieves 100% validation AUC with 85% GPU utilization, includes
           1,448 tests with property-based validation, and supports real-time inference under
-          5 seconds. These aren't just research metrics—they're the foundation for a system
+          5 seconds. These aren&apos;t just research metrics—they&apos;re the foundation for a system
           that can actually be used in clinical settings.
         </P>
 
