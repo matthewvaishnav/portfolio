@@ -35,7 +35,7 @@ const Post = () => (
       </Heading>
       
       <Text {...leadTextProps}>
-        Fifteen months after I first wrote about HistoCore, the project has grown from an
+        Since I first wrote about HistoCore, the project has grown from an
         accessible cancer-detection framework into a broader computational pathology platform
         with validated benchmarks, clinical threshold tuning, and workflow pieces designed for
         real hospital data.
