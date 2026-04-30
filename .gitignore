@@ -21,6 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.next-dev.log
 
 # local env files
 .env*.local
@@ -39,3 +40,21 @@ next-env.d.ts
 resume.md
 resume.pdf
 
+# temporary files and folders
+*.log
+.vscode/
+.hypothesis/
+.pytest_cache/
+.qodo/
+
+# random assets not needed in repo
+6002673227767036131/
+*.svg
+*.png
+3_HistoCore.png
+HistoCore.svg
+1.svg
+1 (1).svg
+
+# font files (keep only in public)
+dropline-font/
