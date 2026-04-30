@@ -28,7 +28,7 @@ const Posts = () => (
             RESEARCH
           </Box>
           <Heading as="h2" fontSize={{ base: '2xl', md: '4xl' }} mb={3} fontWeight={700} lineHeight="1.2">
-            I built an AI framework to democratize cancer detection
+            I built an AI framework for cancer detection
           </Heading>
           <Text fontSize={{ base: 'md', md: 'lg' }} mb={3} lineHeight="1.6">
             Cancer kills because we find it too late. What if we could change that with better tools 
