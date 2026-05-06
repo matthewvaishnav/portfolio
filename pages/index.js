@@ -161,6 +161,21 @@ const Home = () => (
           </ListItem>
         </List>
       </Section>
+
+      <Box mt={8} pt={6} borderTop="1px solid" borderColor="whiteAlpha.200" textAlign="center">
+        <Text fontSize="sm" color="gray.500">
+          Inspired by{' '}
+          <Link 
+            href="https://www.craftz.dog/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            color="teal.500"
+            _hover={{ textDecoration: 'underline' }}
+          >
+            Takuya Matsuyama&apos;s homepage
+          </Link>
+        </Text>
+      </Box>
     </Container>
   </Layout>
 )

@@ -15,6 +15,32 @@ const Posts = () => (
       <Box mb={{ base: 8, md: 12 }}>
         <Link 
           as={NextLink} 
+          href="/posts/histocore-production-ready" 
+          style={{ textDecoration: 'none' }}
+          display="block"
+          mb={{ base: 6, md: 8 }}
+          pb={{ base: 6, md: 8 }}
+          borderBottom="1px solid"
+          borderColor="gray.600"
+          _hover={{ opacity: 0.8 }}
+        >
+          <Box fontSize="xs" color="purple.400" mb={2} textTransform="uppercase" letterSpacing="wider">
+            RESEARCH UPDATE
+          </Box>
+          <Heading as="h2" fontSize={{ base: '2xl', md: '4xl' }} mb={3} fontWeight={700} lineHeight="1.2">
+            HistoCore is now production-ready
+          </Heading>
+          <Text fontSize={{ base: 'md', md: 'lg' }} mb={3} lineHeight="1.6">
+            What started as a research framework has evolved into production-grade infrastructure
+            with 4,196 tests, 8-12x training optimization, federated learning, and clinical PACS integration.
+          </Text>
+          <Box fontSize="sm" color="gray.400">
+            By Matthew Vaishnav — 6 May 2026
+          </Box>
+        </Link>
+
+        <Link 
+          as={NextLink} 
           href="/posts/histocore-framework" 
           style={{ textDecoration: 'none' }}
           display="block"
