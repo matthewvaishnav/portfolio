@@ -14,7 +14,7 @@ const Footer = () => {
           </WrapItem>
           <WrapItem>
             <Link
-              href="https://www.linkedin.com/in/matthew-vaishnav-279670229/"
+              href="https://www.linkedin.com/in/matthew-vaishnav-594312403/"
               target="_blank"
             >
               LinkedIn

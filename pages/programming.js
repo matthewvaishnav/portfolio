@@ -104,7 +104,7 @@ const Programming = () => (
           </Button>
           <Button
             as={Link}
-            href="https://www.linkedin.com/in/matthew-vaishnav-279670229/"
+            href="https://www.linkedin.com/in/matthew-vaishnav-594312403/"
             target="_blank"
             colorScheme="teal"
             variant="outline"
@@ -162,7 +162,7 @@ const Programming = () => (
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://www.linkedin.com/in/matthew-vaishnav-279670229/" target="_blank">
+            <Link href="https://www.linkedin.com/in/matthew-vaishnav-594312403/" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
