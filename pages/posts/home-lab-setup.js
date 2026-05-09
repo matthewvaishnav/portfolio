@@ -1,26 +1,29 @@
-import { Container, Heading, Text, Box, Avatar, Flex } from '@chakra-ui/react'
+import { Container, Heading, Text, Box, Avatar, Flex, Divider } from '@chakra-ui/react'
 import BlogLayout from '../../components/layouts/blog'
 import P from '../../components/paragraph'
 import CodeBlock from '../../components/code-block'
 
 const articleHeadingProps = {
-  fontSize: { base: '3xl', md: '5xl' },
-  mb: { base: 4, md: 6 },
-  fontWeight: 700,
-  lineHeight: '1.2'
+  fontSize: { base: '2xl', md: '4xl' },
+  mb: 4,
+  fontWeight: 600,
+  lineHeight: '1.2',
+  letterSpacing: '-0.02em'
 }
 
 const leadTextProps = {
-  fontSize: { base: 'md', md: 'lg' },
-  mb: { base: 6, md: 8 },
-  lineHeight: '1.6'
+  fontSize: { base: 'lg', md: 'xl' },
+  mb: 8,
+  lineHeight: '1.7',
+  color: 'gray.300'
 }
 
 const sectionHeadingProps = {
-  fontSize: { base: '2xl', md: '4xl' },
-  mt: { base: 10, md: 12 },
-  mb: { base: 4, md: 6 },
-  fontWeight: 700
+  fontSize: { base: 'xl', md: '2xl' },
+  mt: 12,
+  mb: 4,
+  fontWeight: 600,
+  letterSpacing: '-0.01em'
 }
 
 const Post = () => (
@@ -35,11 +38,11 @@ const Post = () => (
       </Heading>
       
       <Text {...leadTextProps}>
-        Most people collect stamps or build model trains. I decided to build a full-scale 
-        security research lab with 18 nodes, 6 VLANs, and comprehensive attack infrastructure.
+        I wanted to practice pentesting without breaking real systems. One thing led to another 
+        and now I have 18 VMs, 6 VLANs, and a full security monitoring stack running 24/7.
       </Text>
       
-      <Flex align="center" wrap="wrap" gap={3} mb={{ base: 8, md: 12 }}>
+      <Flex align="center" wrap="wrap" gap={3} mb={8}>
         <Avatar size="sm" name="Matthew Vaishnav" src="/portfolio/images/matthew.jpg" />
         <Box>
           <Text fontSize="sm" fontWeight={600}>Matthew Vaishnav</Text>
@@ -47,24 +50,26 @@ const Post = () => (
         </Box>
       </Flex>
 
-      <Box fontSize={{ base: 'md', md: 'lg' }} lineHeight="1.7">
+      <Divider mb={8} borderColor="whiteAlpha.200" />
+
+      <Box fontSize={{ base: 'md', md: 'lg' }} lineHeight="1.7" color="gray.200">
         <P>
-          It started simple. I wanted to practice penetration testing without breaking real systems. 
-          One Kali VM, one vulnerable target. Easy.
+          Started with one Kali VM and one vulnerable target. Simple enough.
         </P>
 
         <P>
-          Then I realized I needed to see the network traffic. Added Security Onion. 
-          Now I needed a proper network. Added pfSense. Now I needed segmentation. 
-          Added VLANs. Now I needed more targets. Added 12 more VMs.
+          Then I needed to see network traffic, so I added Security Onion. That needed proper 
+          routing, so I added pfSense. Routing needed segmentation, so I added VLANs. VLANs 
+          needed more targets to be useful. Added 12 more VMs.
         </P>
 
         <P>
-          The result is a comprehensive security research environment perfect for learning and testing.
+          Now I have a complete security research environment where I can run attacks, 
+          watch them happen in real-time, and break things without consequences.
         </P>
 
         <P>
-          In this article, I&apos;ll show you exactly how to replicate my setup.
+          Here&apos;s how to build the same thing.
         </P>
 
         <Heading as="h2" {...sectionHeadingProps}>
@@ -72,12 +77,12 @@ const Post = () => (
         </Heading>
 
         <P>
-          You&apos;ll need a decent hypervisor to run 18 VMs. I&apos;m using a salvaged Dell PowerEdge R720 
-          with 128GB RAM and dual Xeon E5-2670 processors. Cost me about $300 on eBay.
+          Running 18 VMs needs decent hardware. I&apos;m using a Dell PowerEdge R720 I got 
+          on eBay for $300 - 128GB RAM, dual Xeon E5-2670 processors.
         </P>
 
         <P>
-          Minimum specs for this lab:
+          Minimum specs:
         </P>
 
         <CodeBlock>
@@ -88,7 +93,7 @@ Network: 2x Gigabit NICs (one for WAN, one for management)`}
         </CodeBlock>
 
         <P>
-          Install Proxmox VE as your hypervisor. It&apos;s free, stable, and handles VLANs beautifully.
+          Install Proxmox VE as your hypervisor. Free, stable, handles VLANs well.
         </P>
 
         <Heading as="h2" {...sectionHeadingProps}>
@@ -387,37 +392,30 @@ Description: "Pre-attack baseline state"`}
         </Heading>
 
         <P>
-          This lab costs about $15/month in electricity. I just repurposed my old gaming PC 
+          This lab costs about $15/month in electricity. I repurposed an old gaming PC 
           instead of buying new hardware.
         </P>
 
         <P>
-          Compare that to cloud labs at $50-100/month with limited customization and 
-          you can&apos;t keep running 24/7. This lab is mine. I can break it, rebuild it, 
-          and run attacks at 3 AM without worrying about hourly billing.
+          Cloud labs cost $50-100/month with limited customization and you can&apos;t run 
+          them 24/7. This lab is mine. I can break it, rebuild it, run attacks at 3 AM 
+          without worrying about hourly billing.
         </P>
 
         <P>
-          The best part? I can practice MITRE ATT&CK techniques end-to-end. 
-          Initial access, privilege escalation, lateral movement, data exfiltration - 
-          all in a controlled environment where breaking things is the goal.
+          Best part is practicing MITRE ATT&CK techniques end-to-end. Initial access, 
+          privilege escalation, lateral movement, data exfiltration - all in a controlled 
+          environment where breaking things is the point.
         </P>
 
         <P>
-          Would I recommend building one? Absolutely. Start small - one attacker, one target, 
-          one monitoring tool. Then grow it as you learn. The hands-on experience is worth 
-          more than any certification.
+          Start small if you&apos;re building one. One attacker, one target, one monitoring 
+          tool. Grow it as you learn. The hands-on experience beats any certification.
         </P>
 
         <P>
-          Just make sure you have adequate cooling and power for your setup.
+          Just make sure you have adequate cooling and power.
         </P>
-
-        <P>That&apos;s it. A complete replication guide.</P>
-
-        <P>I hope it&apos;s helpful for your security research workflow :)</P>
-
-        <P>Have a productive day!</P>
       </Box>
     </Box>
   </BlogLayout>
