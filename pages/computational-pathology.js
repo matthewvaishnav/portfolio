@@ -17,28 +17,36 @@ const Work = () => (
         HistoCore <Badge>2025-</Badge>
       </Title>
       <P>
-        Production-grade PyTorch framework for computational pathology research building
-        ML infrastructure with attention-based MIL models, federated learning with
-        differential privacy, and clinical PACS integration for hospital deployment.
+        Production-grade PyTorch framework for whole-slide image analysis achieving 85.26% accuracy (0.9394 AUC) on PatchCamelyon benchmark. 
+        Features 8-12x training optimization (torch.compile, AMP, GPU optimization), attention-based MIL models (AttentionMIL, CLAM, TransMIL), 
+        first open-source federated learning for digital pathology with differential privacy, and production-ready PACS integration with DICOM/FHIR support.
       </P>
       <List ml={4} my={4}>
         <ListItem>
-          <Meta>Website</Meta>
-          <Link href="https://matthewvaishnav.github.io/computational-pathology-research/">
-            Documentation <ExternalLinkIcon mx="2px" />
+          <Meta>GitHub</Meta>
+          <Link href="https://github.com/matthewvaishnav/computational-pathology-research">
+            Repository <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
         <ListItem>
-          <Meta>Testing</Meta>
-          <span>3,006 tests with comprehensive property-based validation</span>
+          <Meta>Performance</Meta>
+          <span>85.26% accuracy, 0.9394 AUC on 262K training samples</span>
         </ListItem>
         <ListItem>
-          <Meta>Performance</Meta>
-          <span>8-12x training optimization, 93.94% AUC on PCam in 2.25 hours</span>
+          <Meta>Optimization</Meta>
+          <span>8-12x training speedup with torch.compile, AMP, GPU optimization</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Models</Meta>
+          <span>AttentionMIL, CLAM, TransMIL with attention visualization</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Testing</Meta>
+          <span>1,448 tests with 55% coverage, bootstrap confidence intervals</span>
         </ListItem>
         <ListItem>
           <Meta>Clinical</Meta>
-          <span>PACS integration, real-time inference (&lt;5s), production-ready</span>
+          <span>PACS integration, DICOM/FHIR support, federated learning with differential privacy</span>
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>

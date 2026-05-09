@@ -18,8 +18,8 @@ A comprehensive portfolio showcasing the intersection of programming and securit
 
 ### Programming Projects
 
-**Computational Pathology Research**  
-Machine learning pipelines for analyzing histopathology images. Implements deep learning models for cancer detection and tissue classification. Includes data preprocessing, model training, and inference pipelines with MLflow tracking and experiment management.
+**HistoCore - Computational Pathology Framework**  
+Production-grade PyTorch framework for whole-slide image analysis achieving 85.26% accuracy (0.9394 AUC) on PatchCamelyon benchmark. Features 8-12x training optimization (torch.compile, AMP, GPU optimization), attention-based MIL models (AttentionMIL, CLAM, TransMIL), first open-source federated learning for digital pathology with differential privacy, and production-ready PACS integration with DICOM/FHIR support. Comprehensive testing: 1,448 tests with 55% coverage. Validated on 262K training samples with bootstrap confidence intervals for clinical deployment readiness.
 
 **drift**  
 Real-time data processing system for computational pathology workflows. Handles high-throughput image analysis with distributed computing. Features automatic scaling, fault tolerance, and comprehensive monitoring with Prometheus and Grafana.

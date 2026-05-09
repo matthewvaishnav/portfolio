@@ -65,7 +65,7 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-          Matthew Vaishnav is a computational systems engineer based in Kitchener building production-grade ML infrastructure for computational pathology. He&apos;s developing <Link href="https://matthewvaishnav.github.io/computational-pathology-research/" color="teal.500" target="_blank">HistoCore</Link>, a PyTorch framework with 3,006 tests, attention-based MIL models, federated learning, and clinical PACS integration. When he&apos;s not coding, he&apos;s optimizing training pipelines (8-12x speedup) and exploring ways to build reliable systems that work in production.
+          Matthew Vaishnav is a computational systems engineer based in Kitchener who builds machine learning systems and research tools for computational pathology. He is currently building <Link href="https://github.com/matthewvaishnav/computational-pathology-research" color="teal.500" target="_blank">HistoCore</Link>, a production-grade PyTorch framework achieving 85.26% accuracy (0.9394 AUC) on PatchCamelyon with 8-12x training optimization, attention-based MIL models, federated learning with differential privacy, and PACS integration. The framework includes 1,448 tests with 55% coverage and is validated on 262K training samples. When he&apos;s not coding, he&apos;s refining workflows and exploring new ways to build reliable and useful systems.
         </Paragraph>
         <Flex justify="center" my={4}>
           <Button

@@ -18,7 +18,7 @@ const Works = () => (
             thumbnail="/portfolio/images/works/histocore-logo-rect.svg" 
             title="HistoCore"
           >
-            Production pathology AI with real-time WSI streaming
+            Production pathology framework: 85.26% accuracy, 8-12x optimized training, federated learning
           </WorkGridItem>
         </Section>
         <Section>
