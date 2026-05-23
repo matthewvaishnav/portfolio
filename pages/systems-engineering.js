@@ -16,9 +16,9 @@ const Works = () => (
             id="computational-pathology"
             href="/computational-pathology"
             thumbnail="/portfolio/images/works/histocore-logo-rect.svg" 
-            title="HistoCore"
+            title="Computational Pathology & Federated Oncology"
           >
-            Production pathology framework: 85.26% accuracy, 8-12x optimized training, federated learning
+            My flagship research platform: 0.9394 PCam AUC, TransnnMIL v2.0, PathologyFL, FAIR-WEIGHTS-H, and validation infrastructure
           </WorkGridItem>
         </Section>
         <Section>
