@@ -30,10 +30,10 @@ const Home = () => (
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">Matthew Vaishnav</Heading>
           <Text fontSize={{ base: 'md', md: 'xl' }} mb={1}>
-            Computational Pathology · Federated Oncology Learning · Security Engineering
+            Applied ML · Computational Pathology · Federated Oncology Learning
           </Text>
           <Text fontSize="sm" color="gray.500">
-            Whole-slide AI / TransnnMIL v2.0 / PathologyFL / FAIR-WEIGHTS-H / Defensive infrastructure
+            Whole-slide AI / PANDA Phikon features / TransnnMIL / PathologyFL / Dominance-aware federated robustness
           </Text>
         </Box>
         <Box flexShrink={0} mt={{ base: 4, md: 0 }} ml={{ md: 6 }} textAlign="center">
@@ -46,14 +46,14 @@ const Home = () => (
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">Work</Heading>
         <Paragraph>
-          Matthew Vaishnav is a computational systems engineer based in Kitchener-Waterloo building research infrastructure for computational pathology, federated oncology learning, mathematical validation, and defensive systems engineering. His flagship project is a computational pathology framework with PCam benchmark validation, TransnnMIL v2.0 model development, PathologyFL federated learning infrastructure, FAIR-WEIGHTS-H institutional weighting, and VitePress documentation for reproducible medical-AI research.
+          Matthew Vaishnav is an applied machine-learning and computational pathology research engineer based in Kitchener-Waterloo. His flagship work studies whole-slide pathology AI, federated oncology learning, failure-mode analysis, and reproducible medical-AI validation. Recent work identifies a FedAvg dominant-site failure mode on full PANDA Phikon slide features and evaluates cross-site blending plus dominance-aware detector switches under label noise and ordinal grading bias.
         </Paragraph>
         <Flex justify="center" my={4} gap={3} flexWrap="wrap">
           <Button as={NextLink} href="/computational-pathology" scroll={false} rightIcon={<ChevronRightIcon />} colorScheme="teal" size="lg">
             Flagship Research
           </Button>
-          <Button as={NextLink} href="/systems-engineering" scroll={false} rightIcon={<ChevronRightIcon />} colorScheme="teal" variant="outline" size="lg">
-            All Projects
+          <Button as={NextLink} href="/posts/dominance-aware-federated-pathology" scroll={false} rightIcon={<ChevronRightIcon />} colorScheme="teal" variant="outline" size="lg">
+            Latest Result
           </Button>
         </Flex>
       </Section>
@@ -61,27 +61,27 @@ const Home = () => (
       <Section delay={0.25}>
         <Heading as="h3" variant="section-title">Flagship Research Platform</Heading>
         <Paragraph>
-          My main research project combines whole-slide pathology AI, federated learning, benchmark automation, and clinical-data integration components. The work includes a full PCam benchmark, a custom TransnnMIL v2.0 architecture direction, PathologyFL for simulated multi-site learning, and FAIR-WEIGHTS-H for institutional weighting and validation diagnostics.
+          My main research project combines whole-slide pathology AI, federated learning, benchmark automation, and clinical-data integration components. The work includes a full PCam benchmark, PANDA prostate-grading experiments with Phikon features, TransnnMIL architecture work, PathologyFL simulated multi-site learning, and dominance-aware federated robustness analysis.
         </Paragraph>
         <List mt={4} spacing={2}>
           <ListItem><strong>PCam benchmark:</strong> 85.26% test accuracy and 0.9394 AUC on the full 32,768-sample PCam test set.</ListItem>
-          <ListItem><strong>Ranking:</strong> #1 by AUC among 11 compared PCam methods.</ListItem>
-          <ListItem><strong>Scale:</strong> 262,144 training samples and 1,000 bootstrap resamples for confidence intervals.</ListItem>
-          <ListItem><strong>Models:</strong> TransnnMIL v2.0, AttentionMIL, CLAM-style and TransMIL-style workflows.</ListItem>
-          <ListItem><strong>Federated learning:</strong> PathologyFL with PCam simulated-site smoke tests and benchmarks.</ListItem>
-          <ListItem><strong>Mathematical validation:</strong> FAIR-WEIGHTS-H, entropy, N_eff, weight trajectories, and null-result diagnostics.</ListItem>
+          <ListItem><strong>PANDA scale:</strong> 10,611 readable PANDA-derived Phikon slide feature vectors, 768 dimensions.</ListItem>
+          <ListItem><strong>Federated robustness:</strong> 15-seed full-PANDA studies of FedAvg under dominant-site label corruption and systematic ordinal threshold bias.</ListItem>
+          <ListItem><strong>Key finding:</strong> cross-site blending improves robustness when the dominant simulated site becomes unreliable, especially under conservative grading shift.</ListItem>
+          <ListItem><strong>Detector switch:</strong> clean-calibrated FedAvg diagnostics can trigger a switch away from sample-size dominance in unsafe regimes.</ListItem>
+          <ListItem><strong>Models:</strong> TransnnMIL, AttentionMIL, CLAM-style and TransMIL-style workflows.</ListItem>
         </List>
       </Section>
 
       <Section delay={0.28}>
         <Heading as="h3" variant="section-title">Research Metrics</Heading>
         <SimpleGrid columns={[1, 2, 3]} gap={4}>
-          <Stat><StatLabel>PCam AUC</StatLabel><StatNumber>0.9394</StatNumber><StatHelpText>#1 by AUC among 11 methods</StatHelpText></Stat>
-          <Stat><StatLabel>PCam Accuracy</StatLabel><StatNumber>85.26%</StatNumber><StatHelpText>Full 32,768-sample test set</StatHelpText></Stat>
-          <Stat><StatLabel>Training Samples</StatLabel><StatNumber>262K</StatNumber><StatHelpText>Full PCam training split</StatHelpText></Stat>
-          <Stat><StatLabel>Bootstrap</StatLabel><StatNumber>1,000</StatNumber><StatHelpText>Confidence interval resamples</StatHelpText></Stat>
-          <Stat><StatLabel>Hardware</StatLabel><StatNumber>RTX 4070</StatNumber><StatHelpText>Consumer GPU benchmark</StatHelpText></Stat>
-          <Stat><StatLabel>Validation Path</StatLabel><StatNumber>PCam → FL</StatNumber><StatHelpText>Camelyon17 planned</StatHelpText></Stat>
+          <Stat><StatLabel>PANDA Phikon Cache</StatLabel><StatNumber>10,611</StatNumber><StatHelpText>Readable slide feature vectors</StatHelpText></Stat>
+          <Stat><StatLabel>Feature Dimension</StatLabel><StatNumber>768</StatNumber><StatHelpText>Mean-pooled Phikon embeddings</StatHelpText></Stat>
+          <Stat><StatLabel>Validation Seeds</StatLabel><StatNumber>15</StatNumber><StatHelpText>Full-PANDA FL stress studies</StatHelpText></Stat>
+          <Stat><StatLabel>PCam AUC</StatLabel><StatNumber>0.9394</StatNumber><StatHelpText>Full 32,768-sample test set</StatHelpText></Stat>
+          <Stat><StatLabel>PCam Accuracy</StatLabel><StatNumber>85.26%</StatNumber><StatHelpText>Bootstrap confidence intervals</StatHelpText></Stat>
+          <Stat><StatLabel>Research Focus</StatLabel><StatNumber>FL Robustness</StatNumber><StatHelpText>Dominant-site failure detection</StatHelpText></Stat>
         </SimpleGrid>
       </Section>
 
@@ -90,8 +90,8 @@ const Home = () => (
         <BioSection><BioYear>2006</BioYear>Born in Ontario, Canada.</BioSection>
         <BioSection><BioYear>2025 to present</BioYear>Studying Computer Systems Technician at Conestoga College.</BioSection>
         <BioSection><BioYear>2025</BioYear>Built 18-node home lab with Security Onion and pfSense for security research.</BioSection>
-        <BioSection><BioYear>2025 to present</BioYear>Building computational pathology tooling, PCam benchmarks, TransnnMIL v2.0, PathologyFL, and FAIR-WEIGHTS-H.</BioSection>
-        <BioSection><BioYear>2025 to present</BioYear>Developing security detection rules, log analysis tools, and infrastructure failure-analysis systems.</BioSection>
+        <BioSection><BioYear>2025 to present</BioYear>Building computational pathology tooling, PCam benchmarks, TransnnMIL, PathologyFL, and federated robustness experiments.</BioSection>
+        <BioSection><BioYear>2026</BioYear>Validated dominance-aware federated learning failure modes on 10,611 PANDA-derived Phikon slide features across 15-seed stress studies.</BioSection>
         <BioSection><BioYear>2026 to present</BioYear>Building reproducible documentation, benchmark analysis, and validation reports for computational oncology research.</BioSection>
       </Section>
 
