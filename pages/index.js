@@ -30,10 +30,11 @@ const Home = () => (
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">Matthew Vaishnav</Heading>
           <Text fontSize={{ base: 'md', md: 'xl' }} mb={1}>
-            Applied ML · Computational Pathology · Federated Oncology Learning
+            Computational pathology research engineering
           </Text>
           <Text fontSize="sm" color="gray.500">
-            Whole-slide AI / PANDA Phikon features / TransnnMIL / PathologyFL / Dominance-aware federated robustness
+            Research-only machine learning for whole-slide histopathology, scanner/site robustness,
+            paired-acquisition representation learning, and reproducible ML evaluation
           </Text>
         </Box>
         <Box flexShrink={0} mt={{ base: 4, md: 0 }} ml={{ md: 6 }} textAlign="center">
@@ -46,43 +47,109 @@ const Home = () => (
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">Work</Heading>
         <Paragraph>
-          Matthew Vaishnav is an applied machine-learning and computational pathology research engineer based in Kitchener-Waterloo. His flagship work studies whole-slide pathology AI, federated oncology learning, failure-mode analysis, and reproducible medical-AI validation. Recent work identifies a FedAvg dominant-site failure mode on full PANDA Phikon slide features and evaluates cross-site blending plus dominance-aware detector switches under label noise and ordinal grading bias.
+          I build research-only computational pathology experiments around whole-slide modeling,
+          pathology foundation-model features, scanner/acquisition robustness, simulated federated
+          pathology stress tests, and reproducible evaluation infrastructure. My current strongest
+          research line is Paired-Acquisition Neural Factorization: testing whether paired
+          acquisitions of the same tissue can reduce scanner/acquisition signal in pathology
+          embeddings while preserving tissue identity.
         </Paragraph>
         <Flex justify="center" my={4} gap={3} flexWrap="wrap">
           <Button as={NextLink} href="/computational-pathology" scroll={false} rightIcon={<ChevronRightIcon />} colorScheme="teal" size="lg">
-            Flagship Research
+            Current Research
           </Button>
-          <Button as={NextLink} href="/posts/dominance-aware-federated-pathology" scroll={false} rightIcon={<ChevronRightIcon />} colorScheme="teal" variant="outline" size="lg">
-            Latest Result
+          <Button as={NextLink} href="/posts" scroll={false} rightIcon={<ChevronRightIcon />} colorScheme="teal" variant="outline" size="lg">
+            Research Index
+          </Button>
+          <Button as={Link} href="https://github.com/matthewvaishnav" target="_blank" rightIcon={<ChevronRightIcon />} colorScheme="teal" variant="outline" size="lg">
+            GitHub
           </Button>
         </Flex>
       </Section>
 
       <Section delay={0.25}>
-        <Heading as="h3" variant="section-title">Flagship Research Platform</Heading>
-        <Paragraph>
-          My main research project combines whole-slide pathology AI, federated learning, benchmark automation, and clinical-data integration components. The work includes a full PCam benchmark, PANDA prostate-grading experiments with Phikon features, TransnnMIL architecture work, PathologyFL simulated multi-site learning, and dominance-aware federated robustness analysis.
-        </Paragraph>
-        <List mt={4} spacing={2}>
-          <ListItem><strong>PCam benchmark:</strong> 85.26% test accuracy and 0.9394 AUC on the full 32,768-sample PCam test set.</ListItem>
-          <ListItem><strong>PANDA scale:</strong> 10,611 readable PANDA-derived Phikon slide feature vectors, 768 dimensions.</ListItem>
-          <ListItem><strong>Federated robustness:</strong> 15-seed full-PANDA studies of FedAvg under dominant-site label corruption and systematic ordinal threshold bias.</ListItem>
-          <ListItem><strong>Key finding:</strong> cross-site blending improves robustness when the dominant simulated site becomes unreliable, especially under conservative grading shift.</ListItem>
-          <ListItem><strong>Detector switch:</strong> clean-calibrated FedAvg diagnostics can trigger a switch away from sample-size dominance in unsafe regimes.</ListItem>
-          <ListItem><strong>Models:</strong> TransnnMIL, AttentionMIL, CLAM-style and TransMIL-style workflows.</ListItem>
+        <Heading as="h3" variant="section-title">Current Research</Heading>
+        <List mt={4} spacing={3}>
+          <ListItem>
+            <strong>1. Paired-Acquisition Neural Factorization</strong><br />
+            <Text fontSize="sm" color="gray.400">
+              Scanner/acquisition signal vs tissue identity preservation. SCORPION, external canine SCC,
+              cross-backbone, and baseline controls.
+            </Text>
+          </ListItem>
+          <ListItem>
+            <strong>2. External multi-scanner validation</strong><br />
+            <Text fontSize="sm" color="gray.400">
+              Canine SCC validation package with independent scanner conditions.
+            </Text>
+          </ListItem>
+          <ListItem>
+            <strong>3. Pair-repeat allocation</strong><br />
+            <Text fontSize="sm" color="gray.400">
+              Unique pair diversity vs repeated exposure tradeoffs.
+            </Text>
+          </ListItem>
+          <ListItem>
+            <strong>4. Mechanism audits</strong><br />
+            <Text fontSize="sm" color="gray.400">
+              Acquisition-branch audit: branch separation is measurable.<br />
+              Pair-structure boundary test: biological pairing structure matters.
+            </Text>
+          </ListItem>
+          <ListItem>
+            <strong>5. Earlier research</strong><br />
+            <Text fontSize="sm" color="gray.400">
+              PANDA / PCam / MIL experiments. Simulated federated pathology stress tests.
+            </Text>
+          </ListItem>
         </List>
       </Section>
 
       <Section delay={0.28}>
         <Heading as="h3" variant="section-title">Research Metrics</Heading>
         <SimpleGrid columns={[1, 2, 3]} gap={4}>
-          <Stat><StatLabel>PANDA Phikon Cache</StatLabel><StatNumber>10,611</StatNumber><StatHelpText>Readable slide feature vectors</StatHelpText></Stat>
-          <Stat><StatLabel>Feature Dimension</StatLabel><StatNumber>768</StatNumber><StatHelpText>Mean-pooled Phikon embeddings</StatHelpText></Stat>
-          <Stat><StatLabel>Validation Seeds</StatLabel><StatNumber>15</StatNumber><StatHelpText>Full-PANDA FL stress studies</StatHelpText></Stat>
-          <Stat><StatLabel>PCam AUC</StatLabel><StatNumber>0.9394</StatNumber><StatHelpText>Full 32,768-sample test set</StatHelpText></Stat>
-          <Stat><StatLabel>PCam Accuracy</StatLabel><StatNumber>85.26%</StatNumber><StatHelpText>Bootstrap confidence intervals</StatHelpText></Stat>
-          <Stat><StatLabel>Research Focus</StatLabel><StatNumber>FL Robustness</StatNumber><StatHelpText>Dominant-site failure detection</StatHelpText></Stat>
+          <Stat>
+            <StatLabel>SCORPION scanner probe</StatLabel>
+            <StatNumber>0.7825 → 0.3989</StatNumber>
+            <StatHelpText>Reduction in scanner recoverability</StatHelpText>
+          </Stat>
+          <Stat>
+            <StatLabel>Canine SCC scanner probe</StatLabel>
+            <StatNumber>0.7529 → 0.3614</StatNumber>
+            <StatHelpText>External validation reduction</StatHelpText>
+          </Stat>
+          <Stat>
+            <StatLabel>PANDA readable features</StatLabel>
+            <StatNumber>10,611</StatNumber>
+            <StatHelpText>Verified slide feature vectors</StatHelpText>
+          </Stat>
+          <Stat>
+            <StatLabel>PCam validation AUC</StatLabel>
+            <StatNumber>95.37%</StatNumber>
+            <StatHelpText>Full validation set</StatHelpText>
+          </Stat>
+          <Stat>
+            <StatLabel>PANDA gated AttentionMIL</StatLabel>
+            <StatNumber>QWK 0.8100</StatNumber>
+            <StatHelpText>Slide-level baseline</StatHelpText>
+          </Stat>
+          <Stat>
+            <StatLabel>PANDA tuned TransnnMIL</StatLabel>
+            <StatNumber>QWK 0.8155 / 0.8225</StatNumber>
+            <StatHelpText>Repeated-seed results</StatHelpText>
+          </Stat>
         </SimpleGrid>
+      </Section>
+
+      <Section delay={0.29}>
+        <Heading as="h3" variant="section-title">Claim Boundary</Heading>
+        <Paragraph>
+          Research-only. Not clinically validated. Not diagnostic software. Not intended for
+          clinical deployment or patient-care use. Results are from controlled experiments and
+          simulated federations over pathology-derived feature vectors, not real hospital
+          deployments. All findings are bounded by the specific datasets, backbones, and
+          experimental conditions described in each report.
+        </Paragraph>
       </Section>
 
       <Section delay={0.3}>
@@ -90,15 +157,16 @@ const Home = () => (
         <BioSection><BioYear>2006</BioYear>Born in Ontario, Canada.</BioSection>
         <BioSection><BioYear>2025 to present</BioYear>Studying Computer Systems Technician at Conestoga College.</BioSection>
         <BioSection><BioYear>2025</BioYear>Built 18-node home lab with Security Onion and pfSense for security research.</BioSection>
-        <BioSection><BioYear>2025 to present</BioYear>Building computational pathology tooling, PCam benchmarks, TransnnMIL, PathologyFL, and federated robustness experiments.</BioSection>
-        <BioSection><BioYear>2026</BioYear>Validated dominance-aware federated learning failure modes on 10,611 PANDA-derived Phikon slide features across 15-seed stress studies.</BioSection>
-        <BioSection><BioYear>2026 to present</BioYear>Building reproducible documentation, benchmark analysis, and validation reports for computational oncology research.</BioSection>
+        <BioSection><BioYear>2025 to present</BioYear>Building computational pathology research experiments: PCam benchmarks, PANDA slide-level MIL, simulated federated pathology stress tests.</BioSection>
+        <BioSection><BioYear>2026 to present</BioYear>Paired-Acquisition Neural Factorization: scanner/acquisition signal reduction, tissue identity preservation, external canine SCC validation, pair-repeat allocation, mechanism audits.</BioSection>
       </Section>
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">I ♥</Heading>
         <Paragraph>
-          Computational pathology, whole-slide image AI, federated learning, mathematical validation, security engineering, failure analysis, home labs, clean interfaces, coffee, music, art, and my dog.
+          Computational pathology, whole-slide image modeling, scanner/site robustness,
+          reproducible experiments, security engineering, failure analysis, home labs,
+          clean interfaces, coffee, music, art, and my dog.
         </Paragraph>
       </Section>
 

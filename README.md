@@ -19,8 +19,8 @@ A comprehensive portfolio showcasing the intersection of programming and securit
 
 ### Programming Projects
 
-**HistoCore - Computational Pathology Framework**  
-Production-grade PyTorch framework for whole-slide image analysis achieving 85.26% accuracy (0.9394 AUC) on PatchCamelyon benchmark. Features 8-12x training optimization (torch.compile, AMP, GPU optimization), attention-based MIL models (AttentionMIL, CLAM, TransMIL), first open-source federated learning for digital pathology with differential privacy, and production-ready PACS integration with DICOM/FHIR support. Comprehensive testing: 1,448 tests with 55% coverage. Validated on 262K training samples with bootstrap confidence intervals for clinical deployment readiness.
+**Computational Pathology Research**
+Research-only computational pathology experiments centered on Paired-Acquisition Neural Factorization: testing whether paired acquisitions can reduce scanner/acquisition signal in pathology embeddings while preserving tissue identity. Includes SCORPION, external canine SCC validation, cross-backbone checks, baseline stress tests, pair-repeat allocation, and mechanism audits. Earlier work: PCam benchmark (85.26% accuracy, 0.9394 AUC), PANDA slide-level MIL (AttentionMIL QWK 0.8100, TransnnMIL QWK 0.8155–0.8225), simulated federated pathology stress tests. Research-only — not clinically validated, not diagnostic software, not intended for clinical deployment or patient care.
 
 **drift**  
 Real-time data processing system for computational pathology workflows. Handles high-throughput image analysis with distributed computing. Features automatic scaling, fault tolerance, and comprehensive monitoring with Prometheus and Grafana.

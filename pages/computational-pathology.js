@@ -5,62 +5,130 @@ import P from '../components/paragraph'
 import Layout from '../components/layouts/article'
 
 const Work = () => (
-  <Layout title="Computational Pathology AI Research Framework">
+  <Layout title="Paired-Acquisition Neural Factorization for Computational Pathology">
     <Container>
       <Title>
-        Computational Pathology AI Research Framework <Badge>2025–</Badge>
+        Paired-Acquisition Neural Factorization <Badge>2025–</Badge>
       </Title>
 
+      <Heading as="h4" size="md" mt={2}>Overview</Heading>
       <P>
-        A research and engineering framework for whole-slide histopathology modeling, multiple-instance learning, federated oncology validation, benchmark automation, failure-mode analysis, and mathematical validation tooling.
+        Research-only computational pathology experiments centered on testing whether paired
+        acquisitions of the same tissue can reduce scanner/acquisition signal in pathology
+        foundation-model embeddings while preserving tissue identity. The work spans SCORPION
+        (human prostate), external canine SCC validation, cross-backbone checks, baseline stress
+        tests, pair-repeat allocation, and mechanism-hardening audits.
       </P>
 
       <P>
-        The goal is not just to train a model, but to build the surrounding infrastructure needed to make computational pathology experiments reproducible, inspectable, and extensible.
+        The core approach, Paired-Acquisition Neural Factorization, uses paired same-region
+        acquisitions (different scanners, same tissue block) to train a factorization that
+        separates biological signal from acquisition/scanner signal in frozen foundation-model
+        feature spaces. This is a research investigation, not a clinical tool.
       </P>
 
-      <P>
-        Current work includes PANDA prostate cancer grading with Phikon features, PCam benchmark validation, TransnnMIL model development, PathologyFL federated learning experiments, dominance-aware aggregation research, threshold analysis, and reproducible documentation.
-      </P>
+      <Heading as="h4" size="md" mt={6}>Current Research Packages</Heading>
+      <List ml={4} my={4} spacing={2}>
+        <ListItem>
+          <Meta>Main index</Meta>
+          <Link href="https://matthewvaishnav.github.io/computational-pathology-research/" target="_blank">
+            Research documentation and results index <ExternalLinkIcon mx="2px"/>
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Meta>Canine SCC</Meta>
+          <Link href="https://matthewvaishnav.github.io/paired-acquisition-factorization-caninescc/paired-acquisition-factorization-caninescc.pdf" target="_blank">
+            External multi-scanner validation PDF <ExternalLinkIcon mx="2px"/>
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Meta>Allocation</Meta>
+          <Link href="https://matthewvaishnav.github.io/paired-acquisition-factorization-allocation/paired-acquisition-factorization-allocation.pdf" target="_blank">
+            Pair-repeat allocation study PDF <ExternalLinkIcon mx="2px"/>
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Meta>SCORPION</Meta>
+          <Link href="https://github.com/matthewvaishnav/paired-acquisition-factorization-scorpion" target="_blank">
+            GitHub repository <ExternalLinkIcon mx="2px"/>
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Meta>GitHub</Meta>
+          <Link href="https://github.com/matthewvaishnav/computational-pathology-research" target="_blank">
+            Main research repository <ExternalLinkIcon mx="2px"/>
+          </Link>
+        </ListItem>
+      </List>
 
       <Heading as="h4" size="md" mt={6}>Key Results</Heading>
-      <List ml={4} my={4}>
-        <ListItem><Meta>PCam</Meta><span>95.37% validation AUC; 85.26% test accuracy and 0.9394 test AUC on the full 32,768-sample test set</span></ListItem>
-        <ListItem><Meta>PANDA data</Meta><span>10,611 readable slide-level Phikon feature vectors after HDF5 read verification; 768-dimensional mean-pooled embeddings</span></ListItem>
-        <ListItem><Meta>PANDA baseline</Meta><span>Mean-pooled Phikon + MLP: QWK 0.7274</span></ListItem>
-        <ListItem><Meta>AttentionMIL</Meta><span>Gated AttentionMIL: QWK 0.8100</span></ListItem>
-        <ListItem><Meta>TransnnMIL</Meta><span>Tuned repeated-seed QWK: 0.8155 / 0.8225 / 0.8086</span></ListItem>
-        <ListItem><Meta>FedAvg failure</Meta><span>15-seed full-PANDA stress studies show FedAvg becomes vulnerable when the dominant simulated site is unreliable</span></ListItem>
-        <ListItem><Meta>Label-noise stress</Meta><span>Cross-site blending significantly improves global QWK at 25% and 35% dominant-site label corruption and worst-site QWK at 45%</span></ListItem>
-        <ListItem><Meta>Threshold-shift stress</Meta><span>Under systematic conservative dominant-site grading bias, cross-site blending improves global QWK, worst-site QWK, mean-site QWK, accuracy, and macro-F1 across 25%, 35%, and 45% shift levels</span></ListItem>
-        <ListItem><Meta>Detector switch</Meta><span>Clean-calibrated FedAvg validation diagnostics can trigger dominance-aware switching away from sample-size weighting in unsafe regimes</span></ListItem>
+      <List ml={4} my={4} spacing={2}>
+        <ListItem>
+          <Meta>SCORPION DINOv2</Meta>
+          <span>Scanner-probe accuracy reduced from 0.7825 to 0.3989 while mean paired cosine improved from 0.8476 to 0.8789.</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Canine SCC DINOv2</Meta>
+          <span>Scanner-probe accuracy reduced from 0.7529 to 0.3614 while paired cosine improved from 0.6960 to 0.7300.</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Cross-backbone</Meta>
+          <span>Phikon and ResNet50 backbones reproduce the scanner-suppression / tissue-preservation pattern.</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Baseline stress</Meta>
+          <span>Linear scanner projection and PCA do not match the scanner-suppression / tissue-preservation tradeoff.</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Acquisition-branch audit</Meta>
+          <span>Acquisition branch retains higher scanner recoverability while carrying much lower tissue-identity retrieval than biological branch.</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Pair-structure boundary</Meta>
+          <span>True same-region pairs preserve tissue identity best. Looser/random pairings suppress scanner but do not preserve tissue identity as well.</span>
+        </ListItem>
       </List>
 
-      <Heading as="h4" size="md" mt={6}>Research Components</Heading>
-      <List ml={4} my={4}>
-        <ListItem><Meta>TransnnMIL</Meta><span>Custom multiple-instance learning architecture direction for WSI modeling</span></ListItem>
-        <ListItem><Meta>PathologyFL</Meta><span>Federated learning infrastructure for pathology experiments</span></ListItem>
-        <ListItem><Meta>Dominance-aware FL</Meta><span>FedAvg failure-mode analysis, cross-site blending, oracle switches, observable detector switches, and threshold-shift transfer tests</span></ListItem>
-        <ListItem><Meta>FAIR-WEIGHTS-H</Meta><span>Institutional weighting research with contribution, ordinal harm, entropy, effective-institution diagnostics, and null-result analysis</span></ListItem>
-        <ListItem><Meta>Validation</Meta><span>PCam patch validation → PANDA slide-level validation → simulated federated robustness → planned Camelyon16/17 multi-center validation</span></ListItem>
-      </List>
-
-      <Heading as="h4" size="md" mt={6}>Current Research Claim</Heading>
+      <Heading as="h4" size="md" mt={6}>Mechanism-Hardening Audits</Heading>
       <P>
-        On full PANDA-derived Phikon slide features, FedAvg is strongest when sites are clean but becomes unsafe when the largest simulated client becomes less reliable. Cross-site blending and dominance-aware switching reduce dependence on raw sample count and improve robustness under dominant-site label noise and systematic conservative ordinal grading bias. This is a research result from simulated federations, not clinical validation.
+        Post-freeze audits strengthen the mechanism interpretation without expanding the claim
+        surface. The acquisition-branch audit confirms that branch separation is measurable:
+        the acquisition branch retains higher scanner recoverability while the biological branch
+        preserves tissue-identity retrieval. The pair-structure boundary test shows that
+        biological pairing structure matters: true same-region pairs preserve tissue identity
+        best, and looser or random pairings do not recover true-pair behavior even though they
+        can still suppress scanner signal.
       </P>
+      <P>
+        These are research findings under controlled experimental conditions. They support the
+        interpretation that the factorization is doing more than simple scanner suppression, but
+        they do not prove full factorization or establish clinical validity.
+      </P>
+
+      <Heading as="h4" size="md" mt={6}>Earlier Work</Heading>
+      <List ml={4} my={4} spacing={2}>
+        <ListItem><Meta>PANDA</Meta><span>10,611 readable slide-level Phikon feature vectors. Gated AttentionMIL QWK 0.8100. Tuned TransnnMIL QWK 0.8155 / 0.8225 / 0.8086.</span></ListItem>
+        <ListItem><Meta>PCam</Meta><span>95.37% validation AUC. 85.26% test accuracy and 0.9394 test AUC on the full 32,768-sample test set.</span></ListItem>
+        <ListItem><Meta>Federated stress</Meta><span>15-seed simulated-federation PANDA studies of FedAvg under dominant-site label corruption and systematic ordinal threshold bias. Cross-site blending improved robustness when the dominant simulated site became unreliable.</span></ListItem>
+        <ListItem><Meta>TransnnMIL</Meta><span>Custom multiple-instance learning architecture direction for WSI modeling — earlier slide-level MIL research prototype work.</span></ListItem>
+      </List>
 
       <Heading as="h4" size="md" mt={6}>Claim Boundary</Heading>
       <P>
-        Research-only at this stage. Not clinically validated, not diagnostic software, and not currently used for patient care. The PANDA studies are simulated-federation experiments over real pathology-derived feature vectors, not real hospital federated deployments. Long-term goal is responsible clinical translation after proper validation, regulatory review, security review, usability testing, and deployment testing.
+        Research-only. Not clinically validated. Not diagnostic software. Not intended for
+        clinical deployment, patient care, or medical decision-making. Results are from
+        controlled experiments on specific datasets (SCORPION, canine SCC, PANDA, PCam) with
+        specific foundation-model backbones (DINOv2, Phikon, ResNet50). Findings use language
+        like &ldquo;supports,&rdquo; &ldquo;suggests,&rdquo; and &ldquo;across audited
+        settings&rdquo; — they do not prove, solve, or establish clinical validity. Simulated
+        federated experiments are not real hospital deployments.
       </P>
 
       <Heading as="h4" size="md" mt={6}>Links</Heading>
       <List ml={4} my={4}>
-        <ListItem><Meta>Docs</Meta><Link href="https://matthewvaishnav.github.io/computational-pathology-research/">Research documentation <ExternalLinkIcon mx="2px"/></Link></ListItem>
-        <ListItem><Meta>GitHub</Meta><Link href="https://github.com/matthewvaishnav/computational-pathology-research">Repository <ExternalLinkIcon mx="2px"/></Link></ListItem>
-        <ListItem><Meta>Dominance switch</Meta><Link href="https://matthewvaishnav.github.io/computational-pathology-research/results/dominance-aware-switch-full-panda">Full PANDA dominance-aware switch results <ExternalLinkIcon mx="2px"/></Link></ListItem>
-        <ListItem><Meta>PANDA</Meta><Link href="https://github.com/matthewvaishnav/computational-pathology-research/blob/main/docs/results/panda-slide-level-baselines.md">Slide-level baseline results <ExternalLinkIcon mx="2px"/></Link></ListItem>
+        <ListItem><Meta>Research docs</Meta><Link href="https://matthewvaishnav.github.io/computational-pathology-research/" target="_blank">Research documentation index <ExternalLinkIcon mx="2px"/></Link></ListItem>
+        <ListItem><Meta>GitHub</Meta><Link href="https://github.com/matthewvaishnav/computational-pathology-research" target="_blank">Main repository <ExternalLinkIcon mx="2px"/></Link></ListItem>
+        <ListItem><Meta>SCORPION</Meta><Link href="https://github.com/matthewvaishnav/paired-acquisition-factorization-scorpion" target="_blank">SCORPION package <ExternalLinkIcon mx="2px"/></Link></ListItem>
       </List>
     </Container>
   </Layout>
