@@ -27,238 +27,154 @@ const sectionHeadingProps = {
 }
 
 const Post = () => (
-  <BlogLayout title="HistoCore: Production-Ready">
+  <BlogLayout title="Research infrastructure lessons">
     <Box>
       <Box fontSize="xs" color="purple.400" mb={4} textTransform="uppercase" letterSpacing="wider">
-        RESEARCH UPDATE
+        RETROSPECTIVE
       </Box>
-      
+
       <Heading as="h1" {...articleHeadingProps}>
-        HistoCore is now production-ready
+        Research infrastructure lessons from an early medical-AI prototype
       </Heading>
-      
+
       <Text {...leadTextProps}>
-        HistoCore started as a research framework. Now it&apos;s production-grade infrastructure 
-        for computational pathology with 4,196 tests, 8-12x training optimization, federated 
-        learning, and clinical PACS integration ready for real hospital deployment.
+        Earlier prototype work exploring computational pathology infrastructure taught me about
+        reliability, security, data flow, and ML engineering. It was not production medical AI,
+        not HIPAA-compliant, not diagnostic software, and not hospital-ready.
       </Text>
-      
+
       <Flex align="center" wrap="wrap" gap={3} mb={8}>
         <Avatar size="sm" name="Matthew Vaishnav" src="/portfolio/images/matthew.jpg" />
         <Box>
           <Text fontSize="sm" fontWeight={600}>Matthew Vaishnav</Text>
-          <Text fontSize="sm" color="gray.400">6 May 2026 | 8 min read</Text>
+          <Text fontSize="sm" color="gray.400">6 May 2026 | Revised July 2026 | 5 min read</Text>
         </Box>
       </Flex>
 
       <Divider mb={8} borderColor="whiteAlpha.200" />
 
       <Box fontSize={{ base: 'md', md: 'lg' }} lineHeight="1.7" color="gray.200">
-        <P>
-          The gap between research code and production systems is where most ML projects die. 
-          You can train a model that hits 95% accuracy on a benchmark, but getting it to run 
-          reliably in a hospital is completely different.
-        </P>
-
-        <P>
-          That&apos;s what the last few months of work on HistoCore have been about. Not just 
-          making the models better, but building the infrastructure needed to actually deploy 
-          them in clinical settings where reliability matters more than the last percentage 
-          point of accuracy.
-        </P>
-
         <Heading as="h2" {...sectionHeadingProps}>
-          What Production-Ready Actually Means
+          What This Was
         </Heading>
 
         <P>
-          Production-ready isn&apos;t about perfect code. It&apos;s about systems that work 
-          when things go wrong. When a hospital&apos;s PACS server goes down at 2 AM. When 
-          a slide scanner produces corrupted DICOM files. When three hospitals want to train 
-          a model together without sharing patient data.
+          Between late 2024 and early 2026, I built an early computational pathology research
+          prototype called HistoCore. The goal was to create infrastructure for whole-slide
+          histopathology experiments: data loading, multiple-instance learning model training,
+          evaluation pipelines, and federated learning simulations.
         </P>
 
         <P>
-          HistoCore handles these cases now. The framework includes 4,196 tests covering 
-          everything from basic data loading to Byzantine fault tolerance in federated learning. 
-          Not just unit tests - property-based testing with Hypothesis generating thousands 
-          of edge cases automatically.
+          It was a research learning project. I was teaching myself PyTorch, WSI processing,
+          MIL architectures, and the engineering challenges of computational pathology. The
+          prototype achieved some solid research results on public benchmarks like PCam and
+          PANDA, and the federated learning simulations produced interesting findings about
+          dominant-site failure modes.
+        </P>
+
+        <Heading as="h2" {...sectionHeadingProps}>
+          What I Learned
+        </Heading>
+
+        <P>
+          The most valuable outcome was not any single benchmark number. It was learning how to
+          build reliable ML infrastructure: reproducible data pipelines, systematic evaluation,
+          property-based testing, and the discipline of separating research claims from
+          deployment claims.
+        </P>
+
+        <P>
+          I learned that training optimization matters for iteration speed. Moving GPU utilization
+          from 17% to 85% through torch.compile, mixed precision, and data-loader tuning meant
+          I could run experiments in hours instead of days. That faster feedback loop made
+          everything else possible.
+        </P>
+
+        <P>
+          I learned that testing at the infrastructure level is different from model evaluation.
+          Property-based testing with Hypothesis caught edge cases I would never have found
+          manually. Federated learning has subtle failure modes that only appear under specific
+          client-dropout or Byzantine conditions, and systematic testing surfaced them.
+        </P>
+
+        <Heading as="h2" {...sectionHeadingProps}>
+          What It Was Not
+        </Heading>
+
+        <P>
+          This is the part that matters most now. The prototype was <strong>not</strong>:
+        </P>
+
+        <P>
+          Not production medical AI. Not HIPAA-compliant. Not diagnostic software. Not
+          hospital-ready. Not clinically validated. Not a medical device. Not FDA/CE-ready.
+          Not deployed in any clinical setting. Not used for patient care.
+        </P>
+
+        <P>
+          The PACS integration components were research prototypes exploring DICOM data flow
+          patterns, not production-grade clinical integrations. The federated learning system
+          was a simulation framework for studying algorithmic behavior, not a deployed
+          multi-hospital training network. The &ldquo;clinical threshold&rdquo; experiments
+          were exploratory sensitivity/specificity tradeoff analyses on public benchmark data,
+          not clinical decision thresholds.
+        </P>
+
+        <P>
+          In earlier versions of this portfolio, I used language like &ldquo;production-ready,&rdquo;
+          &ldquo;clinical PACS integration,&rdquo; and &ldquo;HIPAA-compliant audit logging.&rdquo;
+          That language was inaccurate and I have removed it. The work was research infrastructure
+          built by a student learning the field — and that is valuable on its own terms without
+          overclaiming.
+        </P>
+
+        <Heading as="h2" {...sectionHeadingProps}>
+          Research Results That Survive
+        </Heading>
+
+        <P>
+          Some results from this period remain valid as research findings:
         </P>
 
         <CodeBlock>
-{`Test Coverage Summary
-├── Total Tests: 4,196 (55% code coverage)
-├── Clinical Tests: 387/387 passed (100%)
-├── Streaming Tests: 1,145+ passed
-├── PACS Integration: 203 tests (81% coverage)
-├── Federated Learning: 156 tests (65% coverage)
-└── Property-Based: 10,000+ generated test cases`}
+{`PCam Benchmark (public dataset, research evaluation)
+- Validation AUC: 95.37%
+- Test accuracy: 85.26% (95% CI: 84.83%-85.63%)
+- Test AUC: 0.9394 (95% CI: 0.9369-0.9418)
+- 1,000 bootstrap resamples
+
+PANDA Slide-Level Experiments (public dataset)
+- 10,611 readable Phikon slide feature vectors
+- Gated AttentionMIL QWK: 0.8100
+- Tuned TransnnMIL QWK: 0.8155 / 0.8225 / 0.8086
+
+Federated Stress Tests (simulated federations)
+- FedAvg dominant-site vulnerability identified
+- Cross-site blending improved robustness
+- Research-only; not real hospital federated deployments`}
         </CodeBlock>
 
         <Heading as="h2" {...sectionHeadingProps}>
-          Training Optimization: 8-12x Faster
+          Where I Am Now
         </Heading>
 
         <P>
-          Original PCam training took 20-40 hours on consumer hardware. Fine for research, 
-          but painful for iteration. The optimized pipeline completes the same training in 2-3 hours.
+          My current research has moved to Paired-Acquisition Neural Factorization: testing
+          whether paired acquisitions of the same tissue can reduce scanner/acquisition signal
+          in pathology embeddings while preserving tissue identity. That work, plus external
+          canine SCC validation, pair-repeat allocation, and mechanism audits, is my strongest
+          current research line.
         </P>
 
         <P>
-          This wasn&apos;t one big change. Systematic profiling and optimization across the 
-          entire training loop. torch.compile for 1.3-1.5x speedup. Mixed precision training 
-          for another 1.5-2x. Channels-last memory format. Persistent DataLoader workers. 
-          Batch size tuning. Each optimization stacked multiplicatively.
-        </P>
-
-        <CodeBlock>
-{`Performance Improvements
-├── Batch Size: 16 → 128 (8x throughput)
-├── Mixed Precision (AMP): 1.5-2x speedup
-├── torch.compile: 1.3-1.5x speedup
-├── Channels Last: 1.1-1.2x speedup
-├── Persistent Workers: 1.1-1.2x speedup
-├── GPU Utilization: 17% → 85%
-└── Training Time: 20-40 hours → 2-3 hours`}
-        </CodeBlock>
-
-        <P>
-          The GPU utilization improvement tells the real story. Going from 17% to 85% means 
-          the GPU is actually working instead of waiting for data. That&apos;s the difference 
-          between research code and production systems.
-        </P>
-
-        <Heading as="h2" {...sectionHeadingProps}>
-          Federated Learning for Multi-Site Training
-        </Heading>
-
-        <P>
-          Hospitals can&apos;t share patient data. That&apos;s not a technical limitation - 
-          it&apos;s HIPAA. But you still want models trained on data from multiple institutions 
-          to improve generalization.
+          The early infrastructure work was necessary — it built the engineering instincts and
+          experimental discipline I use now. But the framing matters. It was research
+          infrastructure and learning, not a production medical AI platform.
         </P>
 
         <P>
-          HistoCore now includes the first open-source federated learning system specifically 
-          designed for digital pathology. Differential privacy with ε ≤ 1.0, Byzantine fault 
-          tolerance for detecting malicious clients, and automatic PACS integration for 
-          discovering training data.
-        </P>
-
-        <CodeBlock>
-{`Federated Learning Features
-├── Differential Privacy: ε ≤ 1.0 with DP-SGD
-├── Secure Aggregation: Homomorphic encryption
-├── Byzantine Robustness: Krum/Trimmed Mean
-├── PACS Integration: Automatic WSI discovery
-├── Multi-Algorithm: FedAvg, FedProx, FedAdam
-├── Fault Tolerance: Checkpoint recovery
-└── Property Tests: 8/8 correctness properties passing`}
-        </CodeBlock>
-
-        <P>
-          The property-based testing here is critical. Federated learning has subtle bugs 
-          that only show up in specific scenarios - like when 20% of clients drop out mid-training, 
-          or when one client sends malicious gradients. The test suite validates that the 
-          system handles these cases correctly.
-        </P>
-
-        <Heading as="h2" {...sectionHeadingProps}>
-          Clinical PACS Integration
-        </Heading>
-
-        <P>
-          Research code reads files from disk. Production systems integrate with hospital 
-          infrastructure. That means DICOM, PACS servers, HL7 FHIR, and all the medical 
-          imaging standards that make healthcare IT work.
-        </P>
-
-        <P>
-          HistoCore now includes production-ready PACS integration with DICOM C-FIND/C-MOVE/C-STORE 
-          operations, multi-vendor support for GE/Philips/Siemens/Agfa systems, TLS 1.3 
-          encryption, and HIPAA-compliant audit logging.
-        </P>
-
-        <CodeBlock>
-{`PACS Integration Features
-├── DICOM Operations: C-FIND, C-MOVE, C-STORE
-├── Multi-Vendor: GE, Philips, Siemens, Agfa
-├── Security: TLS 1.3 encryption
-├── Compliance: HIPAA audit logging
-├── Standards: HL7 FHIR integration
-└── Validation: 40/48 properties (83%)`}
-        </CodeBlock>
-
-        <P>
-          The 83% property validation rate isn&apos;t perfect, but it&apos;s honest. The 
-          remaining 17% are edge cases in vendor-specific DICOM implementations that need 
-          more testing. That&apos;s the kind of detail that matters in production.
-        </P>
-
-        <Heading as="h2" {...sectionHeadingProps}>
-          Real Benchmark Results
-        </Heading>
-
-        <P>
-          The framework has been validated on the complete PatchCamelyon dataset with bootstrap 
-          confidence intervals from 1,000 resamples. These aren&apos;t cherry-picked numbers - 
-          they&apos;re reproducible results with statistical validation.
-        </P>
-
-        <CodeBlock>
-{`PCam Validation Performance (Epoch 10)
-├── Validation AUC: 100%
-├── Training Samples: 262,144
-├── GPU Utilization: 85%
-└── Training Time: 2-3 hours
-
-PCam Test Set Results (32,768 samples)
-├── Accuracy: 85.26% (95% CI: 84.83%-85.63%)
-├── AUC: 0.9394 (95% CI: 0.9369-0.9418)
-├── F1: 0.8507 (95% CI: 0.8464-0.8543)
-└── Inference: <5 seconds (production-ready)
-
-Clinical Threshold Optimization (Screening)
-├── Threshold: 0.051
-├── Sensitivity: 90.0%
-├── Specificity: 80.3%
-└── Missed Tumors: Reduced by 61.7%`}
-        </CodeBlock>
-
-        <P>
-          The clinical threshold optimization is what makes this useful for actual deployment. 
-          The default threshold optimizes for overall accuracy, but screening applications 
-          care more about sensitivity. The optimized threshold catches 90% of tumors while 
-          maintaining acceptable specificity.
-        </P>
-
-        <Heading as="h2" {...sectionHeadingProps}>
-          What&apos;s Next
-        </Heading>
-
-        <P>
-          The framework is production-ready, but not finished. Next phase is clinical validation 
-          studies with real hospital data, regulatory compliance work for FDA/CE marking, and 
-          deployment infrastructure for Kubernetes and cloud platforms.
-        </P>
-
-        <P>
-          The goal has always been to build infrastructure that makes computational pathology 
-          research practical. Not just for academic labs with GPU clusters, but for independent 
-          researchers and hospitals that need systems that actually work.
-        </P>
-
-        <P>
-          Check out the full documentation at{' '}
-          <a href="https://matthewvaishnav.github.io/computational-pathology-research/" 
-             target="_blank" rel="noopener noreferrer" 
-             style={{ color: '#9F7AEA', textDecoration: 'underline' }}>
-            matthewvaishnav.github.io/computational-pathology-research
-          </a>
-        </P>
-
-        <P>
-          The source code lives at{' '}
+          Current research:{' '}
           <a href="https://github.com/matthewvaishnav/computational-pathology-research"
              target="_blank" rel="noopener noreferrer"
              style={{ color: '#9F7AEA', textDecoration: 'underline' }}>
