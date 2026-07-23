@@ -58,8 +58,8 @@ const Home = () => (
           <Button as={NextLink} href="/computational-pathology" scroll={false} rightIcon={<ChevronRightIcon />} colorScheme="teal" size="lg">
             Current Research
           </Button>
-          <Button as={NextLink} href="/posts" scroll={false} rightIcon={<ChevronRightIcon />} colorScheme="teal" variant="outline" size="lg">
-            Research Index
+          <Button as={NextLink} href="/research" scroll={false} rightIcon={<ChevronRightIcon />} colorScheme="teal" variant="outline" size="lg">
+            Research Library
           </Button>
           <Button as={Link} href="https://github.com/matthewvaishnav" target="_blank" rightIcon={<ChevronRightIcon />} colorScheme="teal" variant="outline" size="lg">
             GitHub

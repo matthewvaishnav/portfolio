@@ -84,9 +84,6 @@ const Navbar = props => {
           mt={{ base: 4, md: 0 }}
           spacing={1}
         >
-          <LinkItem href="/posts" path={path} fontSize="16px">
-            Posts
-          </LinkItem>
           <LinkItem href="/research" path={path} fontSize="16px">
             Research
           </LinkItem>
@@ -119,9 +116,6 @@ const Navbar = props => {
               <MenuList>
                 <MenuItem as={NextLink} href="/" scroll={false}>
                   About
-                </MenuItem>
-                <MenuItem as={NextLink} href="/posts" scroll={false}>
-                  Posts
                 </MenuItem>
                 <MenuItem as={NextLink} href="/research" scroll={false}>
                   Research
