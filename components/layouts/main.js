@@ -13,6 +13,8 @@ const LazyVoxelDog = dynamic(() => import('../voxel-dog'), {
 
 const Main = ({ children, router }) => {
   const isBlogRoute = router.asPath.startsWith('/posts')
+  const isResearchRoute =
+    router.asPath.startsWith('/research') || router.asPath.startsWith('/ml-notes')
   
   return (
     <Box as="main" pb={8}>
@@ -31,7 +33,7 @@ const Main = ({ children, router }) => {
       <NavBar path={router.asPath} />
 
       <Container maxW="container.md" pt={14}>
-        {!isBlogRoute && (
+        {!isBlogRoute && !isResearchRoute && (
           <>
             <LazyVoxelDog />
             <SpeechBubble />
