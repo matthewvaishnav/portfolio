@@ -87,8 +87,8 @@ const Navbar = props => {
           <LinkItem href="/posts" path={path} fontSize="16px">
             Posts
           </LinkItem>
-          <LinkItem href="/ml-notes" path={path} fontSize="16px">
-            ML Notes
+          <LinkItem href="/research" path={path} fontSize="16px">
+            Research
           </LinkItem>
           <LinkItem
             target="_blank"
@@ -123,8 +123,8 @@ const Navbar = props => {
                 <MenuItem as={NextLink} href="/posts" scroll={false}>
                   Posts
                 </MenuItem>
-                <MenuItem as={NextLink} href="/ml-notes" scroll={false}>
-                  ML Notes
+                <MenuItem as={NextLink} href="/research" scroll={false}>
+                  Research
                 </MenuItem>
                 <MenuItem
                   as={Link}
