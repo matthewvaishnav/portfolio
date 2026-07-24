@@ -5,131 +5,158 @@ import P from '../components/paragraph'
 import Layout from '../components/layouts/article'
 
 const Work = () => (
-  <Layout title="Paired-Acquisition Neural Factorization for Computational Pathology">
+  <Layout title="Independent Computational Pathology Research">
     <Container>
       <Title>
-        Paired-Acquisition Neural Factorization <Badge>2025–</Badge>
+        Independent Computational Pathology Research <Badge>2025–</Badge>
       </Title>
 
       <Heading as="h4" size="md" mt={2}>Overview</Heading>
       <P>
-        Research-only computational pathology experiments centered on testing whether paired
-        acquisitions of the same tissue can reduce scanner/acquisition signal in pathology
-        foundation-model embeddings while preserving tissue identity. The work spans SCORPION
-        (human prostate), external canine SCC validation, cross-backbone checks, baseline stress
-        tests, pair-repeat allocation, and mechanism-hardening audits.
+        I am building an independent computational pathology research framework for whole-slide
+        histopathology modeling, multiple-instance learning, scanner and acquisition robustness,
+        representation identifiability, and reproducible healthcare-AI research infrastructure.
       </P>
-
       <P>
-        The core approach, Paired-Acquisition Neural Factorization, uses paired same-region
-        acquisitions (different scanners, same tissue block) to train a factorization that
-        separates biological signal from acquisition/scanner signal in frozen foundation-model
-        feature spaces. This is a research investigation, not a clinical tool.
+        My primary research line is Paired-Acquisition Neural Factorization. It uses multiple scans
+        of the same underlying tissue region to factor frozen pathology embeddings into a
+        scanner-suppressed tissue factor and an acquisition-specific factor. The central question is
+        whether paired acquisitions can reduce linearly recoverable scanner identity while
+        preserving same-tissue information. This is a deliberately narrower claim than proving
+        disease biology or perfect biological/acquisition disentanglement.
       </P>
 
-      <Heading as="h4" size="md" mt={6}>Current Research Packages</Heading>
+      <Heading as="h4" size="md" mt={6}>Current Research</Heading>
+      <List ml={4} my={4} spacing={3}>
+        <ListItem>
+          <Meta>Paired acquisition</Meta>
+          <span>Paired-Acquisition Neural Factorization on the five-scanner SCORPION benchmark.</span>
+        </ListItem>
+        <ListItem>
+          <Meta>External validation</Meta>
+          <span>Locked multi-scanner validation on an independent canine cutaneous squamous-cell carcinoma dataset.</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Allocation</Meta>
+          <span>Matched-budget experiments testing unique biological pair diversity against repeated exposure to fewer tissue anchors.</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Center leakage</Meta>
+          <span>CAMELYON17 center-subspace projection studies that attenuate source-center information while auditing tumor-signal preservation.</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Whole-slide MIL</Meta>
+          <span>PANDA slide-level grading with mean pooling, gated AttentionMIL, and TransnnMIL over frozen pathology features.</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Patch classification</Meta>
+          <span>PatchCamelyon convolutional classification and full validation/test evaluation.</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Federated pathology</Meta>
+          <span>Controlled feature-level simulations of aggregation, dominant-site corruption, ordinal bias, and held-out-center generalization.</span>
+        </ListItem>
+      </List>
+
+      <Heading as="h4" size="md" mt={6}>Selected Results</Heading>
+      <List ml={4} my={4} spacing={3}>
+        <ListItem>
+          <Meta>SCORPION scale</Meta>
+          <span>48 original human H&amp;E slides, 480 aligned tissue regions, five scanners, and 2,400 real-human-tissue patches evaluated across DINOv2-Base, Phikon, and ImageNet ResNet50 features.</span>
+        </ListItem>
+        <ListItem>
+          <Meta>SCORPION DINOv2</Meta>
+          <span>Scanner-probe accuracy reduced from 0.7825 to 0.3989 while mean paired cosine improved from 0.8476 to 0.8789, with near-perfect tissue retrieval retained.</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Cross-backbone transfer</Meta>
+          <span>The frozen objective reproduced the scanner-suppression and tissue-preservation pattern on Phikon and ResNet50, arguing against a DINOv2-specific explanation.</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Canine SCC scale</Meta>
+          <span>44 biological samples, five scanners, 805 complete five-view regions, and 4,025 image views in the geometry-qualified public subset.</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Canine SCC validation</Meta>
+          <span>Locked five-fold DINOv2-Base validation reduced scanner-probe accuracy from 0.7529 to 0.3614 while paired cosine improved from 0.6960 to 0.7300 and same-region retrieval was preserved.</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Pair-repeat allocation</Meta>
+          <span>Matched budgets of 6,400 and 12,800 pair presentations supported broader biological pair diversity over repeatedly presenting fewer anchors, with additional gains from doubling the total budget.</span>
+        </ListItem>
+        <ListItem>
+          <Meta>CAMELYON17</Meta>
+          <span>Supervised center-subspace projection reduced center accuracy from 0.8946 to 0.7636 while preserving tumor AUC near 0.9903.</span>
+        </ListItem>
+        <ListItem>
+          <Meta>PatchCamelyon</Meta>
+          <span>95.37% validation AUC, with 85.26% test accuracy and 0.9394 test AUC on the full 32,768-sample test set.</span>
+        </ListItem>
+        <ListItem>
+          <Meta>PANDA data</Meta>
+          <span>Validated feature readability across 10,611 slide-level Phikon feature files before downstream MIL evaluation.</span>
+        </ListItem>
+        <ListItem>
+          <Meta>PANDA MIL</Meta>
+          <span>Mean-pooled Phikon plus MLP reached QWK 0.7274; gated AttentionMIL reached 0.8100; tuned TransnnMIL repeated-seed runs reached 0.8155, 0.8225, and 0.8086.</span>
+        </ListItem>
+      </List>
+
+      <Heading as="h4" size="md" mt={6}>Research Reliability Infrastructure</Heading>
+      <P>
+        The framework includes immutable provenance identifiers, SHA-256 artifact bindings,
+        dataset/split/configuration/environment/command/commit lineage, corruption tests,
+        resumable factorial execution, preregistered smoke grids, fail-closed release validators,
+        and dedicated GitHub Actions gates. Large raw images, feature archives, checkpoints, and
+        generated run directories remain outside Git, while public repositories contain the code,
+        frozen protocols, evidence tables, reports, and validation contracts needed to audit each
+        supported claim.
+      </P>
+
+      <Heading as="h4" size="md" mt={6}>Public Research Packages</Heading>
       <List ml={4} my={4} spacing={2}>
         <ListItem>
           <Meta>Main index</Meta>
-          <Link href="https://matthewvaishnav.github.io/computational-pathology-research/" target="_blank">
+          <Link href="https://matthewvaishnav.github.io/computational-pathology-research/" target="_blank" rel="noopener noreferrer">
             Research documentation and results index <ExternalLinkIcon mx="2px"/>
           </Link>
         </ListItem>
         <ListItem>
+          <Meta>SCORPION</Meta>
+          <Link href="https://matthewvaishnav.github.io/paired-acquisition-factorization-scorpion/paired-acquisition-factorization-scorpion.pdf" target="_blank" rel="noopener noreferrer">
+            Core paired-acquisition study PDF <ExternalLinkIcon mx="2px"/>
+          </Link>
+        </ListItem>
+        <ListItem>
           <Meta>Canine SCC</Meta>
-          <Link href="https://matthewvaishnav.github.io/paired-acquisition-factorization-caninescc/paired-acquisition-factorization-caninescc.pdf" target="_blank">
+          <Link href="https://matthewvaishnav.github.io/paired-acquisition-factorization-caninescc/paired-acquisition-factorization-caninescc.pdf" target="_blank" rel="noopener noreferrer">
             External multi-scanner validation PDF <ExternalLinkIcon mx="2px"/>
           </Link>
         </ListItem>
         <ListItem>
           <Meta>Allocation</Meta>
-          <Link href="https://matthewvaishnav.github.io/paired-acquisition-factorization-allocation/paired-acquisition-factorization-allocation.pdf" target="_blank">
+          <Link href="https://matthewvaishnav.github.io/paired-acquisition-factorization-allocation/paired-acquisition-factorization-allocation.pdf" target="_blank" rel="noopener noreferrer">
             Pair-repeat allocation study PDF <ExternalLinkIcon mx="2px"/>
           </Link>
         </ListItem>
         <ListItem>
-          <Meta>SCORPION</Meta>
-          <Link href="https://github.com/matthewvaishnav/paired-acquisition-factorization-scorpion" target="_blank">
-            GitHub repository <ExternalLinkIcon mx="2px"/>
-          </Link>
-        </ListItem>
-        <ListItem>
           <Meta>GitHub</Meta>
-          <Link href="https://github.com/matthewvaishnav/computational-pathology-research" target="_blank">
+          <Link href="https://github.com/matthewvaishnav/computational-pathology-research" target="_blank" rel="noopener noreferrer">
             Main research repository <ExternalLinkIcon mx="2px"/>
           </Link>
         </ListItem>
       </List>
 
-      <Heading as="h4" size="md" mt={6}>Key Results</Heading>
-      <List ml={4} my={4} spacing={2}>
-        <ListItem>
-          <Meta>SCORPION DINOv2</Meta>
-          <span>Scanner-probe accuracy reduced from 0.7825 to 0.3989 while mean paired cosine improved from 0.8476 to 0.8789.</span>
-        </ListItem>
-        <ListItem>
-          <Meta>Canine SCC DINOv2</Meta>
-          <span>Scanner-probe accuracy reduced from 0.7529 to 0.3614 while paired cosine improved from 0.6960 to 0.7300.</span>
-        </ListItem>
-        <ListItem>
-          <Meta>Cross-backbone</Meta>
-          <span>Phikon and ResNet50 backbones reproduce the scanner-suppression / tissue-preservation pattern.</span>
-        </ListItem>
-        <ListItem>
-          <Meta>Baseline stress</Meta>
-          <span>Linear scanner projection and PCA do not match the scanner-suppression / tissue-preservation tradeoff.</span>
-        </ListItem>
-        <ListItem>
-          <Meta>Acquisition-branch audit</Meta>
-          <span>Acquisition branch retains higher scanner recoverability while carrying much lower tissue-identity retrieval than biological branch.</span>
-        </ListItem>
-        <ListItem>
-          <Meta>Pair-structure boundary</Meta>
-          <span>True same-region pairs preserve tissue identity best. Looser/random pairings suppress scanner but do not preserve tissue identity as well.</span>
-        </ListItem>
-      </List>
-
-      <Heading as="h4" size="md" mt={6}>Mechanism-Hardening Audits</Heading>
-      <P>
-        Post-freeze audits strengthen the mechanism interpretation without expanding the claim
-        surface. The acquisition-branch audit confirms that branch separation is measurable:
-        the acquisition branch retains higher scanner recoverability while the biological branch
-        preserves tissue-identity retrieval. The pair-structure boundary test shows that
-        biological pairing structure matters: true same-region pairs preserve tissue identity
-        best, and looser or random pairings do not recover true-pair behavior even though they
-        can still suppress scanner signal.
-      </P>
-      <P>
-        These are research findings under controlled experimental conditions. They support the
-        interpretation that the factorization is doing more than simple scanner suppression, but
-        they do not prove full factorization or establish clinical validity.
-      </P>
-
-      <Heading as="h4" size="md" mt={6}>Earlier Work</Heading>
-      <List ml={4} my={4} spacing={2}>
-        <ListItem><Meta>PANDA</Meta><span>10,611 readable slide-level Phikon feature vectors. Gated AttentionMIL QWK 0.8100. Tuned TransnnMIL QWK 0.8155 / 0.8225 / 0.8086.</span></ListItem>
-        <ListItem><Meta>PCam</Meta><span>95.37% validation AUC. 85.26% test accuracy and 0.9394 test AUC on the full 32,768-sample test set.</span></ListItem>
-        <ListItem><Meta>Federated stress</Meta><span>15-seed simulated-federation PANDA studies of FedAvg under dominant-site label corruption and systematic ordinal threshold bias. Cross-site blending improved robustness when the dominant simulated site became unreliable.</span></ListItem>
-        <ListItem><Meta>TransnnMIL</Meta><span>Custom multiple-instance learning architecture direction for WSI modeling — earlier slide-level MIL research prototype work.</span></ListItem>
-      </List>
-
       <Heading as="h4" size="md" mt={6}>Claim Boundary</Heading>
       <P>
-        Research-only. Not clinically validated. Not diagnostic software. Not intended for
-        clinical deployment, patient care, or medical decision-making. Results are from
-        controlled experiments on specific datasets (SCORPION, canine SCC, PANDA, PCam) with
-        specific foundation-model backbones (DINOv2, Phikon, ResNet50). Findings use language
-        like &ldquo;supports,&rdquo; &ldquo;suggests,&rdquo; and &ldquo;across audited
-        settings&rdquo; — they do not prove, solve, or establish clinical validity. Simulated
-        federated experiments are not real hospital deployments.
+        Research-only. Not clinically validated. Not diagnostic software. Not intended for clinical
+        deployment, patient care, or medical decision-making. Results come from controlled studies
+        on specific datasets, feature backbones, folds, and preprocessing conditions. Simulated
+        federated experiments are not real hospital deployments. The paired-acquisition results
+        support scanner-suppressed tissue representation and factor-separation interpretations
+        across audited settings; they do not prove disease biology, perfect disentanglement,
+        diagnostic equivalence, clinical safety, or improved patient outcomes.
       </P>
-
-      <Heading as="h4" size="md" mt={6}>Links</Heading>
-      <List ml={4} my={4}>
-        <ListItem><Meta>Research docs</Meta><Link href="https://matthewvaishnav.github.io/computational-pathology-research/" target="_blank">Research documentation index <ExternalLinkIcon mx="2px"/></Link></ListItem>
-        <ListItem><Meta>GitHub</Meta><Link href="https://github.com/matthewvaishnav/computational-pathology-research" target="_blank">Main repository <ExternalLinkIcon mx="2px"/></Link></ListItem>
-        <ListItem><Meta>SCORPION</Meta><Link href="https://github.com/matthewvaishnav/paired-acquisition-factorization-scorpion" target="_blank">SCORPION package <ExternalLinkIcon mx="2px"/></Link></ListItem>
-      </List>
     </Container>
   </Layout>
 )
