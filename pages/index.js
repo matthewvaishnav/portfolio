@@ -180,9 +180,10 @@ const Home = () => (
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">I ♥</Heading>
         <Paragraph>
-          Computational pathology, PyTorch, whole-slide image modeling, representation learning,
-          scanner and site robustness, reproducible experiments, systems programming, security
-          engineering, failure analysis, home labs, clean interfaces, coffee, music, art, and my dog.
+          Matrix multiplication, backpropagation, gradient descent, optimization landscapes,
+          attention mechanisms, convolutional inductive biases, embedding geometry, latent-space
+          factorization, feature disentanglement, multiple-instance learning, pathological failure
+          modes, and figuring out what neural networks actually encode.
         </Paragraph>
       </Section>
 
