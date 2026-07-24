@@ -30,16 +30,16 @@ const Home = () => (
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">Matthew Vaishnav</Heading>
           <Text fontSize={{ base: 'md', md: 'xl' }} mb={1}>
-            Computational pathology research engineering
+            Applied ML / Computational Pathology Research Engineer
           </Text>
           <Text fontSize="sm" color="gray.500">
-            Research-only machine learning for whole-slide histopathology, scanner/site robustness,
-            paired-acquisition representation learning, and reproducible ML evaluation
+            Independent research in whole-slide histopathology, scanner and acquisition robustness,
+            representation identifiability, multiple-instance learning, and reproducible ML systems
           </Text>
         </Box>
         <Box flexShrink={0} mt={{ base: 4, md: 0 }} ml={{ md: 6 }} textAlign="center">
           <Box borderColor="whiteAlpha.800" borderWidth={2} borderStyle="solid" w={{ base: '88px', md: '100px' }} h={{ base: '88px', md: '100px' }} display="inline-block" borderRadius="full" overflow="hidden">
-            <Box as="img" src="/portfolio/images/matthew.jpg" alt="Profile image" borderRadius="full" w={{ base: '88px', md: '100px' }} h={{ base: '88px', md: '100px' }} objectFit="cover" objectPosition="center" />
+            <Box as="img" src="/portfolio/images/matthew.jpg" alt="Matthew Vaishnav" borderRadius="full" w={{ base: '88px', md: '100px' }} h={{ base: '88px', md: '100px' }} objectFit="cover" objectPosition="center" />
           </Box>
         </Box>
       </Box>
@@ -47,12 +47,17 @@ const Home = () => (
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">Work</Heading>
         <Paragraph>
-          I build research-only computational pathology experiments around whole-slide modeling,
-          pathology foundation-model features, scanner/acquisition robustness, simulated federated
-          pathology stress tests, and reproducible evaluation infrastructure. My current strongest
-          research line is Paired-Acquisition Neural Factorization: testing whether paired
-          acquisitions of the same tissue can reduce scanner/acquisition signal in pathology
-          embeddings while preserving tissue identity.
+          I am a Conestoga College Computer Systems Technician student and an independent applied
+          machine-learning researcher. I build research software and controlled experiments for
+          computational pathology, with an emphasis on whole-slide modeling, pathology
+          foundation-model features, scanner and site robustness, representation audits, simulated
+          federated learning, and fail-closed reproducibility infrastructure.
+        </Paragraph>
+        <Paragraph>
+          My primary research line is Paired-Acquisition Neural Factorization: using multiple scans
+          of the same underlying tissue to test whether frozen pathology embeddings can be separated
+          into a scanner-suppressed tissue factor and an acquisition-specific factor without erasing
+          tissue identity.
         </Paragraph>
         <Flex justify="center" my={4} gap={3} flexWrap="wrap">
           <Button as={NextLink} href="/computational-pathology" scroll={false} rightIcon={<ChevronRightIcon />} colorScheme="teal" size="lg">
@@ -61,7 +66,7 @@ const Home = () => (
           <Button as={NextLink} href="/research" scroll={false} rightIcon={<ChevronRightIcon />} colorScheme="teal" variant="outline" size="lg">
             Research Library
           </Button>
-          <Button as={Link} href="https://github.com/matthewvaishnav" target="_blank" rightIcon={<ChevronRightIcon />} colorScheme="teal" variant="outline" size="lg">
+          <Button as={Link} href="https://github.com/matthewvaishnav" target="_blank" rel="noopener noreferrer" rightIcon={<ChevronRightIcon />} colorScheme="teal" variant="outline" size="lg">
             GitHub
           </Button>
         </Flex>
@@ -73,70 +78,80 @@ const Home = () => (
           <ListItem>
             <strong>1. Paired-Acquisition Neural Factorization</strong><br />
             <Text fontSize="sm" color="gray.400">
-              Scanner/acquisition signal vs tissue identity preservation. SCORPION, external canine SCC,
-              cross-backbone, and baseline controls.
+              Primary SCORPION study across 48 human H&amp;E slides, five scanners, and DINOv2,
+              Phikon, and ResNet50 feature families.
             </Text>
           </ListItem>
           <ListItem>
             <strong>2. External multi-scanner validation</strong><br />
             <Text fontSize="sm" color="gray.400">
-              Canine SCC validation package with independent scanner conditions.
+              Independent five-scanner canine squamous-cell carcinoma validation of the locked
+              factorization objective.
             </Text>
           </ListItem>
           <ListItem>
             <strong>3. Pair-repeat allocation</strong><br />
             <Text fontSize="sm" color="gray.400">
-              Unique pair diversity vs repeated exposure tradeoffs.
+              Matched-budget experiments testing unique biological pair diversity against repeated
+              exposure to the same anchors.
             </Text>
           </ListItem>
           <ListItem>
-            <strong>4. Mechanism audits</strong><br />
+            <strong>4. CAMELYON17 center-subspace projection</strong><br />
             <Text fontSize="sm" color="gray.400">
-              Acquisition-branch audit: branch separation is measurable.<br />
-              Pair-structure boundary test: biological pairing structure matters.
+              Mechanism-focused work on reducing source-center leakage while preserving tumor signal
+              in pathology representations.
             </Text>
           </ListItem>
           <ListItem>
-            <strong>5. Earlier research</strong><br />
+            <strong>5. Whole-slide multiple-instance learning</strong><br />
             <Text fontSize="sm" color="gray.400">
-              PANDA / PCam / MIL experiments. Simulated federated pathology stress tests.
+              PANDA slide-level grading with mean pooling, AttentionMIL, and TransnnMIL over frozen
+              pathology foundation-model features.
+            </Text>
+          </ListItem>
+          <ListItem>
+            <strong>6. Research reliability infrastructure</strong><br />
+            <Text fontSize="sm" color="gray.400">
+              Immutable provenance, artifact hashing, corruption tests, resumable factorial runs,
+              fail-closed validators, and dedicated GitHub Actions gates.
             </Text>
           </ListItem>
         </List>
       </Section>
 
       <Section delay={0.28}>
-        <Heading as="h3" variant="section-title">Research Metrics</Heading>
+        <Heading as="h3" variant="section-title">Selected Evidence</Heading>
         <SimpleGrid columns={[1, 2, 3]} gap={4}>
           <Stat>
             <StatLabel>SCORPION scanner probe</StatLabel>
             <StatNumber>0.7825 → 0.3989</StatNumber>
-            <StatHelpText>Reduction in scanner recoverability</StatHelpText>
+            <StatHelpText>Reduced scanner recoverability</StatHelpText>
           </Stat>
           <Stat>
             <StatLabel>Canine SCC scanner probe</StatLabel>
             <StatNumber>0.7529 → 0.3614</StatNumber>
-            <StatHelpText>External validation reduction</StatHelpText>
+            <StatHelpText>Independent external validation</StatHelpText>
+          </Stat>
+          <Stat>
+            <StatLabel>CAMELYON17 tumor AUC</StatLabel>
+            <StatNumber>≈ 0.9903</StatNumber>
+            <StatHelpText>Preserved during center attenuation</StatHelpText>
+          </Stat>
+          <Stat>
+            <StatLabel>Public study packages</StatLabel>
+            <StatNumber>3</StatNumber>
+            <StatHelpText>SCORPION, canine SCC, and allocation</StatHelpText>
           </Stat>
           <Stat>
             <StatLabel>PANDA readable features</StatLabel>
             <StatNumber>10,611</StatNumber>
-            <StatHelpText>Verified slide feature vectors</StatHelpText>
-          </Stat>
-          <Stat>
-            <StatLabel>PCam validation AUC</StatLabel>
-            <StatNumber>95.37%</StatNumber>
-            <StatHelpText>Full validation set</StatHelpText>
-          </Stat>
-          <Stat>
-            <StatLabel>PANDA gated AttentionMIL</StatLabel>
-            <StatNumber>QWK 0.8100</StatNumber>
-            <StatHelpText>Slide-level baseline</StatHelpText>
+            <StatHelpText>Verified slide-level feature vectors</StatHelpText>
           </Stat>
           <Stat>
             <StatLabel>PANDA tuned TransnnMIL</StatLabel>
-            <StatNumber>QWK 0.8155 / 0.8225</StatNumber>
-            <StatHelpText>Repeated-seed results</StatHelpText>
+            <StatNumber>0.8155 / 0.8225</StatNumber>
+            <StatHelpText>Repeated-seed validation QWK</StatHelpText>
           </Stat>
         </SimpleGrid>
       </Section>
@@ -145,37 +160,37 @@ const Home = () => (
         <Heading as="h3" variant="section-title">Claim Boundary</Heading>
         <Paragraph>
           Research-only. Not clinically validated. Not diagnostic software. Not intended for
-          clinical deployment or patient-care use. Results are from controlled experiments and
+          clinical deployment or patient-care use. Results come from controlled experiments and
           simulated federations over pathology-derived feature vectors, not real hospital
-          deployments. All findings are bounded by the specific datasets, backbones, and
-          experimental conditions described in each report.
+          deployments. Every finding is bounded by the datasets, feature backbones, splits, and
+          experimental conditions documented in its report.
         </Paragraph>
       </Section>
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">Bio</Heading>
         <BioSection><BioYear>2006</BioYear>Born in Ontario, Canada.</BioSection>
-        <BioSection><BioYear>2025 to present</BioYear>Studying Computer Systems Technician at Conestoga College.</BioSection>
-        <BioSection><BioYear>2025</BioYear>Built 18-node home lab with Security Onion and pfSense for security research.</BioSection>
-        <BioSection><BioYear>2025 to present</BioYear>Building computational pathology research experiments: PCam benchmarks, PANDA slide-level MIL, simulated federated pathology stress tests.</BioSection>
-        <BioSection><BioYear>2026 to present</BioYear>Paired-Acquisition Neural Factorization: scanner/acquisition signal reduction, tissue identity preservation, external canine SCC validation, pair-repeat allocation, mechanism audits.</BioSection>
+        <BioSection><BioYear>2025 to present</BioYear>Studying Computer Systems Technician – IT Infrastructure &amp; Services at Conestoga College in Waterloo, Ontario.</BioSection>
+        <BioSection><BioYear>2025</BioYear>Built an 18-node home lab with Security Onion and pfSense for systems and security research.</BioSection>
+        <BioSection><BioYear>2025 to present</BioYear>Developing independent computational pathology experiments across PCam, PANDA, CAMELYON17, multiple-instance learning, and simulated federated pathology.</BioSection>
+        <BioSection><BioYear>2026 to present</BioYear>Publishing Paired-Acquisition Neural Factorization studies, external validation packages, mechanism audits, and reproducibility infrastructure.</BioSection>
       </Section>
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">I ♥</Heading>
         <Paragraph>
-          Computational pathology, whole-slide image modeling, scanner/site robustness,
-          reproducible experiments, security engineering, failure analysis, home labs,
-          clean interfaces, coffee, music, art, and my dog.
+          Computational pathology, PyTorch, whole-slide image modeling, representation learning,
+          scanner and site robustness, reproducible experiments, systems programming, security
+          engineering, failure analysis, home labs, clean interfaces, coffee, music, art, and my dog.
         </Paragraph>
       </Section>
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">On the web</Heading>
         <List>
-          <ListItem><Link href="https://github.com/matthewvaishnav" target="_blank"><Button variant="ghost" colorScheme="teal" leftIcon={<IoLogoGithub />}>@matthewvaishnav</Button></Link></ListItem>
-          <ListItem><Link href="https://www.linkedin.com/in/matthew-vaishnav-594312403/" target="_blank"><Button variant="ghost" colorScheme="teal" leftIcon={<IoLogoLinkedin />}>Matthew Vaishnav</Button></Link></ListItem>
-          <ListItem><Link href="https://tryhackme.com/p/matthew.vaishnav" target="_blank"><Button variant="ghost" colorScheme="teal" leftIcon={<SiTryhackme />}>@matthew.vaishnav</Button></Link></ListItem>
+          <ListItem><Link href="https://github.com/matthewvaishnav" target="_blank" rel="noopener noreferrer"><Button variant="ghost" colorScheme="teal" leftIcon={<IoLogoGithub />}>@matthewvaishnav</Button></Link></ListItem>
+          <ListItem><Link href="https://www.linkedin.com/in/matthew-vaishnav-594312403/" target="_blank" rel="noopener noreferrer"><Button variant="ghost" colorScheme="teal" leftIcon={<IoLogoLinkedin />}>Matthew Vaishnav</Button></Link></ListItem>
+          <ListItem><Link href="https://tryhackme.com/p/matthew.vaishnav" target="_blank" rel="noopener noreferrer"><Button variant="ghost" colorScheme="teal" leftIcon={<SiTryhackme />}>@matthew.vaishnav</Button></Link></ListItem>
         </List>
       </Section>
 
