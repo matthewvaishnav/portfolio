@@ -47,10 +47,10 @@ const Home = () => (
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">Work</Heading>
         <Paragraph>
-          I am an independent applied machine-learning researcher and research software developer
-          working in computational pathology. I build controlled experiments and reproducible ML
-          systems for whole-slide modeling, pathology foundation-model features, scanner and site
-          robustness, representation audits, simulated federated learning, and fail-closed research
+          I am an independent computational pathology engineer and applied machine-learning
+          researcher. I build controlled experiments and reproducible ML systems for whole-slide
+          modeling, pathology foundation-model features, scanner and site robustness,
+          representation audits, simulated federated learning, and fail-closed research
           infrastructure. Alongside this work, I study Computer Systems Technician – IT
           Infrastructure &amp; Services at Conestoga College.
         </Paragraph>
@@ -171,7 +171,7 @@ const Home = () => (
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">Bio</Heading>
         <BioSection><BioYear>2006</BioYear>Born in Ontario, Canada.</BioSection>
-        <BioSection><BioYear>2025 to present</BioYear>Independent applied machine-learning research in computational pathology across PCam, PANDA, CAMELYON17, multiple-instance learning, and simulated federated pathology.</BioSection>
+        <BioSection><BioYear>2025 to present</BioYear>Independent computational pathology engineering and applied machine-learning research across PCam, PANDA, CAMELYON17, multiple-instance learning, and simulated federated pathology.</BioSection>
         <BioSection><BioYear>2025</BioYear>Built an 18-node home lab with Security Onion and pfSense for systems and security research.</BioSection>
         <BioSection><BioYear>2025 to present</BioYear>Studying Computer Systems Technician – IT Infrastructure &amp; Services at Conestoga College in Waterloo, Ontario.</BioSection>
         <BioSection><BioYear>2026 to present</BioYear>Publishing Paired-Acquisition Neural Factorization studies, external validation packages, mechanism audits, and reproducibility infrastructure.</BioSection>
