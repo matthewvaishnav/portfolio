@@ -18,16 +18,25 @@ import { IoLogoGithub } from 'react-icons/io5'
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
-  const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
+  const inactiveColor = useColorModeValue('gray.700', 'whiteAlpha.900')
+  const activeBg = useColorModeValue('teal.50', 'whiteAlpha.200')
+  const activeColor = useColorModeValue('teal.800', 'white')
+  const hoverBg = useColorModeValue('blackAlpha.50', 'whiteAlpha.100')
+
   return (
     <Link
       as={NextLink}
       href={href}
       scroll={false}
-      p={2}
-      bg={active ? 'grassTeal' : undefined}
-      color={active ? '#202023' : inactiveColor}
+      px={3}
+      py={2}
+      borderRadius="md"
+      bg={active ? activeBg : undefined}
+      color={active ? activeColor : inactiveColor}
+      fontWeight={active ? 'semibold' : 'medium'}
       target={target}
+      transition="background-color 0.2s ease, color 0.2s ease"
+      _hover={{ textDecoration: 'none', bg: active ? activeBg : hoverBg }}
       {...props}
     >
       {children}
@@ -37,14 +46,20 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
 
 const Navbar = props => {
   const { path } = props
+  const navBg = useColorModeValue('rgba(255, 255, 255, 0.88)', 'rgba(32, 32, 35, 0.82)')
+  const navBorder = useColorModeValue('blackAlpha.100', 'whiteAlpha.100')
+  const navShadow = useColorModeValue('0 1px 0 rgba(15, 23, 42, 0.06)', 'none')
 
   return (
     <Box
       position="fixed"
       as="nav"
       w="100%"
-      bg={useColorModeValue('#ffffff40', '#20202380')}
-      css={{ backdropFilter: 'blur(10px)' }}
+      bg={navBg}
+      borderBottomWidth="1px"
+      borderColor={navBorder}
+      boxShadow={navShadow}
+      css={{ backdropFilter: 'blur(14px)', WebkitBackdropFilter: 'blur(14px)' }}
       zIndex={2}
       {...props}
     >
@@ -68,7 +83,7 @@ const Navbar = props => {
             fontWeight="bold"
             lineHeight="shorter"
             whiteSpace="nowrap"
-            color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+            color={useColorModeValue('gray.900', 'whiteAlpha.900')}
             _hover={{ textDecoration: 'none' }}
           >
             Matthew Vaishnav
