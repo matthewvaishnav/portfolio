@@ -51,8 +51,7 @@ const Home = () => (
           researcher. I build controlled experiments and reproducible ML systems for whole-slide
           modeling, pathology foundation-model features, scanner and site robustness,
           representation audits, simulated federated learning, and fail-closed research
-          infrastructure. Alongside this work, I study Computer Systems Technician – IT
-          Infrastructure &amp; Services at Conestoga College.
+          infrastructure.
         </Paragraph>
         <Paragraph>
           My primary research line is Paired-Acquisition Neural Factorization: using multiple scans
