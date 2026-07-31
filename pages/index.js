@@ -8,6 +8,7 @@ import {
   List,
   ListItem,
   Text,
+  Flex,
   SimpleGrid,
   Stat,
   StatLabel,
@@ -101,12 +102,12 @@ const Home = () => {
             tested protocols.
           </Paragraph>
 
-          <SimpleGrid
-            columns={{ base: 1, sm: 3 }}
-            spacing={3}
+          <Flex
+            justify="center"
+            align="center"
+            gap={{ base: 2, md: 3 }}
+            flexWrap="wrap"
             my={{ base: 6, md: 7 }}
-            maxW="680px"
-            mx="auto"
           >
             <Button
               as={NextLink}
@@ -114,8 +115,10 @@ const Home = () => {
               scroll={false}
               rightIcon={<ChevronRightIcon />}
               colorScheme="teal"
-              size="lg"
-              w="full"
+              size="md"
+              px={4}
+              w={{ base: 'full', sm: 'auto' }}
+              flexShrink={0}
             >
               Current Research
             </Button>
@@ -126,8 +129,10 @@ const Home = () => {
               rightIcon={<ChevronRightIcon />}
               colorScheme="teal"
               variant="outline"
-              size="lg"
-              w="full"
+              size="md"
+              px={4}
+              w={{ base: 'full', sm: 'auto' }}
+              flexShrink={0}
             >
               Research Library
             </Button>
@@ -139,12 +144,14 @@ const Home = () => {
               rightIcon={<ChevronRightIcon />}
               colorScheme="teal"
               variant="outline"
-              size="lg"
-              w="full"
+              size="md"
+              px={4}
+              w={{ base: 'full', sm: 'auto' }}
+              flexShrink={0}
             >
               GitHub
             </Button>
-          </SimpleGrid>
+          </Flex>
         </Section>
 
         <Section delay={0.25}>
