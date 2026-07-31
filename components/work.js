@@ -1,16 +1,30 @@
 import NextLink from 'next/link'
-import { Heading, Box, Image, Link, Badge, Flex, Text } from '@chakra-ui/react'
+import { Heading, Box, Image, Link, Flex, Text } from '@chakra-ui/react'
 import { ArrowBackIcon } from '@chakra-ui/icons'
 
-export const Title = ({ children }) => (
-  <Box mb={6}>
-    <Flex align="center" mb={3} wrap="wrap" rowGap={2}>
-      <Link as={NextLink} href="/systems-engineering" display="flex" alignItems="center" _hover={{ textDecoration: "underline" }}>
+export const Title = ({ children, backHref = '/', backLabel = 'Back to home' }) => (
+  <Box mb={{ base: 7, md: 9 }}>
+    <Flex align="center" mb={4} wrap="wrap" rowGap={2}>
+      <Link
+        as={NextLink}
+        href={backHref}
+        display="flex"
+        alignItems="center"
+        _hover={{ textDecoration: 'underline' }}
+      >
         <ArrowBackIcon mr={2} />
-        <Text fontSize="sm" fontWeight="medium">Back to Portfolio</Text>
+        <Text fontSize="sm" fontWeight="medium">
+          {backLabel}
+        </Text>
       </Link>
     </Flex>
-    <Heading as="h1" fontSize={{ base: 24, md: 28 }} fontWeight="bold" lineHeight="1.2">
+    <Heading
+      as="h1"
+      fontSize={{ base: 24, md: 30 }}
+      fontWeight="bold"
+      lineHeight="1.25"
+      letterSpacing="-0.02em"
+    >
       {children}
     </Heading>
   </Box>

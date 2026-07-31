@@ -14,24 +14,31 @@ const LazyVoxelDog = dynamic(() => import('../voxel-dog'), {
 const Main = ({ children, router }) => {
   const isResearchRoute =
     router.asPath.startsWith('/research') || router.asPath.startsWith('/ml-notes')
-  
+
   return (
-    <Box as="main" pb={8}>
+    <Box as="main" pb={{ base: 8, md: 12 }}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Matthew Vaishnav's cybersecurity portfolio" />
+        <meta
+          name="description"
+          content="Matthew Vaishnav's applied machine-learning and computational pathology research portfolio."
+        />
         <meta name="author" content="Matthew Vaishnav" />
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <meta property="og:site_name" content="Matthew Vaishnav's Portfolio" />
-        <meta name="og:title" content="Matthew Vaishnav's Portfolio" />
+        <meta property="og:site_name" content="Matthew Vaishnav's Research Portfolio" />
+        <meta name="og:title" content="Matthew Vaishnav's Research Portfolio" />
         <meta property="og:type" content="website" />
-        <title>Matthew Vaishnav - Portfolio</title>
+        <title>Matthew Vaishnav - Research Portfolio</title>
       </Head>
 
       <NavBar path={router.asPath} />
 
-      <Container maxW="container.md" pt={14}>
+      <Container
+        maxW="container.md"
+        pt={{ base: 14, md: 16 }}
+        px={{ base: 5, md: 6 }}
+      >
         {!isResearchRoute && (
           <>
             <LazyVoxelDog />
