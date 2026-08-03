@@ -14,6 +14,7 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
+import LanguageSelector from './language-selector'
 import { IoLogoGithub } from 'react-icons/io5'
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
@@ -116,10 +117,11 @@ const Navbar = props => {
           </LinkItem>
         </Stack>
 
-        <Box flex={1} display="flex" justifyContent="flex-end" alignItems="center">
+        <Box flex={1} display="flex" justifyContent="flex-end" alignItems="center" gap={2}>
+          <LanguageSelector />
           <ThemeToggleButton />
 
-          <Box ml={2} display={{ base: 'inline-flex', md: 'none' }}>
+          <Box display={{ base: 'inline-flex', md: 'none' }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
                 as={IconButton}
