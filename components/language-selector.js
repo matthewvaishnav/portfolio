@@ -2,27 +2,31 @@ import { useEffect, useState } from 'react'
 import {
   Box,
   Button,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
+  Divider,
+  Input,
+  Link,
+  Popover,
+  PopoverBody,
+  PopoverContent,
+  PopoverHeader,
+  PopoverTrigger,
   Text,
-  useColorModeValue
+  useColorModeValue,
+  VStack
 } from '@chakra-ui/react'
 import { CheckIcon, ChevronDownIcon } from '@chakra-ui/icons'
 import { IoLanguageOutline } from 'react-icons/io5'
+import { getShortLanguageLabel, languages } from '../lib/languages'
 
 const ORIGINAL_ORIGIN = 'https://matthewvaishnav.github.io'
 const TRANSLATED_ORIGIN = 'https://matthewvaishnav-github-io.translate.goog'
-
-const languages = [
-  { code: 'en', shortLabel: 'EN', nativeLabel: 'English', englishLabel: 'English' },
-  { code: 'zh-CN', shortLabel: '中', nativeLabel: '简体中文', englishLabel: 'Chinese' },
-  { code: 'ja', shortLabel: '日', nativeLabel: '日本語', englishLabel: 'Japanese' },
-  { code: 'ko', shortLabel: '한', nativeLabel: '한국어', englishLabel: 'Korean' }
-]
-
+const featuredCodes = ['en', 'fr', 'fr-CA', 'zh-CN', 'zh-TW', 'ja', 'ko', 'es', 'de']
 const supportedCodes = new Set(languages.map(language => language.code))
+
+const orderedLanguages = [
+  ...featuredCodes.map(code => languages.find(language => language.code === code)),
+  ...languages.filter(language => !featuredCodes.includes(language.code))
+].filter(Boolean)
 
 const getActiveLanguage = () => {
   if (typeof window === 'undefined') return 'en'
@@ -58,10 +62,11 @@ const getLanguageUrl = languageCode => {
 
 const LanguageSelector = () => {
   const [activeLanguage, setActiveLanguage] = useState('en')
+  const [search, setSearch] = useState('')
   const buttonVariant = useColorModeValue('solid', 'outline')
   const buttonBorder = useColorModeValue('transparent', 'orange.300')
-  const menuBg = useColorModeValue('white', 'gray.800')
-  const menuBorder = useColorModeValue('blackAlpha.200', 'whiteAlpha.200')
+  const popoverBg = useColorModeValue('white', 'gray.800')
+  const popoverBorder = useColorModeValue('blackAlpha.200', 'whiteAlpha.200')
   const activeBg = useColorModeValue('teal.50', 'whiteAlpha.100')
   const muted = useColorModeValue('gray.500', 'whiteAlpha.600')
 
@@ -71,6 +76,14 @@ const LanguageSelector = () => {
 
   const activeOption =
     languages.find(language => language.code === activeLanguage) || languages[0]
+  const normalizedSearch = search.trim().toLocaleLowerCase()
+  const visibleLanguages = normalizedSearch
+    ? languages.filter(language =>
+        `${language.englishLabel} ${language.nativeLabel} ${language.code}`
+          .toLocaleLowerCase()
+          .includes(normalizedSearch)
+      )
+    : orderedLanguages
 
   const selectLanguage = languageCode => {
     if (languageCode === activeLanguage) return
@@ -78,67 +91,109 @@ const LanguageSelector = () => {
   }
 
   return (
-    <Menu placement="bottom-end" isLazy>
-      <MenuButton
-        as={Button}
-        aria-label={`Select language. Current language: ${activeOption.englishLabel}`}
-        colorScheme={useColorModeValue('teal', 'orange')}
-        variant={buttonVariant}
-        borderColor={buttonBorder}
-        minW={{ base: '40px', md: '84px' }}
-        px={{ base: 0, md: 3 }}
-      >
-        <Box as="span" display={{ base: 'none', md: 'inline-flex' }} mr={2}>
-          <IoLanguageOutline />
-        </Box>
-        <Box as="span">{activeOption.shortLabel}</Box>
-        <ChevronDownIcon display={{ base: 'none', md: 'inline-block' }} ml={1.5} />
-      </MenuButton>
+    <Popover placement="bottom-end" isLazy>
+      <PopoverTrigger>
+        <Button
+          aria-label={`Select language. Current language: ${activeOption.englishLabel}`}
+          colorScheme={useColorModeValue('teal', 'orange')}
+          variant={buttonVariant}
+          borderColor={buttonBorder}
+          minW={{ base: '40px', md: '84px' }}
+          px={{ base: 0, md: 3 }}
+          className="notranslate"
+          translate="no"
+        >
+          <Box as="span" display={{ base: 'none', md: 'inline-flex' }} mr={2}>
+            <IoLanguageOutline />
+          </Box>
+          <Box as="span">{getShortLanguageLabel(activeOption.code)}</Box>
+          <ChevronDownIcon display={{ base: 'none', md: 'inline-block' }} ml={1.5} />
+        </Button>
+      </PopoverTrigger>
 
-      <MenuList
-        minW="210px"
-        p={2}
-        mt={1}
-        bg={menuBg}
-        borderColor={menuBorder}
+      <PopoverContent
+        w={{ base: 'calc(100vw - 24px)', sm: '330px' }}
+        maxW="330px"
+        bg={popoverBg}
+        borderColor={popoverBorder}
         borderRadius="xl"
         boxShadow="xl"
+        className="notranslate"
+        translate="no"
       >
-        {languages.map(language => {
-          const isActive = language.code === activeLanguage
+        <PopoverHeader border="0" px={4} pt={4} pb={2}>
+          <Text fontWeight={800}>Choose a language</Text>
+          <Text mt={1} color={muted} fontSize="xs">
+            {languages.length} translation options
+          </Text>
+        </PopoverHeader>
+        <PopoverBody px={3} pt={2} pb={3}>
+          <Input
+            value={search}
+            onChange={event => setSearch(event.target.value)}
+            placeholder="Search languages"
+            aria-label="Search languages"
+            mb={2}
+            borderRadius="lg"
+          />
 
-          return (
-            <MenuItem
-              key={language.code}
-              onClick={() => selectLanguage(language.code)}
-              bg={isActive ? activeBg : 'transparent'}
-              borderRadius="lg"
-              px={3}
-              py={2.5}
-              _hover={{ bg: activeBg }}
-              _focus={{ bg: activeBg }}
-            >
-              <Box w="18px" mr={3} color="teal.400">
-                {isActive && <CheckIcon boxSize={3} />}
-              </Box>
-              <Box flex="1">
-                <Text fontWeight={isActive ? 700 : 600} lineHeight="short">
-                  {language.nativeLabel}
-                </Text>
-                {language.nativeLabel !== language.englishLabel && (
-                  <Text mt={1} color={muted} fontSize="xs" lineHeight="short">
-                    {language.englishLabel}
+          <VStack align="stretch" spacing={1} maxH="320px" overflowY="auto" pr={1}>
+            {visibleLanguages.map(language => {
+              const isActive = language.code === activeLanguage
+
+              return (
+                <Button
+                  key={language.code}
+                  onClick={() => selectLanguage(language.code)}
+                  variant="ghost"
+                  bg={isActive ? activeBg : 'transparent'}
+                  justifyContent="flex-start"
+                  h="auto"
+                  minH="44px"
+                  px={3}
+                  py={2}
+                  borderRadius="lg"
+                  fontWeight="normal"
+                  _hover={{ bg: activeBg }}
+                  _focusVisible={{ boxShadow: 'outline' }}
+                >
+                  <Box w="18px" mr={3} color="teal.400" flexShrink={0}>
+                    {isActive && <CheckIcon boxSize={3} />}
+                  </Box>
+                  <Box flex="1" minW={0} textAlign="left">
+                    <Text fontWeight={isActive ? 700 : 600} lineHeight="short" noOfLines={1}>
+                      {language.nativeLabel}
+                    </Text>
+                    {language.nativeLabel !== language.englishLabel && (
+                      <Text mt={1} color={muted} fontSize="xs" lineHeight="short" noOfLines={1}>
+                        {language.englishLabel}
+                      </Text>
+                    )}
+                  </Box>
+                  <Text ml={3} color={muted} fontSize="xs" fontWeight={700} flexShrink={0}>
+                    {language.code}
                   </Text>
-                )}
-              </Box>
-              <Text color={muted} fontSize="xs" fontWeight={700}>
-                {language.shortLabel}
+                </Button>
+              )
+            })}
+
+            {visibleLanguages.length === 0 && (
+              <Text px={3} py={5} color={muted} fontSize="sm" textAlign="center">
+                No matching language
               </Text>
-            </MenuItem>
-          )
-        })}
-      </MenuList>
-    </Menu>
+            )}
+          </VStack>
+
+          <Divider my={3} />
+          <Text color={muted} fontSize="xs" textAlign="center">
+            Translations powered by{' '}
+            <Link href="https://translate.google.com" target="_blank" rel="noopener noreferrer">
+              Google Translate
+            </Link>
+          </Text>
+        </PopoverBody>
+      </PopoverContent>
+    </Popover>
   )
 }
 
