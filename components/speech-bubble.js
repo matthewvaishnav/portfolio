@@ -15,7 +15,7 @@ const SpeechBubble = () => {
       borderColor={border}
       borderRadius="lg"
       w="fit-content"
-      maxW={{ base: '100%', md: '680px' }}
+      maxW={{ base: '100%', md: '60ch' }}
       mx="auto"
       mt={4}
       mb={{ base: 8, md: 10 }}
