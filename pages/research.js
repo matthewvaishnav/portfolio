@@ -16,70 +16,92 @@ import Layout from '../components/layouts/article'
 
 const records = [
   {
-    title: 'Current Claim Boundary',
-    type: 'Authoritative record',
-    date: 'Updated July 2026',
+    title: 'Paired-Acquisition Neural Factorization',
+    type: 'Flagship preprint',
+    date: 'September 4, 2026',
     description:
-      'The current supported claims, withdrawn interpretations, active evidence families, and required next evidence for the research program.',
-    metric: 'Start here',
+      'End-to-end computational pathology pipeline spanning paired-scanner representation learning, TransnnMIL whole-slide aggregation, and PathologyFL multi-institutional learning.',
+    metric: 'Flagship paper',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href:
-      'https://github.com/matthewvaishnav/computational-pathology-research/blob/main/CLAIM_BOUNDARY.md'
+      'https://matthewvaishnav.github.io/computational-pathology-research/paired-acquisition-neural-factorization-pipeline.pdf'
   },
   {
-    title: 'Corrected Paired-Acquisition Evidence',
-    type: 'Promoted evidence',
-    date: 'July 26, 2026',
+    title: 'Focused PA-NF Representation Paper',
+    type: 'Supporting manuscript',
+    date: '2026',
     description:
-      'The forward-valid corrected release for fold-aware SCORPION inference and the corrected fixed-estimand canine SCC audit.',
-    metric: 'Corrected release',
+      'Focused manuscript for the paired-acquisition representation stage, including the corrected SCORPION and independent multi-scanner evidence.',
+    metric: 'Representation stage',
     image: '/portfolio/images/research/scorpion-cover.webp',
     href:
-      'https://github.com/matthewvaishnav/computational-pathology-research/tree/main/evidence/paired_acquisition/corrected-20260726'
+      'https://matthewvaishnav.github.io/computational-pathology-research/paired-acquisition-neural-factorization.pdf'
   },
   {
-    title: 'Capacity-Matched SCORPION Ablations',
-    type: 'Promoted evidence',
-    date: 'July 26, 2026',
+    title: 'Capacity-Matched SCORPION Campaign',
+    type: 'Experimental evidence',
+    date: '2026',
     description:
-      'A seven-variant, five-fold, five-seed campaign using a true equal-capacity two-branch control and registered objective ablations.',
+      'Seven variants across five folds and five seeds. PA-NF reduced tissue-branch scanner balanced accuracy by 0.3108 relative to an equal-capacity two-branch neural control while preserving registered retrieval noninferiority.',
     metric: '175 / 175 fits',
     image: '/portfolio/images/research/scorpion-cover.webp',
     href:
       'https://github.com/matthewvaishnav/computational-pathology-research/tree/main/evidence/paired_acquisition/scorpion-capacity-matched-20260726'
   },
   {
-    title: 'Dimensionality × Cross-Covariance Factorial',
-    type: 'Promoted evidence',
-    date: 'July 27, 2026',
-    description:
-      'A preregistered canine SCC factorial that found no universal dimensionality effect or stable operating point under the tested protocol.',
-    metric: '450 / 450 cells',
-    image: '/portfolio/images/research/canine-scc-cover.webp',
-    href:
-      'https://github.com/matthewvaishnav/computational-pathology-research/tree/main/evidence/paired_acquisition/dimensionality-xcov-factorial-20260726'
-  },
-  {
-    title: 'Pair-Repeat Allocation Effects',
-    type: 'Active study',
+    title: 'Independent Multi-Scanner Canine SCC Study',
+    type: 'External validation',
     date: '2026',
     description:
-      'A matched-budget study of whether paired-acquisition learning benefits more from biological pair diversity or repeated anchor exposure.',
-    metric: '6,400 / 12,800 budgets',
-    image: '/portfolio/images/research/allocation-cover.webp',
+      'Biological-sample-blocked evaluation across five scanners. The study confirmed strong scanner suppression but also showed that simple centroid, QR, and paired-linear controls remain formidable baselines.',
+    metric: '44 samples / 5 scanners',
+    image: '/portfolio/images/research/canine-scc-cover.webp',
     href:
-      'https://github.com/matthewvaishnav/computational-pathology-research/blob/main/docs/studies/index.md'
+      'https://github.com/matthewvaishnav/computational-pathology-research/tree/main/evidence/paired_acquisition/corrected-20260726'
   },
   {
-    title: 'Prospective Paired Affine Comparison',
-    type: 'Preregistered protocol',
-    date: 'July 29, 2026',
+    title: 'PANDA Whole-Slide TransnnMIL Program',
+    type: 'Whole-slide learning',
+    date: '2026',
     description:
-      'A leakage-resistant comparison of neural factorization with centroid translation, orthogonal Procrustes, affine least squares, and ridge affine controls. No result is claimed yet.',
-    metric: 'Execution pending',
+      'Slide-level prostate grading with 10,611 readable Phikon feature bags. The stabilization grid reached mean best validation QWK 0.8257 at 1e-4 and a best run of 0.8455.',
+    metric: '10,611 slides',
+    image: '/portfolio/images/research/allocation-cover.webp',
+    href:
+      'https://github.com/matthewvaishnav/computational-pathology-research'
+  },
+  {
+    title: 'PathologyFL Dominance-Aware Site Learning',
+    type: 'Federated learning',
+    date: '2026',
+    description:
+      'A fixed dominance detector transferred without retuning from label-noise calibration to ordinal site shift, improving global QWK, macro-F1, and worst-site QWK at the strongest tested shift.',
+    metric: '+0.01053 global QWK',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href:
-      'https://github.com/matthewvaishnav/computational-pathology-research/blob/main/docs/research/featmap-affine-comparison-protocol.md'
+      'https://github.com/matthewvaishnav/computational-pathology-research/blob/main/docs/research/dominance-detector-transfer-results.md'
+  },
+  {
+    title: 'CAMELYON17/WILDS Center-Shift Studies',
+    type: 'Multi-center mechanism study',
+    date: '2026',
+    description:
+      'Frozen-feature source-weighting and center-subspace experiments across 455,954 examples from five centers. Equal-client and dominant-center-adjusted policies materially outperformed sample-proportional weighting in the held-out-center proxy.',
+    metric: '455,954 examples',
+    image: '/portfolio/images/research/research-platform-cover.webp',
+    href:
+      'https://github.com/matthewvaishnav/computational-pathology-research'
+  },
+  {
+    title: 'PatchCamelyon Benchmark',
+    type: 'Patch-level benchmark',
+    date: '2026',
+    description:
+      'Complete patch-level training and evaluation path on PCam, reaching ROC AUC 0.9394 and accuracy 0.8526 on the official 32,768-patch test split.',
+    metric: '0.9394 ROC AUC',
+    image: '/portfolio/images/research/research-platform-cover.webp',
+    href:
+      'https://github.com/matthewvaishnav/computational-pathology-research'
   }
 ]
 
@@ -106,11 +128,7 @@ const RecordCard = ({ record }) => {
       bg={cardBg}
       boxShadow={shadow}
       transition="transform 180ms ease, border-color 180ms ease, background 180ms ease"
-      _hover={{
-        transform: 'translateY(-4px)',
-        borderColor: hoverBorder,
-        bg: hoverBg
-      }}
+      _hover={{ transform: 'translateY(-4px)', borderColor: hoverBorder, bg: hoverBg }}
     >
       <AspectRatio
         ratio={16 / 9}
@@ -169,14 +187,8 @@ const RecordCard = ({ record }) => {
           fontSize="sm"
         >
           <Text>{record.metric}</Text>
-          <Box
-            display="inline-flex"
-            alignItems="center"
-            gap={1}
-            color={accent}
-            fontWeight={600}
-          >
-            Open record <ArrowForwardIcon />
+          <Box display="inline-flex" alignItems="center" gap={1} color={accent} fontWeight={600}>
+            Open <ArrowForwardIcon />
           </Box>
         </Stack>
       </Stack>
@@ -221,8 +233,8 @@ const Research = () => {
     'linear-gradient(135deg, #122725 0%, #24182c 52%, #2d2017 100%)'
   )
   const heroAccent = useColorModeValue('teal.700', 'teal.200')
-  const claimBg = useColorModeValue('blackAlpha.50', 'whiteAlpha.50')
-  const claimBorder = useColorModeValue('blackAlpha.200', 'whiteAlpha.200')
+  const noteBg = useColorModeValue('blackAlpha.50', 'whiteAlpha.50')
+  const noteBorder = useColorModeValue('blackAlpha.200', 'whiteAlpha.200')
 
   return (
     <Layout title="Research">
@@ -246,17 +258,6 @@ const Research = () => {
           backgroundSize: '44px 44px',
           maskImage: 'linear-gradient(to bottom, black, transparent)'
         }}
-        _after={{
-          content: '""',
-          position: 'absolute',
-          width: { base: '240px', md: '420px' },
-          height: { base: '240px', md: '420px' },
-          right: { base: '-110px', md: '6vw' },
-          top: { base: '-100px', md: '-190px' },
-          borderRadius: 'full',
-          bg: 'rgba(255,255,255,.12)',
-          filter: 'blur(2px)'
-        }}
       >
         <Box
           position="relative"
@@ -274,7 +275,7 @@ const Research = () => {
             letterSpacing="0.22em"
             mb={5}
           >
-            Research record
+            Research library
           </Text>
           <Heading
             as="h1"
@@ -283,9 +284,9 @@ const Research = () => {
             lineHeight="1.08"
             letterSpacing="-0.035em"
           >
-            Current evidence, protocols, and{' '}
+            Papers, experiments, and{' '}
             <Box as="span" color={heroAccent}>
-              claim boundaries
+              working systems
             </Box>
           </Heading>
         </Box>
@@ -298,9 +299,10 @@ const Research = () => {
           lineHeight="1.85"
           maxW="710px"
         >
-          This page points to the current public research record rather than treating older papers as
-          automatically authoritative. Start with the claim boundary, then follow the promoted
-          evidence packages, preregistered protocols, and reproducibility records for each result.
+          The PA-NF flagship is the primary synthesis of my computational pathology work. The records
+          below expose the main experimental components behind it: paired-scanner representation
+          learning, whole-slide aggregation, multi-institutional learning, and the supporting public
+          benchmarks.
         </Text>
       </Box>
 
@@ -312,32 +314,32 @@ const Research = () => {
 
       <Box as="section" pt={{ base: 10, md: 14 }} pb={6}>
         <Heading as="h2" fontSize="2xl" mb={2}>
-          Open research record
+          Public research links
         </Heading>
         <Text color={subtleText} lineHeight="1.75" mb={4}>
-          The repository contains the code, frozen protocols, result artifacts, provenance records,
-          and explicit boundaries needed to audit the active claims.
+          Papers are backed by the public repository, experiment packages, implementation notes, and
+          result tables used to build the current research program.
         </Text>
 
         <ResearchLink
+          label="PA-NF flagship preprint"
+          description="The end-to-end paper spanning representation, whole-slide, and institutional learning."
+          href="https://matthewvaishnav.github.io/computational-pathology-research/paired-acquisition-neural-factorization-pipeline.pdf"
+        />
+        <ResearchLink
           label="Computational pathology research repository"
-          description="Main codebase, current README, evidence packages, technical documentation, and reproducibility infrastructure."
+          description="Main codebase, experiments, documentation, and public result artifacts."
           href="https://github.com/matthewvaishnav/computational-pathology-research"
         />
         <ResearchLink
-          label="Research-engineering brief"
-          description="A concise explanation of Paired-Acquisition Neural Factorization, its design, current evidence, and limitations."
-          href="https://github.com/matthewvaishnav/computational-pathology-research/blob/main/docs/research/paired-acquisition-research-engineering-brief.md"
+          label="Focused PA-NF representation manuscript"
+          description="Supporting paper for the paired-acquisition representation stage."
+          href="https://matthewvaishnav.github.io/computational-pathology-research/paired-acquisition-neural-factorization.pdf"
         />
         <ResearchLink
-          label="Scientific audit remediation ledger"
-          description="The corrections, withdrawals, reruns, and evidence-promotion status behind the current public record."
-          href="https://github.com/matthewvaishnav/computational-pathology-research/blob/main/docs/research/scientific-audit-remediation-20260725.md"
-        />
-        <ResearchLink
-          label="Study package index"
-          description="Focused SCORPION, external canine SCC, and pair-allocation repositories and documents."
-          href="https://github.com/matthewvaishnav/computational-pathology-research/blob/main/docs/studies/index.md"
+          label="PathologyFL detector-transfer results"
+          description="Fixed site-dominance detector transferred without retuning to ordinal site shift."
+          href="https://github.com/matthewvaishnav/computational-pathology-research/blob/main/docs/research/dominance-detector-transfer-results.md"
         />
       </Box>
 
@@ -346,18 +348,14 @@ const Research = () => {
         mb={4}
         p={{ base: 5, md: 6 }}
         border="1px solid"
-        borderColor={claimBorder}
+        borderColor={noteBorder}
         borderRadius="xl"
-        bg={claimBg}
+        bg={noteBg}
       >
         <Text fontSize="sm" color={subtleText} lineHeight="1.8">
-          <Box as="span" fontWeight={800} color={bodyText}>
-            Claim boundary.
-          </Box>{' '}
-          This is research-only work under controlled experimental conditions. It is not clinically
-          validated, diagnostic software, or intended for patient-care decisions. The public paper
-          remains on scientific-audit hold; the repository claim boundary and promoted evidence
-          packages are authoritative when older summaries conflict.
+          This is research-only work under controlled experimental conditions. Results are specific to
+          the stated datasets, feature backbones, folds, comparators, and simulated-site settings; the
+          work is not clinical software and does not imply universal model superiority.
         </Text>
       </Box>
     </Layout>
