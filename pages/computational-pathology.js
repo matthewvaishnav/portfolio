@@ -1,11 +1,18 @@
 import {
   Badge,
   Box,
+  Button,
   Container,
+  Flex,
   Heading,
   Link,
   List,
   ListItem,
+  SimpleGrid,
+  Stat,
+  StatHelpText,
+  StatLabel,
+  StatNumber,
   Text,
   useColorModeValue
 } from '@chakra-ui/react'
@@ -14,149 +21,225 @@ import { Title, Meta } from '../components/work'
 import P from '../components/paragraph'
 import Layout from '../components/layouts/article'
 
+const FLAGSHIP_PDF =
+  'https://matthewvaishnav.github.io/computational-pathology-research/paired-acquisition-neural-factorization-pipeline.pdf'
+
 const Work = () => {
   const muted = useColorModeValue('gray.600', 'gray.400')
-  const statusBg = useColorModeValue('teal.50', 'whiteAlpha.50')
-  const statusBorder = useColorModeValue('teal.200', 'whiteAlpha.200')
+  const cardBg = useColorModeValue('white', 'whiteAlpha.50')
+  const cardBorder = useColorModeValue('blackAlpha.200', 'whiteAlpha.200')
+  const cardShadow = useColorModeValue('0 12px 28px rgba(15, 23, 42, 0.06)', 'none')
 
   return (
-    <Layout title="Independent Computational Pathology Research">
+    <Layout title="Paired-Acquisition Neural Factorization">
       <Container px={0}>
         <Title>
-          Independent Computational Pathology Research <Badge>2025–present</Badge>
+          Paired-Acquisition Neural Factorization <Badge>2025–present</Badge>
         </Title>
 
         <Heading as="h2" size="md" mt={2} mb={3}>
-          Overview
+          End-to-End Computational Pathology Pipeline
         </Heading>
         <P>
-          I am building an independent computational pathology research framework for whole-slide
-          histopathology modeling, multiple-instance learning, scanner and acquisition robustness,
-          representation auditing, and reproducible healthcare-AI research infrastructure.
+          Paired-Acquisition Neural Factorization (PA-NF) is the name of my computational pathology
+          pipeline. It connects three levels of the learning problem: scanner-aware representation
+          formation, whole-slide neural aggregation, and multi-institutional learning. The central
+          question is how acquisition and site structure enters the representation, propagates through
+          slide-level models, and changes learning across institutions.
         </P>
         <P>
-          My primary research line is Paired-Acquisition Neural Factorization. It uses multiple scans
-          of the same underlying tissue region to learn a tissue-oriented representation with reduced
-          linearly recoverable scanner identity and an acquisition representation that retains scanner
-          information. The current evidence supports partial structured separation under the tested
-          conditions, not pure biological factors or perfect biological/acquisition disentanglement.
+          The pipeline is built around a paired-acquisition factorization stage, TransnnMIL for
+          whole-slide multiple-instance learning, and PathologyFL for federated and site-aware
+          optimization. Its current real-data program spans SCORPION, an independent multi-scanner
+          canine SCC cohort, PANDA, CAMELYON17/WILDS, and PatchCamelyon.
         </P>
 
-        <Box
-          my={{ base: 7, md: 8 }}
-          p={{ base: 5, md: 6 }}
-          border="1px solid"
-          borderColor={statusBorder}
-          borderRadius="xl"
-          bg={statusBg}
-        >
-          <Text fontWeight="bold" mb={2}>
-            Current scientific status
-          </Text>
-          <Text fontSize="sm" color={muted} lineHeight="1.75">
-            Corrected paired-acquisition evidence was promoted on July 26, 2026. The SCORPION
-            capacity-matched campaign and canine dimensionality × cross-covariance factorial are
-            complete and promoted within the repository&apos;s claim boundary. The public paper remains
-            on scientific-audit hold, and historical TransnnMIL fusion claims remain withdrawn pending
-            clean controlled reruns.
-          </Text>
-        </Box>
+        <Flex gap={3} flexWrap="wrap" my={{ base: 6, md: 7 }}>
+          <Button
+            as={Link}
+            href={FLAGSHIP_PDF}
+            target="_blank"
+            rel="noopener noreferrer"
+            colorScheme="teal"
+            rightIcon={<ExternalLinkIcon />}
+          >
+            Read Flagship Paper
+          </Button>
+          <Button
+            as={Link}
+            href="https://github.com/matthewvaishnav/computational-pathology-research"
+            target="_blank"
+            rel="noopener noreferrer"
+            colorScheme="teal"
+            variant="outline"
+            rightIcon={<ExternalLinkIcon />}
+          >
+            Open Repository
+          </Button>
+        </Flex>
 
         <Heading as="h2" size="md" mt={8} mb={3}>
-          Current Research
+          Pipeline Architecture
         </Heading>
-        <List ml={{ base: 0, md: 4 }} my={4} spacing={4}>
+        <List ml={{ base: 0, md: 4 }} my={4} spacing={5}>
           <ListItem>
-            <Meta>Paired acquisition</Meta>
-            <span>Corrected fold-aware Paired-Acquisition Neural Factorization evaluation on the five-scanner SCORPION benchmark.</span>
+            <Meta>Stage I — Paired representation</Meta>
+            <span>
+              Aligned scans of the same tissue across scanners provide the supervision for a
+              tissue-oriented branch and an acquisition-oriented branch. The goal is structured
+              separation rather than pretending scanner effects can be removed by a single universal
+              normalization step.
+            </span>
           </ListItem>
           <ListItem>
-            <Meta>Capacity-matched ablations</Meta>
-            <span>A 175-fit campaign with a true equal-capacity two-branch control and registered objective ablations.</span>
+            <Meta>Stage II — TransnnMIL</Meta>
+            <span>
+              Whole-slide multiple-instance learning over patch embeddings, evaluated on PANDA with
+              mean pooling, AttentionMIL, and the repaired TransnnMIL family under a broad
+              stabilization grid.
+            </span>
           </ListItem>
           <ListItem>
-            <Meta>External validation</Meta>
-            <span>Biological-sample-blocked canine SCC validation with a corrected fixed five-category audit.</span>
-          </ListItem>
-          <ListItem>
-            <Meta>Factorial analysis</Meta>
-            <span>A completed 450-cell canine SCC dimensionality × cross-covariance study with fold-aware aggregate analysis.</span>
-          </ListItem>
-          <ListItem>
-            <Meta>Prospective baselines</Meta>
-            <span>Preregistered paired affine and orthogonal-Procrustes comparisons; no comparative result is claimed before execution and promotion.</span>
-          </ListItem>
-          <ListItem>
-            <Meta>Allocation</Meta>
-            <span>Matched-budget experiments testing unique biological pair diversity against repeated exposure to fewer tissue anchors.</span>
-          </ListItem>
-          <ListItem>
-            <Meta>Center leakage</Meta>
-            <span>CAMELYON17 center-subspace projection studies that attenuate source-center information while auditing tumor signal.</span>
-          </ListItem>
-          <ListItem>
-            <Meta>Whole-slide MIL</Meta>
-            <span>PANDA slide-level modeling with mean pooling, gated AttentionMIL, and a repaired TransnnMIL implementation awaiting matched reruns.</span>
+            <Meta>Stage III — PathologyFL</Meta>
+            <span>
+              A custom federated-learning framework with coordinator/client training, FedAvg,
+              FedProx, FedAdam, weighted aggregation, differential-privacy engines, secure
+              aggregation, asynchronous execution, compression, and pathology-specific site-aware
+              policies.
+            </span>
           </ListItem>
         </List>
 
         <Heading as="h2" size="md" mt={9} mb={3}>
-          Selected Evidence
+          Experimental Program
         </Heading>
         <List ml={{ base: 0, md: 4 }} my={4} spacing={4}>
           <ListItem>
-            <Meta>SCORPION scale</Meta>
-            <span>48 original human H&amp;E slides, 480 aligned tissue regions, five scanners, and 2,400 image patches across DINOv2-Base, Phikon, and ImageNet ResNet50 features.</span>
+            <Meta>SCORPION</Meta>
+            <span>
+              48 human H&amp;E slides, 480 aligned tissue regions, five scanners, and 2,400 images.
+              Frozen DINOv2, Phikon, and ResNet50 feature families are used to test scanner signal,
+              tissue structure, and same-region retrieval.
+            </span>
           </ListItem>
           <ListItem>
-            <Meta>SCORPION scanner signal</Meta>
-            <span>On the documented DINOv2 protocol, scanner-probe accuracy in the tissue-oriented representation decreased from 0.7825 to 0.3989 while same-region retrieval remained largely preserved.</span>
+            <Meta>Independent canine SCC</Meta>
+            <span>
+              44 biological samples and 805 geometry-qualified complete five-view regions across five
+              scanners, evaluated with biological-sample-blocked folds and strong linear removal
+              baselines.
+            </span>
           </ListItem>
           <ListItem>
-            <Meta>Capacity-matched campaign</Meta>
-            <span>All 175 registered fits were validated under the equal-capacity design, with objective-level conclusions bounded to the preregistered controls.</span>
+            <Meta>PANDA</Meta>
+            <span>
+              10,611 readable 768-dimensional Phikon slide feature bags for prostate grading,
+              whole-slide MIL, and simulated multi-site stress experiments.
+            </span>
           </ListItem>
           <ListItem>
-            <Meta>Canine SCC factorial</Meta>
-            <span>All 450 registered cells were validated. The analysis found no universal dimensionality effect or stable operating point; cross-covariance regularization reduced measured branch cross-covariance without a uniform scanner/category benefit.</span>
-          </ListItem>
-          <ListItem>
-            <Meta>Cross-backbone transfer</Meta>
-            <span>The frozen SCORPION objective reproduced the scanner-suppression and tissue-structure pattern across DINOv2-Base, Phikon, and ResNet50 under the tested protocol.</span>
-          </ListItem>
-          <ListItem>
-            <Meta>Pair-repeat allocation</Meta>
-            <span>Matched budgets of 6,400 and 12,800 pair presentations supported broader biological pair diversity over repeatedly presenting fewer anchors, within that study&apos;s own protocol.</span>
-          </ListItem>
-          <ListItem>
-            <Meta>CAMELYON17</Meta>
-            <span>Center-subspace projection reduced center recoverability while tumor AUC remained near 0.9903 in a centralized frozen-feature mechanism study.</span>
+            <Meta>CAMELYON17/WILDS</Meta>
+            <span>
+              455,954 examples from five centers, preserving the WILDS source/validation/test center
+              split for held-out-center weighting and center-subspace studies.
+            </span>
           </ListItem>
           <ListItem>
             <Meta>PatchCamelyon</Meta>
-            <span>The documented model achieved 0.9394 ROC AUC and 0.8526 accuracy on one official patch-level test split.</span>
-          </ListItem>
-          <ListItem>
-            <Meta>PANDA data</Meta>
-            <span>Feature readability was validated across 10,611 slide-level Phikon feature files before downstream MIL evaluation.</span>
-          </ListItem>
-          <ListItem>
-            <Meta>Whole-slide architecture status</Meta>
-            <span>Historical TransnnMIL QWK values remain records of the old execution path and are not used as evidence that fusion or topology improved performance. Repaired matched reruns are required.</span>
+            <span>
+              Full patch-level training and evaluation on the official test split as a complete
+              benchmark and engineering substrate.
+            </span>
           </ListItem>
         </List>
 
+        <Heading as="h2" size="md" mt={9} mb={4}>
+          Selected Results
+        </Heading>
+        <Box
+          bg={cardBg}
+          borderWidth="1px"
+          borderColor={cardBorder}
+          borderRadius="xl"
+          p={{ base: 5, md: 6 }}
+          boxShadow={cardShadow}
+        >
+          <SimpleGrid columns={{ base: 1, sm: 2 }} spacing={6}>
+            <Stat>
+              <StatLabel>SCORPION capacity-matched effect</StatLabel>
+              <StatNumber>-0.3108</StatNumber>
+              <StatHelpText mb={0} color={muted}>
+                Tissue-branch scanner balanced accuracy relative to an equal-capacity neural control;
+                95% CI [-0.3346, -0.2858].
+              </StatHelpText>
+            </Stat>
+            <Stat>
+              <StatLabel>Same-region retrieval</StatLabel>
+              <StatNumber>Noninferior</StatNumber>
+              <StatHelpText mb={0} color={muted}>
+                Mean and worst-pair retrieval remained within the registered 0.02 noninferiority
+                margin in the primary SCORPION comparison.
+              </StatHelpText>
+            </Stat>
+            <Stat>
+              <StatLabel>TransnnMIL stabilization</StatLabel>
+              <StatNumber>0.8257</StatNumber>
+              <StatHelpText mb={0} color={muted}>
+                Mean best validation QWK at learning rate 1e-4 across three seeds; best observed run
+                across the grid was 0.8455.
+              </StatHelpText>
+            </Stat>
+            <Stat>
+              <StatLabel>PathologyFL detector transfer</StatLabel>
+              <StatNumber>+0.01053 QWK</StatNumber>
+              <StatHelpText mb={0} color={muted}>
+                Global QWK gain at 45% ordinal shift without retuning; macro-F1 +0.01512 and
+                worst-site QWK +0.01290.
+              </StatHelpText>
+            </Stat>
+            <Stat>
+              <StatLabel>CAMELYON held-out-center proxy</StatLabel>
+              <StatNumber>0.8312 → 0.9132</StatNumber>
+              <StatHelpText mb={0} color={muted}>
+                Sample-proportional to equal-client weighting on frozen ImageNet ResNet18 features.
+              </StatHelpText>
+            </Stat>
+            <Stat>
+              <StatLabel>PatchCamelyon</StatLabel>
+              <StatNumber>0.9394 AUC</StatNumber>
+              <StatHelpText mb={0} color={muted}>
+                Accuracy 0.8526 and F1 0.8507 on the official 32,768-patch test split.
+              </StatHelpText>
+            </Stat>
+          </SimpleGrid>
+        </Box>
+
         <Heading as="h2" size="md" mt={9} mb={3}>
-          Research Reliability Infrastructure
+          What the Results Mean
         </Heading>
         <P>
-          The framework includes immutable provenance identifiers, SHA-256 artifact bindings,
-          dataset/split/configuration/environment/command/commit lineage, corruption tests,
-          resumable factorial execution, preregistered analyses, fail-closed release validators, and
-          dedicated GitHub Actions gates. Large raw images, feature archives, checkpoints, and
-          generated run directories remain outside Git, while the public repository contains the
-          code, frozen protocols, evidence tables, reports, and validation contracts needed to audit
-          each supported claim.
+          The strongest representation-level result is comparative: PA-NF beats the registered
+          equal-capacity neural control on the SCORPION structured-separation objective while
+          preserving retrieval. The independent canine study is deliberately more demanding and shows
+          that centroid, QR, and paired-linear removal remain strong competitors; I therefore do not
+          claim universal neural superiority over every harmonization method.
+        </P>
+        <P>
+          At the institutional level, PathologyFL&apos;s site-aware policies outperform FedAvg under
+          specified simulated-site stress regimes, and the fixed dominance detector transfers to a
+          different ordinal-shift mechanism without retuning. CAMELYON17 source-weighting experiments
+          provide a natural-center mechanism study, but they are centralized frozen-feature proxies
+          rather than a completed real-world federated deployment.
+        </P>
+
+        <Heading as="h2" size="md" mt={9} mb={3}>
+          Whole-Slide Status
+        </Heading>
+        <P>
+          TransnnMIL is implemented, repaired, and stable across the current PANDA learning-rate grid.
+          Its current results are competitive within the project, but I do not claim that it is
+          state-of-the-art or conclusively superior to AttentionMIL, TransMIL, or nnMIL. That
+          comparison remains a separate matched-model question.
         </P>
 
         <Heading as="h2" size="md" mt={9} mb={3}>
@@ -164,53 +247,30 @@ const Work = () => {
         </Heading>
         <List ml={{ base: 0, md: 4 }} my={4} spacing={3}>
           <ListItem>
-            <Meta>Claim boundary</Meta>
-            <Link
-              href="https://github.com/matthewvaishnav/computational-pathology-research/blob/main/CLAIM_BOUNDARY.md"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Authoritative current claims and exclusions <ExternalLinkIcon mx="2px" />
+            <Meta>Flagship paper</Meta>
+            <Link href={FLAGSHIP_PDF} target="_blank" rel="noopener noreferrer">
+              Paired-Acquisition Neural Factorization: An End-to-End Computational Pathology Pipeline{' '}
+              <ExternalLinkIcon mx="2px" />
             </Link>
           </ListItem>
           <ListItem>
-            <Meta>Corrected evidence</Meta>
+            <Meta>Focused representation paper</Meta>
             <Link
-              href="https://github.com/matthewvaishnav/computational-pathology-research/tree/main/evidence/paired_acquisition/corrected-20260726"
+              href="https://matthewvaishnav.github.io/computational-pathology-research/paired-acquisition-neural-factorization.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Forward-valid paired-acquisition evidence package <ExternalLinkIcon mx="2px" />
+              Supporting PA-NF representation manuscript <ExternalLinkIcon mx="2px" />
             </Link>
           </ListItem>
           <ListItem>
-            <Meta>Capacity matched</Meta>
+            <Meta>PathologyFL transfer study</Meta>
             <Link
-              href="https://github.com/matthewvaishnav/computational-pathology-research/tree/main/evidence/paired_acquisition/scorpion-capacity-matched-20260726"
+              href="https://github.com/matthewvaishnav/computational-pathology-research/blob/main/docs/research/dominance-detector-transfer-results.md"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Validated 175-fit SCORPION package <ExternalLinkIcon mx="2px" />
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Meta>Factorial</Meta>
-            <Link
-              href="https://github.com/matthewvaishnav/computational-pathology-research/tree/main/evidence/paired_acquisition/dimensionality-xcov-factorial-20260726"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Validated 450-cell dimensionality × cross-covariance package <ExternalLinkIcon mx="2px" />
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Meta>Study index</Meta>
-            <Link
-              href="https://github.com/matthewvaishnav/computational-pathology-research/blob/main/docs/studies/index.md"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Focused study repositories and documents <ExternalLinkIcon mx="2px" />
+              Dominance-detector transfer results <ExternalLinkIcon mx="2px" />
             </Link>
           </ListItem>
           <ListItem>
@@ -226,15 +286,13 @@ const Work = () => {
         </List>
 
         <Heading as="h2" size="md" mt={9} mb={3}>
-          Claim Boundary
+          Scope
         </Heading>
         <P>
-          Research-only. Not clinically validated. Not diagnostic software. Not intended for clinical
-          deployment, patient care, or medical decision-making. Results come from controlled studies
-          on specific datasets, feature backbones, folds, preprocessing conditions, and simulated
-          settings. The paired-acquisition evidence supports partial structured separation under the
-          tested conditions; it does not prove pure biological factors, complete scanner invariance,
-          disease biology, diagnostic equivalence, clinical safety, or improved patient outcomes.
+          Research-only. Not clinically validated. Not diagnostic software. Results are bounded to
+          the stated datasets, feature backbones, comparators, folds, and simulated-site conditions.
+          The pipeline does not establish complete scanner invariance, universal architecture
+          superiority, real-world federated deployment, clinical safety, or improved patient outcomes.
         </P>
       </Container>
     </Layout>
