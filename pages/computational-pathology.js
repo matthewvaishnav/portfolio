@@ -13,7 +13,6 @@ import {
   StatHelpText,
   StatLabel,
   StatNumber,
-  Text,
   useColorModeValue
 } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
@@ -22,7 +21,7 @@ import P from '../components/paragraph'
 import Layout from '../components/layouts/article'
 
 const FLAGSHIP_PDF =
-  'https://matthewvaishnav.github.io/computational-pathology-research/paired-acquisition-neural-factorization-pipeline.pdf'
+  'https://matthewvaishnav.github.io/computational-pathology-research/accountable-neural-aggregation-in-computational-pathology.pdf'
 
 const Work = () => {
   const muted = useColorModeValue('gray.600', 'gray.400')
@@ -31,27 +30,30 @@ const Work = () => {
   const cardShadow = useColorModeValue('0 12px 28px rgba(15, 23, 42, 0.06)', 'none')
 
   return (
-    <Layout title="Paired-Acquisition Neural Factorization">
+    <Layout title="Computational Pathology Research">
       <Container px={0}>
         <Title>
-          Paired-Acquisition Neural Factorization <Badge>2025–present</Badge>
+          Computational Pathology Research <Badge>2025–present</Badge>
         </Title>
 
         <Heading as="h2" size="md" mt={2} mb={3}>
-          End-to-End Computational Pathology Pipeline
+          Independent Research Program
         </Heading>
         <P>
-          Paired-Acquisition Neural Factorization (PA-NF) is the name of my computational pathology
-          pipeline. It connects three levels of the learning problem: scanner-aware representation
-          formation, whole-slide neural aggregation, and multi-institutional learning. The central
-          question is how acquisition and site structure enters the representation, propagates through
-          slide-level models, and changes learning across institutions.
+          I am building an independent computational pathology research program spanning
+          representation learning, whole-slide neural aggregation, institutional aggregation, and
+          scientific provenance. The work is organized as distinct research lines with their own
+          methods, experiments, evidence, and claim boundaries rather than as one model or one
+          three-stage pipeline.
         </P>
         <P>
-          The pipeline is built around a paired-acquisition factorization stage, TransnnMIL for
-          whole-slide multiple-instance learning, and PathologyFL for federated and site-aware
-          optimization. Its current real-data program spans SCORPION, an independent multi-scanner
-          canine SCC cohort, PANDA, CAMELYON17/WILDS, and PatchCamelyon.
+          Paired-Acquisition Neural Factorization (PA-NF) is the paired-acquisition representation
+          learning line. TransnnMIL is a separate authored whole-slide multiple-instance learning
+          architecture. PathologyFL is a separate pathology-specific federated-learning and
+          institutional-aggregation framework. FAIR-WEIGHTS-H studies auditable institutional
+          weighting, while the program-level provenance layer handles registered experiments,
+          immutable evidence, exact lineage, hostile review, and fail-closed claim validation. These
+          systems can be studied together, but none of them is a rename or substage of the others.
         </P>
 
         <Flex gap={3} flexWrap="wrap" my={{ base: 6, md: 7 }}>
@@ -63,7 +65,7 @@ const Work = () => {
             colorScheme="teal"
             rightIcon={<ExternalLinkIcon />}
           >
-            Read Flagship Paper
+            Read Foundations Paper
           </Button>
           <Button
             as={Link}
@@ -74,38 +76,65 @@ const Work = () => {
             variant="outline"
             rightIcon={<ExternalLinkIcon />}
           >
-            Open Repository
+            Open Program Repository
           </Button>
         </Flex>
 
         <Heading as="h2" size="md" mt={8} mb={3}>
-          Pipeline Architecture
+          Research Lines
         </Heading>
         <List ml={{ base: 0, md: 4 }} my={4} spacing={5}>
           <ListItem>
-            <Meta>Stage I — Paired representation</Meta>
+            <Meta>Paired-Acquisition Neural Factorization</Meta>
             <span>
-              Aligned scans of the same tissue across scanners provide the supervision for a
-              tissue-oriented branch and an acquisition-oriented branch. The goal is structured
-              separation rather than pretending scanner effects can be removed by a single universal
-              normalization step.
+              Representation learning from aligned acquisitions of the same tissue across scanners.
+              PA-NF learns a tissue-oriented branch alongside an explicit acquisition branch and is
+              evaluated through registered scanner-recoverability, retrieval, capacity-matched, and
+              strong linear-removal controls rather than being treated as a generic normalization
+              method.
             </span>
           </ListItem>
           <ListItem>
-            <Meta>Stage II — TransnnMIL</Meta>
+            <Meta>TransnnMIL</Meta>
             <span>
-              Whole-slide multiple-instance learning over patch embeddings, evaluated on PANDA with
-              mean pooling, AttentionMIL, and the repaired TransnnMIL family under a broad
-              stabilization grid.
+              An authored multibranch whole-slide multiple-instance learning architecture for
+              aggregating patch-level representations into slide-level predictions. PANDA is the main
+              whole-slide evaluation substrate, with matched baselines and repaired controlled reruns
+              kept separate from the PA-NF representation question.
             </span>
           </ListItem>
           <ListItem>
-            <Meta>Stage III — PathologyFL</Meta>
+            <Meta>PathologyFL</Meta>
             <span>
-              A custom federated-learning framework with coordinator/client training, FedAvg,
-              FedProx, FedAdam, weighted aggregation, differential-privacy engines, secure
-              aggregation, asynchronous execution, compression, and pathology-specific site-aware
-              policies.
+              A pathology-specific federated-learning and institutional-aggregation framework with
+              coordinator/client training, FedAvg, FedProx, FedAdam, weighted aggregation,
+              differential-privacy engines, secure aggregation, asynchronous execution, compression,
+              and site-aware policies. Its central question is how heterogeneous institutional
+              structure changes distributed learning and aggregation.
+            </span>
+          </ListItem>
+          <ListItem>
+            <Meta>FAIR-WEIGHTS-H</Meta>
+            <span>
+              An auditable hybrid institutional-weighting protocol developed within the federated
+              research line, with explicit stability and safety mechanisms and bounded claims about
+              when weighting policies help under controlled site imbalance and shift.
+            </span>
+          </ListItem>
+          <ListItem>
+            <Meta>Scientific provenance and audit</Meta>
+            <span>
+              Program-level research infrastructure for immutable evidence packages, dataset/split/
+              configuration/environment/command/commit lineage, preregistered analyses, corruption
+              tests, exact artifact recovery, hostile review, and fail-closed release validation.
+            </span>
+          </ListItem>
+          <ListItem>
+            <Meta>WSI-NCA / Factorized Tissue Dynamics</Meta>
+            <span>
+              Experimental whole-slide dynamics research exploring topology-aware local state updates
+              and falsifiable spatial mechanisms. It remains an experimental frontier rather than a
+              promoted pathology claim.
             </span>
           </ListItem>
         </List>
@@ -119,36 +148,40 @@ const Work = () => {
             <span>
               48 human H&amp;E slides, 480 aligned tissue regions, five scanners, and 2,400 images.
               Frozen DINOv2, Phikon, and ResNet50 feature families are used to test scanner signal,
-              tissue structure, and same-region retrieval.
+              tissue structure, same-region retrieval, and the registered PA-NF structured-separation
+              objective.
             </span>
           </ListItem>
           <ListItem>
             <Meta>Independent canine SCC</Meta>
             <span>
               44 biological samples and 805 geometry-qualified complete five-view regions across five
-              scanners, evaluated with biological-sample-blocked folds and strong linear removal
-              baselines.
+              scanners, evaluated with biological-sample-blocked folds and strong centroid, QR, and
+              paired-linear scanner-removal baselines.
             </span>
           </ListItem>
           <ListItem>
             <Meta>PANDA</Meta>
             <span>
-              10,611 readable 768-dimensional Phikon slide feature bags for prostate grading,
-              whole-slide MIL, and simulated multi-site stress experiments.
+              10,611 readable 768-dimensional Phikon slide feature bags supporting whole-slide MIL,
+              prostate grading, simulated institutional stress experiments, and controlled
+              architecture evaluation.
             </span>
           </ListItem>
           <ListItem>
             <Meta>CAMELYON17/WILDS</Meta>
             <span>
               455,954 examples from five centers, preserving the WILDS source/validation/test center
-              split for held-out-center weighting and center-subspace studies.
+              split for held-out-center weighting, center-subspace studies, and site-structure
+              mechanism experiments.
             </span>
           </ListItem>
           <ListItem>
             <Meta>PatchCamelyon</Meta>
             <span>
               Full patch-level training and evaluation on the official test split as a complete
-              benchmark and engineering substrate.
+              benchmark, engineering substrate, and reproducibility check independent of the
+              whole-slide and federated research lines.
             </span>
           </ListItem>
         </List>
@@ -218,28 +251,24 @@ const Work = () => {
           What the Results Mean
         </Heading>
         <P>
-          The strongest representation-level result is comparative: PA-NF beats the registered
-          equal-capacity neural control on the SCORPION structured-separation objective while
-          preserving retrieval. The independent canine study is deliberately more demanding and shows
-          that centroid, QR, and paired-linear removal remain strong competitors; I therefore do not
-          claim universal neural superiority over every harmonization method.
+          The representation-level evidence belongs to PA-NF. The registered SCORPION campaign
+          establishes a controlled comparative advantage over the equal-capacity two-branch neural
+          control on the structured-separation objective while preserving retrieval. The independent
+          canine fixed-estimand audit asks a harder external question and does not establish an
+          additional neural feature-space increment over every strong simple scanner-removal baseline.
         </P>
         <P>
-          At the institutional level, PathologyFL&apos;s site-aware policies outperform FedAvg under
-          specified simulated-site stress regimes, and the fixed dominance detector transfers to a
-          different ordinal-shift mechanism without retuning. CAMELYON17 source-weighting experiments
-          provide a natural-center mechanism study, but they are centralized frozen-feature proxies
-          rather than a completed real-world federated deployment.
+          The institutional-learning evidence belongs to PathologyFL, not to PA-NF. Under specified
+          simulated-site stress regimes, fixed site-aware policies improve over FedAvg, including a
+          detector transfer result at 45% ordinal shift without retuning. CAMELYON17 source-weighting
+          experiments provide a natural-center mechanism study, but they remain centralized
+          frozen-feature proxies rather than a completed real-world federated deployment.
         </P>
-
-        <Heading as="h2" size="md" mt={9} mb={3}>
-          Whole-Slide Status
-        </Heading>
         <P>
-          TransnnMIL is implemented, repaired, and stable across the current PANDA learning-rate grid.
-          Its current results are competitive within the project, but I do not claim that it is
-          state-of-the-art or conclusively superior to AttentionMIL, TransMIL, or nnMIL. That
-          comparison remains a separate matched-model question.
+          The whole-slide question is separate again. TransnnMIL is an authored aggregation
+          architecture whose current repaired implementation is evaluated against matched MIL
+          baselines. Historical fusion and topology interpretations are not used as evidence until
+          clean controlled reruns support them.
         </P>
 
         <Heading as="h2" size="md" mt={9} mb={3}>
@@ -247,20 +276,21 @@ const Work = () => {
         </Heading>
         <List ml={{ base: 0, md: 4 }} my={4} spacing={3}>
           <ListItem>
-            <Meta>Flagship paper</Meta>
+            <Meta>Program foundations paper</Meta>
             <Link href={FLAGSHIP_PDF} target="_blank" rel="noopener noreferrer">
-              Paired-Acquisition Neural Factorization: An End-to-End Computational Pathology Pipeline{' '}
-              <ExternalLinkIcon mx="2px" />
+              Accountable Neural Aggregation in Computational Pathology: From Paired-Acquisition
+              Representations to Whole-Slide and Institutional Learning <ExternalLinkIcon mx="2px" />
             </Link>
           </ListItem>
           <ListItem>
-            <Meta>Focused representation paper</Meta>
+            <Meta>Focused PA-NF manuscript</Meta>
             <Link
               href="https://matthewvaishnav.github.io/computational-pathology-research/paired-acquisition-neural-factorization.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Supporting PA-NF representation manuscript <ExternalLinkIcon mx="2px" />
+              Paired-Acquisition Neural Factorization representation manuscript{' '}
+              <ExternalLinkIcon mx="2px" />
             </Link>
           </ListItem>
           <ListItem>
@@ -274,13 +304,13 @@ const Work = () => {
             </Link>
           </ListItem>
           <ListItem>
-            <Meta>GitHub</Meta>
+            <Meta>Program repository</Meta>
             <Link
               href="https://github.com/matthewvaishnav/computational-pathology-research"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Main research repository <ExternalLinkIcon mx="2px" />
+              Computational pathology research hub <ExternalLinkIcon mx="2px" />
             </Link>
           </ListItem>
         </List>
@@ -289,10 +319,11 @@ const Work = () => {
           Scope
         </Heading>
         <P>
-          Research-only. Not clinically validated. Not diagnostic software. Results are bounded to
-          the stated datasets, feature backbones, comparators, folds, and simulated-site conditions.
-          The pipeline does not establish complete scanner invariance, universal architecture
-          superiority, real-world federated deployment, clinical safety, or improved patient outcomes.
+          Research-only. Not clinically validated. Not diagnostic software. Each result is bounded to
+          its stated dataset, feature backbone, comparator, fold, protocol, and simulated-site
+          condition. The program does not claim complete scanner invariance, pure biological
+          disentanglement, universal architecture superiority, real-world federated deployment,
+          clinical safety, or improved patient outcomes.
         </P>
       </Container>
     </Layout>
