@@ -2,6 +2,7 @@ import {
   AspectRatio,
   Badge,
   Box,
+  Container,
   Heading,
   Link,
   LinkBox,
@@ -67,8 +68,7 @@ const records = [
       'Slide-level prostate grading with 10,611 readable Phikon feature bags. The stabilization grid reached mean best validation QWK 0.8257 at 1e-4 and a best run of 0.8455.',
     metric: '10,611 slides',
     image: '/portfolio/images/research/allocation-cover.webp',
-    href:
-      'https://github.com/matthewvaishnav/computational-pathology-research'
+    href: 'https://github.com/matthewvaishnav/computational-pathology-research'
   },
   {
     title: 'PathologyFL Dominance-Aware Site Learning',
@@ -89,8 +89,7 @@ const records = [
       'Frozen-feature source-weighting and center-subspace experiments across 455,954 examples from five centers. Equal-client and dominant-center-adjusted policies materially outperformed sample-proportional weighting in the held-out-center proxy.',
     metric: '455,954 examples',
     image: '/portfolio/images/research/research-platform-cover.webp',
-    href:
-      'https://github.com/matthewvaishnav/computational-pathology-research'
+    href: 'https://github.com/matthewvaishnav/computational-pathology-research'
   },
   {
     title: 'PatchCamelyon Benchmark',
@@ -100,8 +99,7 @@ const records = [
       'Complete patch-level training and evaluation path on PCam, reaching ROC AUC 0.9394 and accuracy 0.8526 on the official 32,768-patch test split.',
     metric: '0.9394 ROC AUC',
     image: '/portfolio/images/research/research-platform-cover.webp',
-    href:
-      'https://github.com/matthewvaishnav/computational-pathology-research'
+    href: 'https://github.com/matthewvaishnav/computational-pathology-research'
   }
 ]
 
@@ -228,136 +226,76 @@ const ResearchLink = ({ label, description, href }) => {
 const Research = () => {
   const bodyText = useColorModeValue('gray.700', 'whiteAlpha.800')
   const subtleText = useColorModeValue('gray.600', 'whiteAlpha.700')
-  const heroBg = useColorModeValue(
-    'linear-gradient(135deg, #d8eee9 0%, #e9d9e9 50%, #f3dfca 100%)',
-    'linear-gradient(135deg, #122725 0%, #24182c 52%, #2d2017 100%)'
-  )
-  const heroAccent = useColorModeValue('teal.700', 'teal.200')
   const noteBg = useColorModeValue('blackAlpha.50', 'whiteAlpha.50')
   const noteBorder = useColorModeValue('blackAlpha.200', 'whiteAlpha.200')
 
   return (
     <Layout title="Research">
-      <Box
-        as="header"
-        position="relative"
-        w="100vw"
-        minH={{ base: '250px', md: '310px' }}
-        ml="calc(50% - 50vw)"
-        display="flex"
-        alignItems="center"
-        overflow="hidden"
-        bg={heroBg}
-        _before={{
-          content: '""',
-          position: 'absolute',
-          inset: 0,
-          opacity: 0.45,
-          backgroundImage:
-            'linear-gradient(rgba(255,255,255,.09) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.09) 1px, transparent 1px)',
-          backgroundSize: '44px 44px',
-          maskImage: 'linear-gradient(to bottom, black, transparent)'
-        }}
-      >
-        <Box
-          position="relative"
-          zIndex={1}
-          w="100%"
-          maxW="container.md"
-          mx="auto"
-          px={{ base: 6, md: 8 }}
-          textAlign="center"
-        >
-          <Text
-            fontSize="xs"
-            fontWeight={800}
-            textTransform="uppercase"
-            letterSpacing="0.22em"
-            mb={5}
-          >
-            Research library
-          </Text>
-          <Heading
-            as="h1"
-            fontSize={{ base: '3xl', md: '5xl' }}
-            fontWeight={600}
-            lineHeight="1.08"
-            letterSpacing="-0.035em"
-          >
-            Papers, experiments, and{' '}
-            <Box as="span" color={heroAccent}>
-              working systems
-            </Box>
-          </Heading>
-        </Box>
-      </Box>
+      <Container px={0}>
+        <Heading as="h3" fontSize={20} mb={4}>
+          Research
+        </Heading>
 
-      <Box pt={{ base: 9, md: 12 }} pb={{ base: 4, md: 6 }}>
-        <Text
-          fontSize={{ base: 'md', md: 'lg' }}
-          color={bodyText}
-          lineHeight="1.85"
-          maxW="710px"
-        >
+        <Text color={bodyText} lineHeight="1.8" mb={6}>
           The PA-NF flagship is the primary synthesis of my computational pathology work. The records
           below expose the main experimental components behind it: paired-scanner representation
-          learning, whole-slide aggregation, multi-institutional learning, and the supporting public
+          learning, whole-slide aggregation, multi-institutional learning, and supporting public
           benchmarks.
         </Text>
-      </Box>
 
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: 6, md: 7 }} py={6}>
-        {records.map(record => (
-          <RecordCard key={record.title} record={record} />
-        ))}
-      </SimpleGrid>
+        <SimpleGrid columns={[1, 1, 2]} gap={6}>
+          {records.map(record => (
+            <RecordCard key={record.title} record={record} />
+          ))}
+        </SimpleGrid>
 
-      <Box as="section" pt={{ base: 10, md: 14 }} pb={6}>
-        <Heading as="h2" fontSize="2xl" mb={2}>
-          Public research links
-        </Heading>
-        <Text color={subtleText} lineHeight="1.75" mb={4}>
-          Papers are backed by the public repository, experiment packages, implementation notes, and
-          result tables used to build the current research program.
-        </Text>
+        <Box as="section" pt={12} pb={6}>
+          <Heading as="h3" fontSize={20} mb={2}>
+            Public research links
+          </Heading>
+          <Text color={subtleText} lineHeight="1.75" mb={4}>
+            Papers are backed by the public repository, experiment packages, implementation notes, and
+            result tables used to build the current research program.
+          </Text>
 
-        <ResearchLink
-          label="PA-NF flagship preprint"
-          description="The end-to-end paper spanning representation, whole-slide, and institutional learning."
-          href="https://matthewvaishnav.github.io/computational-pathology-research/paired-acquisition-neural-factorization-pipeline.pdf"
-        />
-        <ResearchLink
-          label="Computational pathology research repository"
-          description="Main codebase, experiments, documentation, and public result artifacts."
-          href="https://github.com/matthewvaishnav/computational-pathology-research"
-        />
-        <ResearchLink
-          label="Focused PA-NF representation manuscript"
-          description="Supporting paper for the paired-acquisition representation stage."
-          href="https://matthewvaishnav.github.io/computational-pathology-research/paired-acquisition-neural-factorization.pdf"
-        />
-        <ResearchLink
-          label="PathologyFL detector-transfer results"
-          description="Fixed site-dominance detector transferred without retuning to ordinal site shift."
-          href="https://github.com/matthewvaishnav/computational-pathology-research/blob/main/docs/research/dominance-detector-transfer-results.md"
-        />
-      </Box>
+          <ResearchLink
+            label="PA-NF flagship preprint"
+            description="The end-to-end paper spanning representation, whole-slide, and institutional learning."
+            href="https://matthewvaishnav.github.io/computational-pathology-research/paired-acquisition-neural-factorization-pipeline.pdf"
+          />
+          <ResearchLink
+            label="Computational pathology research repository"
+            description="Main codebase, experiments, documentation, and public result artifacts."
+            href="https://github.com/matthewvaishnav/computational-pathology-research"
+          />
+          <ResearchLink
+            label="Focused PA-NF representation manuscript"
+            description="Supporting paper for the paired-acquisition representation stage."
+            href="https://matthewvaishnav.github.io/computational-pathology-research/paired-acquisition-neural-factorization.pdf"
+          />
+          <ResearchLink
+            label="PathologyFL detector-transfer results"
+            description="Fixed site-dominance detector transferred without retuning to ordinal site shift."
+            href="https://github.com/matthewvaishnav/computational-pathology-research/blob/main/docs/research/dominance-detector-transfer-results.md"
+          />
+        </Box>
 
-      <Box
-        mt={8}
-        mb={4}
-        p={{ base: 5, md: 6 }}
-        border="1px solid"
-        borderColor={noteBorder}
-        borderRadius="xl"
-        bg={noteBg}
-      >
-        <Text fontSize="sm" color={subtleText} lineHeight="1.8">
-          This is research-only work under controlled experimental conditions. Results are specific to
-          the stated datasets, feature backbones, folds, comparators, and simulated-site settings; the
-          work is not clinical software and does not imply universal model superiority.
-        </Text>
-      </Box>
+        <Box
+          mt={8}
+          mb={4}
+          p={{ base: 5, md: 6 }}
+          border="1px solid"
+          borderColor={noteBorder}
+          borderRadius="xl"
+          bg={noteBg}
+        >
+          <Text fontSize="sm" color={subtleText} lineHeight="1.8">
+            This is research-only work under controlled experimental conditions. Results are specific to
+            the stated datasets, feature backbones, folds, comparators, and simulated-site settings; the
+            work is not clinical software and does not imply universal model superiority.
+          </Text>
+        </Box>
+      </Container>
     </Layout>
   )
 }
