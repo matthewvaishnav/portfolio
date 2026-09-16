@@ -39,12 +39,8 @@ const Main = ({ children, router }) => {
         pt={{ base: 14, md: 16 }}
         px={{ base: 5, md: 6 }}
       >
-        {!isResearchRoute && (
-          <>
-            <LazyVoxelDog />
-            <SpeechBubble />
-          </>
-        )}
+        <LazyVoxelDog />
+        {!isResearchRoute && <SpeechBubble />}
 
         {children}
 
