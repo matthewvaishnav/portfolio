@@ -7,17 +7,9 @@ const LogoBox = styled.span`
   font-size: 18px;
   display: inline-flex;
   align-items: center;
-  height: auto;
-  line-height: 1;
-  padding: 8px 0;
-
-  > svg {
-    transition: 200ms ease;
-  }
-
-  &:hover > svg {
-    transform: rotate(20deg);
-  }
+  height: 30px;
+  line-height: 20px;
+  padding: 10px;
 `
 
 const Logo = () => {
@@ -26,11 +18,8 @@ const Logo = () => {
       <LogoBox>
         <Text
           color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-          fontFamily="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
-          fontWeight="normal"
-          fontSize="16px"
-          letterSpacing="normal"
-          lineHeight="1"
+          fontFamily="'M PLUS Rounded 1c', sans-serif"
+          fontWeight="bold"
         >
           Matthew Vaishnav
         </Text>
