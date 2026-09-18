@@ -22,10 +22,8 @@ import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
-import { SiTryhackme } from 'react-icons/si'
 
-const FLAGSHIP_PDF =
-  'https://matthewvaishnav.github.io/computational-pathology-research/paired-acquisition-neural-factorization-pipeline.pdf'
+const CANONICAL_PA_NF = 'https://matthewvaishnav.github.io/computational-pathology-research/'
 
 const Home = () => {
   const mutedText = useColorModeValue('gray.600', 'gray.400')
@@ -52,11 +50,11 @@ const Home = () => {
               Matthew Vaishnav
             </Heading>
             <Text fontSize={{ base: 'lg', md: 'xl' }} fontWeight="medium" mb={2}>
-              Applied ML / Computational Pathology Research Engineer
+              Computational Pathology / ML Research Engineer
             </Text>
             <Text fontSize="sm" color={mutedText} lineHeight="1.75" maxW="620px">
-              Independent research in computational pathology, representation learning, whole-slide
-              neural aggregation, federated learning, and scientific computing.
+              Independent research in computational pathology, machine learning, quantitative
+              measurement, and reproducible scientific systems.
             </Text>
           </Box>
           <Box flexShrink={0} mt={{ base: 5, md: 0 }} textAlign="center">
@@ -89,17 +87,16 @@ const Home = () => {
             Work
           </Heading>
           <Paragraph>
-            I build computational pathology systems from representation formation through whole-slide
-            modeling and multi-institutional learning. My flagship research program is
-            Paired-Acquisition Neural Factorization (PA-NF), an end-to-end pipeline that studies how
-            scanner and site signal enters pathology representations, propagates through slide-level
-            aggregation, and affects learning across institutions.
+            I build research systems around hard measurement and identifiability problems in
+            pathology. My work includes paired-acquisition representation learning, whole-slide
+            modeling, nucleus-level quantitative measurement, federated pathology, and tooling for
+            making experimental evidence auditable.
           </Paragraph>
           <Paragraph>
-            The pipeline combines a paired-acquisition representation stage, TransnnMIL for whole-slide
-            multiple-instance learning, and PathologyFL for federated and site-aware training. The work
-            is tested across SCORPION, an independent multi-scanner canine SCC cohort, PANDA,
-            CAMELYON17/WILDS, and PatchCamelyon.
+            These are separate research lines rather than stages of one pipeline. PA-NF is the
+            paired-acquisition representation project; TransnnMIL and WSI-NCA are whole-slide work;
+            PathologyFL is a separate federated-learning program; and my current NucleoScope
+            collaboration studies nucleus-level measurement and tissue organization.
           </Paragraph>
 
           <Flex
@@ -111,7 +108,7 @@ const Home = () => {
           >
             <Button
               as={Link}
-              href={FLAGSHIP_PDF}
+              href={CANONICAL_PA_NF}
               target="_blank"
               rel="noopener noreferrer"
               rightIcon={<ExternalLinkIcon />}
@@ -121,21 +118,7 @@ const Home = () => {
               w={{ base: 'full', sm: 'auto' }}
               flexShrink={0}
             >
-              Read Flagship Paper
-            </Button>
-            <Button
-              as={NextLink}
-              href="/computational-pathology"
-              scroll={false}
-              rightIcon={<ChevronRightIcon />}
-              colorScheme="teal"
-              variant="outline"
-              size="md"
-              px={4}
-              w={{ base: 'full', sm: 'auto' }}
-              flexShrink={0}
-            >
-              PA-NF Pipeline
+              Read PA-NF
             </Button>
             <Button
               as={NextLink}
@@ -149,41 +132,64 @@ const Home = () => {
               w={{ base: 'full', sm: 'auto' }}
               flexShrink={0}
             >
-              Research Library
+              Research
+            </Button>
+            <Button
+              as={Link}
+              href="https://github.com/matthewvaishnav"
+              target="_blank"
+              rel="noopener noreferrer"
+              rightIcon={<ExternalLinkIcon />}
+              colorScheme="teal"
+              variant="outline"
+              size="md"
+              px={4}
+              w={{ base: 'full', sm: 'auto' }}
+              flexShrink={0}
+            >
+              GitHub
             </Button>
           </Flex>
         </Section>
 
         <Section delay={0.25}>
           <Heading as="h2" variant="section-title">
-            PA-NF Pipeline
+            Current Research
           </Heading>
           <List mt={4} spacing={5}>
             <ListItem>
-              <Text fontWeight="bold">1. Paired-acquisition representation learning</Text>
+              <Text fontWeight="bold">Paired-Acquisition Neural Factorization</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Uses aligned scans of the same tissue across scanners to learn tissue-oriented and
-                acquisition-oriented branches. A 175-fit capacity-matched SCORPION campaign found a
-                0.3108 reduction in tissue-branch scanner balanced accuracy relative to an
-                equal-capacity two-branch neural control while preserving same-region retrieval within
-                the registered noninferiority margin.
+                Uses matched scans of the same tissue region to study how acquisition information can
+                be separated from tissue-oriented representations under explicit controls.
               </Text>
             </ListItem>
             <ListItem>
-              <Text fontWeight="bold">2. Whole-slide neural aggregation</Text>
+              <Text fontWeight="bold">NucleoScope nuclear measurement</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                TransnnMIL operates on slide-level Phikon feature bags for prostate grading on PANDA.
-                The stabilized 10,611-slide program reached a mean best validation QWK of 0.8257 at
-                learning rate 1e-4, with a best seed/run of 0.8455 across the stabilization grid.
+                Active technical collaboration on nucleus-level H&E measurement, computational-context
+                effects, repeated detections, and candidate laws of tissue organization.
               </Text>
             </ListItem>
             <ListItem>
-              <Text fontWeight="bold">3. Multi-institutional learning</Text>
+              <Text fontWeight="bold">Whole-slide modeling</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                PathologyFL implements federated optimization, privacy/security mechanisms, and
-                pathology-specific site-aware weighting. A fixed dominance detector transferred
-                without retuning to ordinal site shift and improved global QWK by 0.01053, macro-F1 by
-                0.01512, and worst-site QWK by 0.01290 at the strongest tested shift level.
+                TransnnMIL and ongoing WSI-NCA work on aggregation, topology, spatial update rules, and
+                controlled falsification on whole-slide pathology data.
+              </Text>
+            </ListItem>
+            <ListItem>
+              <Text fontWeight="bold">PathologyFL</Text>
+              <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
+                Separate federated-pathology research on site-aware weighting, dominance detection,
+                privacy-aware training, and multi-institutional stress tests.
+              </Text>
+            </ListItem>
+            <ListItem>
+              <Text fontWeight="bold">Scientific compiler / evidence DSL</Text>
+              <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
+                Typed research tooling that makes units, identities, controls, evidence provenance,
+                and admissible claims explicit and machine-checkable.
               </Text>
             </ListItem>
           </List>
@@ -191,7 +197,7 @@ const Home = () => {
 
         <Section delay={0.28}>
           <Heading as="h2" variant="section-title">
-            Selected Results
+            Selected Public Evidence
           </Heading>
           <Box
             bg={cardBg}
@@ -203,14 +209,21 @@ const Home = () => {
           >
             <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} gap={{ base: 6, md: 7 }}>
               <Stat>
-                <StatLabel color={subtleText}>SCORPION paired acquisition</StatLabel>
+                <StatLabel color={subtleText}>SCORPION study</StatLabel>
                 <StatNumber>48 / 480 / 5</StatNumber>
                 <StatHelpText color={mutedText} mb={0}>
                   Slides / aligned regions / scanners
                 </StatHelpText>
               </Stat>
               <Stat>
-                <StatLabel color={subtleText}>Capacity-matched PA-NF effect</StatLabel>
+                <StatLabel color={subtleText}>PA-NF registered campaign</StatLabel>
+                <StatNumber>175 / 175</StatNumber>
+                <StatHelpText color={mutedText} mb={0}>
+                  Completed capacity-matched fits
+                </StatHelpText>
+              </Stat>
+              <Stat>
+                <StatLabel color={subtleText}>PA-NF scanner effect</StatLabel>
                 <StatNumber>-0.3108</StatNumber>
                 <StatHelpText color={mutedText} mb={0}>
                   Tissue-branch scanner BA vs equal-capacity control
@@ -224,13 +237,6 @@ const Home = () => {
                 </StatHelpText>
               </Stat>
               <Stat>
-                <StatLabel color={subtleText}>TransnnMIL validation</StatLabel>
-                <StatNumber>0.8455</StatNumber>
-                <StatHelpText color={mutedText} mb={0}>
-                  Best validation QWK in stabilization grid
-                </StatHelpText>
-              </Stat>
-              <Stat>
                 <StatLabel color={subtleText}>CAMELYON17/WILDS</StatLabel>
                 <StatNumber>455,954</StatNumber>
                 <StatHelpText color={mutedText} mb={0}>
@@ -238,10 +244,10 @@ const Home = () => {
                 </StatHelpText>
               </Stat>
               <Stat>
-                <StatLabel color={subtleText}>PatchCamelyon</StatLabel>
-                <StatNumber>0.9394 AUC</StatNumber>
+                <StatLabel color={subtleText}>Independent canine audit</StatLabel>
+                <StatNumber>44 / 5</StatNumber>
                 <StatHelpText color={mutedText} mb={0}>
-                  0.8526 accuracy on the official test split
+                  Biological samples / scanners
                 </StatHelpText>
               </Stat>
             </SimpleGrid>
@@ -250,15 +256,12 @@ const Home = () => {
 
         <Section delay={0.29}>
           <Heading as="h2" variant="section-title">
-            Scope
+            Approach
           </Heading>
           <Paragraph>
-            This is research software and experimental machine-learning work, not clinical software.
-            The strongest results are specific to their registered datasets and comparators: PA-NF
-            outperforms its equal-capacity neural control on the SCORPION structured-separation
-            objective, and PathologyFL site-aware policies outperform FedAvg in defined simulated-site
-            stress regimes. I do not claim universal scanner invariance, clinical validation, or
-            state-of-the-art superiority across all pathology models.
+            I prefer experiments that can fail cleanly: preregistered gates, matched controls,
+            immutable artifacts, explicit provenance, negative results kept in the record, and claim
+            boundaries that stay narrower than the evidence.
           </Paragraph>
         </Section>
 
@@ -271,21 +274,20 @@ const Home = () => {
           </BioSection>
           <BioSection>
             <BioYear>2025 to present</BioYear>Independent computational pathology and machine-learning
-            research across paired-acquisition representations, whole-slide analysis, and
-            multi-institutional learning.
+            research across representation learning, whole-slide analysis, measurement, and
+            scientific systems.
           </BioSection>
           <BioSection>
             <BioYear>2025</BioYear>Built an 18-node home lab with Security Onion and pfSense for
             systems and security research.
           </BioSection>
           <BioSection>
-            <BioYear>Fall 2026</BioYear>Entering Computer Programming at Conestoga College in
-            Waterloo, Ontario.
+            <BioYear>2026</BioYear>Released the PA-NF public research record and began an active
+            technical collaboration with NucleoScope.ai.
           </BioSection>
           <BioSection>
-            <BioYear>2026</BioYear>Released the PA-NF flagship pipeline manuscript spanning
-            paired-scanner representation learning, TransnnMIL whole-slide modeling, and PathologyFL
-            multi-institutional learning.
+            <BioYear>Fall 2026</BioYear>Computer Programming at Conestoga College in Waterloo,
+            Ontario.
           </BioSection>
         </Section>
 
@@ -294,10 +296,9 @@ const Home = () => {
             I ♥
           </Heading>
           <Paragraph>
-            Matrix multiplication, backpropagation, gradient descent, optimization landscapes,
-            attention mechanisms, convolutional inductive biases, embedding geometry, latent-space
-            factorization, multiple-instance learning, federated learning, neural aggregation, and
-            figuring out what neural networks actually encode.
+            Representation geometry, optimization, multiple-instance learning, spatial models,
+            measurement theory, experimental design, reproducibility, and figuring out what a result
+            actually proves.
           </Paragraph>
         </Section>
 
@@ -321,17 +322,6 @@ const Home = () => {
               >
                 <Button variant="ghost" colorScheme="teal" leftIcon={<IoLogoLinkedin />}>
                   Matthew Vaishnav
-                </Button>
-              </Link>
-            </ListItem>
-            <ListItem>
-              <Link
-                href="https://tryhackme.com/p/matthew.vaishnav"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button variant="ghost" colorScheme="teal" leftIcon={<SiTryhackme />}>
-                  @matthew.vaishnav
                 </Button>
               </Link>
             </ListItem>
