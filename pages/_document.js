@@ -10,7 +10,7 @@ export default function Document() {
             src: url('/portfolio/fonts/DroplineRegular-Wpegz.otf') format('opentype');
             font-display: swap;
             font-style: normal;
-            font-weight: 400 700;
+            font-weight: normal;
           }
         `}</style>
       </Head>
