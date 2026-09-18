@@ -4,7 +4,6 @@ import {
   Box,
   Container,
   Flex,
-  Heading,
   IconButton,
   Link,
   Menu,
@@ -64,37 +63,35 @@ const Navbar = ({ path, ...props }) => (
       alignItems="center"
       justifyContent="space-between"
     >
-      <Flex align="center" mr={5}>
-        <Heading as="h1" size="lg" letterSpacing="tighter">
-          <Logo />
-        </Heading>
-      </Flex>
+      <Flex alignItems="center" flexGrow={1}>
+        <Logo />
 
-      <Stack
-        direction={{ base: 'column', md: 'row' }}
-        display={{ base: 'none', md: 'flex' }}
-        width={{ base: 'full', md: 'auto' }}
-        alignItems="center"
-        flexGrow={1}
-        mt={{ base: 4, md: 0 }}
-      >
-        <LinkItem href="/research" path={path}>
-          Research
-        </LinkItem>
-        <Link
-          href="https://github.com/matthewvaishnav/portfolio"
-          target="_blank"
-          rel="noopener noreferrer"
-          display="inline-flex"
+        <Stack
+          direction={{ base: 'column', md: 'row' }}
+          display={{ base: 'none', md: 'flex' }}
+          width={{ base: 'full', md: 'auto' }}
           alignItems="center"
-          gap={1}
-          p={2}
-          color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+          ml={3}
+          mt={{ base: 4, md: 0 }}
         >
-          <IoLogoGithub />
-          Source
-        </Link>
-      </Stack>
+          <LinkItem href="/research" path={path}>
+            Research
+          </LinkItem>
+          <Link
+            href="https://github.com/matthewvaishnav/portfolio"
+            target="_blank"
+            rel="noopener noreferrer"
+            display="inline-flex"
+            alignItems="center"
+            gap={1}
+            p={2}
+            color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+          >
+            <IoLogoGithub />
+            Source
+          </Link>
+        </Stack>
+      </Flex>
 
       <Box flex={1} textAlign="right">
         <ThemeToggleButton />
