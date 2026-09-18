@@ -20,8 +20,8 @@ import { Title, Meta } from '../components/work'
 import P from '../components/paragraph'
 import Layout from '../components/layouts/article'
 
-const FLAGSHIP_PDF =
-  'https://matthewvaishnav.github.io/computational-pathology-research/accountable-neural-aggregation-in-computational-pathology.pdf'
+const CANONICAL_PA_NF =
+  'https://matthewvaishnav.github.io/computational-pathology-research/'
 
 const Work = () => {
   const muted = useColorModeValue('gray.600', 'gray.400')
@@ -59,13 +59,13 @@ const Work = () => {
         <Flex gap={3} flexWrap="wrap" my={{ base: 6, md: 7 }}>
           <Button
             as={Link}
-            href={FLAGSHIP_PDF}
+            href={CANONICAL_PA_NF}
             target="_blank"
             rel="noopener noreferrer"
             colorScheme="teal"
             rightIcon={<ExternalLinkIcon />}
           >
-            Read Foundations Paper
+            Read PA-NF Manuscript
           </Button>
           <Button
             as={Link}
@@ -276,21 +276,29 @@ const Work = () => {
         </Heading>
         <List ml={{ base: 0, md: 4 }} my={4} spacing={3}>
           <ListItem>
-            <Meta>Program foundations paper</Meta>
-            <Link href={FLAGSHIP_PDF} target="_blank" rel="noopener noreferrer">
-              Accountable Neural Aggregation in Computational Pathology: From Paired-Acquisition
-              Representations to Whole-Slide and Institutional Learning <ExternalLinkIcon mx="2px" />
+            <Meta>PA-NF canonical manuscript</Meta>
+            <Link href={CANONICAL_PA_NF} target="_blank" rel="noopener noreferrer">
+              Paired-Acquisition Neural Factorization <ExternalLinkIcon mx="2px" />
             </Link>
           </ListItem>
           <ListItem>
-            <Meta>Focused PA-NF manuscript</Meta>
+            <Meta>PA-NF SCORPION study</Meta>
             <Link
-              href="https://matthewvaishnav.github.io/computational-pathology-research/paired-acquisition-neural-factorization.pdf"
+              href="https://github.com/matthewvaishnav/paired-acquisition-factorization-scorpion"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Paired-Acquisition Neural Factorization representation manuscript{' '}
-              <ExternalLinkIcon mx="2px" />
+              Study-specific paired-acquisition repository <ExternalLinkIcon mx="2px" />
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Meta>PA-NF canine SCC audit</Meta>
+            <Link
+              href="https://github.com/matthewvaishnav/paired-acquisition-factorization-caninescc"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Independent multi-scanner audit repository <ExternalLinkIcon mx="2px" />
             </Link>
           </ListItem>
           <ListItem>

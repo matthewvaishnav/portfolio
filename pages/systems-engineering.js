@@ -18,7 +18,7 @@ const Works = () => (
             thumbnail="/portfolio/images/works/histocore-logo-rect.svg" 
             title="Computational Pathology & Federated Oncology"
           >
-            My flagship research platform: 0.9394 PCam AUC, TransnnMIL v2.0, PathologyFL, FAIR-WEIGHTS-H, and validation infrastructure
+            Computational pathology research across paired acquisition, whole-slide modeling, federated learning, and reproducible scientific systems
           </WorkGridItem>
         </Section>
         <Section>

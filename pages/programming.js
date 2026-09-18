@@ -30,7 +30,7 @@ const Programming = () => (
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        Available for co-op / Summer / Fall 2026
+        Computer Programming @ Conestoga · 2026–2027
       </Box>
 
       <Box display={{ base: 'block', md: 'flex' }} alignItems="center" gap={{ base: 4, md: 6 }}>
