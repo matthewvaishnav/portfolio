@@ -18,86 +18,72 @@ import Layout from '../components/layouts/article'
 const records = [
   {
     title: 'Paired-Acquisition Neural Factorization',
-    type: 'Flagship preprint',
-    date: 'September 4, 2026',
+    type: 'Published research',
+    date: '2026',
     description:
-      'End-to-end computational pathology pipeline spanning paired-scanner representation learning, TransnnMIL whole-slide aggregation, and PathologyFL multi-institutional learning.',
-    metric: 'Flagship paper',
+      'Paired-scanner representation learning from matched acquisitions of the same tissue. The primary SCORPION campaign uses a capacity-matched neural control and slide-blocked evaluation.',
+    metric: '175 registered fits',
     image: '/portfolio/images/research/research-platform-cover.webp',
-    href:
-      'https://matthewvaishnav.github.io/computational-pathology-research/paired-acquisition-neural-factorization-pipeline.pdf'
+    href: 'https://matthewvaishnav.github.io/computational-pathology-research/'
   },
   {
-    title: 'Focused PA-NF Representation Paper',
-    type: 'Supporting manuscript',
+    title: 'SCORPION Paired-Acquisition Study',
+    type: 'Representation study',
     date: '2026',
     description:
-      'Focused manuscript for the paired-acquisition representation stage, including the corrected SCORPION and independent multi-scanner evidence.',
-    metric: 'Representation stage',
+      'Five-scanner H&E study with 48 slides and 480 aligned tissue regions. The current evidence package contains the registered capacity-matched comparison, fold-aware analysis, and reproducible artifacts.',
+    metric: '48 slides · 480 regions · 5 scanners',
     image: '/portfolio/images/research/scorpion-cover.webp',
-    href:
-      'https://matthewvaishnav.github.io/computational-pathology-research/paired-acquisition-neural-factorization.pdf'
+    href: 'https://github.com/matthewvaishnav/paired-acquisition-factorization-scorpion'
   },
   {
-    title: 'Capacity-Matched SCORPION Campaign',
-    type: 'Experimental evidence',
+    title: 'Multi-Scanner Canine SCC Audit',
+    type: 'External audit',
     date: '2026',
     description:
-      'Seven variants across five folds and five seeds. PA-NF reduced tissue-branch scanner balanced accuracy by 0.3108 relative to an equal-capacity two-branch neural control while preserving registered retrieval noninferiority.',
-    metric: '175 / 175 fits',
-    image: '/portfolio/images/research/scorpion-cover.webp',
-    href:
-      'https://github.com/matthewvaishnav/computational-pathology-research/tree/main/evidence/paired_acquisition/scorpion-capacity-matched-20260726'
-  },
-  {
-    title: 'Independent Multi-Scanner Canine SCC Study',
-    type: 'External validation',
-    date: '2026',
-    description:
-      'Biological-sample-blocked evaluation across five scanners. The study confirmed strong scanner suppression but also showed that simple centroid, QR, and paired-linear controls remain formidable baselines.',
-    metric: '44 samples / 5 scanners',
+      'Biological-sample-blocked evaluation across five scanners and 44 samples, including direct comparison with centroid, QR, and paired-linear scanner-removal baselines.',
+    metric: '44 samples · 5 scanners',
     image: '/portfolio/images/research/canine-scc-cover.webp',
-    href:
-      'https://github.com/matthewvaishnav/computational-pathology-research/tree/main/evidence/paired_acquisition/corrected-20260726'
+    href: 'https://github.com/matthewvaishnav/paired-acquisition-factorization-caninescc'
   },
   {
-    title: 'PANDA Whole-Slide TransnnMIL Program',
+    title: 'NucleoScope Nuclear Measurement',
+    type: 'Active collaboration',
+    date: '2026',
+    description:
+      'Technical collaboration on nucleus-level H&E measurement, repeated-detection structure, computational-context effects, and the search for stable tissue organization that survives explicit artifact controls.',
+    metric: 'Measurement and law discovery',
+    image: '/portfolio/images/research/research-platform-cover.webp',
+    href: 'https://nucleoscope.ai/'
+  },
+  {
+    title: 'Whole-Slide Modeling',
     type: 'Whole-slide learning',
     date: '2026',
     description:
-      'Slide-level prostate grading with 10,611 readable Phikon feature bags. The stabilization grid reached mean best validation QWK 0.8257 at 1e-4 and a best run of 0.8455.',
-    metric: '10,611 slides',
+      'Authored TransnnMIL work and ongoing whole-slide spatial-model research on aggregation, topology, and tissue dynamics, evaluated with matched baselines and falsification controls.',
+    metric: '10,611 PANDA slide bags',
     image: '/portfolio/images/research/allocation-cover.webp',
     href: 'https://github.com/matthewvaishnav/computational-pathology-research'
   },
   {
-    title: 'PathologyFL Dominance-Aware Site Learning',
-    type: 'Federated learning',
+    title: 'PathologyFL',
+    type: 'Separate research line',
     date: '2026',
     description:
-      'A fixed dominance detector transferred without retuning from label-noise calibration to ordinal site shift, improving global QWK, macro-F1, and worst-site QWK at the strongest tested shift.',
-    metric: '+0.01053 global QWK',
+      'Federated and site-aware pathology learning with explicit dominance detection, weighting policies, and simulated-site stress tests. PathologyFL is separate from PA-NF rather than a stage inside it.',
+    metric: 'Federated pathology research',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href:
       'https://github.com/matthewvaishnav/computational-pathology-research/blob/main/docs/research/dominance-detector-transfer-results.md'
   },
   {
-    title: 'CAMELYON17/WILDS Center-Shift Studies',
-    type: 'Multi-center mechanism study',
+    title: 'Scientific Compiler / Evidence DSL',
+    type: 'Research tooling',
     date: '2026',
     description:
-      'Frozen-feature source-weighting and center-subspace experiments across 455,954 examples from five centers. Equal-client and dominant-center-adjusted policies materially outperformed sample-proportional weighting in the held-out-center proxy.',
-    metric: '455,954 examples',
-    image: '/portfolio/images/research/research-platform-cover.webp',
-    href: 'https://github.com/matthewvaishnav/computational-pathology-research'
-  },
-  {
-    title: 'PatchCamelyon Benchmark',
-    type: 'Patch-level benchmark',
-    date: '2026',
-    description:
-      'Complete patch-level training and evaluation path on PCam, reaching ROC AUC 0.9394 and accuracy 0.8526 on the official 32,768-patch test split.',
-    metric: '0.9394 ROC AUC',
+      'Typed scientific infrastructure for making experimental legality explicit: units, acquisition identities, controls, evidence objects, admissible claims, and fail-closed validation.',
+    metric: 'Reproducibility systems',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href: 'https://github.com/matthewvaishnav/computational-pathology-research'
   }
@@ -237,10 +223,10 @@ const Research = () => {
         </Heading>
 
         <Text color={bodyText} lineHeight="1.8" mb={6}>
-          The PA-NF flagship is the primary synthesis of my computational pathology work. The records
-          below expose the main experimental components behind it: paired-scanner representation
-          learning, whole-slide aggregation, multi-institutional learning, and supporting public
-          benchmarks.
+          I work across several distinct research lines rather than one umbrella pipeline. PA-NF is
+          the paired-acquisition representation project. Whole-slide modeling, PathologyFL,
+          NucleoScope measurement research, and scientific-compiler work are separate programs with
+          their own experiments and evidence boundaries.
         </Text>
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
@@ -251,32 +237,37 @@ const Research = () => {
 
         <Box as="section" pt={12} pb={6}>
           <Heading as="h3" fontSize={20} mb={2}>
-            Public research links
+            Canonical research links
           </Heading>
           <Text color={subtleText} lineHeight="1.75" mb={4}>
-            Papers are backed by the public repository, experiment packages, implementation notes, and
-            result tables used to build the current research program.
+            These links point to the current research record rather than older standalone PDFs or
+            superseded analysis pages.
           </Text>
 
           <ResearchLink
-            label="PA-NF flagship preprint"
-            description="The end-to-end paper spanning representation, whole-slide, and institutional learning."
-            href="https://matthewvaishnav.github.io/computational-pathology-research/paired-acquisition-neural-factorization-pipeline.pdf"
+            label="PA-NF canonical manuscript"
+            description="Current public manuscript and release entry point."
+            href="https://matthewvaishnav.github.io/computational-pathology-research/"
           />
           <ResearchLink
-            label="Computational pathology research repository"
-            description="Main codebase, experiments, documentation, and public result artifacts."
+            label="Computational pathology research hub"
+            description="Main public codebase, experiments, claim boundaries, documentation, and evidence ledger."
             href="https://github.com/matthewvaishnav/computational-pathology-research"
           />
           <ResearchLink
-            label="Focused PA-NF representation manuscript"
-            description="Supporting paper for the paired-acquisition representation stage."
-            href="https://matthewvaishnav.github.io/computational-pathology-research/paired-acquisition-neural-factorization.pdf"
+            label="PA-NF SCORPION study"
+            description="Study-specific repository for the paired-acquisition SCORPION experiments."
+            href="https://github.com/matthewvaishnav/paired-acquisition-factorization-scorpion"
           />
           <ResearchLink
-            label="PathologyFL detector-transfer results"
-            description="Fixed site-dominance detector transferred without retuning to ordinal site shift."
-            href="https://github.com/matthewvaishnav/computational-pathology-research/blob/main/docs/research/dominance-detector-transfer-results.md"
+            label="PA-NF canine SCC audit"
+            description="Study-specific repository for the independent multi-scanner canine evaluation."
+            href="https://github.com/matthewvaishnav/paired-acquisition-factorization-caninescc"
+          />
+          <ResearchLink
+            label="PA-NF evidence release"
+            description="Versioned public evidence package for the paired-acquisition study."
+            href="https://huggingface.co/datasets/MatthewVaishnav/paired-acquisition-factorization-evidence"
           />
         </Box>
 
@@ -290,9 +281,9 @@ const Research = () => {
           bg={noteBg}
         >
           <Text fontSize="sm" color={subtleText} lineHeight="1.8">
-            This is research-only work under controlled experimental conditions. Results are specific to
-            the stated datasets, feature backbones, folds, comparators, and simulated-site settings; the
-            work is not clinical software and does not imply universal model superiority.
+            Research-only work. Results are bounded to the stated datasets, comparators, and
+            protocols; active projects are presented as work in progress rather than as established
+            biological or clinical conclusions.
           </Text>
         </Box>
       </Container>
