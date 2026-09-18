@@ -1,31 +1,29 @@
-import Link from 'next/link'
+import NextLink from 'next/link'
 import { Text, useColorModeValue } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 
 const LogoBox = styled.span`
-  font-weight: bold;
-  font-size: 18px;
   display: inline-flex;
   align-items: center;
   height: 30px;
-  line-height: 20px;
   padding: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
 `
 
-const Logo = () => {
-  return (
-    <Link href="/" scroll={false}>
-      <LogoBox>
-        <Text
-          color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-          fontFamily="'M PLUS Rounded 1c', sans-serif"
-          fontWeight="bold"
-        >
-          Matthew Vaishnav
-        </Text>
-      </LogoBox>
-    </Link>
-  )
-}
+const Logo = () => (
+  <NextLink href="/" scroll={false}>
+    <LogoBox>
+      <Text
+        color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+        fontFamily="heading"
+        fontWeight="bold"
+      >
+        Matthew Vaishnav
+      </Text>
+    </LogoBox>
+  </NextLink>
+)
 
 export default Logo
