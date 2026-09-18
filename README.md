@@ -41,10 +41,16 @@ Research-only. Not clinically validated or intended for patient-care use. Result
 ## Other Projects
 
 ### drift
-Real-time data processing system for computational pathology workflows. Handles high-throughput image analysis with distributed computing, fault tolerance, and monitoring.
+Git-like Linux server-state tracking for packages, services, ports, users, cron jobs, kernel parameters, and other operational state.
 
 ### SENTINEL
-Infrastructure monitoring and alerting system for distributed environments.
+Anti-DDoS research and engineering project built around asynchronous analysis, distributed state, and threat-sharing mechanisms.
+
+### replay / whoops
+Infrastructure tooling for converting shell sessions into Ansible playbooks and intercepting destructive commands before execution.
+
+### Out of Orbit
+C++17/Raylib arcade shooter with fixed-size object pools, wave progression, bosses, and data-driven upgrades.
 
 ### Security Research
 The portfolio also includes defensive-security work, detection engineering, infrastructure automation, and an 18-node home lab built around Security Onion and pfSense.
@@ -53,14 +59,11 @@ The portfolio also includes defensive-security work, detection engineering, infr
 
 ## Technical Stack
 
-**Languages:** Python, JavaScript, TypeScript, Bash  
-**Machine learning:** PyTorch, TensorFlow, scikit-learn, OpenCV, MLflow  
-**Scientific / pathology:** representation learning, multiple-instance learning, federated learning, whole-slide analysis, pathology foundation-model features  
-**Web:** Next.js, React, Three.js, FastAPI, Flask  
-**Security:** SIEM, Sigma Rules, MITRE ATT&CK, Security Onion, pfSense  
-**Infrastructure:** Docker, Kubernetes, Terraform, Ansible  
-**Cloud:** AWS, Azure, Google Cloud Platform  
-**Monitoring:** Prometheus, Grafana, ELK Stack
+**Languages:** Python, C++, JavaScript, Bash  
+**Machine learning / scientific:** PyTorch, scikit-learn, NumPy, SciPy, pandas, representation learning, multiple-instance learning, federated learning  
+**Web / visualization:** Next.js, React, Chakra UI, Three.js  
+**Infrastructure:** Git, GitHub Actions, Docker, Ansible, Linux, SSH  
+**Security / lab:** Security Onion, pfSense, Sigma, MITRE ATT&CK, Prometheus, Grafana
 
 ---
 
