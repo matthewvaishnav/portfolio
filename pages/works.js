@@ -18,7 +18,7 @@ const Works = () => (
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
           <WorkGridItem id="soc-log-correlation" title="SOC Log Correlation Engine" thumbnail="/portfolio/images/works/soc-thumb.svg">
-            14,822 logs parsed, 3 alerts flagged
+            Log parsing, correlation, and alert triage
           </WorkGridItem>
         </Section>
         <Section>
@@ -27,7 +27,7 @@ const Works = () => (
             title="Security Scripting Suite"
             thumbnail="/portfolio/images/works/sigma-thumb.svg"
           >
-            CIS hardening, AD audit scripts
+            Host hardening and audit automation
           </WorkGridItem>
         </Section>
         <Section delay={0.1}>
@@ -36,12 +36,12 @@ const Works = () => (
             title="DevSecOps Pipeline"
             thumbnail="/portfolio/images/works/ctf-thumb.svg"
           >
-            Automated security scanning, caught 6 CVEs
+            Automated security scanning and policy checks
           </WorkGridItem>
         </Section>
         <Section delay={0.1}>
           <WorkGridItem id="monitoring-stack" thumbnail="/portfolio/images/works/lab-thumb.svg" title="SOC Monitoring Stack">
-            Prometheus/Grafana monitoring for 7 services
+            Prometheus/Grafana service monitoring
           </WorkGridItem>
         </Section>
         <Section delay={0.2}>

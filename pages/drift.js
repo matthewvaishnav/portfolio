@@ -29,7 +29,7 @@ const Work = () => (
         </ListItem>
         <ListItem>
           <Meta>Platform</Meta>
-          <span>Linux/macOS/Windows</span>
+          <span>Linux; Windows via WSL</span>
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>

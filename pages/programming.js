@@ -85,7 +85,7 @@ const Programming = () => (
         >
           <Button
             as={NextLink}
-            href="/programming-works"
+            href="/systems-engineering"
             scroll={false}
             rightIcon={<ChevronRightIcon />}
             colorScheme="teal"
@@ -106,6 +106,7 @@ const Programming = () => (
             as={Link}
             href="https://www.linkedin.com/in/matthew-vaishnav-594312403/"
             target="_blank"
+            rel="noopener noreferrer"
             colorScheme="teal"
             variant="outline"
             w={{ base: 'full', sm: 'auto' }}
@@ -151,7 +152,7 @@ const Programming = () => (
         </Heading>
         <List>
           <ListItem>
-            <Link href="https://github.com/matthewvaishnav" target="_blank">
+            <Link href="https://github.com/matthewvaishnav" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="ghost"
                 colorScheme="teal"
@@ -162,7 +163,7 @@ const Programming = () => (
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://www.linkedin.com/in/matthew-vaishnav-594312403/" target="_blank">
+            <Link href="https://www.linkedin.com/in/matthew-vaishnav-594312403/" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="ghost"
                 colorScheme="teal"
@@ -173,7 +174,7 @@ const Programming = () => (
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://tryhackme.com/p/matthew.vaishnav" target="_blank">
+            <Link href="https://tryhackme.com/p/matthew.vaishnav" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="ghost"
                 colorScheme="teal"

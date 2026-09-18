@@ -1,36 +1,36 @@
-import { motion } from 'framer-motion'
 import Head from 'next/head'
+import { motion, useReducedMotion } from 'framer-motion'
 import { GridItemStyle } from '../grid-item'
 
 const variants = {
-  hidden: { opacity: 0, x: 0, y: 20 },
-  enter: { opacity: 1, x: 0, y: 0 },
-  exit: { opacity: 0, x: -0, y: 20 }
+  hidden: { opacity: 0, y: 20 },
+  enter: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: 20 }
 }
 
 const Layout = ({ children, title }) => {
-  const t = `${title} - Matthew Vaishnav`
+  const reduceMotion = useReducedMotion()
+  const pageTitle = title ? `${title} - Matthew Vaishnav` : null
+
   return (
     <motion.article
-      initial="hidden"
+      initial={reduceMotion ? false : 'hidden'}
       animate="enter"
-      exit="exit"
+      exit={reduceMotion ? undefined : 'exit'}
       variants={variants}
-      transition={{ duration: 0.4, type: 'easeInOut' }}
+      transition={{ duration: reduceMotion ? 0 : 0.35, ease: 'easeOut' }}
       style={{ position: 'relative' }}
     >
-      <>
-        {title && (
-          <Head>
-            <title>{t}</title>
-            <meta name="twitter:title" content={t} />
-            <meta property="og:title" content={t} />
-          </Head>
-        )}
-        {children}
+      {pageTitle && (
+        <Head>
+          <title>{pageTitle}</title>
+          <meta name="twitter:title" content={pageTitle} />
+          <meta property="og:title" content={pageTitle} />
+        </Head>
+      )}
 
-        <GridItemStyle />
-      </>
+      {children}
+      <GridItemStyle />
     </motion.article>
   )
 }

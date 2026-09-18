@@ -1,26 +1,28 @@
+import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { IconButton, useColorMode, useColorModeValue } from '@chakra-ui/react'
-import { SunIcon, MoonIcon } from '@chakra-ui/icons'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 
 const ThemeToggleButton = () => {
   const { toggleColorMode } = useColorMode()
+  const reduceMotion = useReducedMotion()
+  const mode = useColorModeValue('light', 'dark')
 
   return (
     <AnimatePresence mode="wait" initial={false}>
       <motion.div
         style={{ display: 'inline-block' }}
-        key={useColorModeValue('light', 'dark')}
-        initial={{ y: -20, opacity: 0 }}
+        key={mode}
+        initial={reduceMotion ? false : { y: -12, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        exit={{ y: 20, opacity: 0 }}
-        transition={{ duration: 0.2 }}
+        exit={reduceMotion ? undefined : { y: 12, opacity: 0 }}
+        transition={{ duration: reduceMotion ? 0 : 0.18 }}
       >
         <IconButton
-          aria-label="Toggle theme"
-          colorScheme={useColorModeValue('teal', 'orange')}
-          variant={useColorModeValue('solid', 'outline')}
-          borderColor={useColorModeValue('transparent', 'orange.300')}
-          icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
+          aria-label={mode === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
+          colorScheme={mode === 'light' ? 'teal' : 'orange'}
+          variant={mode === 'light' ? 'solid' : 'outline'}
+          borderColor={mode === 'light' ? 'transparent' : 'orange.300'}
+          icon={mode === 'light' ? <MoonIcon /> : <SunIcon />}
           onClick={toggleColorMode}
         />
       </motion.div>
