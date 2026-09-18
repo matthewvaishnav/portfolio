@@ -21,6 +21,12 @@ const Work = () => (
       </P>
       <List ml={4} my={4}>
         <ListItem>
+          <Meta>Website</Meta>
+          <Link href="https://github.com/matthewvaishnav/whoops" target="_blank" rel="noopener noreferrer">
+            GitHub repository <ExternalLinkIcon mx="2px" />
+          </Link>
+        </ListItem>
+        <ListItem>
           <Meta>Platform</Meta>
           <span>Linux/macOS</span>
         </ListItem>
