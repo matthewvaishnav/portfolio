@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <Box align="center" opacity={0.4} fontSize="sm" mt={10}>
       <Stack spacing={2} align="center">
-        <Box>Matthew Vaishnav | CST @ Conestoga | Class of 2027</Box>
+        <Box>Matthew Vaishnav | Computer Programming @ Conestoga | 2026–2027</Box>
         <Box>Kitchener-Waterloo, Ontario</Box>
         <Wrap justify="center" spacing={{ base: 3, md: 4 }}>
           <WrapItem>
@@ -18,11 +18,6 @@ const Footer = () => {
               target="_blank"
             >
               LinkedIn
-            </Link>
-          </WrapItem>
-          <WrapItem>
-            <Link href="https://tryhackme.com/p/matthew.vaishnav" target="_blank">
-              TryHackMe
             </Link>
           </WrapItem>
           <WrapItem>
