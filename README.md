@@ -9,17 +9,17 @@ Applied machine-learning / computational pathology research engineer working on 
 
 ---
 
-## Flagship Research
+## Research
 
-### Paired-Acquisition Neural Factorization (PA-NF)
+My work is organized as distinct research lines rather than one umbrella pipeline.
 
-PA-NF is an end-to-end computational pathology pipeline spanning three levels of the learning problem:
+- **Paired-Acquisition Neural Factorization (PA-NF):** paired-scanner representation learning from matched acquisitions of the same tissue.
+- **Whole-slide modeling:** TransnnMIL and ongoing WSI-NCA research on aggregation, topology, and spatial tissue dynamics.
+- **PathologyFL:** a separate federated-pathology research line focused on site-aware aggregation and institutional shift.
+- **NucleoScope collaboration:** nucleus-level H&E measurement, computational-context effects, and controlled law discovery.
+- **Scientific systems:** reproducibility tooling, typed evidence, and machine-checkable experimental constraints.
 
-1. **Paired-acquisition representation learning** — aligned scans of the same tissue across scanners are used to learn tissue-oriented and acquisition-oriented representations.
-2. **Whole-slide neural aggregation** — TransnnMIL operates on slide-level pathology feature bags for multiple-instance learning.
-3. **Multi-institutional learning** — PathologyFL provides federated optimization, privacy/security mechanisms, and pathology-specific site-aware policies.
-
-The real-data research program spans **SCORPION**, an independent five-scanner canine SCC cohort, **PANDA**, **CAMELYON17/WILDS**, and **PatchCamelyon**.
+Public datasets and evaluation substrates include **SCORPION**, an independent five-scanner canine SCC cohort, **PANDA**, **CAMELYON17/WILDS**, and **PatchCamelyon**.
 
 Selected results include:
 
@@ -30,7 +30,7 @@ Selected results include:
 - **CAMELYON17/WILDS:** 455,954 examples across five centers. In a centralized frozen-feature held-out-center proxy, equal-client weighting improved accuracy from **0.8312 to 0.9132** relative to sample-proportional weighting.
 - **PatchCamelyon:** ROC AUC **0.9394**, accuracy **0.8526**, and F1 **0.8507** on the official 32,768-patch test split.
 
-**Flagship preprint:** [Paired-Acquisition Neural Factorization: An End-to-End Computational Pathology Pipeline](https://matthewvaishnav.github.io/computational-pathology-research/paired-acquisition-neural-factorization-pipeline.pdf)
+**Canonical PA-NF manuscript:** [Current public manuscript](https://matthewvaishnav.github.io/computational-pathology-research/)
 
 **Research repository:** [matthewvaishnav/computational-pathology-research](https://github.com/matthewvaishnav/computational-pathology-research)
 
