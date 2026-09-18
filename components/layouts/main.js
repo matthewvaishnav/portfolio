@@ -1,34 +1,34 @@
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
-import NavBar from '../navbar'
 import { Box, Container } from '@chakra-ui/react'
 import Footer from '../footer'
-import VoxelDogLoader from '../voxel-dog-loader'
+import NavBar from '../navbar'
+import LaptopSceneLoader from '../laptop-scene-loader'
 import SpeechBubble from '../speech-bubble'
 
-const LazyVoxelDog = dynamic(() => import('../voxel-dog'), {
+const LazyLaptopScene = dynamic(() => import('../laptop-scene'), {
   ssr: false,
-  loading: () => <VoxelDogLoader />
+  loading: () => <LaptopSceneLoader />
 })
 
+const SITE_DESCRIPTION =
+  "Matthew Vaishnav's computational pathology, machine-learning, and scientific-systems research portfolio."
+
 const Main = ({ children, router }) => {
-  const isResearchRoute =
-    router.asPath.startsWith('/research') || router.asPath.startsWith('/ml-notes')
+  const isResearchRoute = router.asPath.startsWith('/research')
 
   return (
     <Box as="main" pb={{ base: 8, md: 12 }}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content="Matthew Vaishnav's computational pathology, machine-learning, and scientific-systems research portfolio."
-        />
+        <meta name="description" content={SITE_DESCRIPTION} />
         <meta name="author" content="Matthew Vaishnav" />
-        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/portfolio/favicon.svg" type="image/svg+xml" />
         <meta property="og:site_name" content="Matthew Vaishnav Research" />
-        <meta name="og:title" content="Matthew Vaishnav — Computational Pathology & ML" />
+        <meta property="og:title" content="Matthew Vaishnav — Computational Pathology & ML" />
+        <meta property="og:description" content={SITE_DESCRIPTION} />
         <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
         <title>Matthew Vaishnav — Computational Pathology & ML</title>
       </Head>
 
@@ -39,7 +39,7 @@ const Main = ({ children, router }) => {
         pt={{ base: 14, md: 16 }}
         px={{ base: 5, md: 6 }}
       >
-        <LazyVoxelDog />
+        <LazyLaptopScene />
         {!isResearchRoute && <SpeechBubble />}
 
         {children}
