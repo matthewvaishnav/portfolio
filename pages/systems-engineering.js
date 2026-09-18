@@ -36,7 +36,7 @@ const Works = () => (
           <WorkGridItem
             id="drift"
             href="/drift"
-            thumbnail="/portfolio/images/works/drift-logo-rect.svg"
+            thumbnail="/portfolio/images/works/drift-detail.svg"
             title="drift"
           >
             Git-like server state tracker
@@ -44,18 +44,18 @@ const Works = () => (
         </Section>
 
         <Section delay={0.2}>
-          <WorkGridItem id="out-of-orbit" href="/out-of-orbit" thumbnail="/portfolio/images/works/out-of-orbit-logo-rect.svg" title="Out of Orbit">
+          <WorkGridItem id="out-of-orbit" href="/out-of-orbit" thumbnail="/portfolio/images/works/out-of-orbit-logo.svg" title="Out of Orbit">
             Vaporwave arcade shooter with object pooling
           </WorkGridItem>
         </Section>
         <Section delay={0.2}>
-          <WorkGridItem id="replay" href="/replay" thumbnail="/portfolio/images/works/replay-logo-rect.svg" title="replay">
+          <WorkGridItem id="replay" href="/replay" thumbnail="/portfolio/images/works/replay-logo.svg" title="replay">
             Record sessions → Ansible playbooks
           </WorkGridItem>
         </Section>
 
         <Section delay={0.3}>
-          <WorkGridItem id="whoops" href="/whoops" thumbnail="/portfolio/images/works/whoops-logo-rect.svg" title="whoops">
+          <WorkGridItem id="whoops" href="/whoops" thumbnail="/portfolio/images/works/whoops-logo.svg" title="whoops">
             Intercepts dangerous shell commands
           </WorkGridItem>
         </Section>
