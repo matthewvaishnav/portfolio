@@ -21,15 +21,15 @@ const Main = ({ children, router }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Matthew Vaishnav's applied machine-learning and computational pathology research portfolio."
+          content="Matthew Vaishnav's computational pathology, machine-learning, and scientific-systems research portfolio."
         />
         <meta name="author" content="Matthew Vaishnav" />
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <meta property="og:site_name" content="Matthew Vaishnav's Research Portfolio" />
-        <meta name="og:title" content="Matthew Vaishnav's Research Portfolio" />
+        <meta property="og:site_name" content="Matthew Vaishnav Research" />
+        <meta name="og:title" content="Matthew Vaishnav — Computational Pathology & ML" />
         <meta property="og:type" content="website" />
-        <title>Matthew Vaishnav - Research Portfolio</title>
+        <title>Matthew Vaishnav — Computational Pathology & ML</title>
       </Head>
 
       <NavBar path={router.asPath} />
