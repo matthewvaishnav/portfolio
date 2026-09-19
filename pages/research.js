@@ -280,7 +280,14 @@ const Research = () => {
           borderRadius="xl"
           bg={noteBg}
         >
-          <Text fontSize="sm" color={subtleText} lineHeight="1.8">
+          <Text
+            fontSize="sm"
+            color={subtleText}
+            lineHeight="1.8"
+            textAlign="center"
+            maxW="60ch"
+            mx="auto"
+          >
             Research-only work. Results are bounded to the stated datasets, comparators, and
             protocols; active projects are presented as work in progress rather than as established
             biological or clinical conclusions.
