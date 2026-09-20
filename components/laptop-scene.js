@@ -1,69 +1,51 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import { loadGLTFModel } from '../lib/model'
+import { disposeObject3D, loadGLTFModel } from '../lib/model'
 import {
   LaptopSceneContainer,
   LaptopSceneFallback,
   LaptopSceneSpinner
 } from './laptop-scene-loader'
 
+const MODEL_URL = '/portfolio/laptop.glb'
+const TARGET_Y = 12
+const CAMERA_DISTANCE = 38
+
+const easeOutCubic = x => 1 - Math.pow(1 - x, 3)
+
 const LaptopScene = () => {
-  const containerRef = useRef()
-  const rendererRef = useRef()
+  const containerRef = useRef(null)
   const [loading, setLoading] = useState(true)
   const [failed, setFailed] = useState(false)
-  const modelUrl = '/portfolio/laptop.glb'
-
-  const handleWindowResize = useCallback(() => {
-    const { current: renderer } = rendererRef
-    const { current: container } = containerRef
-
-    if (container && renderer) {
-      renderer.setSize(container.clientWidth, container.clientHeight)
-    }
-  }, [])
 
   useEffect(() => {
-    const { current: container } = containerRef
+    const container = containerRef.current
     if (!container) return undefined
 
-    const scW = container.clientWidth
-    const scH = container.clientHeight
+    let animationFrame = 0
+    let model = null
+    let disposed = false
+    let introFrame = 0
 
     const renderer = new THREE.WebGLRenderer({
       antialias: true,
-      alpha: true
+      alpha: true,
+      powerPreference: 'high-performance'
     })
-    renderer.setPixelRatio(window.devicePixelRatio)
-    renderer.setSize(scW, scH)
     renderer.outputColorSpace = THREE.SRGBColorSpace
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2))
     renderer.domElement.setAttribute('aria-hidden', 'true')
+    renderer.domElement.style.display = 'block'
     container.appendChild(renderer.domElement)
-    rendererRef.current = renderer
 
     const scene = new THREE.Scene()
-    const target = new THREE.Vector3(0, 12, 0)
-    const initialCameraPosition = new THREE.Vector3(
-      38 * Math.sin(0.5 * Math.PI),
-      15,
-      38 * Math.cos(0.5 * Math.PI)
-    )
-
-    const scale = scH * 0.0085 + 6.0
-    const camera = new THREE.OrthographicCamera(
-      -scale,
-      scale,
-      scale,
-      -scale,
-      0.01,
-      50000
-    )
-    camera.position.copy(initialCameraPosition)
+    const target = new THREE.Vector3(0, TARGET_Y, 0)
+    const camera = new THREE.OrthographicCamera(-8, 8, 8, -8, 0.01, 50000)
+    camera.position.set(CAMERA_DISTANCE, 15, 0)
     camera.lookAt(target)
 
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.8)
-    scene.add(ambientLight)
+    scene.add(new THREE.AmbientLight(0xffffff, 0.8))
 
     const keyLight = new THREE.DirectionalLight(0xffffff, 1.2)
     keyLight.position.set(10, 15, 10)
@@ -78,47 +60,91 @@ const LaptopScene = () => {
     scene.add(rimLight)
 
     const controls = new OrbitControls(camera, renderer.domElement)
-    controls.autoRotate = false
-    controls.enablePan = false
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     controls.target.copy(target)
+    controls.enablePan = false
+    controls.enableDamping = true
+    controls.autoRotate = !reduceMotion
+    controls.autoRotateSpeed = 0.75
 
-    let req = null
+    const resize = () => {
+      const width = Math.max(container.clientWidth, 1)
+      const height = Math.max(container.clientHeight, 1)
+      const aspect = width / height
+      const scale = height * 0.0085 + 6
+
+      renderer.setSize(width, height, false)
+      camera.left = -scale * aspect
+      camera.right = scale * aspect
+      camera.top = scale
+      camera.bottom = -scale
+      camera.updateProjectionMatrix()
+    }
+
+    const resizeObserver = new ResizeObserver(resize)
+    resizeObserver.observe(container)
+    resize()
 
     const animate = () => {
-      req = requestAnimationFrame(animate)
-      controls.update()
+      animationFrame = window.requestAnimationFrame(animate)
+
+      if (!reduceMotion && introFrame < 90) {
+        introFrame += 1
+        const progress = easeOutCubic(introFrame / 90)
+        const angle = progress * Math.PI * 0.6
+        camera.position.x = CAMERA_DISTANCE * Math.cos(angle)
+        camera.position.z = CAMERA_DISTANCE * Math.sin(angle)
+        camera.position.y = 15
+        camera.lookAt(target)
+      } else {
+        controls.update()
+      }
+
       renderer.render(scene, camera)
     }
 
-    loadGLTFModel(scene, modelUrl, {
+    animate()
+
+    loadGLTFModel(scene, MODEL_URL, {
+      name: 'portfolio-laptop',
+      targetY: TARGET_Y,
       receiveShadow: false,
-      castShadow: false,
-      targetY: 12
+      castShadow: false
     })
-      .then(() => {
-        animate()
+      .then(loadedModel => {
+        if (disposed) {
+          disposeObject3D(loadedModel)
+          return
+        }
+        model = loadedModel
         setLoading(false)
       })
       .catch(() => {
-        setLoading(false)
-        setFailed(true)
+        if (!disposed) {
+          setLoading(false)
+          setFailed(true)
+        }
       })
 
     return () => {
-      cancelAnimationFrame(req)
+      disposed = true
+      window.cancelAnimationFrame(animationFrame)
+      resizeObserver.disconnect()
       controls.dispose()
-      renderer.domElement.remove()
+
+      if (model) {
+        scene.remove(model)
+        disposeObject3D(model)
+      }
+
       renderer.dispose()
-      rendererRef.current = null
+      renderer.forceContextLoss()
+
+      if (renderer.domElement.parentNode === container) {
+        container.removeChild(renderer.domElement)
+      }
     }
   }, [])
-
-  useEffect(() => {
-    window.addEventListener('resize', handleWindowResize, false)
-    return () => {
-      window.removeEventListener('resize', handleWindowResize, false)
-    }
-  }, [handleWindowResize])
 
   if (failed) return <LaptopSceneFallback />
 
