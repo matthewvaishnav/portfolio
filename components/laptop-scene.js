@@ -92,7 +92,8 @@ const LaptopScene = () => {
 
     loadGLTFModel(scene, modelUrl, {
       receiveShadow: false,
-      castShadow: false
+      castShadow: false,
+      targetY: 12
     })
       .then(() => {
         animate()
