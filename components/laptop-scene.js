@@ -1,51 +1,73 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import { disposeObject3D, loadGLTFModel } from '../lib/model'
+import { loadGLTFModel } from '../lib/model'
 import {
   LaptopSceneContainer,
   LaptopSceneFallback,
   LaptopSceneSpinner
 } from './laptop-scene-loader'
 
-const MODEL_URL = '/portfolio/laptop.glb'
-const TARGET_Y = 12
-const CAMERA_DISTANCE = 38
-
-const easeOutCubic = x => 1 - Math.pow(1 - x, 3)
+function easeOutCirc(x) {
+  return Math.sqrt(1 - Math.pow(x - 1, 4))
+}
 
 const LaptopScene = () => {
-  const containerRef = useRef(null)
+  const containerRef = useRef()
+  const rendererRef = useRef()
   const [loading, setLoading] = useState(true)
   const [failed, setFailed] = useState(false)
+  const modelUrl = '/portfolio/laptop.glb'
+
+  const handleWindowResize = useCallback(() => {
+    const { current: renderer } = rendererRef
+    const { current: container } = containerRef
+
+    if (container && renderer) {
+      renderer.setSize(container.clientWidth, container.clientHeight)
+    }
+  }, [])
 
   useEffect(() => {
-    const container = containerRef.current
+    const { current: container } = containerRef
     if (!container) return undefined
 
-    let animationFrame = 0
-    let model = null
-    let disposed = false
-    let introFrame = 0
+    const scW = container.clientWidth
+    const scH = container.clientHeight
 
     const renderer = new THREE.WebGLRenderer({
       antialias: true,
-      alpha: true,
-      powerPreference: 'high-performance'
+      alpha: true
     })
+    renderer.setPixelRatio(window.devicePixelRatio)
+    renderer.setSize(scW, scH)
     renderer.outputColorSpace = THREE.SRGBColorSpace
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2))
     renderer.domElement.setAttribute('aria-hidden', 'true')
-    renderer.domElement.style.display = 'block'
     container.appendChild(renderer.domElement)
+    rendererRef.current = renderer
 
     const scene = new THREE.Scene()
-    const target = new THREE.Vector3(0, TARGET_Y, 0)
-    const camera = new THREE.OrthographicCamera(-8, 8, 8, -8, 0.01, 50000)
-    camera.position.set(CAMERA_DISTANCE, 15, 0)
+    const target = new THREE.Vector3(0, 12, 0)
+    const initialCameraPosition = new THREE.Vector3(
+      38 * Math.sin(0.5 * Math.PI),
+      15,
+      38 * Math.cos(0.5 * Math.PI)
+    )
+
+    const scale = scH * 0.0085 + 6.0
+    const camera = new THREE.OrthographicCamera(
+      -scale,
+      scale,
+      scale,
+      -scale,
+      0.01,
+      50000
+    )
+    camera.position.copy(initialCameraPosition)
     camera.lookAt(target)
 
-    scene.add(new THREE.AmbientLight(0xffffff, 0.8))
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.8)
+    scene.add(ambientLight)
 
     const keyLight = new THREE.DirectionalLight(0xffffff, 1.2)
     keyLight.position.set(10, 15, 10)
@@ -60,41 +82,26 @@ const LaptopScene = () => {
     scene.add(rimLight)
 
     const controls = new OrbitControls(camera, renderer.domElement)
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    controls.autoRotate = true
     controls.target.copy(target)
-    controls.enablePan = false
-    controls.enableDamping = true
-    controls.autoRotate = !reduceMotion
-    controls.autoRotateSpeed = 0.75
 
-    const resize = () => {
-      const width = Math.max(container.clientWidth, 1)
-      const height = Math.max(container.clientHeight, 1)
-      const aspect = width / height
-      const scale = height * 0.0085 + 6
-
-      renderer.setSize(width, height, false)
-      camera.left = -scale * aspect
-      camera.right = scale * aspect
-      camera.top = scale
-      camera.bottom = -scale
-      camera.updateProjectionMatrix()
-    }
-
-    const resizeObserver = new ResizeObserver(resize)
-    resizeObserver.observe(container)
-    resize()
+    let req = null
+    let frame = 0
 
     const animate = () => {
-      animationFrame = window.requestAnimationFrame(animate)
+      req = requestAnimationFrame(animate)
 
-      if (!reduceMotion && introFrame < 90) {
-        introFrame += 1
-        const progress = easeOutCubic(introFrame / 90)
-        const angle = progress * Math.PI * 0.6
-        camera.position.x = CAMERA_DISTANCE * Math.cos(angle)
-        camera.position.z = CAMERA_DISTANCE * Math.sin(angle)
+      frame = frame <= 100 ? frame + 1 : frame
+
+      if (frame <= 100) {
+        const p = initialCameraPosition
+        const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20
+
         camera.position.y = 15
+        camera.position.x =
+          p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed)
+        camera.position.z =
+          p.z * Math.cos(rotSpeed) - p.x * Math.sin(rotSpeed)
         camera.lookAt(target)
       } else {
         controls.update()
@@ -103,48 +110,34 @@ const LaptopScene = () => {
       renderer.render(scene, camera)
     }
 
-    animate()
-
-    loadGLTFModel(scene, MODEL_URL, {
-      name: 'portfolio-laptop',
-      targetY: TARGET_Y,
+    loadGLTFModel(scene, modelUrl, {
       receiveShadow: false,
       castShadow: false
     })
-      .then(loadedModel => {
-        if (disposed) {
-          disposeObject3D(loadedModel)
-          return
-        }
-        model = loadedModel
+      .then(() => {
+        animate()
         setLoading(false)
       })
       .catch(() => {
-        if (!disposed) {
-          setLoading(false)
-          setFailed(true)
-        }
+        setLoading(false)
+        setFailed(true)
       })
 
     return () => {
-      disposed = true
-      window.cancelAnimationFrame(animationFrame)
-      resizeObserver.disconnect()
+      cancelAnimationFrame(req)
       controls.dispose()
-
-      if (model) {
-        scene.remove(model)
-        disposeObject3D(model)
-      }
-
+      renderer.domElement.remove()
       renderer.dispose()
-      renderer.forceContextLoss()
-
-      if (renderer.domElement.parentNode === container) {
-        container.removeChild(renderer.domElement)
-      }
+      rendererRef.current = null
     }
   }, [])
+
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowResize, false)
+    return () => {
+      window.removeEventListener('resize', handleWindowResize, false)
+    }
+  }, [handleWindowResize])
 
   if (failed) return <LaptopSceneFallback />
 
