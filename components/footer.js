@@ -1,11 +1,23 @@
 import { Box, Link, Stack, Wrap, WrapItem } from '@chakra-ui/react'
 
 const Footer = () => (
-  <Box as="footer" textAlign="center" opacity={0.55} fontSize="sm" mt={10}>
-    <Stack spacing={2} align="center">
-      <Box>Matthew Vaishnav | Computer Programming @ Conestoga | 2026–2027</Box>
-      <Box>Kitchener-Waterloo, Ontario</Box>
-      <Wrap justify="center" spacing={{ base: 3, md: 4 }}>
+  <Box
+    as="footer"
+    w="100%"
+    mx="auto"
+    textAlign="center"
+    opacity={0.55}
+    fontSize="sm"
+    mt={10}
+  >
+    <Stack w="100%" spacing={2} alignItems="center" textAlign="center">
+      <Box w="100%" textAlign="center">
+        Matthew Vaishnav | Computer Programming @ Conestoga | 2026–2027
+      </Box>
+      <Box w="100%" textAlign="center">
+        Kitchener-Waterloo, Ontario
+      </Box>
+      <Wrap w="100%" justify="center" spacing={{ base: 3, md: 4 }}>
         <WrapItem>
           <Link
             href="https://github.com/matthewvaishnav"
