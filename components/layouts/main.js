@@ -3,12 +3,12 @@ import dynamic from 'next/dynamic'
 import { Box, Container } from '@chakra-ui/react'
 import Footer from '../footer'
 import NavBar from '../navbar'
-import LaptopSceneLoader from '../laptop-scene-loader'
+import VoxelDogLoader from '../voxel-dog-loader'
 import SpeechBubble from '../speech-bubble'
 
-const LazyLaptopScene = dynamic(() => import('../laptop-scene'), {
+const LazyVoxelDog = dynamic(() => import('../voxel-dog'), {
   ssr: false,
-  loading: () => <LaptopSceneLoader />
+  loading: () => <VoxelDogLoader />
 })
 
 const SITE_DESCRIPTION =
@@ -39,7 +39,7 @@ const Main = ({ children, router }) => {
         pt={{ base: 14, md: 16 }}
         px={{ base: 5, md: 6 }}
       >
-        <LazyLaptopScene />
+        <LazyVoxelDog />
         {!isResearchRoute && <SpeechBubble />}
 
         {children}
