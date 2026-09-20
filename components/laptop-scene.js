@@ -8,10 +8,6 @@ import {
   LaptopSceneSpinner
 } from './laptop-scene-loader'
 
-function easeOutCirc(x) {
-  return Math.sqrt(1 - Math.pow(x - 1, 4))
-}
-
 const LaptopScene = () => {
   const containerRef = useRef()
   const rendererRef = useRef()
@@ -82,31 +78,15 @@ const LaptopScene = () => {
     scene.add(rimLight)
 
     const controls = new OrbitControls(camera, renderer.domElement)
-    controls.autoRotate = true
+    controls.autoRotate = false
+    controls.enablePan = false
     controls.target.copy(target)
 
     let req = null
-    let frame = 0
 
     const animate = () => {
       req = requestAnimationFrame(animate)
-
-      frame = frame <= 100 ? frame + 1 : frame
-
-      if (frame <= 100) {
-        const p = initialCameraPosition
-        const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20
-
-        camera.position.y = 15
-        camera.position.x =
-          p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed)
-        camera.position.z =
-          p.z * Math.cos(rotSpeed) - p.x * Math.sin(rotSpeed)
-        camera.lookAt(target)
-      } else {
-        controls.update()
-      }
-
+      controls.update()
       renderer.render(scene, camera)
     }
 
