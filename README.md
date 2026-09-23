@@ -1,6 +1,6 @@
 # Matthew Vaishnav — Portfolio
 
-Applied machine-learning / computational pathology research engineer working on representation learning, whole-slide neural aggregation, federated learning, scientific computing, and systems engineering.
+Computational pathology / ML research engineer building controlled experiments around identifiability, measurement reliability, institutional generalization, and auditable scientific evidence.
 
 **Contact:** matthew.vaishnav@gmail.com  
 **LinkedIn:** [linkedin.com/in/matthew-vaishnav-594312403](https://www.linkedin.com/in/matthew-vaishnav-594312403/)  
@@ -11,17 +11,17 @@ Applied machine-learning / computational pathology research engineer working on 
 
 ## Research
 
-My work is organized as distinct research lines rather than one umbrella pipeline.
+The common method is controlled falsification: hold the relevant identity fixed, perturb the suspected nuisance or mechanism, preserve the signal that should remain, and bound the claim to what survives.
 
-- **Paired-Acquisition Neural Factorization (PA-NF):** paired-scanner representation learning from matched acquisitions of the same tissue.
-- **Whole-slide modeling:** TransnnMIL and ongoing WSI-NCA research on aggregation, topology, and spatial tissue dynamics.
-- **PathologyFL:** a separate federated-pathology research line focused on site-aware aggregation and institutional shift.
-- **NucleoScope collaboration:** nucleus-level H&E measurement, computational-context effects, and controlled law discovery.
-- **Scientific systems:** reproducibility tooling, typed evidence, and machine-checkable experimental constraints.
+- **Paired-Acquisition Neural Factorization (PA-NF):** tests whether acquisition information can be reduced while tissue identity is preserved across matched scanner views.
+- **Whole-slide modeling:** TransnnMIL tests aggregation; WSI-NCA tests whether topology and spatial dynamics survive matched and shuffled-mechanism controls.
+- **PathologyFL:** tests site-aware weighting and dominance detection under explicit institutional imbalance and shift.
+- **NucleoScope collaboration:** tests whether nucleus-level quantitative measurements are stable to computational context before biological interpretation.
+- **Scientific systems:** turns identities, units, controls, provenance, and admissible claims into executable research constraints.
 
 Public datasets and evaluation substrates include **SCORPION**, an independent five-scanner canine SCC cohort, **PANDA**, **CAMELYON17/WILDS**, and **PatchCamelyon**.
 
-Selected results include:
+Selected controlled results include:
 
 - **SCORPION:** 48 H&E slides, 480 aligned tissue regions, five scanners, and 2,400 images. In the registered 175-fit capacity-matched campaign, PA-NF reduced tissue-branch scanner balanced accuracy by **0.3108** relative to an equal-capacity neural control while preserving same-region retrieval within the registered noninferiority margin.
 - **Independent canine SCC:** 44 biological samples and 805 complete five-view regions across five scanners. The external study confirmed strong scanner suppression while showing that centroid, QR, and paired-linear removal remain strong baselines.
