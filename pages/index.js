@@ -53,8 +53,9 @@ const Home = () => {
               Computational Pathology / ML Research Engineer
             </Text>
             <Text fontSize="sm" color={mutedText} lineHeight="1.75" maxW="620px">
-              Researching what pathology models and measurements actually encode, and building
-              methods to separate biological signal from acquisition, site, topology, and computation.
+              Independent research across computational pathology and machine learning, spanning
+              representation learning, whole-slide models, federated systems, quantitative
+              measurement, adaptive relational learning, and scientific tooling.
             </Text>
           </Box>
           <Box flexShrink={0} mt={{ base: 5, md: 0 }} textAlign="center">
@@ -87,16 +88,17 @@ const Home = () => {
             About
           </Heading>
           <Paragraph>
-            I work on computational pathology problems where a model can be right for the wrong
-            reason.
+            I work across several independent research lines in computational pathology and machine
+            learning, building new models, measurement systems, and research infrastructure.
           </Paragraph>
           <Paragraph>
-            My research asks what a model or measurement is actually responding to, and whether that
-            signal survives changes in scanner, site, tissue context, and computation.
+            That includes paired-acquisition representation learning, whole-slide MIL and spatial
+            dynamics, federated pathology, nucleus-level quantitative measurement, and SERA, my work
+            on evidence-governed adaptive computation.
           </Paragraph>
           <Paragraph>
-            I build models and experimental systems to separate biological signal from artifact and
-            make the evidence reproducible.
+            Across them, I care about whether the mechanism is real, whether the result reproduces,
+            and whether the claim matches the evidence.
           </Paragraph>
 
           <Flex
@@ -158,40 +160,54 @@ const Home = () => {
           </Heading>
           <List mt={4} spacing={5}>
             <ListItem>
-              <Text fontWeight="bold">Paired-Acquisition Neural Factorization</Text>
+              <Text fontWeight="bold">Paired-Acquisition Neural Factorization (PA-NF)</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Holds tissue identity fixed across matched scanner acquisitions, reduces scanner
-                recoverability in the tissue branch, and tests whether tissue retrieval survives
-                equal-capacity and strong removal controls.
+                Factorizes tissue-oriented and acquisition-oriented information from matched
+                multi-scanner views, with explicit preservation, leakage, collapse, and comparator
+                controls.
+              </Text>
+            </ListItem>
+            <ListItem>
+              <Text fontWeight="bold">Whole-slide MIL: AttentionMIL and TransnnMIL</Text>
+              <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
+                Whole-slide aggregation research on PANDA using gated AttentionMIL, TransnnMIL, and
+                matched MIL baselines, with repeated-seed and architecture-specific evaluation.
+              </Text>
+            </ListItem>
+            <ListItem>
+              <Text fontWeight="bold">WSI-NCA / whole-slide tissue dynamics</Text>
+              <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
+                Studies topology, history, and iterative spatial state updates using real-versus-
+                shuffled structure and mechanism-specific falsification.
+              </Text>
+            </ListItem>
+            <ListItem>
+              <Text fontWeight="bold">PathologyFL / FAIR-WEIGHTS-H</Text>
+              <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
+                Federated pathology research on institutional weighting, site dominance, privacy-aware
+                training, robustness, and transfer under controlled multi-site shift.
               </Text>
             </ListItem>
             <ListItem>
               <Text fontWeight="bold">NucleoScope nuclear measurement</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Tests whether nucleus-level measurements belong to the biological object or to the
-                computational context that produced them, using repeated detections, reruns, and
-                explicit artifact controls.
+                Active collaboration on nucleus-level quantitative measurement, repeated-detection
+                structure, computational-context effects, and falsifiable tissue-organization laws.
               </Text>
             </ListItem>
             <ListItem>
-              <Text fontWeight="bold">Whole-slide modeling</Text>
+              <Text fontWeight="bold">SERA</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                TransnnMIL tests whole-slide aggregation; WSI-NCA tests whether topology and spatial
-                dynamics remain necessary after matched, shuffled, and mechanism-specific controls.
-              </Text>
-            </ListItem>
-            <ListItem>
-              <Text fontWeight="bold">PathologyFL</Text>
-              <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Tests whether site-aware weighting and dominance detection still help under explicit
-                institutional imbalance, ordinal shift, and held-out-center stress.
+                Independent machine-learning research on an evidence-governed structural control
+                plane for the birth, reuse, composition, repair, consolidation, and retirement of
+                learned computational structure.
               </Text>
             </ListItem>
             <ListItem>
               <Text fontWeight="bold">Scientific compiler / evidence DSL</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Turns scientific legality into executable constraints: identities, units, controls,
-                provenance, evidence types, and claims that fail closed when support is missing.
+                Typed research tooling for identities, units, controls, provenance, evidence objects,
+                and machine-checkable claim boundaries.
               </Text>
             </ListItem>
           </List>
@@ -199,7 +215,7 @@ const Home = () => {
 
         <Section delay={0.28}>
           <Heading as="h2" variant="section-title">
-            Evidence That Survived Controls
+            Research at a Glance
           </Heading>
           <Box
             bg={cardBg}
@@ -211,45 +227,45 @@ const Home = () => {
           >
             <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} gap={{ base: 6, md: 7 }}>
               <Stat>
-                <StatLabel color={subtleText}>PA-NF scanner identifiability</StatLabel>
+                <StatLabel color={subtleText}>PA-NF</StatLabel>
                 <StatNumber>-0.3108</StatNumber>
                 <StatHelpText color={mutedText} mb={0}>
-                  Tissue-branch scanner balanced accuracy vs equal-capacity neural control
+                  Scanner balanced-accuracy effect vs equal-capacity control, with retrieval preserved
                 </StatHelpText>
               </Stat>
               <Stat>
-                <StatLabel color={subtleText}>PA-NF tissue preservation</StatLabel>
-                <StatNumber>Noninferior</StatNumber>
+                <StatLabel color={subtleText}>AttentionMIL / TransnnMIL</StatLabel>
+                <StatNumber>0.8100 / 0.8257</StatNumber>
                 <StatHelpText color={mutedText} mb={0}>
-                  Same-region retrieval stayed inside the registered 0.02 margin
+                  PANDA validation QWK for gated AttentionMIL / mean best TransnnMIL across three seeds
                 </StatHelpText>
               </Stat>
               <Stat>
-                <StatLabel color={subtleText}>Registered PA-NF campaign</StatLabel>
-                <StatNumber>175 / 175</StatNumber>
-                <StatHelpText color={mutedText} mb={0}>
-                  Capacity-matched fits completed
-                </StatHelpText>
-              </Stat>
-              <Stat>
-                <StatLabel color={subtleText}>TransnnMIL stabilization</StatLabel>
-                <StatNumber>0.8257</StatNumber>
-                <StatHelpText color={mutedText} mb={0}>
-                  Mean best validation QWK across three seeds at 1e-4
-                </StatHelpText>
-              </Stat>
-              <Stat>
-                <StatLabel color={subtleText}>PathologyFL transfer</StatLabel>
+                <StatLabel color={subtleText}>PathologyFL</StatLabel>
                 <StatNumber>+0.01053</StatNumber>
                 <StatHelpText color={mutedText} mb={0}>
                   Global QWK at 45% ordinal shift without retuning
                 </StatHelpText>
               </Stat>
               <Stat>
-                <StatLabel color={subtleText}>Independent scanner audit</StatLabel>
-                <StatNumber>44 / 5</StatNumber>
+                <StatLabel color={subtleText}>SERA</StatLabel>
+                <StatNumber>Validation</StatNumber>
                 <StatHelpText color={mutedText} mb={0}>
-                  Biological samples / scanners with strong simple baselines retained
+                  Evidence-governed structural control plane under strong conventional comparators
+                </StatHelpText>
+              </Stat>
+              <Stat>
+                <StatLabel color={subtleText}>NucleoScope</StatLabel>
+                <StatNumber>Active collaboration</StatNumber>
+                <StatHelpText color={mutedText} mb={0}>
+                  Repeated-detection measurement and tissue-organization falsification
+                </StatHelpText>
+              </Stat>
+              <Stat>
+                <StatLabel color={subtleText}>Scientific compiler</StatLabel>
+                <StatNumber>175 / 175</StatNumber>
+                <StatHelpText color={mutedText} mb={0}>
+                  Metamorphic scientific-legality benchmark outcomes matched expectation
                 </StatHelpText>
               </Stat>
             </SimpleGrid>
