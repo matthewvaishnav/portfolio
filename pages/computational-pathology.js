@@ -37,23 +37,18 @@ const Work = () => {
         </Title>
 
         <Heading as="h2" size="md" mt={2} mb={3}>
-          Independent Research Program
+          Research Thesis
         </Heading>
         <P>
-          I am building an independent computational pathology research program spanning
-          representation learning, whole-slide neural aggregation, institutional aggregation, and
-          scientific provenance. The work is organized as distinct research lines with their own
-          methods, experiments, evidence, and claim boundaries rather than as one model or one
-          three-stage pipeline.
+          I use computational pathology to ask a harder question than whether a model can score well:
+          what signal produced the result, and does it survive when the competing explanation is
+          deliberately changed?
         </P>
         <P>
-          Paired-Acquisition Neural Factorization (PA-NF) is the paired-acquisition representation
-          learning line. TransnnMIL is a separate authored whole-slide multiple-instance learning
-          architecture. PathologyFL is a separate pathology-specific federated-learning and
-          institutional-aggregation framework. FAIR-WEIGHTS-H studies auditable institutional
-          weighting, while the program-level provenance layer handles registered experiments,
-          immutable evidence, exact lineage, hostile review, and fail-closed claim validation. These
-          systems can be studied together, but none of them is a rename or substage of the others.
+          Across paired acquisitions, whole-slide models, institutional shift, quantitative
+          measurement, and scientific tooling, the method is the same: hold the relevant identity
+          fixed, perturb the suspected nuisance or mechanism, compare against matched controls,
+          preserve what should remain, and narrow the claim to what survives.
         </P>
 
         <Flex gap={3} flexWrap="wrap" my={{ base: 6, md: 7 }}>
@@ -95,22 +90,30 @@ const Work = () => {
             </span>
           </ListItem>
           <ListItem>
+            <Meta>NucleoScope measurement research</Meta>
+            <span>
+              Active nucleus-level measurement work asking whether quantitative values are properties
+              of the biological object or of the computational context in which that object was
+              detected. Repeated detections, reruns, and artifact controls come before biological
+              interpretation.
+            </span>
+          </ListItem>
+          <ListItem>
             <Meta>TransnnMIL</Meta>
             <span>
-              An authored multibranch whole-slide multiple-instance learning architecture for
-              aggregating patch-level representations into slide-level predictions. PANDA is the main
-              whole-slide evaluation substrate, with matched baselines and repaired controlled reruns
-              kept separate from the PA-NF representation question.
+              An authored multibranch whole-slide multiple-instance learning architecture. The
+              important question is not only whether it predicts well, but whether its architectural
+              advantage survives matched MIL baselines and controlled reruns on the same slide
+              substrate.
             </span>
           </ListItem>
           <ListItem>
             <Meta>PathologyFL</Meta>
             <span>
-              A pathology-specific federated-learning and institutional-aggregation framework with
-              coordinator/client training, FedAvg, FedProx, FedAdam, weighted aggregation,
-              differential-privacy engines, secure aggregation, asynchronous execution, compression,
-              and site-aware policies. Its central question is how heterogeneous institutional
-              structure changes distributed learning and aggregation.
+              A pathology-specific federated-learning program that tests how institutional
+              imbalance, dominance, and shift change distributed learning. Site-aware policies are
+              evaluated under controlled stress and transfer rather than inferred from aggregate
+              performance alone.
             </span>
           </ListItem>
           <ListItem>
@@ -124,23 +127,24 @@ const Work = () => {
           <ListItem>
             <Meta>Scientific provenance and audit</Meta>
             <span>
-              Program-level research infrastructure for immutable evidence packages, dataset/split/
-              configuration/environment/command/commit lineage, preregistered analyses, corruption
-              tests, exact artifact recovery, hostile review, and fail-closed release validation.
+              Scientific compiler and evidence infrastructure that makes identities, units,
+              controls, provenance, admissible claims, and failure conditions machine-checkable. The
+              goal is to make unsupported scientific statements fail as early as invalid code.
             </span>
           </ListItem>
           <ListItem>
             <Meta>WSI-NCA / Factorized Tissue Dynamics</Meta>
             <span>
-              Experimental whole-slide dynamics research exploring topology-aware local state updates
-              and falsifiable spatial mechanisms. It remains an experimental frontier rather than a
-              promoted pathology claim.
+              Experimental whole-slide dynamics research asking whether topology, history, and local
+              spatial updates are genuinely necessary. Real-versus-shuffled structure and
+              mechanism-specific falsifiers are treated as part of the model test, not optional
+              interpretation.
             </span>
           </ListItem>
         </List>
 
         <Heading as="h2" size="md" mt={9} mb={3}>
-          Experimental Program
+          Experimental Substrates
         </Heading>
         <List ml={{ base: 0, md: 4 }} my={4} spacing={4}>
           <ListItem>
@@ -158,6 +162,13 @@ const Work = () => {
               44 biological samples and 805 geometry-qualified complete five-view regions across five
               scanners, evaluated with biological-sample-blocked folds and strong centroid, QR, and
               paired-linear scanner-removal baselines.
+            </span>
+          </ListItem>
+          <ListItem>
+            <Meta>NucleoScope measurement audit</Meta>
+            <span>
+              Repeated detections and controlled reruns are used to test computational-context
+              dependence before residual structure is interpreted as tissue organization or biology.
             </span>
           </ListItem>
           <ListItem>
@@ -187,7 +198,7 @@ const Work = () => {
         </List>
 
         <Heading as="h2" size="md" mt={9} mb={4}>
-          Selected Results
+          Selected Controlled Results
         </Heading>
         <Box
           bg={cardBg}
@@ -238,10 +249,10 @@ const Work = () => {
               </StatHelpText>
             </Stat>
             <Stat>
-              <StatLabel>PatchCamelyon</StatLabel>
-              <StatNumber>0.9394 AUC</StatNumber>
+              <StatLabel>Scientific compiler</StatLabel>
+              <StatNumber>175 / 175</StatNumber>
               <StatHelpText mb={0} color={muted}>
-                Accuracy 0.8526 and F1 0.8507 on the official 32,768-patch test split.
+                Metamorphic benchmark cases matched expected scientific-legality outcomes.
               </StatHelpText>
             </Stat>
           </SimpleGrid>
@@ -251,24 +262,25 @@ const Work = () => {
           What the Results Mean
         </Heading>
         <P>
-          The representation-level evidence belongs to PA-NF. The registered SCORPION campaign
-          establishes a controlled comparative advantage over the equal-capacity two-branch neural
-          control on the structured-separation objective while preserving retrieval. The independent
-          canine fixed-estimand audit asks a harder external question and does not establish an
-          additional neural feature-space increment over every strong simple scanner-removal baseline.
+          PA-NF is strongest where the experiment fixes biology and changes acquisition. In the
+          registered SCORPION comparison, scanner recoverability falls relative to an equal-capacity
+          neural control while same-region retrieval remains inside the preservation margin. The
+          independent canine audit keeps the claim honest: strong simple removal baselines remain
+          competitive, so the evidence supports structured separation rather than universal neural
+          superiority.
         </P>
         <P>
-          The institutional-learning evidence belongs to PathologyFL, not to PA-NF. Under specified
-          simulated-site stress regimes, fixed site-aware policies improve over FedAvg, including a
-          detector transfer result at 45% ordinal shift without retuning. CAMELYON17 source-weighting
-          experiments provide a natural-center mechanism study, but they remain centralized
-          frozen-feature proxies rather than a completed real-world federated deployment.
+          The whole-slide and federated results follow the same standard. TransnnMIL is evaluated
+          against matched aggregation baselines, while WSI-NCA treats shuffled topology and competing
+          mechanisms as falsifiers. PathologyFL asks whether site-aware behavior transfers under
+          controlled institutional shift; CAMELYON17 is useful natural-center evidence, but not a
+          substitute for a completed real-world federated deployment.
         </P>
         <P>
-          The whole-slide question is separate again. TransnnMIL is an authored aggregation
-          architecture whose current repaired implementation is evaluated against matched MIL
-          baselines. Historical fusion and topology interpretations are not used as evidence until
-          clean controlled reruns support them.
+          Nucleus-level measurement and the scientific compiler push the audit one level deeper:
+          first ask whether the measurement itself is stable, then ask whether the experiment is
+          legally capable of supporting the sentence written about it. Negative results, failed
+          mechanisms, and narrower claim boundaries remain part of the public research record.
         </P>
 
         <Heading as="h2" size="md" mt={9} mb={3}>
