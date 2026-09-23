@@ -12,7 +12,7 @@ const LazyVoxelDog = dynamic(() => import('../voxel-dog'), {
 })
 
 const SITE_DESCRIPTION =
-  "Matthew Vaishnav's computational pathology research on identifiability, controlled falsification, measurement reliability, generalization, and auditable evidence."
+  "Matthew Vaishnav's computational pathology and machine-learning research across representation learning, whole-slide models, federated learning, quantitative measurement, adaptive relational systems, and scientific evidence tooling."
 
 const Main = ({ children, router }) => {
   const isResearchRoute = router.asPath.startsWith('/research')
