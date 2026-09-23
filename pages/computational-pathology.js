@@ -99,12 +99,19 @@ const Work = () => {
             </span>
           </ListItem>
           <ListItem>
+            <Meta>AttentionMIL / whole-slide baselines</Meta>
+            <span>
+              Gated AttentionMIL, mean pooling, nnMIL, CLAM-style, and TransMIL-style comparators form
+              the controlled whole-slide benchmark layer. They are treated as substantive reference
+              models rather than decorative baselines.
+            </span>
+          </ListItem>
+          <ListItem>
             <Meta>TransnnMIL</Meta>
             <span>
-              An authored multibranch whole-slide multiple-instance learning architecture. The
-              important question is not only whether it predicts well, but whether its architectural
-              advantage survives matched MIL baselines and controlled reruns on the same slide
-              substrate.
+              An authored multibranch whole-slide multiple-instance learning architecture evaluated
+              on the same PANDA substrate. Its architectural claim depends on whether it survives
+              repeated-seed comparison against AttentionMIL and the other matched MIL controls.
             </span>
           </ListItem>
           <ListItem>
