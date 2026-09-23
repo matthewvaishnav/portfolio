@@ -53,7 +53,7 @@ const Home = () => {
               Computational Pathology / ML Research Engineer
             </Text>
             <Text fontSize="sm" color={mutedText} lineHeight="1.75" maxW="620px">
-              Researching what pathology models and measurements actually encode — and building
+              Researching what pathology models and measurements actually encode, and building
               methods to separate biological signal from acquisition, site, topology, and computation.
             </Text>
           </Box>
