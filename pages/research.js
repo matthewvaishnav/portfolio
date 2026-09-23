@@ -21,8 +21,8 @@ const records = [
     type: 'Published research',
     date: '2026',
     description:
-      'Paired-scanner representation learning from matched acquisitions of the same tissue. The primary SCORPION campaign uses a capacity-matched neural control and slide-blocked evaluation.',
-    metric: '175 registered fits',
+      'Holds tissue identity fixed across matched scanner acquisitions and asks whether acquisition information can be reduced without destroying tissue structure. Evaluated with capacity-matched, retrieval, and strong linear-removal controls.',
+    metric: '-0.3108 scanner BA vs control',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href: 'https://matthewvaishnav.github.io/computational-pathology-research/'
   },
@@ -31,8 +31,8 @@ const records = [
     type: 'Representation study',
     date: '2026',
     description:
-      'Five-scanner H&E study with 48 slides and 480 aligned tissue regions. The current evidence package contains the registered capacity-matched comparison, fold-aware analysis, and reproducible artifacts.',
-    metric: '48 slides · 480 regions · 5 scanners',
+      'Five-scanner H&E study in which the same underlying tissue is observed under different acquisitions. The registered campaign tests scanner suppression and tissue preservation under slide-blocked evaluation.',
+    metric: '175 / 175 registered fits',
     image: '/portfolio/images/research/scorpion-cover.webp',
     href: 'https://github.com/matthewvaishnav/paired-acquisition-factorization-scorpion'
   },
@@ -41,7 +41,7 @@ const records = [
     type: 'External audit',
     date: '2026',
     description:
-      'Biological-sample-blocked evaluation across five scanners and 44 samples, including direct comparison with centroid, QR, and paired-linear scanner-removal baselines.',
+      'Independent five-scanner audit that keeps the hard result visible: PA-NF suppresses scanner signal, but strong centroid, QR, and paired-linear alternatives remain serious comparators under a fixed estimand.',
     metric: '44 samples · 5 scanners',
     image: '/portfolio/images/research/canine-scc-cover.webp',
     href: 'https://github.com/matthewvaishnav/paired-acquisition-factorization-caninescc'
@@ -51,8 +51,8 @@ const records = [
     type: 'Active collaboration',
     date: '2026',
     description:
-      'Technical collaboration on nucleus-level H&E measurement, repeated-detection structure, computational-context effects, and the search for stable tissue organization that survives explicit artifact controls.',
-    metric: 'Measurement and law discovery',
+      'Tests whether a nucleus-level measurement is stable to the computational context in which the same object is detected. Repeated detections, reruns, and artifact controls separate measurement behavior from biological interpretation.',
+    metric: 'Repeated-context measurement audit',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href: 'https://nucleoscope.ai/'
   },
@@ -61,7 +61,7 @@ const records = [
     type: 'Whole-slide learning',
     date: '2026',
     description:
-      'Authored TransnnMIL work and ongoing whole-slide spatial-model research on aggregation, topology, and tissue dynamics, evaluated with matched baselines and falsification controls.',
+      'TransnnMIL tests slide-level aggregation; WSI-NCA asks whether topology, history, and spatial update mechanisms remain necessary after matched baselines, shuffled structure, and mechanism-specific falsifiers.',
     metric: '10,611 PANDA slide bags',
     image: '/portfolio/images/research/allocation-cover.webp',
     href: 'https://github.com/matthewvaishnav/computational-pathology-research'
@@ -71,8 +71,8 @@ const records = [
     type: 'Separate research line',
     date: '2026',
     description:
-      'Federated and site-aware pathology learning with explicit dominance detection, weighting policies, and simulated-site stress tests. PathologyFL is separate from PA-NF rather than a stage inside it.',
-    metric: 'Federated pathology research',
+      'Tests how institutional imbalance and shift change distributed pathology learning, including fixed dominance detection and site-aware weighting under controlled stress rather than assuming aggregate performance implies robustness.',
+    metric: '+0.01053 QWK at 45% shift',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href:
       'https://github.com/matthewvaishnav/computational-pathology-research/blob/main/docs/research/dominance-detector-transfer-results.md'
@@ -82,8 +82,8 @@ const records = [
     type: 'Research tooling',
     date: '2026',
     description:
-      'Typed scientific infrastructure for making experimental legality explicit: units, acquisition identities, controls, evidence objects, admissible claims, and fail-closed validation.',
-    metric: 'Reproducibility systems',
+      'Compiles scientific constraints into executable checks: identities, units, controls, evidence provenance, admissible claims, and fail-closed validation when the experiment does not support the statement.',
+    metric: '175 / 175 metamorphic checks',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href: 'https://github.com/matthewvaishnav/computational-pathology-research'
   }
@@ -223,10 +223,10 @@ const Research = () => {
         </Heading>
 
         <Text color={bodyText} lineHeight="1.8" mb={6}>
-          I work across several distinct research lines rather than one umbrella pipeline. PA-NF is
-          the paired-acquisition representation project. Whole-slide modeling, PathologyFL,
-          NucleoScope measurement research, and scientific-compiler work are separate programs with
-          their own experiments and evidence boundaries.
+          My research is built around controlled falsification. Each line asks a different question,
+          but the standard is the same: expose the hidden variable that could explain the result,
+          change it while preserving what should remain, and see whether the claimed signal survives.
+          The projects stay separate because their evidence and claim boundaries are different.
         </Text>
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
@@ -240,8 +240,8 @@ const Research = () => {
             Canonical research links
           </Heading>
           <Text color={subtleText} lineHeight="1.75" mb={4}>
-            These links point to the current research record rather than older standalone PDFs or
-            superseded analysis pages.
+            Current manuscripts, code, study-specific audits, and versioned evidence packages for
+            inspecting the experiments behind the claims.
           </Text>
 
           <ResearchLink
