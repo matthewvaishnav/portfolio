@@ -53,8 +53,8 @@ const Home = () => {
               Computational Pathology / ML Research Engineer
             </Text>
             <Text fontSize="sm" color={mutedText} lineHeight="1.75" maxW="620px">
-              Controlled experiments in computational pathology: identifiability, measurement,
-              generalization, and evidence that survives falsification.
+              Researching what pathology models and measurements actually encode — and building
+              methods to separate biological signal from acquisition, site, topology, and computation.
             </Text>
           </Box>
           <Box flexShrink={0} mt={{ base: 5, md: 0 }} textAlign="center">
@@ -87,17 +87,16 @@ const Home = () => {
             About
           </Heading>
           <Paragraph>
-            I build computational pathology systems around controlled falsification: change one
-            causal or structural factor, preserve what should remain, and test whether the claimed
-            effect survives.
+            I work on computational pathology problems where a model can be right for the wrong
+            reason.
           </Paragraph>
           <Paragraph>
-            My work interrogates scanner and site bias, measurement stability, tissue topology,
-            institutional generalization, and scientific evidence itself.
+            My research asks what a model or measurement is actually responding to, and whether that
+            signal survives changes in scanner, site, tissue context, and computation.
           </Paragraph>
           <Paragraph>
-            I care less about headline benchmark numbers than whether a result survives the
-            experiment designed to break it.
+            I build models and experimental systems to separate biological signal from artifact and
+            make the evidence reproducible.
           </Paragraph>
 
           <Flex
@@ -276,9 +275,9 @@ const Home = () => {
             <BioYear>2006</BioYear>Born in Ontario, Canada.
           </BioSection>
           <BioSection>
-            <BioYear>2025 to present</BioYear>Independent computational pathology and machine-learning
-            research across representation learning, whole-slide analysis, measurement, and
-            scientific systems.
+            <BioYear>2025 to present</BioYear>Independent computational pathology research on
+            representation identifiability, whole-slide mechanisms, measurement reliability, and
+            reproducible evidence.
           </BioSection>
           <BioSection>
             <BioYear>2025</BioYear>Built an 18-node home lab with Security Onion and pfSense for
