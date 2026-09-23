@@ -11,13 +11,15 @@ Computational pathology / ML research engineer building controlled experiments a
 
 ## Research
 
-The common method is controlled falsification: hold the relevant identity fixed, perturb the suspected nuisance or mechanism, preserve the signal that should remain, and bound the claim to what survives.
+My research is organized as several independent programs with different technical questions and evidence boundaries.
 
-- **Paired-Acquisition Neural Factorization (PA-NF):** tests whether acquisition information can be reduced while tissue identity is preserved across matched scanner views.
-- **Whole-slide modeling:** TransnnMIL tests aggregation; WSI-NCA tests whether topology and spatial dynamics survive matched and shuffled-mechanism controls.
-- **PathologyFL:** tests site-aware weighting and dominance detection under explicit institutional imbalance and shift.
-- **NucleoScope collaboration:** tests whether nucleus-level quantitative measurements are stable to computational context before biological interpretation.
-- **Scientific systems:** turns identities, units, controls, provenance, and admissible claims into executable research constraints.
+- **Paired-Acquisition Neural Factorization (PA-NF):** matched multi-scanner representation learning with explicit tissue/acquisition factorization and preservation controls.
+- **Whole-slide MIL:** gated **AttentionMIL**, authored **TransnnMIL**, and matched MIL baselines on PANDA.
+- **WSI-NCA / whole-slide tissue dynamics:** topology-, history-, and recurrence-aware spatial modeling under explicit falsification controls.
+- **PathologyFL / FAIR-WEIGHTS-H:** federated pathology, institutional weighting, dominance detection, privacy-aware training, and shift robustness.
+- **NucleoScope collaboration:** nucleus-level quantitative measurement, repeated-detection structure, computational-context effects, and tissue-organization law discovery.
+- **SERA:** evidence-governed adaptive computation in which learned structure can be born, reused, composed, repaired, consolidated, and retired.
+- **Scientific compiler / evidence DSL:** typed identities, units, controls, provenance, evidence objects, and machine-checkable claim boundaries.
 
 Public datasets and evaluation substrates include **SCORPION**, an independent five-scanner canine SCC cohort, **PANDA**, **CAMELYON17/WILDS**, and **PatchCamelyon**.
 
