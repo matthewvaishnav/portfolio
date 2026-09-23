@@ -53,8 +53,8 @@ const Home = () => {
               Computational Pathology / ML Research Engineer
             </Text>
             <Text fontSize="sm" color={mutedText} lineHeight="1.75" maxW="620px">
-              Independent research in computational pathology, machine learning, quantitative
-              measurement, and reproducible scientific systems.
+              Controlled experiments in computational pathology: identifiability, measurement,
+              generalization, and evidence that survives falsification.
             </Text>
           </Box>
           <Box flexShrink={0} mt={{ base: 5, md: 0 }} textAlign="center">
@@ -87,17 +87,17 @@ const Home = () => {
             About
           </Heading>
           <Paragraph>
-            I build computational pathology systems to test whether apparent biological signal is
-            actually biology.
+            I build computational pathology systems around controlled falsification: change one
+            causal or structural factor, preserve what should remain, and test whether the claimed
+            effect survives.
           </Paragraph>
           <Paragraph>
-            My work targets scanner and site bias, measurement instability, tissue topology, hidden
-            confounding, and weak evaluation design. I use paired acquisitions, controlled
-            falsification, cross-site validation, and auditable evidence to determine what models
-            are really learning and which claims actually survive scrutiny.
+            My work interrogates scanner and site bias, measurement stability, tissue topology,
+            institutional generalization, and scientific evidence itself.
           </Paragraph>
           <Paragraph>
-            The goal is simple: make computational pathology harder to fool itself.
+            I care less about headline benchmark numbers than whether a result survives the
+            experiment designed to break it.
           </Paragraph>
 
           <Flex
@@ -161,36 +161,38 @@ const Home = () => {
             <ListItem>
               <Text fontWeight="bold">Paired-Acquisition Neural Factorization</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Uses matched scans of the same tissue region to study how acquisition information can
-                be separated from tissue-oriented representations under explicit controls.
+                Holds tissue identity fixed across matched scanner acquisitions, reduces scanner
+                recoverability in the tissue branch, and tests whether tissue retrieval survives
+                equal-capacity and strong removal controls.
               </Text>
             </ListItem>
             <ListItem>
               <Text fontWeight="bold">NucleoScope nuclear measurement</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Active technical collaboration on nucleus-level H&E measurement, computational-context
-                effects, repeated detections, and candidate laws of tissue organization.
+                Tests whether nucleus-level measurements belong to the biological object or to the
+                computational context that produced them, using repeated detections, reruns, and
+                explicit artifact controls.
               </Text>
             </ListItem>
             <ListItem>
               <Text fontWeight="bold">Whole-slide modeling</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                TransnnMIL and ongoing WSI-NCA work on aggregation, topology, spatial update rules, and
-                controlled falsification on whole-slide pathology data.
+                TransnnMIL tests whole-slide aggregation; WSI-NCA tests whether topology and spatial
+                dynamics remain necessary after matched, shuffled, and mechanism-specific controls.
               </Text>
             </ListItem>
             <ListItem>
               <Text fontWeight="bold">PathologyFL</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Separate federated-pathology research on site-aware weighting, dominance detection,
-                privacy-aware training, and multi-institutional stress tests.
+                Tests whether site-aware weighting and dominance detection still help under explicit
+                institutional imbalance, ordinal shift, and held-out-center stress.
               </Text>
             </ListItem>
             <ListItem>
               <Text fontWeight="bold">Scientific compiler / evidence DSL</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Typed research tooling that makes units, identities, controls, evidence provenance,
-                and admissible claims explicit and machine-checkable.
+                Turns scientific legality into executable constraints: identities, units, controls,
+                provenance, evidence types, and claims that fail closed when support is missing.
               </Text>
             </ListItem>
           </List>
@@ -198,7 +200,7 @@ const Home = () => {
 
         <Section delay={0.28}>
           <Heading as="h2" variant="section-title">
-            Selected Public Evidence
+            Evidence That Survived Controls
           </Heading>
           <Box
             bg={cardBg}
@@ -210,45 +212,45 @@ const Home = () => {
           >
             <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} gap={{ base: 6, md: 7 }}>
               <Stat>
-                <StatLabel color={subtleText}>SCORPION study</StatLabel>
-                <StatNumber>48 / 480 / 5</StatNumber>
-                <StatHelpText color={mutedText} mb={0}>
-                  Slides / aligned regions / scanners
-                </StatHelpText>
-              </Stat>
-              <Stat>
-                <StatLabel color={subtleText}>PA-NF registered campaign</StatLabel>
-                <StatNumber>175 / 175</StatNumber>
-                <StatHelpText color={mutedText} mb={0}>
-                  Completed capacity-matched fits
-                </StatHelpText>
-              </Stat>
-              <Stat>
-                <StatLabel color={subtleText}>PA-NF scanner effect</StatLabel>
+                <StatLabel color={subtleText}>PA-NF scanner identifiability</StatLabel>
                 <StatNumber>-0.3108</StatNumber>
                 <StatHelpText color={mutedText} mb={0}>
-                  Tissue-branch scanner BA vs equal-capacity control
+                  Tissue-branch scanner balanced accuracy vs equal-capacity neural control
                 </StatHelpText>
               </Stat>
               <Stat>
-                <StatLabel color={subtleText}>PANDA whole-slide corpus</StatLabel>
-                <StatNumber>10,611</StatNumber>
+                <StatLabel color={subtleText}>PA-NF tissue preservation</StatLabel>
+                <StatNumber>Noninferior</StatNumber>
                 <StatHelpText color={mutedText} mb={0}>
-                  Readable Phikon slide feature bags
+                  Same-region retrieval stayed inside the registered 0.02 margin
                 </StatHelpText>
               </Stat>
               <Stat>
-                <StatLabel color={subtleText}>CAMELYON17/WILDS</StatLabel>
-                <StatNumber>455,954</StatNumber>
+                <StatLabel color={subtleText}>Registered PA-NF campaign</StatLabel>
+                <StatNumber>175 / 175</StatNumber>
                 <StatHelpText color={mutedText} mb={0}>
-                  Examples across five medical centers
+                  Capacity-matched fits completed
                 </StatHelpText>
               </Stat>
               <Stat>
-                <StatLabel color={subtleText}>Independent canine audit</StatLabel>
+                <StatLabel color={subtleText}>TransnnMIL stabilization</StatLabel>
+                <StatNumber>0.8257</StatNumber>
+                <StatHelpText color={mutedText} mb={0}>
+                  Mean best validation QWK across three seeds at 1e-4
+                </StatHelpText>
+              </Stat>
+              <Stat>
+                <StatLabel color={subtleText}>PathologyFL transfer</StatLabel>
+                <StatNumber>+0.01053</StatNumber>
+                <StatHelpText color={mutedText} mb={0}>
+                  Global QWK at 45% ordinal shift without retuning
+                </StatHelpText>
+              </Stat>
+              <Stat>
+                <StatLabel color={subtleText}>Independent scanner audit</StatLabel>
                 <StatNumber>44 / 5</StatNumber>
                 <StatHelpText color={mutedText} mb={0}>
-                  Biological samples / scanners
+                  Biological samples / scanners with strong simple baselines retained
                 </StatHelpText>
               </Stat>
             </SimpleGrid>
@@ -260,9 +262,9 @@ const Home = () => {
             Approach
           </Heading>
           <Paragraph>
-            I prefer experiments that can fail cleanly: preregistered gates, matched controls,
-            immutable artifacts, explicit provenance, negative results kept in the record, and claim
-            boundaries that stay narrower than the evidence.
+            Hold the relevant identity fixed. Perturb the suspected nuisance or mechanism. Compare
+            against matched controls. Preserve the signal that should survive. Keep the negative
+            results. Then make the claim no broader than the experiment allows.
           </Paragraph>
         </Section>
 
