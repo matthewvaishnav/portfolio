@@ -87,16 +87,17 @@ const Home = () => {
             Work
           </Heading>
           <Paragraph>
-            I build research systems around hard measurement and identifiability problems in
-            pathology. My work includes paired-acquisition representation learning, whole-slide
-            modeling, nucleus-level quantitative measurement, federated pathology, and tooling for
-            making experimental evidence auditable.
+            I build computational pathology systems to test whether apparent biological signal is
+            actually biology.
           </Paragraph>
           <Paragraph>
-            These are separate research lines rather than stages of one pipeline. PA-NF is the
-            paired-acquisition representation project; TransnnMIL and WSI-NCA are whole-slide work;
-            PathologyFL is a separate federated-learning program; and my current NucleoScope
-            collaboration studies nucleus-level measurement and tissue organization.
+            My work targets scanner and site bias, measurement instability, tissue topology, hidden
+            confounding, and weak evaluation design. I use paired acquisitions, controlled
+            falsification, cross-site validation, and auditable evidence to determine what models
+            are really learning and which claims actually survive scrutiny.
+          </Paragraph>
+          <Paragraph>
+            The goal is simple: make computational pathology harder to fool itself.
           </Paragraph>
 
           <Flex
