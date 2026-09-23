@@ -84,7 +84,7 @@ const Home = () => {
 
         <Section delay={0.2}>
           <Heading as="h2" variant="section-title">
-            Work
+            About
           </Heading>
           <Paragraph>
             I build computational pathology systems to test whether apparent biological signal is
