@@ -16,9 +16,9 @@ const Works = () => (
             id="computational-pathology"
             href="/computational-pathology"
             thumbnail="/portfolio/images/works/histocore-logo-rect.svg" 
-            title="Computational Pathology & Federated Oncology"
+            title="Computational Pathology Research"
           >
-            Computational pathology research across paired acquisition, whole-slide modeling, federated learning, and reproducible scientific systems
+            Controlled experiments in paired acquisition, whole-slide modeling, measurement, institutional shift, and auditable evidence
           </WorkGridItem>
         </Section>
         <Section>
