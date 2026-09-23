@@ -18,71 +18,71 @@ import Layout from '../components/layouts/article'
 const records = [
   {
     title: 'Paired-Acquisition Neural Factorization',
-    type: 'Published research',
+    type: 'Representation learning',
     date: '2026',
     description:
-      'Holds tissue identity fixed across matched scanner acquisitions and asks whether acquisition information can be reduced without destroying tissue structure. Evaluated with capacity-matched, retrieval, and strong linear-removal controls.',
+      'Matched multi-scanner representation learning that separates tissue-oriented and acquisition-oriented information while explicitly testing preservation, leakage, collapse, and strong scanner-removal alternatives.',
     metric: '-0.3108 scanner BA vs control',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href: 'https://matthewvaishnav.github.io/computational-pathology-research/'
   },
   {
-    title: 'SCORPION Paired-Acquisition Study',
-    type: 'Representation study',
-    date: '2026',
-    description:
-      'Five-scanner H&E study in which the same underlying tissue is observed under different acquisitions. The registered campaign tests scanner suppression and tissue preservation under slide-blocked evaluation.',
-    metric: '175 / 175 registered fits',
-    image: '/portfolio/images/research/scorpion-cover.webp',
-    href: 'https://github.com/matthewvaishnav/paired-acquisition-factorization-scorpion'
-  },
-  {
-    title: 'Multi-Scanner Canine SCC Audit',
-    type: 'External audit',
-    date: '2026',
-    description:
-      'Independent five-scanner audit that keeps the hard result visible: PA-NF suppresses scanner signal, but strong centroid, QR, and paired-linear alternatives remain serious comparators under a fixed estimand.',
-    metric: '44 samples · 5 scanners',
-    image: '/portfolio/images/research/canine-scc-cover.webp',
-    href: 'https://github.com/matthewvaishnav/paired-acquisition-factorization-caninescc'
-  },
-  {
-    title: 'NucleoScope Nuclear Measurement',
-    type: 'Active collaboration',
-    date: '2026',
-    description:
-      'Tests whether a nucleus-level measurement is stable to the computational context in which the same object is detected. Repeated detections, reruns, and artifact controls separate measurement behavior from biological interpretation.',
-    metric: 'Repeated-context measurement audit',
-    image: '/portfolio/images/research/research-platform-cover.webp',
-    href: 'https://nucleoscope.ai/'
-  },
-  {
-    title: 'Whole-Slide Modeling',
+    title: 'Whole-Slide MIL: AttentionMIL & TransnnMIL',
     type: 'Whole-slide learning',
     date: '2026',
     description:
-      'TransnnMIL tests slide-level aggregation; WSI-NCA asks whether topology, history, and spatial update mechanisms remain necessary after matched baselines, shuffled structure, and mechanism-specific falsifiers.',
-    metric: '10,611 PANDA slide bags',
+      'PANDA whole-slide modeling with gated AttentionMIL, TransnnMIL, and matched MIL comparators. The emphasis is repeated-seed stability and isolating whether architectural changes earn their claimed advantage.',
+    metric: '0.8100 / 0.8257 QWK',
     image: '/portfolio/images/research/allocation-cover.webp',
     href: 'https://github.com/matthewvaishnav/computational-pathology-research'
   },
   {
-    title: 'PathologyFL',
-    type: 'Separate research line',
+    title: 'WSI-NCA / Whole-Slide Tissue Dynamics',
+    type: 'Spatial modeling',
     date: '2026',
     description:
-      'Tests how institutional imbalance and shift change distributed pathology learning, including fixed dominance detection and site-aware weighting under controlled stress rather than assuming aggregate performance implies robustness.',
+      'Iterative local-state modeling over whole-slide tissue structure, with real-versus-shuffled topology, history controls, tied/untied dynamics, and mechanism-specific falsifiers.',
+    metric: 'Topology and history falsification',
+    image: '/portfolio/images/research/allocation-cover.webp',
+    href: 'https://github.com/matthewvaishnav/computational-pathology-research'
+  },
+  {
+    title: 'PathologyFL / FAIR-WEIGHTS-H',
+    type: 'Federated pathology',
+    date: '2026',
+    description:
+      'Federated and site-aware pathology learning with institutional weighting, dominance detection, privacy-aware training, robustness controls, and transfer under explicit multi-site shift.',
     metric: '+0.01053 QWK at 45% shift',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href:
       'https://github.com/matthewvaishnav/computational-pathology-research/blob/main/docs/research/dominance-detector-transfer-results.md'
   },
   {
-    title: 'Scientific Compiler / Evidence DSL',
-    type: 'Research tooling',
+    title: 'NucleoScope Nuclear Measurement',
+    type: 'Active collaboration',
     date: '2026',
     description:
-      'Compiles scientific constraints into executable checks: identities, units, controls, evidence provenance, admissible claims, and fail-closed validation when the experiment does not support the statement.',
+      'Nucleus-level quantitative pathology research on repeated detections, computational-context effects, measurement stability, and candidate tissue-organization laws subjected to explicit artifact attacks.',
+    metric: 'Measurement and law discovery',
+    image: '/portfolio/images/research/research-platform-cover.webp',
+    href: 'https://nucleoscope.ai/'
+  },
+  {
+    title: 'SERA',
+    type: 'Independent ML research',
+    date: '2026',
+    description:
+      'An evidence-governed structural control plane over learned computation, studying when computational structure should be born, reused, composed, repaired, consolidated, or retired under increasingly strong conventional neural controls.',
+    metric: 'Validation-stage structural learning',
+    image: '/portfolio/images/research/research-platform-cover.webp',
+    href: null
+  },
+  {
+    title: 'Scientific Compiler / Evidence DSL',
+    type: 'Scientific systems',
+    date: '2026',
+    description:
+      'Typed scientific infrastructure that makes identities, units, controls, provenance, evidence objects, and admissible claims machine-checkable instead of leaving scientific legality implicit.',
     metric: '175 / 175 metamorphic checks',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href: 'https://github.com/matthewvaishnav/computational-pathology-research'
@@ -152,9 +152,13 @@ const RecordCard = ({ record }) => {
         </Stack>
 
         <Heading as="h2" fontSize="xl" lineHeight="1.3" letterSpacing="-0.015em">
-          <LinkOverlay href={record.href} target="_blank" rel="noopener noreferrer">
-            {record.title}
-          </LinkOverlay>
+          {record.href ? (
+            <LinkOverlay href={record.href} target="_blank" rel="noopener noreferrer">
+              {record.title}
+            </LinkOverlay>
+          ) : (
+            record.title
+          )}
         </Heading>
 
         <Text color={muted} lineHeight="1.7" fontSize="sm">
@@ -172,7 +176,13 @@ const RecordCard = ({ record }) => {
         >
           <Text>{record.metric}</Text>
           <Box display="inline-flex" alignItems="center" gap={1} color={accent} fontWeight={600}>
-            Open <ArrowForwardIcon />
+            {record.href ? (
+              <>
+                Open <ArrowForwardIcon />
+              </>
+            ) : (
+              'Private research record'
+            )}
           </Box>
         </Stack>
       </Stack>
@@ -223,10 +233,10 @@ const Research = () => {
         </Heading>
 
         <Text color={bodyText} lineHeight="1.8" mb={6}>
-          My research is built around controlled falsification. Each line asks a different question,
-          but the standard is the same: expose the hidden variable that could explain the result,
-          change it while preserving what should remain, and see whether the claimed signal survives.
-          The projects stay separate because their evidence and claim boundaries are different.
+          I run several independent research programs rather than one model stack. They span
+          paired-acquisition representations, whole-slide MIL and spatial dynamics, federated
+          pathology, quantitative nuclear measurement, adaptive relational learning, and scientific
+          evidence tooling. Each has its own experiments, comparators, and claim boundary.
         </Text>
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
