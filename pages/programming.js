@@ -39,7 +39,7 @@ const Programming = () => (
             Matthew Vaishnav
           </Heading>
           <Text fontSize={{ base: 'md', md: 'lg' }}>
-            I build labs to learn how things break.
+            Research software, systems tooling, and experimental engineering.
           </Text>
         </Box>
         <Box
@@ -74,7 +74,8 @@ const Programming = () => (
 
       <Section delay={0.1}>
         <Paragraph>
-          Software developer building automation tools, CLI utilities, and games.
+          I build research software and systems tools across scientific computing, Linux
+          automation, infrastructure safety, reproducibility, and experimental game development.
         </Paragraph>
         <Stack
           direction={{ base: 'column', sm: 'row' }}
@@ -121,10 +122,14 @@ const Programming = () => (
           About
         </Heading>
         <Paragraph>
-          I build software tools that solve real problems. From AI agents to game engines, server monitoring to shell safety tools.
+          The engineering side of my work ranges from computational-pathology experiment systems
+          and evidence tooling to Linux state forensics, session-to-Ansible translation, destructive
+          command interception, anti-DDoS architecture experiments, and a C++/Raylib game.
         </Paragraph>
         <Paragraph>
-          My projects focus on automation, developer experience, and making complex tasks simple. Everything is open source and documented.
+          Public repositories are linked where they exist. Some work is private or historical, and
+          I keep that distinction explicit rather than presenting every project as publicly
+          reproducible.
         </Paragraph>
       </Section>
 
@@ -142,7 +147,7 @@ const Programming = () => (
         </BioSection>
         <BioSection>
           <BioYear>Focus</BioYear>
-          Automation, CLI tools, DevOps
+          Research engineering, automation, CLI tools, systems safety
         </BioSection>
       </Section>
 
