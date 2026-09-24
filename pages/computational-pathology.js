@@ -348,7 +348,7 @@ const Work = () => {
             <span>
               Full patch-level training and evaluation on the official 32,768-patch test split:
               0.9394 ROC AUC, 0.8526 accuracy, and 0.8507 F1. The AUC was numerically higher than
-              every external PCam AUC in the repository's historical 10-value comparison table;
+              every external PCam AUC in the repository’s historical 10-value comparison table;
               because those external values came from different studies/protocols, that is a
               descriptive numerical lead rather than a matched superiority test.
             </span>
