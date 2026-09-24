@@ -204,10 +204,26 @@ const Home = () => {
               </Text>
             </ListItem>
             <ListItem>
+              <Text fontWeight="bold">PANDA / SICAP provenance & scanner validation</Text>
+              <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
+                Provenance-complete scanner and dataset validation work, including scanner inventory,
+                assignment reproducibility, transport audits, and the PAR same-glass scanner
+                intervention.
+              </Text>
+            </ListItem>
+            <ListItem>
               <Text fontWeight="bold">Scientific compiler / evidence DSL</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
                 Typed research tooling for identities, units, controls, provenance, evidence objects,
                 and machine-checkable claim boundaries.
+              </Text>
+            </ListItem>
+            <ListItem>
+              <Text fontWeight="bold">Accountable computational pathology program</Text>
+              <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
+                Program-level evidence and reproducibility work connecting representation, whole-slide,
+                institutional, provenance, and claim-audit research without collapsing their separate
+                evidentiary boundaries.
               </Text>
             </ListItem>
           </List>
