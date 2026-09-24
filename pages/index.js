@@ -171,10 +171,10 @@ const Home = () => {
               </Text>
             </ListItem>
             <ListItem>
-              <Text fontWeight="bold">WSI-NCA / WCI lineage</Text>
+              <Text fontWeight="bold">WSI-NCA / whole-slide tissue dynamics</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Spatial dynamics, PANDA coupling, SICAP transport, state canonicalization, K5
-                representation structure, topology/history falsifiers, and acquisition intervention.
+                Local-state dynamics, topology and history falsifiers, recurrence controls, PANDA
+                comparison work, SICAP assignment stability, and related representation-coupling studies.
               </Text>
             </ListItem>
             <ListItem>
@@ -204,6 +204,13 @@ const Home = () => {
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
                 PANDA/SICAP provenance, scanner inventory, assignment stability, public-dataset
                 discovery, and the PAR same-glass scanner intervention.
+              </Text>
+            </ListItem>
+            <ListItem>
+              <Text fontWeight="bold">Benchmark & audit instruments</Text>
+              <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
+                Oncology Identity Audit, paired-scanner counterfactual benchmarking, measurement
+                validation protocols, and scanner-invariant residual-provenance feasibility work.
               </Text>
             </ListItem>
             <ListItem>
@@ -244,10 +251,10 @@ const Home = () => {
                 </StatHelpText>
               </Stat>
               <Stat>
-                <StatLabel color={subtleText}>AttentionMIL / TransnnMIL</StatLabel>
-                <StatNumber>0.8100 / 0.8257</StatNumber>
+                <StatLabel color={subtleText}>Whole-slide MIL</StatLabel>
+                <StatNumber>Matched rerun</StatNumber>
                 <StatHelpText color={mutedText} mb={0}>
-                  PANDA validation QWK for gated AttentionMIL / mean best TransnnMIL across three seeds
+                  AttentionMIL, TransMIL, nnMIL, CLAM, and repaired TransnnMIL under controlled comparison
                 </StatHelpText>
               </Stat>
               <Stat>
@@ -273,9 +280,9 @@ const Home = () => {
               </Stat>
               <Stat>
                 <StatLabel color={subtleText}>Scientific compiler</StatLabel>
-                <StatNumber>175 / 175</StatNumber>
+                <StatNumber>15 / 15 · 35 / 35</StatNumber>
                 <StatHelpText color={mutedText} mb={0}>
-                  Metamorphic scientific-legality benchmark outcomes matched expectation
+                  Pipeline benchmarks and unit/adversarial scientific-legality tests
                 </StatHelpText>
               </Stat>
             </SimpleGrid>
