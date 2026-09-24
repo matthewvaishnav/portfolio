@@ -29,7 +29,7 @@ const Works = () => (
             title="SENTINEL"
             thumbnail="/portfolio/images/works/sentinel-logo-rect.svg"
           >
-            Hardened anti-DDoS architecture with verified benchmarks
+            Anti-DDoS architecture with automated tests and a reproducible synthetic benchmark
           </WorkGridItem>
         </Section>
 
