@@ -51,8 +51,9 @@ const Home = () => {
               Computational Pathology / ML Research Engineer
             </Text>
             <Text fontSize="sm" color={mutedText} lineHeight="1.75" maxW="620px">
-              Independent computational pathology and machine-learning research across models,
-              representations, measurement, learning systems, and scientific infrastructure.
+              Research on what computational pathology systems actually measure, where their signal
+              comes from, and whether their conclusions survive controlled nuisance shifts and
+              mechanism falsification.
             </Text>
           </Box>
           <Box flexShrink={0} mt={{ base: 5, md: 0 }} textAlign="center">
@@ -85,17 +86,24 @@ const Home = () => {
             About
           </Heading>
           <Paragraph>
-            I build research programs, not one model or one pipeline.
+            Computational pathology can produce convincing results for the wrong reasons. My
+            research is about finding those reasons and making them experimentally testable.
           </Paragraph>
           <Paragraph>
-            Some of my work studies what pathology representations encode. Some develops whole-slide
-            and federated models. Some investigates quantitative nuclear measurement. SERA studies
-            how learned computational structure can form and change, while my scientific-language
-            work makes experimental evidence and claim boundaries executable.
+            A model can carry scanner or site identity while appearing to learn biology. A nucleus
+            measurement can change when the surrounding computational context changes. A spatial
+            model can improve without depending on the spatial mechanism it claims to use. A
+            multi-institutional system can look robust because the evaluation preserves hidden
+            structure. I build experiments that separate those alternatives from the biological
+            interpretation.
           </Paragraph>
           <Paragraph>
-            The common requirement is that the system, measurement, or claim has to survive its own
-            controls.
+            I use paired acquisitions, fixed identities, controlled perturbations, mechanism
+            falsification, provenance tracking, retained negative results, and machine-checkable
+            evidence to ask what the system actually knows, where the information came from, and
+            what claim the experiment is entitled to make. The goal is not another leaderboard
+            entry. It is computational pathology whose conclusions survive the shortcuts being
+            removed.
           </Paragraph>
 
           <Flex
