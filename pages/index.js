@@ -53,9 +53,8 @@ const Home = () => {
               Computational Pathology / ML Research Engineer
             </Text>
             <Text fontSize="sm" color={mutedText} lineHeight="1.75" maxW="620px">
-              Independent research across computational pathology and machine learning, spanning
-              representation learning, whole-slide models, federated systems, quantitative
-              measurement, adaptive relational learning, and scientific tooling.
+              Independent computational pathology and machine-learning research across models,
+              representations, measurement, learning systems, and scientific infrastructure.
             </Text>
           </Box>
           <Box flexShrink={0} mt={{ base: 5, md: 0 }} textAlign="center">
@@ -88,17 +87,17 @@ const Home = () => {
             About
           </Heading>
           <Paragraph>
-            I work across several independent research lines in computational pathology and machine
-            learning, building new models, measurement systems, and research infrastructure.
+            I build research programs, not one model or one pipeline.
           </Paragraph>
           <Paragraph>
-            That includes paired-acquisition representation learning, whole-slide MIL and spatial
-            dynamics, federated pathology, nucleus-level quantitative measurement, and SERA, my work
-            on evidence-governed adaptive computation.
+            Some of my work studies what pathology representations encode. Some develops whole-slide
+            and federated models. Some investigates quantitative nuclear measurement. SERA studies
+            how learned computational structure can form and change, while my scientific-language
+            work makes experimental evidence and claim boundaries executable.
           </Paragraph>
           <Paragraph>
-            Across them, I care about whether the mechanism is real, whether the result reproduces,
-            and whether the claim matches the evidence.
+            The common requirement is that the system, measurement, or claim has to survive its own
+            controls.
           </Paragraph>
 
           <Flex
@@ -160,39 +159,38 @@ const Home = () => {
           </Heading>
           <List mt={4} spacing={5}>
             <ListItem>
-              <Text fontWeight="bold">Paired-Acquisition Neural Factorization (PA-NF)</Text>
+              <Text fontWeight="bold">Paired acquisition & representation identifiability</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Factorizes tissue-oriented and acquisition-oriented information from matched
-                multi-scanner views, with explicit preservation, leakage, collapse, and comparator
-                controls.
+                PA-NF, SCORPION, canine SCC, scanner and center subspaces, representation geometry,
+                capacity allocation, pair-repeat studies, and crossed-preparation identifiability.
               </Text>
             </ListItem>
             <ListItem>
-              <Text fontWeight="bold">Whole-slide MIL: AttentionMIL and TransnnMIL</Text>
+              <Text fontWeight="bold">Whole-slide learning</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Whole-slide aggregation research on PANDA using gated AttentionMIL, TransnnMIL, and
-                matched MIL baselines, with repeated-seed and architecture-specific evaluation.
+                Mean pooling, AttentionMIL, nnMIL, CLAM, TransMIL-style controls, TransnnMIL,
+                branch-fusion studies, and repeated-seed PANDA evaluation.
               </Text>
             </ListItem>
             <ListItem>
-              <Text fontWeight="bold">WSI-NCA / whole-slide tissue dynamics</Text>
+              <Text fontWeight="bold">WSI-NCA / WCI lineage</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Studies topology, history, and iterative spatial state updates using real-versus-
-                shuffled structure and mechanism-specific falsification.
+                Spatial dynamics, PANDA coupling, SICAP transport, state canonicalization, K5
+                representation structure, topology/history falsifiers, and acquisition intervention.
               </Text>
             </ListItem>
             <ListItem>
-              <Text fontWeight="bold">PathologyFL / FAIR-WEIGHTS-H</Text>
+              <Text fontWeight="bold">Federated & institutional learning</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Federated pathology research on institutional weighting, site dominance, privacy-aware
-                training, robustness, and transfer under controlled multi-site shift.
+                PathologyFL, FAIR-WEIGHTS-H, dominant-site and site-signal alignment, CAMELYON17
+                external-center studies, privacy/communication stress, and institutional weighting.
               </Text>
             </ListItem>
             <ListItem>
-              <Text fontWeight="bold">NucleoScope nuclear measurement</Text>
+              <Text fontWeight="bold">NucleoScope</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Active collaboration on nucleus-level quantitative measurement, repeated-detection
-                structure, computational-context effects, and falsifiable tissue-organization laws.
+                Nuclear measurement stability, repeated context, primitive response, cross-tile
+                structure, artifact models, ordinal spatial statistics, and independent law discovery.
               </Text>
             </ListItem>
             <ListItem>
@@ -204,26 +202,24 @@ const Home = () => {
               </Text>
             </ListItem>
             <ListItem>
-              <Text fontWeight="bold">PANDA / SICAP provenance & scanner validation</Text>
+              <Text fontWeight="bold">Scanner provenance & intervention</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Provenance-complete scanner and dataset validation work, including scanner inventory,
-                assignment reproducibility, transport audits, and the PAR same-glass scanner
-                intervention.
+                PANDA/SICAP provenance, scanner inventory, assignment stability, public-dataset
+                discovery, and the PAR same-glass scanner intervention.
               </Text>
             </ListItem>
             <ListItem>
-              <Text fontWeight="bold">Scientific compiler / evidence DSL</Text>
+              <Text fontWeight="bold">Scientific compiler & evidence systems</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Typed research tooling for identities, units, controls, provenance, evidence objects,
-                and machine-checkable claim boundaries.
+                Pathology Pipeline Language, typed Evidence&lt;T&gt;, identity and unit checks,
+                immutable evidence packages, release registries, and fail-closed claim validation.
               </Text>
             </ListItem>
             <ListItem>
-              <Text fontWeight="bold">Accountable computational pathology program</Text>
+              <Text fontWeight="bold">Program-level reproducibility & audit</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Program-level evidence and reproducibility work connecting representation, whole-slide,
-                institutional, provenance, and claim-audit research without collapsing their separate
-                evidentiary boundaries.
+                Claim ledgers, hostile review, public release provenance, retained negative results,
+                exact artifact recovery, and evidence boundaries across the research program.
               </Text>
             </ListItem>
           </List>
@@ -307,9 +303,9 @@ const Home = () => {
             <BioYear>2006</BioYear>Born in Ontario, Canada.
           </BioSection>
           <BioSection>
-            <BioYear>2025 to present</BioYear>Independent computational pathology research on
-            representation identifiability, whole-slide mechanisms, measurement reliability, and
-            reproducible evidence.
+            <BioYear>2025 to present</BioYear>Independent computational pathology and machine-learning
+            research across representation learning, whole-slide models, federated learning,
+            quantitative measurement, adaptive systems, and scientific infrastructure.
           </BioSection>
           <BioSection>
             <BioYear>2025</BioYear>Built an 18-node home lab with Security Onion and pfSense for
@@ -330,9 +326,9 @@ const Home = () => {
             I ♥
           </Heading>
           <Paragraph>
-            Representation geometry, optimization, multiple-instance learning, spatial models,
-            measurement theory, experimental design, reproducibility, and figuring out what a result
-            actually proves.
+            Representation geometry, multiple-instance learning, spatial dynamics, federated
+            systems, adaptive computation, measurement theory, scientific programming languages,
+            experimental design, and reproducibility.
           </Paragraph>
         </Section>
 
