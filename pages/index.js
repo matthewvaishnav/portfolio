@@ -280,6 +280,13 @@ const Home = () => {
                 </StatHelpText>
               </Stat>
               <Stat>
+                <StatLabel color={subtleText}>PCam</StatLabel>
+                <StatNumber>0.9394 AUC</StatNumber>
+                <StatHelpText color={mutedText} mb={0}>
+                  Official 32,768-patch test split; numerically above all 10 external AUC values in the historical comparison table
+                </StatHelpText>
+              </Stat>
+              <Stat>
                 <StatLabel color={subtleText}>Whole-slide MIL</StatLabel>
                 <StatNumber>Matched rerun</StatNumber>
                 <StatHelpText color={mutedText} mb={0}>
