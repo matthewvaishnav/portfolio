@@ -657,6 +657,16 @@ const Research = () => {
             description="Versioned public evidence package."
             href="https://huggingface.co/datasets/MatthewVaishnav/paired-acquisition-factorization-evidence"
           />
+          <ResearchLink
+            label="PA-NF model release"
+            description="Verified registered SCORPION model family and fold-specific preprocessing objects."
+            href="https://huggingface.co/MatthewVaishnav/paired-acquisition-neural-factorization"
+          />
+          <ResearchLink
+            label="Authoritative claim boundary"
+            description="Current supported, withdrawn, and pending claim status for the computational-pathology repository."
+            href="https://github.com/matthewvaishnav/computational-pathology-research/blob/main/CLAIM_BOUNDARY.md"
+          />
         </Box>
 
         <Box
