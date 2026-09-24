@@ -90,6 +90,16 @@ const Work = () => {
             </span>
           </ListItem>
           <ListItem>
+            <Meta>Why PA-NF exists</Meta>
+            <span>
+              Earlier site-invariance experiments were retained as negative evidence. A locked
+              gradient-reversal study reduced recoverable site information without improving
+              held-out tumor prediction, and unconditional subtraction of a learned site-associated
+              component removed tumor-predictive signal. Those failures motivated conditional
+              separation with an explicit acquisition branch rather than blind nuisance deletion.
+            </span>
+          </ListItem>
+          <ListItem>
             <Meta>Paired-acquisition mechanism audits</Meta>
             <span>
               The PA-NF record includes pair-structure ladders, acquisition-branch audits,
@@ -130,10 +140,30 @@ const Work = () => {
           <ListItem>
             <Meta>Synthetic identifiability and capacity studies</Meta>
             <span>
-              Controlled latent-factor experiments isolate when paired supervision is sufficient,
-              when biological and acquisition factors remain non-identifiable, how bottleneck
-              capacity is allocated, and whether benchmark instruments can detect the information
-              they are intended to measure.
+              Controlled latent-factor experiments separate ordinary observations, unique paired
+              anchors, repeated paired exposure, bottleneck capacity, and crossed-target
+              supervision. The program also audits its own instruments: oracle power, validation
+              power, nonlinear-probe capacity, whitening, and task sufficiency are adjudicated
+              separately so an underpowered benchmark cannot be mistaken for a representation
+              failure.
+            </span>
+          </ListItem>
+          <ListItem>
+            <Meta>Pair-repeat resource allocation</Meta>
+            <span>
+              A matched-budget synthetic study separates paired-exposure quantity from unique
+              biological-pair diversity. In the tested grid, broader pair diversity improved the
+              biological/factor-separation score more than concentrating the same budget into a very
+              small repeated anchor set, with diminishing returns beyond the middle allocation.
+            </span>
+          </ListItem>
+          <ListItem>
+            <Meta>Real bottleneck transport and fixed-estimand adjudication</Meta>
+            <span>
+              Synthetic capacity gains were carried into a parameter-matched canine B32/B64 study,
+              then subjected to exact artifact recovery and a no-training corrected five-category
+              adjudication. The real-data result did not establish a neural feature-space increment
+              over every strong simple scanner-removal baseline.
             </span>
           </ListItem>
           <ListItem>
@@ -179,6 +209,15 @@ const Work = () => {
             </span>
           </ListItem>
           <ListItem>
+            <Meta>FAIR-WEIGHTS-H validation boundary</Meta>
+            <span>
+              The heterogeneous PCam benchmark produced different institutional weight trajectories
+              without measurable performance differentiation. Later PANDA stress experiments support
+              conditional harm-aware or dominance-aware switching under simulated corruption, not a
+              universal claim that FAIR-WEIGHTS-H replaces FedAvg.
+            </span>
+          </ListItem>
+          <ListItem>
             <Meta>Site-signal alignment and dominant-site studies</Meta>
             <span>
               PANDA-derived federations test when sample-volume authority becomes unsafe under
@@ -195,6 +234,16 @@ const Work = () => {
             </span>
           </ListItem>
           <ListItem>
+            <Meta>CAMELYON17 center-removal mechanism sequence</Meta>
+            <span>
+              Adversarial and subtractive nuisance-removal variants failed to materially reduce
+              post-hoc center leakage and retained tumor-rich nuisance components. A supervised
+              linear center-subspace projection then partially reduced center decodability while
+              leaving the measured tumor AUC essentially unchanged, establishing a cleaner baseline
+              without implying complete center invariance.
+            </span>
+          </ListItem>
+          <ListItem>
             <Meta>Scientific provenance and audit</Meta>
             <span>
               Scientific compiler and evidence infrastructure that makes identities, units,
@@ -206,9 +255,19 @@ const Work = () => {
             <Meta>WSI-NCA / Factorized Tissue Dynamics</Meta>
             <span>
               Experimental whole-slide dynamics research asking whether topology, history, and local
-              spatial updates are genuinely necessary. Real-versus-shuffled structure and
-              mechanism-specific falsifiers are treated as part of the model test, not optional
-              interpretation.
+              spatial updates are genuinely necessary. A synthetic mechanism signal did not
+              translate into a recurrence- or topology-dependent predictive advantage in the frozen
+              PANDA-300 Phase A; that negative result remains part of the research record while
+              larger and better-powered validation remains separate.
+            </span>
+          </ListItem>
+          <ListItem>
+            <Meta>CPTAC human transfer discovery</Meta>
+            <span>
+              A metadata-first external-human validation layer inventories TCIA and GDC CPTAC
+              pathology availability, patient structure, scanner metadata, and label readiness
+              before any image download or transfer claim. It is active discovery work, not a
+              completed validation result.
             </span>
           </ListItem>
           <ListItem>
@@ -256,7 +315,9 @@ const Work = () => {
             <span>
               44 biological samples and 805 geometry-qualified complete five-view regions across five
               scanners, evaluated with biological-sample-blocked folds and strong centroid, QR, and
-              paired-linear scanner-removal baselines.
+              paired-linear scanner-removal baselines. The public release is downsampled to roughly
+              4 µm per source pixel, so this is coarse tissue-context evidence rather than native
+              cellular- or nuclear-scale scanner invariance.
             </span>
           </ListItem>
           <ListItem>
@@ -350,6 +411,14 @@ const Work = () => {
                 Pipeline benchmarks and unit/adversarial tests at the current v0.3.0 language frontier.
               </StatHelpText>
             </Stat>
+            <Stat>
+              <StatLabel>Retained negative evidence</StatLabel>
+              <StatNumber>Not hidden</StatNumber>
+              <StatHelpText mb={0} color={muted}>
+                Canine all-simple-baseline increment, WSI-NCA PANDA Phase A, benchmark-power failures,
+                and withdrawn historical rankings remain visible in the record.
+              </StatHelpText>
+            </Stat>
           </SimpleGrid>
         </Box>
 
@@ -357,25 +426,93 @@ const Work = () => {
           What the Results Mean
         </Heading>
         <P>
-          The representation program contains both positive and negative evidence. PA-NF shows a
-          registered capacity-matched structured-separation effect on SCORPION, while the canine
-          fixed-estimand audit retains strong simple scanner-removal baselines. Scanner and
-          center-subspace studies, synthetic identifiability experiments, and representation-geometry
-          audits answer related but separate questions.
+          The representation program did not begin with a successful factorizer. It began with two
+          failures: making site identity harder to decode did not improve the held-out tumor task,
+          and subtracting a learned nuisance component deleted tumor-predictive information. PA-NF
+          was built in response to that problem: acquisition-associated information must be
+          accounted for explicitly while tissue information is protected, not simply erased.
         </P>
         <P>
-          The whole-slide program includes conventional MIL baselines, AttentionMIL, TransnnMIL, and
-          WSI-NCA rather than one preferred architecture. The institutional program similarly spans
-          PathologyFL infrastructure, FAIR-WEIGHTS-H, dominant-site stress, CAMELYON17 external-center
-          studies, communication accounting, privacy-noise probes, and infrastructure-friction
-          experiments.
+          That later program contains both supporting and limiting evidence. SCORPION supports a
+          registered capacity-matched structured-separation effect and cross-backbone transfer on the
+          same paired slides. The corrected canine study confirms strong scanner suppression and
+          tissue retrieval under its coarse-resolution public release, but strong simple linear
+          scanner-removal baselines remain competitive and the B32/B64 transport experiment did not
+          establish a universal neural feature-space increment.
         </P>
         <P>
-          Acquisition and provenance work sits beside the modeling work, not underneath it. PANDA /
-          SICAP audits and PAR study physical slide identity, scanner metadata, assignment stability,
-          and acquisition-linked representation structure. NucleoScope and the scientific compiler
-          extend the program into quantitative measurement and machine-checkable scientific evidence.
+          The synthetic line is used as mechanism work, not as a substitute for pathology evidence.
+          It separates pair diversity from repeated exposure, tests crossed-target and unseen-identity
+          behavior, and audits the power of its own probes and positive controls. When an oracle or
+          benchmark instrument is underpowered, the representation-level conclusion is restricted
+          rather than promoted.
         </P>
+        <P>
+          Whole-slide and institutional results are handled the same way. Historical TransnnMIL
+          fusion/topology scores are withdrawn pending the repaired matched rerun. WSI-NCA retained
+          its synthetic propagation result but failed to show a topology- or recurrence-dependent
+          benefit in the frozen PANDA-300 Phase A. PathologyFL and FAIR-WEIGHTS-H are substantial
+          research infrastructure, while their current empirical claims remain bounded to simulated
+          institutional stress and centralized multi-center proxies.
+        </P>
+
+        <Heading as="h2" size="md" mt={9} mb={3}>
+          Scientific self-correction
+        </Heading>
+        <P>
+          The public record keeps failed and superseded analyses instead of silently replacing them.
+          That includes pseudoreplication corrections, leakage-prone canine estimands, capacity-
+          mismatched controls, the withdrawn cross-protocol separation scoreboard, historical
+          TransnnMIL fusion/topology interpretations, unsupported PCam clinical or superiority
+          language, and the claim that cosine similarity by itself proves biological preservation.
+        </P>
+        <P>
+          Exact artifact recovery, immutable manifests, claim ledgers, hostile-review documents, and
+          fail-closed execution are part of the research contribution because they make it possible
+          to narrow a conclusion without rewriting the experimental history.
+        </P>
+
+        <Heading as="h2" size="md" mt={9} mb={3}>
+          Active but not promoted as established evidence
+        </Heading>
+        <List ml={{ base: 0, md: 4 }} my={4} spacing={3}>
+          <ListItem>
+            <Meta>Paired affine / Procrustes comparator</Meta>
+            <span>
+              Prospective centroid-translation, orthogonal-Procrustes, affine, ridge-affine, and
+              neural comparison on frozen SCORPION folds.
+            </span>
+          </ListItem>
+          <ListItem>
+            <Meta>Crossed-target and unseen-identity synthetic work</Meta>
+            <span>
+              Scanner-prototype counterfactual factorization, geometry calibration, task-sufficiency
+              and instrument-power audits whose earlier closed gates remain immutable.
+            </span>
+          </ListItem>
+          <ListItem>
+            <Meta>Repaired TransnnMIL matched rerun</Meta>
+            <span>
+              Seven architecture/control families across five seeds on the same PANDA substrate,
+              including AttentionMIL, nnMIL, TransMIL, repaired TransnnMIL, and matched fusion
+              controls.
+            </span>
+          </ListItem>
+          <ListItem>
+            <Meta>CPTAC external-human transfer</Meta>
+            <span>
+              Metadata and scanner-readiness discovery only; no human-transfer outcome is claimed
+              until the dataset and estimand gates are satisfied.
+            </span>
+          </ListItem>
+          <ListItem>
+            <Meta>Crossed preparation / residual provenance</Meta>
+            <span>
+              Tests the blind spot left by scanner-only intervention: preparation, staining, site,
+              sectioning, and other scanner-constant provenance require their own crossed designs.
+            </span>
+          </ListItem>
+        </List>
 
         <Heading as="h2" size="md" mt={9} mb={3}>
           Public Research Record
