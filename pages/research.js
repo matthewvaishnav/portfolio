@@ -226,6 +226,21 @@ const researchGroups = [
     ]
   },
   {
+    title: 'Research-engineering and platform lineage',
+    items: [
+      'Historical HistoCore computational-pathology framework',
+      'Universal and streaming whole-slide image handling',
+      'Real-time / incremental WSI aggregation prototypes',
+      'Foundation-model adapters and feature-extraction pipelines for Phikon, DINOv2, ResNet, and related encoders',
+      'Research APIs, model registry, model serving, ONNX, and TorchScript tooling',
+      'DICOM, PACS, and FHIR-style integration prototypes',
+      'Docker, Kubernetes, cloud, monitoring, and deployment scaffolds',
+      'Federated privacy, secure-aggregation, async, fault-tolerance, and monitoring infrastructure',
+      'Security, authorization, observability, and reproducibility tooling around the research stack',
+      'Historical DMI, CPI, IMR, and MKN architecture experiments'
+    ]
+  },
+  {
     title: 'Scientific language, provenance, and research infrastructure',
     items: [
       'Pathology Pipeline Language / epistemic compiler',
