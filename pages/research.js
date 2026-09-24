@@ -15,101 +15,211 @@ import {
 import { ArrowForwardIcon, ExternalLinkIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
 
-const records = [
+const programs = [
   {
-    title: 'Paired-Acquisition Neural Factorization',
-    type: 'Representation learning',
+    title: 'Paired Acquisition & Representation Identifiability',
+    type: 'Representation research',
     date: '2026',
     description:
-      'Matched multi-scanner representation learning that separates tissue-oriented and acquisition-oriented information while explicitly testing preservation, leakage, collapse, and strong scanner-removal alternatives.',
-    metric: '-0.3108 scanner BA vs control',
-    image: '/portfolio/images/research/research-platform-cover.webp',
+      'PA-NF sits inside a broader paired-acquisition program covering scanner and center subspaces, representation geometry, capacity allocation, unseen-identity generalization, pair structure, and strong linear and neural controls.',
+    metric: 'SCORPION · canine SCC · paired controls',
+    image: '/portfolio/images/research/scorpion-cover.webp',
     href: 'https://matthewvaishnav.github.io/computational-pathology-research/'
   },
   {
-    title: 'Whole-Slide MIL: AttentionMIL & TransnnMIL',
-    type: 'Whole-slide learning',
+    title: 'Whole-Slide Learning',
+    type: 'MIL and WSI models',
     date: '2026',
     description:
-      'PANDA whole-slide modeling with gated AttentionMIL, TransnnMIL, and matched MIL comparators. The emphasis is repeated-seed stability and isolating whether architectural changes earn their claimed advantage.',
-    metric: '0.8100 / 0.8257 QWK',
+      'PANDA whole-slide research spanning mean pooling, gated AttentionMIL, nnMIL, CLAM-style and TransMIL-style controls, authored TransnnMIL variants, repeated-seed stability, branch fusion, and spatial aggregation.',
+    metric: '10,611 verified PANDA feature bags',
     image: '/portfolio/images/research/allocation-cover.webp',
     href: 'https://github.com/matthewvaishnav/computational-pathology-research'
   },
   {
-    title: 'WSI-NCA / Whole-Slide Tissue Dynamics',
-    type: 'Spatial modeling',
+    title: 'WSI-NCA / WCI Lineage',
+    type: 'Representation coupling and dynamics',
     date: '2026',
     description:
-      'Iterative local-state modeling over whole-slide tissue structure, with real-versus-shuffled topology, history controls, tied/untied dynamics, and mechanism-specific falsifiers.',
-    metric: 'Topology and history falsification',
+      'A broader whole-slide research lineage spanning local state dynamics, topology and history falsifiers, PANDA coupling, SICAP transport, representation-state canonicalization, K5 coupling structure, and scanner intervention.',
+    metric: 'Synthetic · PANDA · SICAP · PAR',
     image: '/portfolio/images/research/allocation-cover.webp',
     href: 'https://github.com/matthewvaishnav/computational-pathology-research'
   },
   {
-    title: 'PathologyFL / FAIR-WEIGHTS-H',
-    type: 'Federated pathology',
+    title: 'Federated & Institutional Learning',
+    type: 'PathologyFL and site-signal research',
     date: '2026',
     description:
-      'Federated and site-aware pathology learning with institutional weighting, dominance detection, privacy-aware training, robustness controls, and transfer under explicit multi-site shift.',
-    metric: '+0.01053 QWK at 45% shift',
+      'PathologyFL, FAIR-WEIGHTS-H, dominant-site stress tests, detector transfer, CAMELYON17 external-center validation, center-subspace studies, and communication, privacy, and infrastructure stress accounting.',
+    metric: 'PANDA · PCam · CAMELYON17/WILDS',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href:
-      'https://github.com/matthewvaishnav/computational-pathology-research/blob/main/docs/research/dominance-detector-transfer-results.md'
+      'https://github.com/matthewvaishnav/computational-pathology-research/blob/main/docs/research/dominant-site-federated-pathology-paper.md'
   },
   {
-    title: 'NucleoScope Nuclear Measurement',
-    type: 'Active collaboration',
+    title: 'PANDA / SICAP Acquisition & Provenance',
+    type: 'Scanner and provenance research',
     date: '2026',
     description:
-      'Nucleus-level quantitative pathology research on repeated detections, computational-context effects, measurement stability, and candidate tissue-organization laws subjected to explicit artifact attacks.',
-    metric: 'Measurement and law discovery',
+      'Physical-slide identity, scanner inventory, assignment reproducibility, public-dataset provenance, transport audits, and the PAR same-glass scanner intervention with a frozen cross-fitted mechanism analysis.',
+    metric: '24,235 / 24,235 SICAP assignments reproduced',
+    image: '/portfolio/images/research/scorpion-cover.webp',
+    href: 'https://github.com/matthewvaishnav/computational-pathology-research'
+  },
+  {
+    title: 'NucleoScope',
+    type: 'Quantitative nuclear pathology',
+    date: '2026',
+    description:
+      'Active collaboration covering measurement stability, repeated detections, computational context, primitive response, cross-tile structure, artifact models, ordinal spatial statistics, and independently governed law discovery.',
+    metric: 'Measurement mechanics and law discovery',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href: 'https://nucleoscope.ai/'
   },
   {
     title: 'SERA',
-    type: 'Independent ML research',
+    type: 'Independent machine-learning research',
     date: '2026',
     description:
-      'An evidence-governed structural control plane over learned computation, studying when computational structure should be born, reused, composed, repaired, consolidated, or retired under increasingly strong conventional neural controls.',
+      'Evidence-governed adaptive computation: formation, birth, reuse, composition, authority, evidence transport, repair, consolidation, retirement, and increasingly strong CRAS and System-One-style conventional controls.',
     metric: 'Validation-stage structural learning',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href: null
   },
   {
-    title: 'PANDA / SICAP Provenance & Scanner Validation',
-    type: 'Provenance and acquisition',
+    title: 'Scientific Compiler & Evidence Systems',
+    type: 'Scientific computing',
     date: '2026',
     description:
-      'Dataset provenance, scanner inventory, assignment reproducibility, transport validation, and same-glass acquisition intervention work designed to make downstream whole-slide and scanner claims physically and computationally auditable.',
-    metric: '24,235 SICAP assignments reproduced',
-    image: '/portfolio/images/research/scorpion-cover.webp',
-    href: 'https://github.com/matthewvaishnav/computational-pathology-research'
-  },
-  {
-    title: 'Scientific Compiler / Evidence DSL',
-    type: 'Scientific systems',
-    date: '2026',
-    description:
-      'Typed scientific infrastructure that makes identities, units, controls, provenance, evidence objects, and admissible claims machine-checkable instead of leaving scientific legality implicit.',
-    metric: '175 / 175 metamorphic checks',
-    image: '/portfolio/images/research/research-platform-cover.webp',
-    href: 'https://github.com/matthewvaishnav/computational-pathology-research'
-  },
-  {
-    title: 'Accountable Computational Pathology Program',
-    type: 'Program-level research record',
-    date: '2026',
-    description:
-      'The program-level evidence and reproducibility layer connecting representation, whole-slide, federated, provenance, and scientific-audit work while keeping the claims of each line separately testable.',
-    metric: 'Evidence ledger and claim boundaries',
+      'Pathology Pipeline Language, typed Evidence<T>, identity hierarchies, units, provenance, run legality, immutable evidence packages, release registries, claim boundaries, and fail-closed scientific validation.',
+    metric: '15/15 pipeline · 35/35 adversarial tests',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href: 'https://github.com/matthewvaishnav/computational-pathology-research'
   }
 ]
 
-const RecordCard = ({ record }) => {
+const researchGroups = [
+  {
+    title: 'Representation, acquisition, and identifiability',
+    items: [
+      'PCam patch benchmark foundation and evaluation infrastructure',
+      'Paired-scanner experimental design and broken-pair / random-pair controls',
+      'Paired-Acquisition Neural Factorization (PA-NF)',
+      'SCORPION five-scanner paired-acquisition study',
+      'Independent multi-scanner canine SCC fixed-estimand audit',
+      'Scanner and center subspace methods: centroid, QR, PCA, paired-linear, adversarial, and projection controls',
+      'Cross-backbone PA-NF evaluation across DINOv2, Phikon, and ResNet feature families',
+      'Synthetic identifiability, two-resource phase maps, and capacity-allocation studies',
+      'Task-defined biological sufficiency and benchmark-instrument power audits',
+      'Pair-repeat / unique-anchor allocation and biological bottleneck studies',
+      'Unseen-identity representation geometry and crossed-factor generalization',
+      'FEATMAP / affine, Procrustes, DANN, and other comparator protocols',
+      'Crossed-preparation identifiability and preparation/workflow metadata-readiness work'
+    ]
+  },
+  {
+    title: 'Whole-slide modeling and representation coupling',
+    items: [
+      'Mean-pooled Phikon whole-slide baselines',
+      'Gated AttentionMIL',
+      'nnMIL',
+      'CLAM-style multiple-instance learning',
+      'TransMIL-style global-attention controls',
+      'TransnnMIL multibranch whole-slide architecture',
+      'Branch-token, concat, gate, and learned branch-attention fusion controls',
+      'Hierarchical pooling, topology/GNN branches, graph caching, and adaptive pruning',
+      'Repeated-seed TransnnMIL stability and matched-rerun program',
+      'WSI-NCA local state-update dynamics',
+      'Real-versus-shuffled topology and tied-versus-untied recurrence',
+      'History transport and mechanism-specific spatial falsifiers',
+      'PANDA representation coupling and state canonicalization',
+      'SICAP transport and seed-excluded backbone tests',
+      'K5 coupling hierarchy and failed gauge / phenotype-transport branches'
+    ]
+  },
+  {
+    title: 'Federated pathology and institutional generalization',
+    items: [
+      'PathologyFL coordinator, client, aggregation, monitoring, async, and fault-tolerance infrastructure',
+      'FedAvg, FedProx, FedAdam, weighted, and robustness-oriented aggregation',
+      'FAIR-WEIGHTS-H institutional weighting',
+      'Dominant-site and site-signal alignment studies on PANDA-derived features',
+      'Fixed detector transfer from label corruption to ordinal threshold shift',
+      'Detector diagnostic ablation and calibration sensitivity',
+      'CAMELYON17/WILDS held-out-center validation',
+      'CAMELYON17 center-subspace projection and leakage diagnostics',
+      'Equal-client and dominant-source weighting studies',
+      'Feature/head communication accounting and bounded communication-resolution study',
+      'Privacy-noise robustness probes',
+      'Infrastructure-friction, dropout, speed, and straggler simulations',
+      'Historical DMI / CPI / IMR / MKN federated architecture lineage'
+    ]
+  },
+  {
+    title: 'Scanner provenance and intervention',
+    items: [
+      'PANDA scanner inventory and metadata census',
+      'SICAP assignment-stability audit',
+      'Public-dataset provenance discovery',
+      'Physical-slide identity and no-content-read preregistration gates',
+      'PAR same-glass scanner intervention across Grundium, Hamamatsu, and Leica',
+      'Branch-conditioned scale-by-gauge acquisition mechanism',
+      'Frozen transport protocol for genuinely new paired-acquisition cohorts',
+      'Paired-acquisition provenance manifests and archive-lineage audits'
+    ]
+  },
+  {
+    title: 'NucleoScope research',
+    items: [
+      'Repeated-context primitive-response experiments',
+      'R, S, RSi, and C measurement stability',
+      'Primitive-level sigma-rho and G response analysis',
+      'Cross-tile repeated detections and matched-pair structure',
+      'Tie-aware finite-multiset nulls for quantized intensities',
+      'GTEx 73-slide primitive and allometry audit',
+      'Object-selection, segmentation, tile-context, and smooth-field artifact adversaries',
+      'Ordinal persistence and finite-scale variogram law candidates',
+      'Nuclear-versus-nearby-tissue matched geometry tests',
+      'Independent Branch B law discovery and A/B/C research firewall',
+      'H9/H10/G4/G5 frozen falsification programs',
+      'Cross-preparation and untouched-cohort validation planning'
+    ]
+  },
+  {
+    title: 'SERA research',
+    items: [
+      'Self-expanding relational and evidence-governed structural learning',
+      'Primitive formation, birth, reuse, composition, repair, consolidation, and retirement',
+      'Evidence transport and provenance-concentration mechanisms',
+      'Temporal-history and difference-field mechanisms',
+      'T127 / reconstructed authority frontier',
+      'SFS reproducibility and exact-replay formation studies',
+      'NRM neural-rematch and falsification ladder',
+      'NRM-043 held-out causal-specificity transport',
+      'CRAS matched-null, exact-rank, and lifecycle comparator program',
+      'System-One-style decomposition, fan-out, support-authority, and learned-composition controls',
+      'Negative mechanisms and retired branches preserved as part of the scientific record'
+    ]
+  },
+  {
+    title: 'Scientific language, provenance, and research infrastructure',
+    items: [
+      'Pathology Pipeline Language / epistemic compiler',
+      'Typed Evidence<T> and bounded claim evaluation',
+      'Patient, specimen, slide, region, acquisition, and run identity hierarchies',
+      'Physical units, split integrity, paired-acquisition legality, and control requirements',
+      'Metamorphic scientific-legality benchmarks',
+      'Immutable evidence packages and exact artifact recovery',
+      'Living claim-boundary contracts and retained negative results',
+      'Hugging Face release registry and fail-closed publishing tools',
+      'Scientific audit remediation and hostile-review ledgers',
+      'Program-level publication and reproducibility architecture'
+    ]
+  }
+]
+
+const ProgramCard = ({ record }) => {
   const muted = useColorModeValue('gray.600', 'whiteAlpha.700')
   const border = useColorModeValue('blackAlpha.200', 'whiteAlpha.200')
   const cardBg = useColorModeValue('white', 'whiteAlpha.50')
@@ -166,7 +276,7 @@ const RecordCard = ({ record }) => {
           >
             {record.type}
           </Badge>
-          <Text fontSize="xs" color={muted} textAlign="right">
+          <Text fontSize="xs" color={muted}>
             {record.date}
           </Text>
         </Stack>
@@ -185,23 +295,15 @@ const RecordCard = ({ record }) => {
           {record.description}
         </Text>
 
-        <Stack
-          direction="row"
-          justify="space-between"
-          align="center"
-          pt={1}
-          mt="auto"
-          color={muted}
-          fontSize="sm"
-        >
-          <Text>{record.metric}</Text>
+        <Stack direction="row" justify="space-between" align="center" pt={1} mt="auto" fontSize="sm">
+          <Text color={muted}>{record.metric}</Text>
           <Box display="inline-flex" alignItems="center" gap={1} color={accent} fontWeight={600}>
             {record.href ? (
               <>
                 Open <ArrowForwardIcon />
               </>
             ) : (
-              'Private research record'
+              'Private research'
             )}
           </Box>
         </Stack>
@@ -244,6 +346,7 @@ const Research = () => {
   const subtleText = useColorModeValue('gray.600', 'whiteAlpha.700')
   const noteBg = useColorModeValue('blackAlpha.50', 'whiteAlpha.50')
   const noteBorder = useColorModeValue('blackAlpha.200', 'whiteAlpha.200')
+  const groupBorder = useColorModeValue('blackAlpha.200', 'whiteAlpha.200')
 
   return (
     <Layout title="Research">
@@ -252,151 +355,107 @@ const Research = () => {
           Research
         </Heading>
 
-        <Text color={bodyText} lineHeight="1.8" mb={6}>
-          I run several independent research programs rather than one model stack. They span
-          paired-acquisition representations, whole-slide MIL and spatial dynamics, federated
-          pathology, quantitative nuclear measurement, adaptive relational learning, and scientific
-          evidence tooling. Each has its own experiments, comparators, and claim boundary.
+        <Text color={bodyText} lineHeight="1.8" mb={3}>
+          My work is not one method or one pathology pipeline. It is a set of independent research
+          programs in computational pathology, machine learning, quantitative measurement, and
+          scientific systems.
+        </Text>
+        <Text color={subtleText} lineHeight="1.75" mb={7}>
+          The cards below are the program-level map. The full research-line inventory underneath
+          shows the architectures, studies, controls, validation programs, and infrastructure that
+          make up those programs.
         </Text>
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
-          {records.map(record => (
-            <RecordCard key={record.title} record={record} />
+          {programs.map(record => (
+            <ProgramCard key={record.title} record={record} />
           ))}
         </SimpleGrid>
 
         <Box as="section" pt={12}>
           <Heading as="h3" fontSize={20} mb={2}>
-            Major studies, models, and validation lines
+            Research-line inventory
           </Heading>
-          <Text color={subtleText} lineHeight="1.75" mb={5}>
-            These are substantial parts of the research record that sit inside or across the
-            top-level programs above. They are shown explicitly so they are not hidden behind a
-            single umbrella label.
+          <Text color={subtleText} lineHeight="1.75" mb={6}>
+            Current, historical, negative, and exploratory lines are kept distinct rather than
+            disappearing when a headline result changes.
           </Text>
 
-          <Stack spacing={5}>
-            <Box>
-              <Text fontWeight={700}>Paired-acquisition studies</Text>
-              <Text color={subtleText} fontSize="sm" mt={1} lineHeight="1.75">
-                SCORPION five-scanner study; independent canine SCC fixed-estimand audit; pair-repeat
-                allocation study; capacity-matched PA-NF campaign; public evidence and model releases.
-              </Text>
-            </Box>
-            <Box>
-              <Text fontWeight={700}>Whole-slide model family</Text>
-              <Text color={subtleText} fontSize="sm" mt={1} lineHeight="1.75">
-                Mean pooling, gated AttentionMIL, nnMIL, CLAM-style MIL, TransMIL-style controls,
-                TransnnMIL, Phikon feature bags, and foundation-encoder comparisons on PANDA and
-                related pathology benchmarks.
-              </Text>
-            </Box>
-            <Box>
-              <Text fontWeight={700}>Spatial whole-slide dynamics</Text>
-              <Text color={subtleText} fontSize="sm" mt={1} lineHeight="1.75">
-                WSI-NCA, real-versus-shuffled topology, tied and untied recurrence, history transport,
-                local update rules, homophily checks, SICAP transport, and PANDA spatial-feature
-                validation.
-              </Text>
-            </Box>
-            <Box>
-              <Text fontWeight={700}>Federated and institutional learning</Text>
-              <Text color={subtleText} fontSize="sm" mt={1} lineHeight="1.75">
-                PathologyFL, FAIR-WEIGHTS-H, dominance and DMI-style site-influence work, FedAvg /
-                FedProx / FedAdam infrastructure, privacy and secure-aggregation hooks, simulated-site
-                stress tests, and CAMELYON17/WILDS held-out-center analysis.
-              </Text>
-            </Box>
-            <Box>
-              <Text fontWeight={700}>Provenance and scanner-intervention studies</Text>
-              <Text color={subtleText} fontSize="sm" mt={1} lineHeight="1.75">
-                PANDA scanner inventory, SICAP assignment reproduction, public-dataset provenance,
-                same-glass PAR intervention, branch-conditioned scale-by-gauge analysis, and frozen
-                transport protocols for new acquisition cohorts.
-              </Text>
-            </Box>
-            <Box>
-              <Text fontWeight={700}>NucleoScope measurement program</Text>
-              <Text color={subtleText} fontSize="sm" mt={1} lineHeight="1.75">
-                Repeated-detection and computational-context measurement audits, primitive-level
-                response analysis, tie-aware nulls, cross-tile matching, artifact adversaries,
-                ordinal spatial statistics, and frozen candidate-law tests.
-              </Text>
-            </Box>
-            <Box>
-              <Text fontWeight={700}>SERA structural-learning program</Text>
-              <Text color={subtleText} fontSize="sm" mt={1} lineHeight="1.75">
-                Self-expanding relational structure, evidence-governed birth and authority,
-                composition and consolidation, provenance-bearing transport, NRM falsification
-                ladders, and CRAS / System-One-style conventional comparator programs.
-              </Text>
-            </Box>
-            <Box>
-              <Text fontWeight={700}>Scientific language and evidence infrastructure</Text>
-              <Text color={subtleText} fontSize="sm" mt={1} lineHeight="1.75">
-                Pathology Pipeline Language, typed Evidence&lt;T&gt;, run identity and hierarchy
-                checks, units, admissible-claim evaluation, immutable evidence packages, release
-                registries, hostile review, and fail-closed validation.
-              </Text>
-            </Box>
-            <Box>
-              <Text fontWeight={700}>Benchmark and external-validation substrates</Text>
-              <Text color={subtleText} fontSize="sm" mt={1} lineHeight="1.75">
-                PatchCamelyon, PANDA, CAMELYON17/WILDS, SCORPION, canine SCC, SICAP, and frozen
-                feature / manifest infrastructure used to separate software validation from
-                scientific evidence.
-              </Text>
-            </Box>
+          <Stack spacing={7}>
+            {researchGroups.map(group => (
+              <Box
+                key={group.title}
+                borderTop="1px solid"
+                borderColor={groupBorder}
+                pt={5}
+              >
+                <Heading as="h4" fontSize="md" mb={3}>
+                  {group.title}
+                </Heading>
+                <SimpleGrid columns={{ base: 1, md: 2 }} spacingX={8} spacingY={2}>
+                  {group.items.map(item => (
+                    <Text key={item} color={subtleText} fontSize="sm" lineHeight="1.7">
+                      {item}
+                    </Text>
+                  ))}
+                </SimpleGrid>
+              </Box>
+            ))}
           </Stack>
         </Box>
 
         <Box as="section" pt={12} pb={6}>
           <Heading as="h3" fontSize={20} mb={2}>
-            Canonical research links
+            Public research record
           </Heading>
           <Text color={subtleText} lineHeight="1.75" mb={4}>
-            Current manuscripts, code, study-specific audits, and versioned evidence packages for
-            inspecting the experiments behind the claims.
+            Public code, manuscripts, study repositories, and evidence packages. SERA and the
+            NucleoScope collaboration also contain private research records that are not linked here.
           </Text>
 
           <ResearchLink
-            label="PA-NF canonical manuscript"
-            description="Current public manuscript and release entry point."
-            href="https://matthewvaishnav.github.io/computational-pathology-research/"
-          />
-          <ResearchLink
             label="Computational pathology research hub"
-            description="Main public codebase, experiments, claim boundaries, documentation, and evidence ledger."
+            description="Program repository, manuscripts, methods, evidence, claim boundaries, and research history."
             href="https://github.com/matthewvaishnav/computational-pathology-research"
           />
           <ResearchLink
-            label="PA-NF SCORPION study"
-            description="Study-specific repository for the paired-acquisition SCORPION experiments."
+            label="PA-NF canonical manuscript"
+            description="Current public manuscript and evidence entry point."
+            href="https://matthewvaishnav.github.io/computational-pathology-research/"
+          />
+          <ResearchLink
+            label="SCORPION paired-acquisition study"
+            description="Five-scanner matched-acquisition study repository."
             href="https://github.com/matthewvaishnav/paired-acquisition-factorization-scorpion"
           />
           <ResearchLink
-            label="PA-NF canine SCC audit"
-            description="Study-specific repository for the independent multi-scanner canine evaluation."
+            label="Canine SCC paired-scanner audit"
+            description="Independent multi-scanner fixed-estimand evaluation."
             href="https://github.com/matthewvaishnav/paired-acquisition-factorization-caninescc"
           />
           <ResearchLink
-            label="PA-NF pair-repeat allocation study"
-            description="Study-specific repository for paired-acquisition allocation and repeat structure."
+            label="Pair-repeat allocation study"
+            description="Paired-acquisition allocation and unique-anchor research."
             href="https://github.com/matthewvaishnav/paired-acquisition-factorization-allocation"
           />
           <ResearchLink
             label="Whole-slide model documentation"
-            description="AttentionMIL, TransnnMIL, CLAM, TransMIL-style controls, and related WSI model documentation."
+            description="AttentionMIL, nnMIL, CLAM, TransMIL-style controls, TransnnMIL, and related WSI work."
             href="https://github.com/matthewvaishnav/computational-pathology-research/tree/main/docs/models"
           />
           <ResearchLink
+            label="Site-signal alignment research"
+            description="Dominant-site federated pathology, detector transfer, and external-center validation."
+            href="https://github.com/matthewvaishnav/computational-pathology-research/blob/main/docs/research/dominant-site-federated-pathology-paper.md"
+          />
+          <ResearchLink
             label="PathologyFL documentation"
-            description="Federated pathology infrastructure and institutional-learning research."
+            description="Federated pathology implementation and validation boundary."
             href="https://github.com/matthewvaishnav/computational-pathology-research/blob/main/docs/federated/pathologyfl.md"
           />
           <ResearchLink
             label="PA-NF evidence release"
-            description="Versioned public evidence package for the paired-acquisition study."
+            description="Versioned public evidence package."
             href="https://huggingface.co/datasets/MatthewVaishnav/paired-acquisition-factorization-evidence"
           />
         </Box>
@@ -415,12 +474,12 @@ const Research = () => {
             color={subtleText}
             lineHeight="1.8"
             textAlign="center"
-            maxW="60ch"
+            maxW="64ch"
             mx="auto"
           >
-            Research-only work. Results are bounded to the stated datasets, comparators, and
-            protocols; active projects are presented as work in progress rather than as established
-            biological or clinical conclusions.
+            Research-only. Evidence status differs by line: some results are public and validated
+            under frozen protocols, some are active or private, and some are retained negative or
+            historical results.
           </Text>
         </Box>
       </Container>
