@@ -37,18 +37,19 @@ const Work = () => {
         </Title>
 
         <Heading as="h2" size="md" mt={2} mb={3}>
-          Research Thesis
+          Program Scope
         </Heading>
         <P>
-          I use computational pathology to ask a harder question than whether a model can score well:
-          what signal produced the result, and does it survive when the competing explanation is
-          deliberately changed?
+          My computational pathology work spans representation learning, paired acquisition,
+          whole-slide multiple-instance learning, spatial dynamics, federated learning, quantitative
+          measurement, scanner provenance, external-center validation, and scientific research
+          infrastructure.
         </P>
         <P>
-          Across paired acquisitions, whole-slide models, institutional shift, quantitative
-          measurement, and scientific tooling, the method is the same: hold the relevant identity
-          fixed, perturb the suspected nuisance or mechanism, compare against matched controls,
-          preserve what should remain, and narrow the claim to what survives.
+          Some lines introduce new models. Others study representations, measurements, acquisition
+          mechanisms, institutional effects, or the validity of the evidence itself. They share a
+          reproducibility standard, but they are not stages of one model and their claims remain
+          separate.
         </P>
 
         <Flex gap={3} flexWrap="wrap" my={{ base: 6, md: 7 }}>
@@ -85,8 +86,25 @@ const Work = () => {
               Representation learning from aligned acquisitions of the same tissue across scanners.
               PA-NF learns a tissue-oriented branch alongside an explicit acquisition branch and is
               evaluated through registered scanner-recoverability, retrieval, capacity-matched, and
-              strong linear-removal controls rather than being treated as a generic normalization
-              method.
+              strong linear-removal controls.
+            </span>
+          </ListItem>
+          <ListItem>
+            <Meta>Representation identifiability and scanner / center subspaces</Meta>
+            <span>
+              A broader line studying what scanner, center, biological-task, and identity information
+              remains accessible in learned representations. It includes centroid and QR removal,
+              PCA, paired-linear controls, supervised center projection, nonlinear probes,
+              representation-geometry calibration, and unseen-identity tests.
+            </span>
+          </ListItem>
+          <ListItem>
+            <Meta>Synthetic identifiability and capacity studies</Meta>
+            <span>
+              Controlled latent-factor experiments isolate when paired supervision is sufficient,
+              when biological and acquisition factors remain non-identifiable, how bottleneck
+              capacity is allocated, and whether benchmark instruments can detect the information
+              they are intended to measure.
             </span>
           </ListItem>
           <ListItem>
@@ -129,6 +147,22 @@ const Work = () => {
               An auditable hybrid institutional-weighting protocol developed within the federated
               research line, with explicit stability and safety mechanisms and bounded claims about
               when weighting policies help under controlled site imbalance and shift.
+            </span>
+          </ListItem>
+          <ListItem>
+            <Meta>Site-signal alignment and dominant-site studies</Meta>
+            <span>
+              PANDA-derived federations test when sample-volume authority becomes unsafe under
+              site-specific label-process shift, including fixed detector transfer, diagnostic
+              ablations, and conservative ordinal-threshold stress.
+            </span>
+          </ListItem>
+          <ListItem>
+            <Meta>CAMELYON17 / WILDS external-center studies</Meta>
+            <span>
+              Natural multi-center experiments test source weighting, held-out-center generalization,
+              center leakage, and explicit center-subspace projection using frozen and
+              pathology-trained feature substrates.
             </span>
           </ListItem>
           <ListItem>
@@ -241,11 +275,11 @@ const Work = () => {
               </StatHelpText>
             </Stat>
             <Stat>
-              <StatLabel>Same-region retrieval</StatLabel>
-              <StatNumber>Noninferior</StatNumber>
+              <StatLabel>PAR scanner intervention</StatLabel>
+              <StatNumber>+0.026644</StatNumber>
               <StatHelpText mb={0} color={muted}>
-                Mean and worst-pair retrieval remained within the registered 0.02 noninferiority
-                margin in the primary SCORPION comparison.
+                Cross-fitted branch-conditioned scale-by-gauge improvement; 5/5 folds positive,
+                95% CI [0.017510, 0.035991].
               </StatHelpText>
             </Stat>
             <Stat>
@@ -285,25 +319,24 @@ const Work = () => {
           What the Results Mean
         </Heading>
         <P>
-          PA-NF is strongest where the experiment fixes biology and changes acquisition. In the
-          registered SCORPION comparison, scanner recoverability falls relative to an equal-capacity
-          neural control while same-region retrieval remains inside the preservation margin. The
-          independent canine audit keeps the claim honest: strong simple removal baselines remain
-          competitive, so the evidence supports structured separation rather than universal neural
-          superiority.
+          The representation program contains both positive and negative evidence. PA-NF shows a
+          registered capacity-matched structured-separation effect on SCORPION, while the canine
+          fixed-estimand audit retains strong simple scanner-removal baselines. Scanner and
+          center-subspace studies, synthetic identifiability experiments, and representation-geometry
+          audits answer related but separate questions.
         </P>
         <P>
-          The whole-slide and federated results follow the same standard. TransnnMIL is evaluated
-          against matched aggregation baselines, while WSI-NCA treats shuffled topology and competing
-          mechanisms as falsifiers. PathologyFL asks whether site-aware behavior transfers under
-          controlled institutional shift; CAMELYON17 is useful natural-center evidence, but not a
-          substitute for a completed real-world federated deployment.
+          The whole-slide program includes conventional MIL baselines, AttentionMIL, TransnnMIL, and
+          WSI-NCA rather than one preferred architecture. The institutional program similarly spans
+          PathologyFL infrastructure, FAIR-WEIGHTS-H, dominant-site stress, CAMELYON17 external-center
+          studies, communication accounting, privacy-noise probes, and infrastructure-friction
+          experiments.
         </P>
         <P>
-          Nucleus-level measurement and the scientific compiler push the audit one level deeper:
-          first ask whether the measurement itself is stable, then ask whether the experiment is
-          legally capable of supporting the sentence written about it. Negative results, failed
-          mechanisms, and narrower claim boundaries remain part of the public research record.
+          Acquisition and provenance work sits beside the modeling work, not underneath it. PANDA /
+          SICAP audits and PAR study physical slide identity, scanner metadata, assignment stability,
+          and acquisition-linked representation structure. NucleoScope and the scientific compiler
+          extend the program into quantitative measurement and machine-checkable scientific evidence.
         </P>
 
         <Heading as="h2" size="md" mt={9} mb={3}>
