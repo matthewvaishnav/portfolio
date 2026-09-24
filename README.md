@@ -64,6 +64,13 @@ C++17/Raylib arcade shooter with fixed-size object pools, wave progression, boss
 ### Security Research
 The portfolio also includes defensive-security work, detection engineering, infrastructure automation, and an 18-node home lab built around Security Onion and pfSense.
 
+### Open-source Contributions
+- **awesome-sysadmin:** VictoriaMetrics catalog contribution, merged upstream in PR #720.
+- **NextUI:** open PR #674 adding a safe cross-platform Clear Recently Played tool.
+- **awesome-selfhosted-data:** open PR #2312 adding Olares metadata.
+- **Knulli/Batocera distribution fork:** authored batocera-config-sentinel for last-known-good config validation/recovery and startup integration; fork contribution, not represented as upstream-merged.
+- **MustardOS:** closed/unmerged PR #699 proposing an emergency critical-battery power-saving mode.
+
 ---
 
 ## Technical Stack
