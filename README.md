@@ -27,7 +27,7 @@ The portfolio contains multiple independent research programs, but they share on
 - **Program-level reproducibility and self-correction:** claim ledgers, retained negative results, exact artifact recovery, versioned public evidence, withdrawn/superseded claim tracking, and explicit evidence boundaries.
 - **Research-engineering lineage:** historical HistoCore work on WSI processing/streaming, multimodal and temporal modeling, stain normalization, foundation-model adapters, interpretability tooling, research APIs/model serving, DICOM/PACS/FHIR-style prototypes, causal/cell/TME/subtype/multiscale/omics modules, Docker/Kubernetes/cloud scaffolding, monitoring, security, and federated systems. Implementation is not presented as clinical or empirical validation.
 
-The public computational-pathology record also includes **PCam**, **PANDA**, **CAMELYON17/WILDS**, **SCORPION**, **canine SCC**, **SICAP**, and curated Hugging Face evidence/model releases.
+The public computational-pathology record also includes **PCam**, **PANDA**, **CAMELYON17/WILDS**, **SCORPION**, **canine SCC**, **SICAP**, and curated Hugging Face evidence/model releases. On PCam, the recorded full-test result is **0.9394 ROC AUC / 0.8526 accuracy / 0.8507 F1** on 32,768 official test patches; 0.9394 was numerically higher than every external AUC in the historical 10-value comparison table, while the unmatched cross-paper protocols prevent treating that ordering as a controlled statistical superiority test.
 
 **Public research hub:** [matthewvaishnav/computational-pathology-research](https://github.com/matthewvaishnav/computational-pathology-research)
 
