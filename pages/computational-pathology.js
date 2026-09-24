@@ -148,6 +148,22 @@ const Work = () => {
               interpretation.
             </span>
           </ListItem>
+          <ListItem>
+            <Meta>PANDA / SICAP provenance and scanner validation</Meta>
+            <span>
+              Provenance-complete work on scanner inventory, assignment stability, transport
+              reproducibility, and acquisition mechanisms before downstream whole-slide claims are
+              promoted.
+            </span>
+          </ListItem>
+          <ListItem>
+            <Meta>PAR same-glass scanner intervention</Meta>
+            <span>
+              A scanner-intervention study using paired same-glass acquisitions to test acquisition
+              operators directly, including falsification of a universal shared gauge and a
+              cross-fitted branch-conditioned scale-by-gauge mechanism.
+            </span>
+          </ListItem>
         </List>
 
         <Heading as="h2" size="md" mt={9} mb={3}>
