@@ -78,12 +78,32 @@ const records = [
     href: null
   },
   {
+    title: 'PANDA / SICAP Provenance & Scanner Validation',
+    type: 'Provenance and acquisition',
+    date: '2026',
+    description:
+      'Dataset provenance, scanner inventory, assignment reproducibility, transport validation, and same-glass acquisition intervention work designed to make downstream whole-slide and scanner claims physically and computationally auditable.',
+    metric: '24,235 SICAP assignments reproduced',
+    image: '/portfolio/images/research/scorpion-cover.webp',
+    href: 'https://github.com/matthewvaishnav/computational-pathology-research'
+  },
+  {
     title: 'Scientific Compiler / Evidence DSL',
     type: 'Scientific systems',
     date: '2026',
     description:
       'Typed scientific infrastructure that makes identities, units, controls, provenance, evidence objects, and admissible claims machine-checkable instead of leaving scientific legality implicit.',
     metric: '175 / 175 metamorphic checks',
+    image: '/portfolio/images/research/research-platform-cover.webp',
+    href: 'https://github.com/matthewvaishnav/computational-pathology-research'
+  },
+  {
+    title: 'Accountable Computational Pathology Program',
+    type: 'Program-level research record',
+    date: '2026',
+    description:
+      'The program-level evidence and reproducibility layer connecting representation, whole-slide, federated, provenance, and scientific-audit work while keeping the claims of each line separately testable.',
+    metric: 'Evidence ledger and claim boundaries',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href: 'https://github.com/matthewvaishnav/computational-pathology-research'
   }
@@ -245,6 +265,91 @@ const Research = () => {
           ))}
         </SimpleGrid>
 
+        <Box as="section" pt={12}>
+          <Heading as="h3" fontSize={20} mb={2}>
+            Major studies, models, and validation lines
+          </Heading>
+          <Text color={subtleText} lineHeight="1.75" mb={5}>
+            These are substantial parts of the research record that sit inside or across the
+            top-level programs above. They are shown explicitly so they are not hidden behind a
+            single umbrella label.
+          </Text>
+
+          <Stack spacing={5}>
+            <Box>
+              <Text fontWeight={700}>Paired-acquisition studies</Text>
+              <Text color={subtleText} fontSize="sm" mt={1} lineHeight="1.75">
+                SCORPION five-scanner study; independent canine SCC fixed-estimand audit; pair-repeat
+                allocation study; capacity-matched PA-NF campaign; public evidence and model releases.
+              </Text>
+            </Box>
+            <Box>
+              <Text fontWeight={700}>Whole-slide model family</Text>
+              <Text color={subtleText} fontSize="sm" mt={1} lineHeight="1.75">
+                Mean pooling, gated AttentionMIL, nnMIL, CLAM-style MIL, TransMIL-style controls,
+                TransnnMIL, Phikon feature bags, and foundation-encoder comparisons on PANDA and
+                related pathology benchmarks.
+              </Text>
+            </Box>
+            <Box>
+              <Text fontWeight={700}>Spatial whole-slide dynamics</Text>
+              <Text color={subtleText} fontSize="sm" mt={1} lineHeight="1.75">
+                WSI-NCA, real-versus-shuffled topology, tied and untied recurrence, history transport,
+                local update rules, homophily checks, SICAP transport, and PANDA spatial-feature
+                validation.
+              </Text>
+            </Box>
+            <Box>
+              <Text fontWeight={700}>Federated and institutional learning</Text>
+              <Text color={subtleText} fontSize="sm" mt={1} lineHeight="1.75">
+                PathologyFL, FAIR-WEIGHTS-H, dominance and DMI-style site-influence work, FedAvg /
+                FedProx / FedAdam infrastructure, privacy and secure-aggregation hooks, simulated-site
+                stress tests, and CAMELYON17/WILDS held-out-center analysis.
+              </Text>
+            </Box>
+            <Box>
+              <Text fontWeight={700}>Provenance and scanner-intervention studies</Text>
+              <Text color={subtleText} fontSize="sm" mt={1} lineHeight="1.75">
+                PANDA scanner inventory, SICAP assignment reproduction, public-dataset provenance,
+                same-glass PAR intervention, branch-conditioned scale-by-gauge analysis, and frozen
+                transport protocols for new acquisition cohorts.
+              </Text>
+            </Box>
+            <Box>
+              <Text fontWeight={700}>NucleoScope measurement program</Text>
+              <Text color={subtleText} fontSize="sm" mt={1} lineHeight="1.75">
+                Repeated-detection and computational-context measurement audits, primitive-level
+                response analysis, tie-aware nulls, cross-tile matching, artifact adversaries,
+                ordinal spatial statistics, and frozen candidate-law tests.
+              </Text>
+            </Box>
+            <Box>
+              <Text fontWeight={700}>SERA structural-learning program</Text>
+              <Text color={subtleText} fontSize="sm" mt={1} lineHeight="1.75">
+                Self-expanding relational structure, evidence-governed birth and authority,
+                composition and consolidation, provenance-bearing transport, NRM falsification
+                ladders, and CRAS / System-One-style conventional comparator programs.
+              </Text>
+            </Box>
+            <Box>
+              <Text fontWeight={700}>Scientific language and evidence infrastructure</Text>
+              <Text color={subtleText} fontSize="sm" mt={1} lineHeight="1.75">
+                Pathology Pipeline Language, typed Evidence&lt;T&gt;, run identity and hierarchy
+                checks, units, admissible-claim evaluation, immutable evidence packages, release
+                registries, hostile review, and fail-closed validation.
+              </Text>
+            </Box>
+            <Box>
+              <Text fontWeight={700}>Benchmark and external-validation substrates</Text>
+              <Text color={subtleText} fontSize="sm" mt={1} lineHeight="1.75">
+                PatchCamelyon, PANDA, CAMELYON17/WILDS, SCORPION, canine SCC, SICAP, and frozen
+                feature / manifest infrastructure used to separate software validation from
+                scientific evidence.
+              </Text>
+            </Box>
+          </Stack>
+        </Box>
+
         <Box as="section" pt={12} pb={6}>
           <Heading as="h3" fontSize={20} mb={2}>
             Canonical research links
@@ -273,6 +378,21 @@ const Research = () => {
             label="PA-NF canine SCC audit"
             description="Study-specific repository for the independent multi-scanner canine evaluation."
             href="https://github.com/matthewvaishnav/paired-acquisition-factorization-caninescc"
+          />
+          <ResearchLink
+            label="PA-NF pair-repeat allocation study"
+            description="Study-specific repository for paired-acquisition allocation and repeat structure."
+            href="https://github.com/matthewvaishnav/paired-acquisition-factorization-allocation"
+          />
+          <ResearchLink
+            label="Whole-slide model documentation"
+            description="AttentionMIL, TransnnMIL, CLAM, TransMIL-style controls, and related WSI model documentation."
+            href="https://github.com/matthewvaishnav/computational-pathology-research/tree/main/docs/models"
+          />
+          <ResearchLink
+            label="PathologyFL documentation"
+            description="Federated pathology infrastructure and institutional-learning research."
+            href="https://github.com/matthewvaishnav/computational-pathology-research/blob/main/docs/federated/pathologyfl.md"
           />
           <ResearchLink
             label="PA-NF evidence release"
