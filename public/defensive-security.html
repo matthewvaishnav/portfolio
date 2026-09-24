@@ -2422,7 +2422,7 @@
       <div class="s-label-line"></div>
     </div>
 
-    <p class="proj-intro reveal">Every project here runs against something real — either my own lab or a cloud environment. <strong>Output first, description second.</strong></p>
+    <p class="proj-intro reveal">Historical project snapshot. Source and evidence availability varies by entry; current verified work is described on the main portfolio. <strong>Archive first, old claims bounded.</strong></p>
 
       <div class="proj-row reveal">
         <div>
@@ -2484,7 +2484,7 @@
         <div class="proj-arrow" style="opacity:.3;">archive</div>
       </div>
 
-      <a href="https://github.com/matthewvaishnav/out-of-orbit" class="proj-row reveal" target="_blank">
+      <a href="/portfolio/out-of-orbit" class="proj-row reveal">
         <div>
           <div class="proj-kicker">C++17 / Raylib</div>
           <div class="proj-title">Out of Orbit</div>
@@ -2526,7 +2526,7 @@
 
      <!-- ROADMAP DIVIDER -->
     <div class="proj-divider reveal">
-      <span class="proj-divider-label">Roadmap: in progress &amp; planned before co-op</span>
+      <span class="proj-divider-label">Historical roadmap snapshot — statuses and dates are not current</span>
       <div class="proj-divider-line"></div>
     </div>
 
@@ -2703,11 +2703,11 @@
 <section id="now">
   <div class="inner">
     <div class="s-label reveal">
-      <span class="s-label-txt">Currently Working On</span>
+      <span class="s-label-txt">Historical Working Snapshot</span>
       <div class="s-label-line"></div>
     </div>
     <div class="now-narrative reveal">
-      <p>Three things in parallel right now: finishing the <strong>TryHackMe SOC Level 2 path</strong>, shipping the <strong>AWS cloud security project</strong> so the portfolio covers both on-prem and cloud, and pushing through the last stretch of <strong>CompTIA Security+</strong> study. Every week something new goes on GitHub.</p>
+      <p>This section preserves what I was working on when this security portfolio snapshot was created. Percent-complete values, target dates, and queued projects below are historical and are not current commitments or status claims.</p>
     </div>
     <div class="now-grid">
       <div class="now-item reveal">
@@ -4190,7 +4190,7 @@ function closeEgg() {
       title: 'Blue — SMB Exploit (CVE-2017-0144)',
       diff: 'easy',
       desc: 'SMB exploitation via CVE-2017-0144. SYSTEM shell, credential dump, persistence via service install. Wrote detection rules for Event IDs 4625, 4648, and SMB scanner fingerprints in Security Onion.',
-      github: 'https://github.com/matthewvaishnav/portfolio/blob/main/security/ctf-writeups/THM_Blue_' + 'Eternal' + 'Blue.md',
+      github: null,
       tags: ['T1190', 'T1003', 'T1543'],
       phases: [
         {
@@ -4264,7 +4264,7 @@ function closeEgg() {
       title: 'Linux PrivEsc Arena',
       diff: 'med',
       desc: 'SUID binary abuse, sudo misconfiguration, cron job exploitation. Full chain from www-data to root. Documented every vector, its detection event, and the one-line fix.',
-      github: 'https://github.com/matthewvaishnav/portfolio/blob/main/security/ctf-writeups/THM_Linux_Privesc.md',
+      github: null,
       tags: ['T1548', 'T1053', 'T1166'],
       phases: [
         {
@@ -4323,7 +4323,7 @@ function closeEgg() {
       title: 'Attacktive Directory',
       diff: 'hard',
       desc: 'Kerberoasting, AS-REP roasting, pass-the-hash, lateral movement. Full chain from anonymous enumeration to Domain Admin. Wrote Sigma rules for Kerberos ticket anomalies and NTLM relay patterns.',
-      github: 'https://github.com/matthewvaishnav/portfolio/blob/main/security/ctf-writeups/THM_ActiveDirectory_Attacks.md',
+      github: null,
       tags: ['T1558', 'T1550', 'T1021'],
       phases: [
         {
@@ -4541,7 +4541,14 @@ function closeEgg() {
   function render() {
     buildTabs();
     buildHeader();
-    githubEl.href = LABS[activeLab].github;
+    var writeup = LABS[activeLab].github;
+    if (writeup) {
+      githubEl.href = writeup;
+      githubEl.style.display = 'flex';
+    } else {
+      githubEl.removeAttribute('href');
+      githubEl.style.display = 'none';
+    }
     renderPhase();
   }
 
