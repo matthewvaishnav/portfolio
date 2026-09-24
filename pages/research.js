@@ -175,7 +175,7 @@ const researchGroups = [
   {
     title: 'Benchmark foundations and evaluation infrastructure',
     items: [
-      'PCam patch benchmark foundation and full-test evaluation infrastructure',
+      'PCam full-test benchmark: 0.9394 ROC AUC and 0.8526 accuracy on 32,768 official test patches; the AUC was numerically higher than all 10 external values in the historical comparison table, while cross-paper protocols remain unmatched',
       'PANDA 10,611-slide readable Phikon feature-bag pipeline',
       'PANDA baseline hierarchy and model-comparison infrastructure',
       'CAMELYON17/WILDS 455,954-example multi-center evaluation substrate',
