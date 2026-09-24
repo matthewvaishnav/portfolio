@@ -22,6 +22,7 @@ The portfolio contains multiple independent research programs and substantial su
 - **SERA:** evidence-governed adaptive computation, structural formation, authority, composition, evidence transport, repair, consolidation, retirement, and strong conventional comparator programs.
 - **Scientific compiler and evidence systems:** Pathology Pipeline Language, typed Evidence<T>, identities, units, split and provenance legality, immutable evidence packages, release registries, hostile review, and fail-closed claim validation.
 - **Program-level reproducibility:** claim ledgers, retained negative results, exact artifact recovery, versioned public evidence, and explicit evidence boundaries.
+- **Research-engineering lineage:** historical HistoCore work on WSI processing and streaming, foundation-model adapters, research APIs/model serving, DICOM/PACS/FHIR-style prototypes, Docker/Kubernetes/cloud scaffolding, monitoring, security, and federated systems. These are engineering/prototype records, not clinical-deployment claims.
 
 The public computational-pathology record also includes **PCam**, **PANDA**, **CAMELYON17/WILDS**, **SCORPION**, **canine SCC**, **SICAP**, and curated Hugging Face evidence/model releases.
 
