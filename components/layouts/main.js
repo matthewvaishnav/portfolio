@@ -12,7 +12,7 @@ const LazyVoxelDog = dynamic(() => import('../voxel-dog'), {
 })
 
 const SITE_DESCRIPTION =
-  "Matthew Vaishnav's computational pathology and machine-learning research across representation learning, whole-slide models, federated learning, quantitative measurement, adaptive relational systems, and scientific evidence tooling."
+  "Matthew Vaishnav studies what computational pathology models and measurements actually encode, where apparent signal comes from, and which conclusions survive controlled nuisance shifts, mechanism falsification, and reproducibility audit."
 
 const Main = ({ children, router }) => {
   const isResearchRoute = router.asPath.startsWith('/research')
@@ -24,7 +24,7 @@ const Main = ({ children, router }) => {
         <meta name="description" content={SITE_DESCRIPTION} />
         <meta name="author" content="Matthew Vaishnav" />
         <link rel="icon" href="/portfolio/favicon.svg" type="image/svg+xml" />
-        <meta property="og:site_name" content="Matthew Vaishnav Research" />
+        <meta property="og:site_name" content="Matthew Vaishnav — Computational Pathology Research" />
         <meta property="og:title" content="Matthew Vaishnav — Computational Pathology & ML" />
         <meta property="og:description" content={SITE_DESCRIPTION} />
         <meta property="og:type" content="website" />
