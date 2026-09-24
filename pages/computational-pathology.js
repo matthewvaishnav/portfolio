@@ -346,9 +346,11 @@ const Work = () => {
           <ListItem>
             <Meta>PatchCamelyon</Meta>
             <span>
-              Full patch-level training and evaluation on the official test split as a complete
-              benchmark, engineering substrate, and reproducibility check independent of the
-              whole-slide and federated research lines.
+              Full patch-level training and evaluation on the official 32,768-patch test split:
+              0.9394 ROC AUC, 0.8526 accuracy, and 0.8507 F1. The AUC was numerically higher than
+              every external PCam AUC in the repository's historical 10-value comparison table;
+              because those external values came from different studies/protocols, that is a
+              descriptive numerical lead rather than a matched superiority test.
             </span>
           </ListItem>
         </List>
@@ -395,6 +397,15 @@ const Work = () => {
               <StatHelpText mb={0} color={muted}>
                 Global QWK gain at 45% ordinal shift without retuning; macro-F1 +0.01512 and
                 worst-site QWK +0.01290.
+              </StatHelpText>
+            </Stat>
+            <Stat>
+              <StatLabel>PCam full test</StatLabel>
+              <StatNumber>0.9394 AUC</StatNumber>
+              <StatHelpText mb={0} color={muted}>
+                0.8526 accuracy and 0.8507 F1 on 32,768 official test patches; numerically above
+                all 10 external AUC values in the historical comparison table, with unmatched
+                cross-paper protocols.
               </StatHelpText>
             </Stat>
             <Stat>
@@ -463,8 +474,10 @@ const Work = () => {
           The public record keeps failed and superseded analyses instead of silently replacing them.
           That includes pseudoreplication corrections, leakage-prone canine estimands, capacity-
           mismatched controls, the withdrawn cross-protocol separation scoreboard, historical
-          TransnnMIL fusion/topology interpretations, unsupported PCam clinical or superiority
-          language, and the claim that cosine similarity by itself proves biological preservation.
+          TransnnMIL fusion/topology interpretations, unsupported PCam clinical or inferential
+          cross-paper superiority language, and the claim that cosine similarity by itself proves
+          biological preservation. The PCam result itself remains 0.9394 AUC, including its
+          descriptive numerical lead over the historical external-value table.
         </P>
         <P>
           Exact artifact recovery, immutable manifests, claim ledgers, hostile-review documents, and
