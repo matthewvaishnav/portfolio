@@ -1,6 +1,6 @@
 # Matthew Vaishnav — Portfolio
 
-Computational pathology / ML research engineer working across representation learning, whole-slide modeling, federated systems, quantitative measurement, adaptive learning systems, and scientific research infrastructure.
+Computational pathology / ML research engineer studying what models and measurements actually encode, where apparent signal comes from, and which conclusions survive controlled nuisance shifts, mechanism falsification, and reproducibility audit.
 
 **Contact:** matthew.vaishnav@gmail.com  
 **LinkedIn:** [linkedin.com/in/matthew-vaishnav-594312403](https://www.linkedin.com/in/matthew-vaishnav-594312403/)  
@@ -11,7 +11,7 @@ Computational pathology / ML research engineer working across representation lea
 
 ## Research
 
-The portfolio contains multiple independent research programs and substantial sub-lines rather than one model or one pipeline.
+The portfolio contains multiple independent research programs, but they share one scientific requirement: a model, measurement, or claim should survive the controls needed to rule out easier alternative explanations.
 
 - **Paired acquisition and representation identifiability:** PA-NF, SCORPION, canine SCC, pair-structure and pair-integrity controls, cross-backbone transfer, scanner-heldout and sample-disjoint transfer, scanner-confounding stress, factor swapping, pair-repeat allocation, bottleneck/capacity studies, representation geometry, synthetic identifiability, instrument-power audits, and crossed-preparation work.
 - **Identity and counterfactual benchmark instruments:** the Oncology Identity Benchmark and runnable Identity Audit, measurement-validation protocols, the Paired Scanner Counterfactual Benchmark, and scanner-invariant residual-provenance / invariance-blind-spot audits.
