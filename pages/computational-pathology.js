@@ -198,6 +198,15 @@ const Work = () => {
               cross-fitted branch-conditioned scale-by-gauge mechanism.
             </span>
           </ListItem>
+          <ListItem>
+            <Meta>Research-engineering lineage</Meta>
+            <span>
+              Historical HistoCore-era work includes WSI processing and streaming, foundation-model
+              adapters, research APIs and model serving, DICOM/PACS/FHIR-style integration
+              prototypes, deployment scaffolds, monitoring, security, and federated infrastructure.
+              These are engineering and prototype contributions, not claims of clinical deployment.
+            </span>
+          </ListItem>
         </List>
 
         <Heading as="h2" size="md" mt={9} mb={3}>
