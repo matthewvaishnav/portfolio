@@ -178,25 +178,31 @@ const Home = () => {
               </Text>
             </ListItem>
             <ListItem>
-              <Text fontWeight="bold">Federated & institutional learning</Text>
+              <Text fontWeight="bold">PathologyFL</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                PathologyFL, FAIR-WEIGHTS-H, dominant-site and site-signal alignment, CAMELYON17
-                external-center studies, privacy/communication stress, and institutional weighting.
+                Federated pathology infrastructure across aggregation, privacy, secure communication,
+                asynchronous training, compression, monitoring, and fault tolerance.
+              </Text>
+            </ListItem>
+            <ListItem>
+              <Text fontWeight="bold">Institutional weighting & site-signal alignment</Text>
+              <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
+                FAIR-WEIGHTS-H, dominant-site stress, fixed detector transfer, CAMELYON17 held-out
+                centers, center-subspace diagnostics, and infrastructure/communication studies.
               </Text>
             </ListItem>
             <ListItem>
               <Text fontWeight="bold">NucleoScope</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Nuclear measurement stability, repeated context, primitive response, cross-tile
-                structure, artifact models, ordinal spatial statistics, and independent law discovery.
+                Repeated-context measurement mechanics, falsified law candidates, ordinal
+                nucleus-versus-tissue regularities, artifact adversaries, and H12/G6 context-control qualification.
               </Text>
             </ListItem>
             <ListItem>
               <Text fontWeight="bold">SERA</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Independent machine-learning research on an evidence-governed structural control
-                plane for the birth, reuse, composition, repair, consolidation, and retirement of
-                learned computational structure.
+                Evidence-governed structural learning across SFS formation stability, NRM mechanism
+                localization and causal-specificity, strong System-One controls, and CRAS lifecycle qualification.
               </Text>
             </ListItem>
             <ListItem>
@@ -258,10 +264,10 @@ const Home = () => {
                 </StatHelpText>
               </Stat>
               <Stat>
-                <StatLabel color={subtleText}>PathologyFL</StatLabel>
+                <StatLabel color={subtleText}>Site-signal alignment</StatLabel>
                 <StatNumber>+0.01053</StatNumber>
                 <StatHelpText color={mutedText} mb={0}>
-                  Global QWK at 45% ordinal shift without retuning
+                  Global QWK delta at 45% conservative ordinal shift using a fixed label-noise-calibrated detector
                 </StatHelpText>
               </Stat>
               <Stat>
