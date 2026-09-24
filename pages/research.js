@@ -522,14 +522,14 @@ const Research = () => {
         </Heading>
 
         <Text color={bodyText} lineHeight="1.8" mb={3}>
-          My work is not one method or one pathology pipeline. It is a set of independent research
-          programs in computational pathology, machine learning, quantitative measurement, and
-          scientific systems.
+          My research asks what a computational system actually knows, where that information came
+          from, and whether the scientific conclusion survives when the shortcuts are removed.
         </Text>
         <Text color={subtleText} lineHeight="1.75" mb={7}>
-          The cards below are the program-level map. The full research-line inventory underneath
-          shows the architectures, studies, controls, validation programs, and infrastructure that
-          make up those programs.
+          The programs below attack that question at different levels: representations, whole-slide
+          aggregation, institutional weighting, quantitative measurement, adaptive computation, and
+          scientific evidence itself. They are not stages of one pipeline, but they share the same
+          requirement that the claimed mechanism and interpretation survive explicit controls.
         </Text>
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
