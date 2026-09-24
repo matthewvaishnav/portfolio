@@ -2,7 +2,7 @@
   "name": "matthew-vaishnav-portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "Matthew Vaishnav's computational pathology and machine-learning research portfolio.",
+  "description": "Matthew Vaishnav's computational pathology research portfolio on representation identifiability, measurement, whole-slide and institutional learning, and scientific evidence audit.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
