@@ -1,6 +1,6 @@
 # Matthew Vaishnav — Portfolio
 
-Computational pathology / ML research engineer building controlled experiments around identifiability, measurement reliability, institutional generalization, and auditable scientific evidence.
+Computational pathology / ML research engineer working across representation learning, whole-slide modeling, federated systems, quantitative measurement, adaptive learning systems, and scientific research infrastructure.
 
 **Contact:** matthew.vaishnav@gmail.com  
 **LinkedIn:** [linkedin.com/in/matthew-vaishnav-594312403](https://www.linkedin.com/in/matthew-vaishnav-594312403/)  
@@ -11,32 +11,25 @@ Computational pathology / ML research engineer building controlled experiments a
 
 ## Research
 
-My research is organized as several independent programs with different technical questions and evidence boundaries.
+The portfolio contains multiple independent research programs and substantial sub-lines rather than one model or one pipeline.
 
-- **Paired-Acquisition Neural Factorization (PA-NF):** matched multi-scanner representation learning with explicit tissue/acquisition factorization and preservation controls.
-- **Whole-slide MIL:** gated **AttentionMIL**, authored **TransnnMIL**, and matched MIL baselines on PANDA.
-- **WSI-NCA / whole-slide tissue dynamics:** topology-, history-, and recurrence-aware spatial modeling under explicit falsification controls.
-- **PathologyFL / FAIR-WEIGHTS-H:** federated pathology, institutional weighting, dominance detection, privacy-aware training, and shift robustness.
-- **NucleoScope collaboration:** nucleus-level quantitative measurement, repeated-detection structure, computational-context effects, and tissue-organization law discovery.
-- **SERA:** evidence-governed adaptive computation in which learned structure can be born, reused, composed, repaired, consolidated, and retired.
-- **Scientific compiler / evidence DSL:** typed identities, units, controls, provenance, evidence objects, and machine-checkable claim boundaries.
+- **Paired acquisition and representation identifiability:** PA-NF, SCORPION, canine SCC, pair-repeat allocation, scanner/center subspaces, representation geometry, synthetic identifiability, capacity allocation, task-sufficiency audits, cross-backbone tests, and crossed-preparation work.
+- **Whole-slide learning:** mean pooling, AttentionMIL, nnMIL, CLAM, TransMIL-style controls, TransnnMIL, branch-fusion studies, topology-aware variants, and repeated-seed PANDA evaluation.
+- **WSI-NCA / WCI lineage:** local spatial dynamics, topology/history falsification, PANDA representation coupling, SICAP transport, state canonicalization, K5 coupling structure, and scanner-intervention work.
+- **Federated and institutional learning:** PathologyFL, FAIR-WEIGHTS-H, site-signal alignment, dominant-site detector transfer, CAMELYON17/WILDS external-center validation, center-subspace studies, communication accounting, privacy-noise probes, and infrastructure-friction studies.
+- **Scanner provenance and intervention:** PANDA/SICAP provenance, scanner inventory, assignment reproducibility, public-dataset provenance discovery, and the PAR same-glass intervention.
+- **NucleoScope:** quantitative nuclear measurement, repeated-context effects, primitive-response analysis, cross-tile matching, artifact adversaries, ordinal spatial statistics, and independently governed law discovery.
+- **SERA:** evidence-governed adaptive computation, structural formation, authority, composition, evidence transport, repair, consolidation, retirement, and strong conventional comparator programs.
+- **Scientific compiler and evidence systems:** Pathology Pipeline Language, typed Evidence<T>, identities, units, split and provenance legality, immutable evidence packages, release registries, hostile review, and fail-closed claim validation.
+- **Program-level reproducibility:** claim ledgers, retained negative results, exact artifact recovery, versioned public evidence, and explicit evidence boundaries.
 
-Public datasets and evaluation substrates include **SCORPION**, an independent five-scanner canine SCC cohort, **PANDA**, **CAMELYON17/WILDS**, and **PatchCamelyon**.
+The public computational-pathology record also includes **PCam**, **PANDA**, **CAMELYON17/WILDS**, **SCORPION**, **canine SCC**, **SICAP**, and curated Hugging Face evidence/model releases.
 
-Selected controlled results include:
+**Public research hub:** [matthewvaishnav/computational-pathology-research](https://github.com/matthewvaishnav/computational-pathology-research)
 
-- **SCORPION:** 48 H&E slides, 480 aligned tissue regions, five scanners, and 2,400 images. In the registered 175-fit capacity-matched campaign, PA-NF reduced tissue-branch scanner balanced accuracy by **0.3108** relative to an equal-capacity neural control while preserving same-region retrieval within the registered noninferiority margin.
-- **Independent canine SCC:** 44 biological samples and 805 complete five-view regions across five scanners. The external study confirmed strong scanner suppression while showing that centroid, QR, and paired-linear removal remain strong baselines.
-- **PANDA / TransnnMIL:** 10,611 readable Phikon slide feature bags; the stabilization grid reached mean best validation QWK **0.8257** at learning rate 1e-4 and a best observed run of **0.8455**.
-- **PathologyFL:** a fixed dominance detector transferred without retuning to ordinal site shift; at the strongest tested shift it improved global QWK by **0.01053**, macro-F1 by **0.01512**, and worst-site QWK by **0.01290**.
-- **CAMELYON17/WILDS:** 455,954 examples across five centers. In a centralized frozen-feature held-out-center proxy, equal-client weighting improved accuracy from **0.8312 to 0.9132** relative to sample-proportional weighting.
-- **PatchCamelyon:** ROC AUC **0.9394**, accuracy **0.8526**, and F1 **0.8507** on the official 32,768-patch test split.
+**PA-NF manuscript:** [Current public manuscript](https://matthewvaishnav.github.io/computational-pathology-research/)
 
-**Canonical PA-NF manuscript:** [Current public manuscript](https://matthewvaishnav.github.io/computational-pathology-research/)
-
-**Research repository:** [matthewvaishnav/computational-pathology-research](https://github.com/matthewvaishnav/computational-pathology-research)
-
-Research-only. Not clinically validated or intended for patient-care use. Results are bounded to the stated datasets, comparators, folds, feature backbones, and simulated-site settings.
+Research-only. Evidence status differs by research line; active, negative, historical, and validation-stage results are kept distinct.
 
 ---
 
