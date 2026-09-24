@@ -23,8 +23,6 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 
-const CANONICAL_PA_NF = 'https://matthewvaishnav.github.io/computational-pathology-research/'
-
 const Home = () => {
   const mutedText = useColorModeValue('gray.600', 'gray.400')
   const subtleText = useColorModeValue('gray.700', 'gray.300')
@@ -108,24 +106,24 @@ const Home = () => {
             my={{ base: 6, md: 7 }}
           >
             <Button
-              as={Link}
-              href={CANONICAL_PA_NF}
-              target="_blank"
-              rel="noopener noreferrer"
-              rightIcon={<ExternalLinkIcon />}
+              as={NextLink}
+              href="/research"
+              scroll={false}
+              rightIcon={<ChevronRightIcon />}
               colorScheme="teal"
               size="md"
               px={4}
               w={{ base: 'full', sm: 'auto' }}
               flexShrink={0}
             >
-              Read PA-NF
+              Research
             </Button>
             <Button
-              as={NextLink}
-              href="/research"
-              scroll={false}
-              rightIcon={<ChevronRightIcon />}
+              as={Link}
+              href="https://github.com/matthewvaishnav/computational-pathology-research"
+              target="_blank"
+              rel="noopener noreferrer"
+              rightIcon={<ExternalLinkIcon />}
               colorScheme="teal"
               variant="outline"
               size="md"
@@ -133,7 +131,7 @@ const Home = () => {
               w={{ base: 'full', sm: 'auto' }}
               flexShrink={0}
             >
-              Research
+              Research Hub
             </Button>
             <Button
               as={Link}
@@ -289,9 +287,10 @@ const Home = () => {
             Approach
           </Heading>
           <Paragraph>
-            Hold the relevant identity fixed. Perturb the suspected nuisance or mechanism. Compare
-            against matched controls. Preserve the signal that should survive. Keep the negative
-            results. Then make the claim no broader than the experiment allows.
+            The method depends on the question. I use matched interventions, architecture controls,
+            external-center tests, synthetic mechanism studies, adversarial falsifiers, frozen
+            protocols, provenance audits, and retained negative results. What matters is that the
+            evidence can be inspected and the claim stays within what the experiment establishes.
           </Paragraph>
         </Section>
 
