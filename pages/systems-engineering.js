@@ -18,7 +18,7 @@ const Works = () => (
             thumbnail="/portfolio/images/works/histocore-logo-rect.svg" 
             title="Computational Pathology Research"
           >
-            Controlled experiments in paired acquisition, whole-slide modeling, measurement, institutional shift, and auditable evidence
+            Representation learning, whole-slide models, federated pathology, measurement, scanner provenance, and research infrastructure
           </WorkGridItem>
         </Section>
         <Section>
