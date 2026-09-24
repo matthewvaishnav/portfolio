@@ -90,6 +90,35 @@ const Work = () => {
             </span>
           </ListItem>
           <ListItem>
+            <Meta>Paired-acquisition mechanism audits</Meta>
+            <span>
+              The PA-NF record includes pair-structure ladders, acquisition-branch audits,
+              biological-label preservation, scanner-heldout transfer, sample-disjoint scanner
+              transfer, scanner-category confounding stress, bottleneck comparisons, cross-backbone
+              pair-integrity tests, and factor swapping through the decoder. Several are deliberate
+              honesty checks where simple linear removal remains competitive.
+            </span>
+          </ListItem>
+          <ListItem>
+            <Meta>Identity and counterfactual benchmark instruments</Meta>
+            <span>
+              A reusable Oncology Identity Benchmark and runnable Identity Audit measure scanner,
+              site, stain, client, and biological identity with random-label, collapse, leakage, and
+              blocking controls. A separate Paired Scanner Counterfactual Benchmark formalizes
+              feature-space, decoder-space, and future pixel-space interventions.
+            </span>
+          </ListItem>
+          <ListItem>
+            <Meta>Invariance-blind-spot / residual provenance research</Meta>
+            <span>
+              Scanner suppression does not identify everything left in the representation as biology:
+              preparation, staining, sectioning, site, and other pre-scanner variables can remain
+              fixed across paired scans. The current feasibility audit can detect residual structure,
+              while non-biological attribution remains blocked until crossed provenance variation is
+              available.
+            </span>
+          </ListItem>
+          <ListItem>
             <Meta>Representation identifiability and scanner / center subspaces</Meta>
             <span>
               A broader line studying what scanner, center, biological-task, and identity information
@@ -292,11 +321,11 @@ const Work = () => {
               </StatHelpText>
             </Stat>
             <Stat>
-              <StatLabel>TransnnMIL stabilization</StatLabel>
-              <StatNumber>0.8257</StatNumber>
+              <StatLabel>TransnnMIL</StatLabel>
+              <StatNumber>Matched rerun</StatNumber>
               <StatHelpText mb={0} color={muted}>
-                Mean best validation QWK at learning rate 1e-4 across three seeds; best observed run
-                across the grid was 0.8455.
+                Repaired canonical implementation; historical fusion/topology scores remain withdrawn
+                until matched reruns against AttentionMIL, TransMIL, nnMIL, and fusion controls.
               </StatHelpText>
             </Stat>
             <Stat>
@@ -316,9 +345,9 @@ const Work = () => {
             </Stat>
             <Stat>
               <StatLabel>Scientific compiler</StatLabel>
-              <StatNumber>175 / 175</StatNumber>
+              <StatNumber>15 / 15 · 35 / 35</StatNumber>
               <StatHelpText mb={0} color={muted}>
-                Metamorphic benchmark cases matched expected scientific-legality outcomes.
+                Pipeline benchmarks and unit/adversarial tests at the current v0.3.0 language frontier.
               </StatHelpText>
             </Stat>
           </SimpleGrid>
