@@ -17,7 +17,7 @@ const Work = () => (
         Out of Orbit <Badge>2025–2026</Badge>
       </Title>
       <P>
-        A C++17/Raylib arcade shoot-'em-up built around fast survival combat, four ship
+        A C++17/Raylib arcade shoot-’em-up built around fast survival combat, four ship
         archetypes, Fire/Ice/Spirit weapon identities, escalating waves and bosses, and a
         shop-driven upgrade loop.
       </P>
