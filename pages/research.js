@@ -41,8 +41,8 @@ const programs = [
     type: 'Spatial dynamics research',
     date: '2026',
     description:
-      'Local state-update dynamics over tissue structure with topology, recurrence, history, construction, leakage, and translation controls; linked to SICAP assignment stability and the frozen PANDA comparison program.',
-    metric: 'Topology · history · recurrence · transport',
+      'Local state-update dynamics over tissue structure with topology, recurrence, history, construction, leakage, and translation controls. Synthetic mechanism tests are paired with a frozen PANDA-300 Phase A that did not support recurrence- or topology-dependent predictive benefit.',
+    metric: 'Synthetic mechanism · PANDA negative · SICAP audit',
     image: '/portfolio/images/research/allocation-cover.webp',
     href: 'https://github.com/matthewvaishnav/computational-pathology-research'
   },
@@ -92,8 +92,8 @@ const programs = [
     type: 'Quantitative nuclear pathology',
     date: '2026',
     description:
-      'Active collaboration covering measurement stability, repeated detections, computational context, primitive response, cross-tile structure, artifact models, ordinal spatial statistics, and independently governed law discovery.',
-    metric: 'Measurement mechanics and law discovery',
+      'Active collaboration spanning repeated-context measurement mechanics, falsified law candidates, ordinal nucleus-versus-tissue regularities, adversarial null construction, and the current H12/G6 estimand-preserving context-control qualification program.',
+    metric: 'Measurement mechanics · falsification · H12/G6',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href: 'https://nucleoscope.ai/'
   },
@@ -102,8 +102,8 @@ const programs = [
     type: 'Independent machine-learning research',
     date: '2026',
     description:
-      'Evidence-governed adaptive computation: formation, birth, reuse, composition, authority, evidence transport, repair, consolidation, retirement, and increasingly strong CRAS and System-One-style conventional controls.',
-    metric: 'Structural formation · authority · lifecycle',
+      'Evidence-governed adaptive computation across formation stability (SFS), neural rematch and mechanism localization (NRM), causal-specificity transport, strong System-One controls, and the CRAS exact-rank / lifecycle comparator program.',
+    metric: 'SFS · NRM · CRAS · structural lifecycle',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href: null
   },
@@ -135,6 +135,8 @@ const researchGroups = [
     items: [
       'Paired-scanner experimental design and broken-pair / random-pair controls',
       'Paired-Acquisition Neural Factorization (PA-NF)',
+      'Locked adversarial site-invariance confirmation: lower site leakage without tumor-prediction gain',
+      'Factorized/subtraction falsification: unconditional nuisance subtraction removed tumor-predictive signal',
       'SCORPION five-scanner paired-acquisition study',
       'Independent multi-scanner canine SCC fixed-estimand audit',
       'Scanner and center subspace methods: centroid, QR, PCA, paired-linear, adversarial, and projection controls',
@@ -164,7 +166,10 @@ const researchGroups = [
       '450-fit canine dimensionality × cross-covariance factorial with retained negative result',
       'Prospective paired-affine and orthogonal-Procrustes comparator program',
       'Scanner-invariant residual provenance / invariance-blind-spot feasibility audit',
-      'Crossed-preparation identifiability and preparation/workflow metadata-readiness work'
+      'Crossed-preparation identifiability and preparation/workflow metadata-readiness work',
+      'CPTAC human histopathology metadata-first transfer discovery (TCIA/GDC; active, no outcome claim)',
+      'Synthetic benchmark self-audit: oracle power, validation power, and representation evidence adjudicated separately',
+      'Fixed-estimand real feature-space adjudication and exact artifact-recovery replay'
     ]
   },
   {
@@ -225,6 +230,8 @@ const researchGroups = [
       'Detector diagnostic ablation and calibration sensitivity',
       'CAMELYON17/WILDS held-out-center validation',
       'CAMELYON17 center-subspace projection and leakage diagnostics',
+      'Adversarial/subtractive center-removal failures followed by a partially successful supervised linear center-subspace projection',
+      'PCam heterogeneous-site informative null: different aggregation weights without measurable performance differentiation',
       'Equal-client and dominant-source weighting studies',
       'Four federated failure pillars: heterogeneity, communication, privacy, and infrastructure',
       'Feature/head communication accounting and bounded communication-resolution study',
@@ -266,6 +273,9 @@ const researchGroups = [
       'Nuclear-versus-nearby-tissue matched geometry tests',
       'Independent Branch B law discovery and A/B/C research firewall',
       'H9/H10/G4/G5 frozen falsification programs',
+      'H11/G5: fresh false-law suppression passed, planted-power preservation failed, terminating the overconditioned control line',
+      'H12/G6: context-conditioned and matched empirical null development that preserves the original nucleus-vs-local-tissue estimand',
+      'Fresh G6 qualification with unseen adversaries, independent planted-power/stress gates, and biology still locked',
       'Cross-preparation and untouched-cohort validation planning'
     ]
   },
@@ -284,6 +294,8 @@ const researchGroups = [
       'NRM neural-rematch, residual-authority, plasticity, compatibility, and transport ladder',
       'NRM-043 held-out causal-specificity transport',
       'CRAS matched-null, exact-rank, and lifecycle comparator program',
+      'CRAS-Q1C exact-rank authorization with null calibration and diagnostic release',
+      'CRAS-Q2 A→B→A lifecycle qualification for stop, continue, retire, recycle, and replacement policies',
       'System-One-style decomposition, fan-out, support-authority, and learned-composition controls',
       'Negative mechanisms and retired branches preserved as part of the scientific record'
     ]
@@ -300,7 +312,11 @@ const researchGroups = [
       'Docker, Kubernetes, cloud, monitoring, and deployment scaffolds',
       'Federated privacy, secure-aggregation, async, fault-tolerance, and monitoring infrastructure',
       'Security, authorization, observability, and reproducibility tooling around the research stack',
-      'Historical DMI, CPI, IMR, and MKN architecture experiments'
+      'Historical DMI, CPI, IMR, and MKN architecture experiments',
+      'Tested multimodal fusion/datasets, temporal reasoning, stain-normalization transformer, and foundation-model compatibility',
+      'Grad-CAM, failure-analysis, feature-importance, and interpretability dashboard tooling',
+      'Implemented causal inference utilities: IPW, doubly robust estimation, T-/X-learners, DAG and refutation helpers',
+      'Implemented cell/TME graphs and GNNs, survival-aware subtype discovery, multiscale MIL, multi-omics factorization, and segmentation/spatial utilities; implementation capability, not promoted empirical findings'
     ]
   },
   {
@@ -320,6 +336,55 @@ const researchGroups = [
   }
 ]
 
+
+const evidenceStates = [
+  {
+    title: 'Supported / current',
+    items: [
+      'SCORPION registered capacity-matched PA-NF effect with retrieval noninferiority and an explicit scanner-bearing acquisition branch',
+      'Corrected canine fixed-estimand evidence, including the bounded negative comparison against strong simple scanner-removal baselines',
+      'PANDA dominant-site / ordinal-shift stress studies and tuned detector transfer under simulated institutional corruption',
+      'CAMELYON17 held-out-center weighting and supervised center-subspace diagnostics, bounded as centralized feature-level proxies',
+      'Scientific-language, provenance, release, and fail-closed validation infrastructure under explicit tests'
+    ]
+  },
+  {
+    title: 'Negative / mixed / falsified',
+    items: [
+      'Early site-invariance study reduced recoverable site information without improving held-out tumor prediction',
+      'Unconditional nuisance subtraction removed tumor-predictive information instead of cleanly isolating nuisance',
+      'Canine B32/B64 did not establish a neural feature-space increment over every strong simple scanner-removal baseline',
+      'Synthetic capacity effects did not transport into a corrected real-data category-accessibility gain',
+      'WSI-NCA synthetic propagation did not translate into a recurrence/topology-dependent PANDA-300 advantage',
+      'FAIR-WEIGHTS-H PCam heterogeneous benchmark produced distinct weights but no performance differentiation',
+      'NucleoScope H11/G5 suppressed fresh false laws but also erased planted projective signal and was terminated',
+      'Historical unified separation rankings were withdrawn because incompatible datasets/protocols had been collapsed into one scoreboard'
+    ]
+  },
+  {
+    title: 'Active but unpromoted',
+    items: [
+      'Paired affine comparison: centroid translation, orthogonal Procrustes, unregularized affine, ridge affine, and PA-NF on frozen SCORPION folds',
+      'Crossed-target scanner-prototype and identity-disjoint synthetic generalization studies',
+      'Repaired TransnnMIL matched PANDA rerun across seven architecture/control families and five seeds',
+      'CPTAC human-histopathology metadata and scanner inventory for a future external-human transfer layer',
+      'Scanner-invariant residual-provenance / crossed-preparation identifiability work',
+      'NucleoScope H12/G6 fresh qualification; biological interpretation remains locked behind control gates',
+      'SERA CRAS-Q2 lifecycle qualification under strong conventional controls'
+    ]
+  },
+  {
+    title: 'Withdrawn / historical only',
+    items: [
+      'Historical TransnnMIL fusion/topology QWK interpretations pending the repaired matched rerun',
+      'Historical canine category metrics affected by leakage or incompatible estimands',
+      'Slide-independent SCORPION sign-flip inference and overconfident pseudoreplication-era statistics',
+      'PCam state-of-the-art, clinical, deployment, and diagnoses-saved language from the pre-audit platform era',
+      'Cosine similarity as proof of biological preservation',
+      'Historical production/hospital-readiness claims inferred from the existence of PACS, FHIR, privacy, security, or deployment modules'
+    ]
+  }
+]
 const ProgramCard = ({ record }) => {
   const muted = useColorModeValue('gray.600', 'whiteAlpha.700')
   const border = useColorModeValue('blackAlpha.200', 'whiteAlpha.200')
@@ -503,6 +568,39 @@ const Research = () => {
               </Box>
             ))}
           </Stack>
+        </Box>
+
+        <Box as="section" pt={12}>
+          <Heading as="h3" fontSize={20} mb={2}>
+            Evidence state
+          </Heading>
+          <Text color={subtleText} lineHeight="1.75" mb={6}>
+            A line stays visible when it fails. Current evidence, negative results, active
+            prospective work, and withdrawn historical claims are separated rather than blended
+            into one leaderboard.
+          </Text>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
+            {evidenceStates.map(group => (
+              <Box
+                key={group.title}
+                border="1px solid"
+                borderColor={groupBorder}
+                borderRadius="xl"
+                p={5}
+              >
+                <Heading as="h4" fontSize="md" mb={3}>
+                  {group.title}
+                </Heading>
+                <Stack spacing={2}>
+                  {group.items.map(item => (
+                    <Text key={item} color={subtleText} fontSize="sm" lineHeight="1.7">
+                      {item}
+                    </Text>
+                  ))}
+                </Stack>
+              </Box>
+            ))}
+          </SimpleGrid>
         </Box>
 
         <Box as="section" pt={12} pb={6}>
