@@ -21,37 +21,47 @@ const programs = [
     type: 'Representation research',
     date: '2026',
     description:
-      'PA-NF sits inside a broader paired-acquisition program covering scanner and center subspaces, representation geometry, capacity allocation, unseen-identity generalization, pair structure, and strong linear and neural controls.',
-    metric: 'SCORPION · canine SCC · paired controls',
+      'PA-NF and the surrounding paired-acquisition program: pair structure, biological/acquisition branch separation, scanner and center subspaces, transfer under scanner and sample shift, bottleneck allocation, factor swapping, representation geometry, and strong linear controls.',
+    metric: 'SCORPION · canine SCC · paired interventions',
     image: '/portfolio/images/research/scorpion-cover.webp',
     href: 'https://matthewvaishnav.github.io/computational-pathology-research/'
   },
   {
-    title: 'Whole-Slide Learning',
-    type: 'MIL and WSI models',
+    title: 'TransnnMIL & Whole-Slide MIL',
+    type: 'Whole-slide architecture research',
     date: '2026',
     description:
-      'PANDA whole-slide research spanning mean pooling, gated AttentionMIL, nnMIL, CLAM-style and TransMIL-style controls, authored TransnnMIL variants, repeated-seed stability, branch fusion, and spatial aggregation.',
+      'PANDA whole-slide research across mean pooling, gated AttentionMIL, nnMIL, CLAM, TransMIL-style controls, authored TransnnMIL variants, branch fusion, topology, hierarchical pooling, pruning, graph caching, and repaired matched reruns.',
     metric: '10,611 verified PANDA feature bags',
     image: '/portfolio/images/research/allocation-cover.webp',
     href: 'https://github.com/matthewvaishnav/computational-pathology-research'
   },
   {
-    title: 'WSI-NCA / WCI Lineage',
-    type: 'Representation coupling and dynamics',
+    title: 'WSI-NCA / Whole-Slide Tissue Dynamics',
+    type: 'Spatial dynamics research',
     date: '2026',
     description:
-      'A broader whole-slide research lineage spanning local state dynamics, topology and history falsifiers, PANDA coupling, SICAP transport, representation-state canonicalization, K5 coupling structure, and scanner intervention.',
-    metric: 'Synthetic · PANDA · SICAP · PAR',
+      'Local state-update dynamics over tissue structure with topology, recurrence, history, construction, leakage, and translation controls; linked to SICAP assignment stability and the frozen PANDA comparison program.',
+    metric: 'Topology · history · recurrence · transport',
     image: '/portfolio/images/research/allocation-cover.webp',
     href: 'https://github.com/matthewvaishnav/computational-pathology-research'
   },
   {
-    title: 'Federated & Institutional Learning',
-    type: 'PathologyFL and site-signal research',
+    title: 'PathologyFL',
+    type: 'Federated pathology systems',
     date: '2026',
     description:
-      'PathologyFL, FAIR-WEIGHTS-H, dominant-site stress tests, detector transfer, CAMELYON17 external-center validation, center-subspace studies, and communication, privacy, and infrastructure stress accounting.',
+      'A pathology-specific federated research stack spanning FedAvg/FedProx/FedAdam and robust aggregation, privacy and secure aggregation, gRPC/TLS communication, asynchronous training, compression, monitoring, checkpointing, reconnection, and fault tolerance.',
+    metric: 'Aggregation · privacy · async · fault tolerance',
+    image: '/portfolio/images/research/research-platform-cover.webp',
+    href: 'https://github.com/matthewvaishnav/computational-pathology-research'
+  },
+  {
+    title: 'Institutional Weighting & Site-Signal Alignment',
+    type: 'Generalization and aggregation research',
+    date: '2026',
+    description:
+      'FAIR-WEIGHTS-H, dominant-site corruption and ordinal-shift studies, detector transfer, CAMELYON17/WILDS held-out-center weighting, center-subspace projection, communication accounting, privacy-noise stress, and infrastructure-friction experiments.',
     metric: 'PANDA · PCam · CAMELYON17/WILDS',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href:
@@ -62,9 +72,19 @@ const programs = [
     type: 'Scanner and provenance research',
     date: '2026',
     description:
-      'Physical-slide identity, scanner inventory, assignment reproducibility, public-dataset provenance, transport audits, and the PAR same-glass scanner intervention with a frozen cross-fitted mechanism analysis.',
+      'Physical-slide identity, scanner inventory, assignment reproducibility, public-dataset provenance, transport audits, and the PAR same-glass scanner intervention with frozen cross-fitted mechanism analysis.',
     metric: '24,235 / 24,235 SICAP assignments reproduced',
     image: '/portfolio/images/research/scorpion-cover.webp',
+    href: 'https://github.com/matthewvaishnav/computational-pathology-research'
+  },
+  {
+    title: 'Benchmark & Audit Instruments',
+    type: 'Scientific measurement systems',
+    date: '2026',
+    description:
+      'The Oncology Identity Benchmark and runnable Identity Audit, measurement-validation protocols, the Paired Scanner Counterfactual Benchmark, and scanner-invariant residual-provenance work that tests what invariance fails to identify.',
+    metric: 'Identity · counterfactuals · collapse · provenance',
+    image: '/portfolio/images/research/research-platform-cover.webp',
     href: 'https://github.com/matthewvaishnav/computational-pathology-research'
   },
   {
@@ -83,7 +103,7 @@ const programs = [
     date: '2026',
     description:
       'Evidence-governed adaptive computation: formation, birth, reuse, composition, authority, evidence transport, repair, consolidation, retirement, and increasingly strong CRAS and System-One-style conventional controls.',
-    metric: 'Validation-stage structural learning',
+    metric: 'Structural formation · authority · lifecycle',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href: null
   },
@@ -93,7 +113,17 @@ const programs = [
     date: '2026',
     description:
       'Pathology Pipeline Language, typed Evidence<T>, identity hierarchies, units, provenance, run legality, immutable evidence packages, release registries, claim boundaries, and fail-closed scientific validation.',
-    metric: '15/15 pipeline · 35/35 adversarial tests',
+    metric: '15/15 pipeline · 35/35 unit/adversarial tests',
+    image: '/portfolio/images/research/research-platform-cover.webp',
+    href: 'https://github.com/matthewvaishnav/computational-pathology-research'
+  },
+  {
+    title: 'Accountable Neural Aggregation',
+    type: 'Program integration and reproducibility',
+    date: '2026',
+    description:
+      'The named program-level project connecting acquisition-aware representation work, whole-slide aggregation, institutional learning, provenance, and compile-time scientific auditability while keeping every component\'s evidence boundary separate.',
+    metric: 'Program architecture · evidence boundaries',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href: 'https://github.com/matthewvaishnav/computational-pathology-research'
   }
@@ -123,6 +153,17 @@ const researchGroups = [
       'Unseen-identity representation geometry and calibrated geometry v2',
       'Crossed-target and unseen-identity generalization',
       'FEATMAP / affine, Procrustes, DANN, and other comparator protocols',
+      'Pair-structure boundary ladder and cross-backbone pair-integrity falsification',
+      'Biological/acquisition branch audit and biological-label preservation audit',
+      'Scanner-heldout biological-label transfer audit',
+      'Sample-disjoint scanner-heldout transfer audit',
+      'Scanner-confounded label-robustness stress test',
+      'Acquisition bottleneck capacity-constrained separation comparison',
+      'Acquisition-factor swapping through branch and decoder space',
+      'Baseline murder tests against PCA and scanner-subspace removal',
+      '450-fit canine dimensionality × cross-covariance factorial with retained negative result',
+      'Prospective paired-affine and orthogonal-Procrustes comparator program',
+      'Scanner-invariant residual provenance / invariance-blind-spot feasibility audit',
       'Crossed-preparation identifiability and preparation/workflow metadata-readiness work'
     ]
   },
@@ -137,6 +178,19 @@ const researchGroups = [
       'DINOv2, Phikon, ResNet, and pathology-foundation feature pipelines',
       'Threshold, calibration, bootstrap, failure-asymmetry, and cross-validation tooling',
       'Dataset and split manifests that separate software fixtures from scientific evidence'
+    ]
+  },
+  {
+    title: 'Identity and counterfactual benchmark instruments',
+    items: [
+      'Paired-Acquisition Neural Factorization Oncology Identity Benchmark',
+      'Runnable frozen-representation Identity Audit CLI',
+      'Measurement Validation Protocol for shortcut suppression, biology preservation, utility, collapse, and blocked inference',
+      'Paired Scanner Counterfactual Benchmark: feature-space, decoder-space, and future pixel-space layers',
+      'Scanner-invariant residual provenance feasibility audit',
+      'Category-plus-geometry and other stupid-baseline controls',
+      'Random-label, broken-pair, scanner-balanced-random, collapse, and leakage controls',
+      'Sample-/slide-/client-blocked inference contracts for representation claims'
     ]
   },
   {
