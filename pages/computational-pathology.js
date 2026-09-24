@@ -390,7 +390,7 @@ const Work = () => {
               </StatHelpText>
             </Stat>
             <Stat>
-              <StatLabel>PathologyFL detector transfer</StatLabel>
+              <StatLabel>Site-signal detector transfer</StatLabel>
               <StatNumber>+0.01053 QWK</StatNumber>
               <StatHelpText mb={0} color={muted}>
                 Global QWK gain at 45% ordinal shift without retuning; macro-F1 +0.01512 and
