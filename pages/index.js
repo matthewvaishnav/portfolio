@@ -127,6 +127,20 @@ const Home = () => {
               Research
             </Button>
             <Button
+              as={NextLink}
+              href="/systems-engineering"
+              scroll={false}
+              rightIcon={<ChevronRightIcon />}
+              colorScheme="teal"
+              variant="outline"
+              size="md"
+              px={4}
+              w={{ base: 'full', sm: 'auto' }}
+              flexShrink={0}
+            >
+              Engineering
+            </Button>
+            <Button
               as={Link}
               href="https://github.com/matthewvaishnav/computational-pathology-research"
               target="_blank"
@@ -181,8 +195,9 @@ const Home = () => {
             <ListItem>
               <Text fontWeight="bold">WSI-NCA / whole-slide tissue dynamics</Text>
               <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Local-state dynamics, topology and history falsifiers, recurrence controls, PANDA
-                comparison work, SICAP assignment stability, and related representation-coupling studies.
+                Local-state dynamics, topology and history falsifiers, recurrence controls, and
+                SICAP assignment stability. The frozen PANDA-300 Phase A did not support a
+                recurrence- or topology-dependent predictive advantage.
               </Text>
             </ListItem>
             <ListItem>
