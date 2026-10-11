@@ -6,12 +6,12 @@ import { WorkGridItem } from '../components/grid-item'
 
 const Works = () => (
   <Layout title="Works">
-    <Container>
+    <Container maxW="full" px={0}>
       <Heading as="h3" fontSize={20} mb={4}>
         Works
       </Heading>
 
-      <SimpleGrid columns={[1, 1, 2]} gap={6}>
+      <SimpleGrid templateColumns="repeat(auto-fit, minmax(min(100%, 260px), 1fr))" gap={6}>
         <Section>
           <WorkGridItem 
             id="computational-pathology"

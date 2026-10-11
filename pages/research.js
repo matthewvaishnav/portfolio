@@ -17,113 +17,113 @@ import Layout from '../components/layouts/article'
 
 const programs = [
   {
-    title: 'Paired Acquisition & Representation Identifiability',
-    type: 'Representation research',
+    title: 'PA-NF & Paired Acquisition',
+    type: 'Representations',
     date: '2026',
     description:
-      'PA-NF and the surrounding paired-acquisition program: pair structure, biological/acquisition branch separation, scanner and center subspaces, transfer under scanner and sample shift, bottleneck allocation, factor swapping, representation geometry, and strong linear controls.',
-    metric: 'SCORPION · canine SCC · paired interventions',
+      'Separating tissue and acquisition signals with paired scans, capacity controls, transfer tests, and factor-swapping studies.',
+    metric: 'SCORPION · canine SCC',
     image: '/portfolio/images/research/scorpion-cover.webp',
     href: 'https://matthewvaishnav.github.io/computational-pathology-research/'
   },
   {
     title: 'TransnnMIL & Whole-Slide MIL',
-    type: 'Whole-slide architecture research',
+    type: 'Whole-slide models',
     date: '2026',
     description:
-      'PANDA whole-slide research across mean pooling, gated AttentionMIL, nnMIL, CLAM, TransMIL-style controls, authored TransnnMIL variants, branch fusion, topology, hierarchical pooling, pruning, graph caching, and repaired matched reruns.',
-    metric: '10,611 verified PANDA feature bags',
+      'Controlled PANDA comparisons of mean pooling, AttentionMIL, nnMIL, CLAM, TransMIL, and repaired TransnnMIL variants.',
+    metric: '10,611 PANDA feature bags',
     image: '/portfolio/images/research/allocation-cover.webp',
     href: 'https://github.com/matthewvaishnav/computational-pathology-research'
   },
   {
-    title: 'WSI-NCA / Whole-Slide Tissue Dynamics',
-    type: 'Spatial dynamics research',
+    title: 'WSI-NCA & Tissue Dynamics',
+    type: 'Tissue dynamics',
     date: '2026',
     description:
-      'Local state-update dynamics over tissue structure with topology, recurrence, history, construction, leakage, and translation controls. Synthetic mechanism tests are paired with a frozen PANDA-300 Phase A that did not support recurrence- or topology-dependent predictive benefit.',
-    metric: 'Synthetic mechanism · PANDA negative · SICAP audit',
+      'Testing local tissue dynamics and spatial mechanisms. Frozen PANDA-300 Phase A did not support a recurrence- or topology-dependent benefit.',
+    metric: 'PANDA negative · SICAP audit',
     image: '/portfolio/images/research/allocation-cover.webp',
     href: 'https://github.com/matthewvaishnav/computational-pathology-research'
   },
   {
     title: 'PathologyFL',
-    type: 'Federated pathology systems',
+    type: 'Federated systems',
     date: '2026',
     description:
-      'A pathology-specific federated research stack spanning FedAvg/FedProx/FedAdam and robust aggregation, privacy and secure aggregation, gRPC/TLS communication, asynchronous training, compression, monitoring, checkpointing, reconnection, and fault tolerance.',
-    metric: 'Aggregation · privacy · async · fault tolerance',
+      'Federated pathology infrastructure for aggregation, privacy, secure communication, asynchronous training, and fault recovery.',
+    metric: 'Aggregation · privacy · recovery',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href: 'https://github.com/matthewvaishnav/computational-pathology-research'
   },
   {
-    title: 'Institutional Weighting & Site-Signal Alignment',
-    type: 'Generalization and aggregation research',
+    title: 'Site Weighting & Alignment',
+    type: 'Site generalization',
     date: '2026',
     description:
-      'FAIR-WEIGHTS-H, dominant-site corruption and ordinal-shift studies, detector transfer, CAMELYON17/WILDS held-out-center weighting, center-subspace projection, communication accounting, privacy-noise stress, and infrastructure-friction experiments.',
-    metric: 'PANDA · PCam · CAMELYON17/WILDS',
+      'FAIR-WEIGHTS-H, site-shift stress tests, fixed-detector transfer, held-out-center weighting, and center-subspace diagnostics.',
+    metric: 'PANDA · PCam · CAMELYON17',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href:
       'https://github.com/matthewvaishnav/computational-pathology-research/blob/main/docs/research/dominant-site-federated-pathology-paper.md'
   },
   {
-    title: 'PANDA / SICAP Acquisition & Provenance',
-    type: 'Scanner and provenance research',
+    title: 'PANDA / SICAP Provenance',
+    type: 'Scanner provenance',
     date: '2026',
     description:
-      'Physical-slide identity, scanner inventory, assignment reproducibility, public-dataset provenance, transport audits, and the PAR same-glass scanner intervention with frozen cross-fitted mechanism analysis.',
-    metric: '24,235 / 24,235 SICAP assignments reproduced',
+      'Slide identity, scanner inventory, reproducible assignments, public-dataset audits, and the PAR same-glass scanner intervention.',
+    metric: '24,235/24,235 assignments reproduced',
     image: '/portfolio/images/research/scorpion-cover.webp',
     href: 'https://github.com/matthewvaishnav/computational-pathology-research'
   },
   {
-    title: 'Benchmark & Audit Instruments',
-    type: 'Scientific measurement systems',
+    title: 'Benchmarks & Audits',
+    type: 'Measurement audits',
     date: '2026',
     description:
-      'The Oncology Identity Benchmark and runnable Identity Audit, measurement-validation protocols, the Paired Scanner Counterfactual Benchmark, and scanner-invariant residual-provenance work that tests what invariance fails to identify.',
-    metric: 'Identity · counterfactuals · collapse · provenance',
+      'Identity audits, measurement validation, paired-scanner counterfactuals, and tests of residual provenance after scanner invariance.',
+    metric: 'Identity · controls · provenance',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href: 'https://github.com/matthewvaishnav/computational-pathology-research'
   },
   {
     title: 'NucleoScope',
-    type: 'Quantitative nuclear pathology',
+    type: 'Nuclear measurement',
     date: '2026',
     description:
-      'Active collaboration spanning repeated-context measurement mechanics, falsified law candidates, ordinal nucleus-versus-tissue regularities, adversarial null construction, and the current H12/G6 estimand-preserving context-control qualification program.',
-    metric: 'Measurement mechanics · falsification · H12/G6',
+      'Active collaboration on context-sensitive nuclear measurements, falsified law candidates, tissue regularities, and H12/G6 controls.',
+    metric: 'Measurement · H12/G6 controls',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href: 'https://nucleoscope.ai/'
   },
   {
     title: 'SERA',
-    type: 'Independent machine-learning research',
+    type: 'Adaptive learning',
     date: '2026',
     description:
-      'Evidence-governed adaptive computation across formation stability (SFS), neural rematch and mechanism localization (NRM), causal-specificity transport, strong System-One controls, and the CRAS exact-rank / lifecycle comparator program.',
-    metric: 'SFS · NRM · CRAS · structural lifecycle',
+      'Evidence-governed adaptive computation: formation stability, mechanism localization, causal transport, and strong comparator controls.',
+    metric: 'SFS · NRM · CRAS',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href: null
   },
   {
-    title: 'Scientific Compiler & Evidence Systems',
+    title: 'Scientific Compiler & Evidence',
     type: 'Scientific computing',
     date: '2026',
     description:
-      'Pathology Pipeline Language, typed Evidence<T>, identity hierarchies, units, provenance, run legality, immutable evidence packages, release registries, claim boundaries, and fail-closed scientific validation.',
-    metric: '15/15 pipeline · 35/35 unit/adversarial tests',
+      'Pathology Pipeline Language checks identity, units, provenance, run legality, and claim boundaries in typed evidence packages.',
+    metric: '15/15 pipeline · 35/35 tests',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href: 'https://github.com/matthewvaishnav/computational-pathology-research'
   },
   {
     title: 'Accountable Neural Aggregation',
-    type: 'Program integration and reproducibility',
+    type: 'Research integration',
     date: '2026',
     description:
-      'The named program-level project connecting acquisition-aware representation work, whole-slide aggregation, institutional learning, provenance, and compile-time scientific auditability while keeping every component\'s evidence boundary separate.',
-    metric: 'Program architecture · evidence boundaries',
+      'Connecting representations, whole-slide models, institutional learning, and scientific audits with separate evidence boundaries.',
+    metric: 'Program design · evidence boundaries',
     image: '/portfolio/images/research/research-platform-cover.webp',
     href: 'https://github.com/matthewvaishnav/computational-pathology-research'
   }
@@ -401,6 +401,7 @@ const ProgramCard = ({ record }) => {
       display="flex"
       flexDirection="column"
       h="100%"
+      minW={0}
       p={3}
       border="1px solid"
       borderColor={border}
@@ -429,8 +430,8 @@ const ProgramCard = ({ record }) => {
         />
       </AspectRatio>
 
-      <Stack flex={1} px={2} pt={4} pb={2} spacing={3}>
-        <Stack direction="row" justify="space-between" align="center" spacing={3}>
+      <Stack flex={1} minW={0} px={2} pt={4} pb={2} spacing={3}>
+        <Box display="flex" flexWrap="wrap" justifyContent="space-between" alignItems="center" gap={2}>
           <Badge
             colorScheme="teal"
             variant="subtle"
@@ -439,15 +440,18 @@ const ProgramCard = ({ record }) => {
             py={1}
             textTransform="none"
             letterSpacing="normal"
+            maxW="full"
+            whiteSpace="normal"
+            overflowWrap="anywhere"
           >
             {record.type}
           </Badge>
-          <Text fontSize="xs" color={muted}>
+          <Text fontSize="xs" color={muted} flexShrink={0}>
             {record.date}
           </Text>
-        </Stack>
+        </Box>
 
-        <Heading as="h2" fontSize="xl" lineHeight="1.3" letterSpacing="-0.015em">
+        <Heading as="h2" fontSize="xl" lineHeight="1.3" letterSpacing="-0.015em" overflowWrap="break-word">
           {record.href ? (
             <LinkOverlay href={record.href} target="_blank" rel="noopener noreferrer">
               {record.title}
@@ -461,9 +465,9 @@ const ProgramCard = ({ record }) => {
           {record.description}
         </Text>
 
-        <Stack direction="row" justify="space-between" align="center" pt={1} mt="auto" fontSize="sm">
-          <Text color={muted}>{record.metric}</Text>
-          <Box display="inline-flex" alignItems="center" gap={1} color={accent} fontWeight={600}>
+        <Box display="flex" flexWrap="wrap" justifyContent="space-between" alignItems="center" gap={2} pt={1} mt="auto" fontSize="sm">
+          <Text color={muted} flex="1 1 160px" minW={0}>{record.metric}</Text>
+          <Box display="inline-flex" flexShrink={0} alignItems="center" gap={1} color={accent} fontWeight={600}>
             {record.href ? (
               <>
                 Open <ArrowForwardIcon />
@@ -472,7 +476,7 @@ const ProgramCard = ({ record }) => {
               'Private research'
             )}
           </Box>
-        </Stack>
+        </Box>
       </Stack>
     </LinkBox>
   )
@@ -496,7 +500,7 @@ const ResearchLink = ({ label, description, href }) => {
       borderColor={border}
       _hover={{ textDecoration: 'none' }}
     >
-      <Box>
+      <Box minW={0}>
         <Text fontWeight={700}>{label}</Text>
         <Text color={muted} fontSize="sm" mt={1} lineHeight="1.7">
           {description}
@@ -516,7 +520,7 @@ const Research = () => {
 
   return (
     <Layout title="Research">
-      <Container px={0}>
+      <Container maxW="full" px={0}>
         <Heading as="h3" fontSize={20} mb={4}>
           Research
         </Heading>
@@ -532,7 +536,7 @@ const Research = () => {
           requirement that the claimed mechanism and interpretation survive explicit controls.
         </Text>
 
-        <SimpleGrid columns={[1, 1, 2]} gap={6}>
+        <SimpleGrid templateColumns="repeat(auto-fit, minmax(min(100%, 260px), 1fr))" gap={6}>
           {programs.map(record => (
             <ProgramCard key={record.title} record={record} />
           ))}
@@ -558,7 +562,7 @@ const Research = () => {
                 <Heading as="h4" fontSize="md" mb={3}>
                   {group.title}
                 </Heading>
-                <SimpleGrid columns={{ base: 1, md: 2 }} spacingX={8} spacingY={2}>
+                <SimpleGrid templateColumns="repeat(auto-fit, minmax(min(100%, 260px), 1fr))" spacingX={8} spacingY={2}>
                   {group.items.map(item => (
                     <Text key={item} color={subtleText} fontSize="sm" lineHeight="1.7">
                       {item}
@@ -579,7 +583,7 @@ const Research = () => {
             prospective work, and withdrawn historical claims are separated rather than blended
             into one leaderboard.
           </Text>
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
+          <SimpleGrid templateColumns="repeat(auto-fit, minmax(min(100%, 260px), 1fr))" spacing={6}>
             {evidenceStates.map(group => (
               <Box
                 key={group.title}

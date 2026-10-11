@@ -34,7 +34,7 @@ const Home = () => {
 
   return (
     <Layout>
-      <Container px={0}>
+      <Container maxW="full" px={0}>
         <Box
           display={{ base: 'block', md: 'flex' }}
           alignItems="center"
@@ -271,54 +271,54 @@ const Home = () => {
             p={{ base: 5, md: 6 }}
             boxShadow={cardShadow}
           >
-            <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} gap={{ base: 6, md: 7 }}>
-              <Stat>
+            <SimpleGrid templateColumns="repeat(auto-fit, minmax(min(100%, 200px), 1fr))" gap={{ base: 6, md: 7 }}>
+              <Stat minW={0}>
                 <StatLabel color={subtleText}>PA-NF</StatLabel>
                 <StatNumber>-0.3108</StatNumber>
                 <StatHelpText color={mutedText} mb={0}>
-                  Scanner balanced-accuracy effect vs equal-capacity control, with retrieval preserved
+                  Scanner balanced-accuracy change vs equal-capacity control; retrieval preserved.
                 </StatHelpText>
               </Stat>
-              <Stat>
+              <Stat minW={0}>
                 <StatLabel color={subtleText}>PCam</StatLabel>
                 <StatNumber>0.9394 AUC</StatNumber>
                 <StatHelpText color={mutedText} mb={0}>
-                  Official 32,768-patch test split; numerically above all 10 external AUC values in the historical comparison table
+                  32,768 official test patches. Historical cross-paper protocols differ.
                 </StatHelpText>
               </Stat>
-              <Stat>
+              <Stat minW={0}>
                 <StatLabel color={subtleText}>Whole-slide MIL</StatLabel>
                 <StatNumber>Matched rerun</StatNumber>
                 <StatHelpText color={mutedText} mb={0}>
-                  AttentionMIL, TransMIL, nnMIL, CLAM, and repaired TransnnMIL under controlled comparison
+                  Controlled comparison of five whole-slide models.
                 </StatHelpText>
               </Stat>
-              <Stat>
+              <Stat minW={0}>
                 <StatLabel color={subtleText}>Site-signal alignment</StatLabel>
                 <StatNumber>+0.01053</StatNumber>
                 <StatHelpText color={mutedText} mb={0}>
-                  Global QWK delta at 45% conservative ordinal shift using a fixed label-noise-calibrated detector
+                  Global QWK gain at 45% ordinal shift; fixed detector.
                 </StatHelpText>
               </Stat>
-              <Stat>
+              <Stat minW={0}>
                 <StatLabel color={subtleText}>SERA</StatLabel>
                 <StatNumber>Validation</StatNumber>
                 <StatHelpText color={mutedText} mb={0}>
-                  Evidence-governed structural control plane under strong conventional comparators
+                  Structural learning tested against strong conventional controls.
                 </StatHelpText>
               </Stat>
-              <Stat>
+              <Stat minW={0}>
                 <StatLabel color={subtleText}>NucleoScope</StatLabel>
-                <StatNumber>Active collaboration</StatNumber>
+                <StatNumber>Active</StatNumber>
                 <StatHelpText color={mutedText} mb={0}>
-                  Repeated-detection measurement and tissue-organization falsification
+                  Collaboration on measurement stability and tissue organization.
                 </StatHelpText>
               </Stat>
-              <Stat>
+              <Stat minW={0}>
                 <StatLabel color={subtleText}>Scientific compiler</StatLabel>
-                <StatNumber>15 / 15 · 35 / 35</StatNumber>
+                <StatNumber>15/15 · 35/35</StatNumber>
                 <StatHelpText color={mutedText} mb={0}>
-                  Pipeline benchmarks and unit/adversarial scientific-legality tests
+                  Pipeline benchmarks · unit and adversarial tests.
                 </StatHelpText>
               </Stat>
             </SimpleGrid>

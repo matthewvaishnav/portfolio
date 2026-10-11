@@ -31,7 +31,7 @@ const Work = () => {
 
   return (
     <Layout title="Computational Pathology Research">
-      <Container px={0}>
+      <Container maxW="full" px={0}>
         <Title>
           Computational Pathology Research <Badge>2025–present</Badge>
         </Title>
@@ -366,8 +366,8 @@ const Work = () => {
           p={{ base: 5, md: 6 }}
           boxShadow={cardShadow}
         >
-          <SimpleGrid columns={{ base: 1, sm: 2 }} spacing={6}>
-            <Stat>
+          <SimpleGrid templateColumns="repeat(auto-fit, minmax(min(100%, 250px), 1fr))" spacing={6}>
+            <Stat minW={0}>
               <StatLabel>SCORPION capacity-matched effect</StatLabel>
               <StatNumber>-0.3108</StatNumber>
               <StatHelpText mb={0} color={muted}>
@@ -375,7 +375,7 @@ const Work = () => {
                 95% CI [-0.3346, -0.2858].
               </StatHelpText>
             </Stat>
-            <Stat>
+            <Stat minW={0}>
               <StatLabel>PAR scanner intervention</StatLabel>
               <StatNumber>+0.026644</StatNumber>
               <StatHelpText mb={0} color={muted}>
@@ -383,7 +383,7 @@ const Work = () => {
                 95% CI [0.017510, 0.035991].
               </StatHelpText>
             </Stat>
-            <Stat>
+            <Stat minW={0}>
               <StatLabel>TransnnMIL</StatLabel>
               <StatNumber>Matched rerun</StatNumber>
               <StatHelpText mb={0} color={muted}>
@@ -391,7 +391,7 @@ const Work = () => {
                 until matched reruns against AttentionMIL, TransMIL, nnMIL, and fusion controls.
               </StatHelpText>
             </Stat>
-            <Stat>
+            <Stat minW={0}>
               <StatLabel>Site-signal detector transfer</StatLabel>
               <StatNumber>+0.01053 QWK</StatNumber>
               <StatHelpText mb={0} color={muted}>
@@ -399,7 +399,7 @@ const Work = () => {
                 worst-site QWK +0.01290.
               </StatHelpText>
             </Stat>
-            <Stat>
+            <Stat minW={0}>
               <StatLabel>PCam full test</StatLabel>
               <StatNumber>0.9394 AUC</StatNumber>
               <StatHelpText mb={0} color={muted}>
@@ -408,21 +408,21 @@ const Work = () => {
                 cross-paper protocols.
               </StatHelpText>
             </Stat>
-            <Stat>
+            <Stat minW={0}>
               <StatLabel>CAMELYON held-out-center proxy</StatLabel>
               <StatNumber>0.8312 → 0.9132</StatNumber>
               <StatHelpText mb={0} color={muted}>
                 Sample-proportional to equal-client weighting on frozen ImageNet ResNet18 features.
               </StatHelpText>
             </Stat>
-            <Stat>
+            <Stat minW={0}>
               <StatLabel>Scientific compiler</StatLabel>
-              <StatNumber>15 / 15 · 35 / 35</StatNumber>
+              <StatNumber>15/15 · 35/35</StatNumber>
               <StatHelpText mb={0} color={muted}>
                 Pipeline benchmarks and unit/adversarial tests at the current v0.3.0 language frontier.
               </StatHelpText>
             </Stat>
-            <Stat>
+            <Stat minW={0}>
               <StatLabel>Retained negative evidence</StatLabel>
               <StatNumber>Not hidden</StatNumber>
               <StatHelpText mb={0} color={muted}>
