@@ -86,24 +86,50 @@ const Home = () => {
             About
           </Heading>
           <Paragraph>
-            Computational pathology can produce convincing results for the wrong reasons. My
-            research is about finding those reasons and making them experimentally testable.
+            I tend to get suspicious when a computational pathology model performs exceptionally well.
+            Particularly when nobody seems interested in finding out what it actually learned.
           </Paragraph>
           <Paragraph>
-            A model can carry scanner or site identity while appearing to learn biology. A nucleus
-            measurement can change when the surrounding computational context changes. A spatial
-            model can improve without depending on the spatial mechanism it claims to use. A
-            multi-institutional system can look robust because the evaluation preserves hidden
-            structure. I build experiments that separate those alternatives from the biological
-            interpretation.
+            For PA-NF, I worked with 480 matched tissue regions from 48 H&E slides, each scanned on
+            five different machines. Same tissue, five scanners, yet scanner identity was still
+            recoverable from the embeddings. I built a model to investigate whether tissue-related
+            information could be separated from acquisition effects. It reduced scanner recoverability
+            by 31.1 percentage points against a capacity-matched neural control while preserving
+            same-region retrieval. Then I tested it on an independent five-scanner dataset, where much
+            simpler linear methods turned out to be remarkably competitive. Slightly inconvenient, but
+            worth knowing.
           </Paragraph>
           <Paragraph>
-            I use paired acquisitions, fixed identities, controlled perturbations, mechanism
-            falsification, provenance tracking, retained negative results, and machine-checkable
-            evidence to ask what the system actually knows, where the information came from, and
-            what claim the experiment is entitled to make. The goal is not another leaderboard
-            entry. It is computational pathology whose conclusions survive the shortcuts being
-            removed.
+            With NucleoScope, working alongside Gengyun Li, I investigated why the same nucleus could
+            receive different measurements depending on which overlapping computational tile contained
+            it. The effect had an approximately 512-pixel structure, and a measurement-response model
+            explained roughly 92% of the observed discrepancies. Same nucleus. Different computational
+            surroundings. Apparently that matters.
+          </Paragraph>
+          <Paragraph>
+            My other projects investigate equally suspicious behaviour. TransnnMIL and WSI-NCA ask
+            whether spatial models actually depend on the spatial relationships they're supposed to
+            use. PathologyFL examines institutional imbalance, hidden site information and misleading
+            validation. And PATH is a scientific compiler I'm building to make it harder for an
+            experiment to claim something its evidence doesn't support.
+          </Paragraph>
+          <Paragraph>
+            I use paired acquisitions, controlled perturbations, fixed identities, strong baselines
+            and frozen protocols. I also keep the experiments that fail. Several of my own ideas have
+            failed their registered tests, which is unfortunate for the ideas but quite useful for the
+            research.
+          </Paragraph>
+          <Paragraph>
+            At this point, I'm essentially running internal affairs for neural networks.
+          </Paragraph>
+          <Paragraph>
+            They all have excellent performance reviews. Some have very questionable alibis.
+          </Paragraph>
+          <Paragraph>
+            I don't accuse models of cheating. I just remove their shortcuts and see what happens.
+          </Paragraph>
+          <Paragraph>
+            Usually, the scanner knows something.
           </Paragraph>
 
           <Flex
