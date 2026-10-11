@@ -108,10 +108,10 @@ const Home = () => {
           </Paragraph>
           <Paragraph>
             My other projects investigate equally suspicious behaviour. TransnnMIL and WSI-NCA ask
-            whether spatial models actually depend on the spatial relationships they're supposed to
+            whether spatial models actually depend on the spatial relationships they&apos;re supposed to
             use. PathologyFL examines institutional imbalance, hidden site information and misleading
-            validation. And PATH is a scientific compiler I'm building to make it harder for an
-            experiment to claim something its evidence doesn't support.
+            validation. And PATH is a scientific compiler I&apos;m building to make it harder for an
+            experiment to claim something its evidence doesn&apos;t support.
           </Paragraph>
           <Paragraph>
             I use paired acquisitions, controlled perturbations, fixed identities, strong baselines
@@ -120,13 +120,13 @@ const Home = () => {
             research.
           </Paragraph>
           <Paragraph>
-            At this point, I'm essentially running internal affairs for neural networks.
+            At this point, I&apos;m essentially running internal affairs for neural networks.
           </Paragraph>
           <Paragraph>
             They all have excellent performance reviews. Some have very questionable alibis.
           </Paragraph>
           <Paragraph>
-            I don't accuse models of cheating. I just remove their shortcuts and see what happens.
+            I don&apos;t accuse models of cheating. I just remove their shortcuts and see what happens.
           </Paragraph>
           <Paragraph>
             Usually, the scanner knows something.
