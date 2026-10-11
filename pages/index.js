@@ -153,20 +153,6 @@ const Home = () => {
               Research
             </Button>
             <Button
-              as={NextLink}
-              href="/systems-engineering"
-              scroll={false}
-              rightIcon={<ChevronRightIcon />}
-              colorScheme="teal"
-              variant="outline"
-              size="md"
-              px={4}
-              w={{ base: 'full', sm: 'auto' }}
-              flexShrink={0}
-            >
-              Engineering
-            </Button>
-            <Button
               as={Link}
               href="https://github.com/matthewvaishnav/computational-pathology-research"
               target="_blank"
