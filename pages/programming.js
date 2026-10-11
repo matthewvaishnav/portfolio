@@ -1,4 +1,3 @@
-import NextLink from 'next/link'
 import {
   Container,
   Box,
@@ -11,7 +10,6 @@ import {
   Text,
   useColorModeValue
 } from '@chakra-ui/react'
-import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
@@ -84,16 +82,6 @@ const Programming = () => (
           justify="center"
           my={4}
         >
-          <Button
-            as={NextLink}
-            href="/systems-engineering"
-            scroll={false}
-            rightIcon={<ChevronRightIcon />}
-            colorScheme="teal"
-            w={{ base: 'full', sm: 'auto' }}
-          >
-            View Projects
-          </Button>
           <Button
             as="a"
             href="mailto:matthewvaishnav@gmail.com"
