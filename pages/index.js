@@ -86,50 +86,26 @@ const Home = () => {
             About
           </Heading>
           <Paragraph>
-            I tend to get suspicious when a computational pathology model performs exceptionally well.
-            Particularly when nobody seems interested in finding out what it actually learned.
+            I get suspicious when a computational pathology model performs exceptionally well.
+            Did it learn the tissue, the scanner, or something the evaluation accidentally gave away?
           </Paragraph>
           <Paragraph>
-            For PA-NF, I worked with 480 matched tissue regions from 48 H&E slides, each scanned on
-            five different machines. Same tissue, five scanners, yet scanner identity was still
-            recoverable from the embeddings. I built a model to investigate whether tissue-related
-            information could be separated from acquisition effects. It reduced scanner recoverability
-            by 31.1 percentage points against a capacity-matched neural control while preserving
-            same-region retrieval. Then I tested it on an independent five-scanner dataset, where much
-            simpler linear methods turned out to be remarkably competitive. Slightly inconvenient, but
-            worth knowing.
+            In PA-NF, I used 480 matched tissue regions scanned on five machines to test that
+            distinction. Scanner recoverability fell 31.1 percentage points against a matched
+            neural control while same-region retrieval held up. On an independent dataset,
+            simpler linear corrections were surprisingly competitive. Slightly inconvenient,
+            but worth knowing.
           </Paragraph>
           <Paragraph>
-            With NucleoScope, working alongside Gengyun Li, I investigated why the same nucleus could
-            receive different measurements depending on which overlapping computational tile contained
-            it. The effect had an approximately 512-pixel structure, and a measurement-response model
-            explained roughly 92% of the observed discrepancies. Same nucleus. Different computational
-            surroundings. Apparently that matters.
+            TransnnMIL and WSI-NCA ask whether spatial mechanisms actually matter. PathologyFL
+            investigates site effects, and PATH checks whether an experiment has earned the
+            claim it makes. I use controlled interventions, strong baselines, and frozen tests.
+            When my own hypotheses fail, I keep the results.
           </Paragraph>
           <Paragraph>
-            My other projects investigate equally suspicious behaviour. TransnnMIL and WSI-NCA ask
-            whether spatial models actually depend on the spatial relationships they&apos;re supposed to
-            use. PathologyFL examines institutional imbalance, hidden site information and misleading
-            validation. And PATH is a scientific compiler I&apos;m building to make it harder for an
-            experiment to claim something its evidence doesn&apos;t support.
-          </Paragraph>
-          <Paragraph>
-            I use paired acquisitions, controlled perturbations, fixed identities, strong baselines
-            and frozen protocols. I also keep the experiments that fail. Several of my own ideas have
-            failed their registered tests, which is unfortunate for the ideas but quite useful for the
-            research.
-          </Paragraph>
-          <Paragraph>
-            At this point, I&apos;m essentially running internal affairs for neural networks.
-          </Paragraph>
-          <Paragraph>
-            They all have excellent performance reviews. Some have very questionable alibis.
-          </Paragraph>
-          <Paragraph>
-            I don&apos;t accuse models of cheating. I just remove their shortcuts and see what happens.
-          </Paragraph>
-          <Paragraph>
-            Usually, the scanner knows something.
+            I&apos;m basically internal affairs for neural networks. Excellent performance
+            reviews, questionable alibis. I don&apos;t accuse models of cheating; I remove
+            their shortcuts and see what happens. Usually, the scanner knows something.
           </Paragraph>
 
           <Flex
