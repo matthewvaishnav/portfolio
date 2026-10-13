@@ -90,11 +90,14 @@ const Home = () => {
             Did it learn the tissue, the scanner, or something the evaluation accidentally gave away?
           </Paragraph>
           <Paragraph>
-            In PA-NF, I used 480 matched tissue regions scanned on five machines to test that
-            distinction. Scanner recoverability fell 31.1 percentage points against a matched
-            neural control while same-region retrieval held up. On an independent dataset,
-            simpler linear corrections were surprisingly competitive. Slightly inconvenient,
-            but worth knowing.
+            PA-NF spans paired-scanner studies, cross-backbone evaluation, synthetic identifiability
+            tests, and capacity and pair-allocation experiments. Its evidence includes human
+            SCORPION and independent canine SCC evaluations; the wider pipeline also covers PCam,
+            PANDA, and CAMELYON17. The 480-region SCORPION study is one part of that record. There,
+            scanner balanced accuracy fell 31.1 percentage points against an equal-capacity neural
+            control while same-region retrieval met the registered noninferiority criterion. The
+            canine audit found no added neural feature-space advantage over the strongest simple
+            linear corrections.
           </Paragraph>
           <Paragraph>
             TransnnMIL and WSI-NCA ask whether spatial mechanisms actually matter. PathologyFL
