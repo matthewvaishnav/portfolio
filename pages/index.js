@@ -85,30 +85,26 @@ const Home = () => {
           <Heading as="h2" variant="section-title">
             About
           </Heading>
+
           <Paragraph>
-            I get suspicious when a computational pathology model performs exceptionally well.
-            Did it learn the tissue, the scanner, or something the evaluation accidentally gave away?
+            My research examines the reliability and scientific interpretation of machine learning
+            in computational pathology, particularly how variation in image acquisition influences
+            what models learn from histopathological tissue.
           </Paragraph>
           <Paragraph>
-            PA-NF spans paired-scanner studies, cross-backbone evaluation, synthetic identifiability
-            tests, and capacity and pair-allocation experiments. Its evidence includes human
-            SCORPION and independent canine SCC evaluations; the wider pipeline also covers PCam,
-            PANDA, and CAMELYON17. The 480-region SCORPION study is one part of that record. There,
-            scanner balanced accuracy fell 31.1 percentage points against an equal-capacity neural
-            control while same-region retrieval met the registered noninferiority criterion. The
-            canine audit found no added neural feature-space advantage over the strongest simple
-            linear corrections.
+            I developed Paired-Acquisition Neural Factorization (PA-NF) as a custom, end-to-end
+            computational pathology research pipeline. The framework is built around the distinction
+            between biological information and acquisition-dependent variation, using matched
+            observations of the same tissue to investigate how these factors are represented. This
+            principle extends beyond the initial factorization model, informing the design of the
+            pipeline's custom neural architectures and its approach to whole-slide analysis and
+            institutional learning.
           </Paragraph>
           <Paragraph>
-            TransnnMIL and WSI-NCA ask whether spatial mechanisms actually matter. PathologyFL
-            investigates site effects, and PATH checks whether an experiment has earned the
-            claim it makes. I use controlled interventions, strong baselines, and frozen tests.
-            When my own hypotheses fail, I keep the results.
-          </Paragraph>
-          <Paragraph>
-            I&apos;m basically internal affairs for neural networks. Excellent performance
-            reviews, questionable alibis. I don&apos;t accuse models of cheating; I remove
-            their shortcuts and see what happens. Usually, the scanner knows something.
+            The research has been evaluated through controlled experiments involving human
+            histopathology and independent canine datasets. My approach places particular importance
+            on rigorous comparisons, reproducible evidence, and determining whether observed
+            improvements reflect meaningful advances or effects that simpler methods can explain.
           </Paragraph>
 
           <Flex
