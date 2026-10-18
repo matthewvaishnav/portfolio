@@ -9,26 +9,17 @@ import {
   ListItem,
   Text,
   Flex,
-  SimpleGrid,
-  Stat,
-  StatLabel,
-  StatNumber,
-  StatHelpText,
   useColorModeValue
 } from '@chakra-ui/react'
 import { ChevronRightIcon, ExternalLinkIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
-import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 
 const Home = () => {
   const mutedText = useColorModeValue('gray.600', 'gray.400')
-  const subtleText = useColorModeValue('gray.700', 'gray.300')
-  const cardBg = useColorModeValue('white', 'whiteAlpha.50')
   const cardBorder = useColorModeValue('blackAlpha.200', 'whiteAlpha.200')
-  const cardShadow = useColorModeValue('0 12px 32px rgba(15, 23, 42, 0.07)', 'none')
   const photoBorder = useColorModeValue('gray.200', 'whiteAlpha.800')
   const footerBorder = useColorModeValue('blackAlpha.200', 'whiteAlpha.200')
 
@@ -48,12 +39,11 @@ const Home = () => {
               Matthew Vaishnav
             </Heading>
             <Text fontSize={{ base: 'lg', md: 'xl' }} fontWeight="medium" mb={2}>
-              Computational Pathology / ML Research Engineer
+              Computational Pathology Researcher & Research Engineer
             </Text>
             <Text fontSize="sm" color={mutedText} lineHeight="1.75" maxW="620px">
-              Research on what computational pathology systems actually measure, where their signal
-              comes from, and whether their conclusions survive controlled nuisance shifts and
-              mechanism falsification.
+              I study how image acquisition changes what pathology models learn about tissue,
+              using matched scans of the same specimen to investigate that distinction.
             </Text>
           </Box>
           <Box flexShrink={0} mt={{ base: 5, md: 0 }} textAlign="center">
@@ -87,24 +77,24 @@ const Home = () => {
           </Heading>
 
           <Paragraph>
-            My research examines the reliability and scientific interpretation of machine learning
-            in computational pathology, particularly how variation in image acquisition influences
-            what models learn from histopathological tissue.
+            The tissue does not change when a slide is scanned on a different machine,
+            yet a model&apos;s representation of it often does. My research investigates
+            what can be attributed to the specimen and what arises from image acquisition.
+            Matched observations make that distinction possible to examine experimentally.
           </Paragraph>
           <Paragraph>
-            I developed Paired-Acquisition Neural Factorization (PA-NF) as a custom, end-to-end
-            computational pathology research pipeline. The framework is built around the distinction
-            between biological information and acquisition-dependent variation, using matched
-            observations of the same tissue to investigate how these factors are represented. This
-            principle extends beyond the initial factorization model, informing the design of the
-            pipeline's custom neural architectures and its approach to whole-slide analysis and
-            institutional learning.
+            I developed Paired-Acquisition Neural Factorization (PA-NF) as a custom
+            computational pathology research framework for this problem. Rather than
+            treating scanner effects as a correction added at the end of an existing workflow,
+            I built the pipeline around observations of the same physical tissue.
+            Its neural models are studied through controlled acquisition changes to determine
+            what they actually learn about the specimen.
           </Paragraph>
           <Paragraph>
-            The research has been evaluated through controlled experiments involving human
-            histopathology and independent canine datasets. My approach places particular importance
-            on rigorous comparisons, reproducible evidence, and determining whether observed
-            improvements reflect meaningful advances or effects that simpler methods can explain.
+            The work draws on paired human histopathology images and an independent
+            multi-scanner canine dataset. My broader aim is to understand when
+            acquisition-aware learning can preserve meaningful tissue information,
+            and what the experimental evidence is sufficient to establish.
           </Paragraph>
 
           <Flex
@@ -162,154 +152,21 @@ const Home = () => {
 
         <Section delay={0.25}>
           <Heading as="h2" variant="section-title">
-            Current Research
+            Research
           </Heading>
-          <List mt={4} spacing={5}>
-            <ListItem>
-              <Text fontWeight="bold">Paired acquisition & representation identifiability</Text>
-              <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                PA-NF, SCORPION, canine SCC, scanner and center subspaces, representation geometry,
-                capacity allocation, pair-repeat studies, and crossed-preparation identifiability.
-              </Text>
-            </ListItem>
-            <ListItem>
-              <Text fontWeight="bold">Whole-slide learning</Text>
-              <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Mean pooling, AttentionMIL, nnMIL, CLAM, TransMIL-style controls, TransnnMIL,
-                branch-fusion studies, and repeated-seed PANDA evaluation.
-              </Text>
-            </ListItem>
-            <ListItem>
-              <Text fontWeight="bold">WSI-NCA / whole-slide tissue dynamics</Text>
-              <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Local-state dynamics, topology and history falsifiers, recurrence controls, and
-                SICAP assignment stability. The frozen PANDA-300 Phase A did not support a
-                recurrence- or topology-dependent predictive advantage.
-              </Text>
-            </ListItem>
-            <ListItem>
-              <Text fontWeight="bold">PathologyFL</Text>
-              <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Federated pathology infrastructure across aggregation, privacy, secure communication,
-                asynchronous training, compression, monitoring, and fault tolerance.
-              </Text>
-            </ListItem>
-            <ListItem>
-              <Text fontWeight="bold">Institutional weighting & site-signal alignment</Text>
-              <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                FAIR-WEIGHTS-H, dominant-site stress, fixed detector transfer, CAMELYON17 held-out
-                centers, center-subspace diagnostics, and infrastructure/communication studies.
-              </Text>
-            </ListItem>
-            <ListItem>
-              <Text fontWeight="bold">NucleoScope</Text>
-              <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Repeated-context measurement mechanics, falsified law candidates, ordinal
-                nucleus-versus-tissue regularities, artifact adversaries, and H12/G6 context-control qualification.
-              </Text>
-            </ListItem>
-            <ListItem>
-              <Text fontWeight="bold">SERA</Text>
-              <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Evidence-governed structural learning across SFS formation stability, NRM mechanism
-                localization and causal-specificity, strong System-One controls, and CRAS lifecycle qualification.
-              </Text>
-            </ListItem>
-            <ListItem>
-              <Text fontWeight="bold">Scanner provenance & intervention</Text>
-              <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                PANDA/SICAP provenance, scanner inventory, assignment stability, public-dataset
-                discovery, and the PAR same-glass scanner intervention.
-              </Text>
-            </ListItem>
-            <ListItem>
-              <Text fontWeight="bold">Benchmark & audit instruments</Text>
-              <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Oncology Identity Audit, paired-scanner counterfactual benchmarking, measurement
-                validation protocols, and scanner-invariant residual-provenance feasibility work.
-              </Text>
-            </ListItem>
-            <ListItem>
-              <Text fontWeight="bold">Scientific compiler & evidence systems</Text>
-              <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Pathology Pipeline Language, typed Evidence&lt;T&gt;, identity and unit checks,
-                immutable evidence packages, release registries, and fail-closed claim validation.
-              </Text>
-            </ListItem>
-            <ListItem>
-              <Text fontWeight="bold">Program-level reproducibility & audit</Text>
-              <Text fontSize="sm" color={mutedText} mt={1} lineHeight="1.7">
-                Claim ledgers, hostile review, public release provenance, retained negative results,
-                exact artifact recovery, and evidence boundaries across the research program.
-              </Text>
-            </ListItem>
-          </List>
-        </Section>
-
-        <Section delay={0.28}>
-          <Heading as="h2" variant="section-title">
-            Research at a Glance
-          </Heading>
-          <Box
-            bg={cardBg}
-            borderWidth="1px"
-            borderColor={cardBorder}
-            borderRadius="xl"
-            p={{ base: 5, md: 6 }}
-            boxShadow={cardShadow}
-          >
-            <SimpleGrid templateColumns="repeat(auto-fit, minmax(min(100%, 200px), 1fr))" gap={{ base: 6, md: 7 }}>
-              <Stat minW={0}>
-                <StatLabel color={subtleText}>PA-NF</StatLabel>
-                <StatNumber>-0.3108</StatNumber>
-                <StatHelpText color={mutedText} mb={0}>
-                  Scanner balanced-accuracy change vs equal-capacity control; retrieval preserved.
-                </StatHelpText>
-              </Stat>
-              <Stat minW={0}>
-                <StatLabel color={subtleText}>PCam</StatLabel>
-                <StatNumber>0.9394 AUC</StatNumber>
-                <StatHelpText color={mutedText} mb={0}>
-                  32,768 official test patches. Historical cross-paper protocols differ.
-                </StatHelpText>
-              </Stat>
-              <Stat minW={0}>
-                <StatLabel color={subtleText}>Whole-slide MIL</StatLabel>
-                <StatNumber>Matched rerun</StatNumber>
-                <StatHelpText color={mutedText} mb={0}>
-                  Controlled comparison of five whole-slide models.
-                </StatHelpText>
-              </Stat>
-              <Stat minW={0}>
-                <StatLabel color={subtleText}>Site-signal alignment</StatLabel>
-                <StatNumber>+0.01053</StatNumber>
-                <StatHelpText color={mutedText} mb={0}>
-                  Global QWK gain at 45% ordinal shift; fixed detector.
-                </StatHelpText>
-              </Stat>
-              <Stat minW={0}>
-                <StatLabel color={subtleText}>SERA</StatLabel>
-                <StatNumber>Validation</StatNumber>
-                <StatHelpText color={mutedText} mb={0}>
-                  Structural learning tested against strong conventional controls.
-                </StatHelpText>
-              </Stat>
-              <Stat minW={0}>
-                <StatLabel color={subtleText}>NucleoScope</StatLabel>
-                <StatNumber>Active</StatNumber>
-                <StatHelpText color={mutedText} mb={0}>
-                  Collaboration on measurement stability and tissue organization.
-                </StatHelpText>
-              </Stat>
-              <Stat minW={0}>
-                <StatLabel color={subtleText}>Scientific compiler</StatLabel>
-                <StatNumber>15/15 · 35/35</StatNumber>
-                <StatHelpText color={mutedText} mb={0}>
-                  Pipeline benchmarks · unit and adversarial tests.
-                </StatHelpText>
-              </Stat>
-            </SimpleGrid>
-          </Box>
+          <Paragraph>
+            PA-NF is the central project in my computational pathology research.
+            It studies the relationship between tissue information and scanner-dependent
+            variation using physical correspondence between acquisitions. Human and canine
+            multi-scanner datasets provide independent settings in which to examine
+            that question.
+          </Paragraph>
+          <Paragraph>
+            I have also studied the reliability of quantitative tissue measurements
+            when their computational context changes. This work has informed my interest
+            in how measurement procedures shape the biological conclusions drawn from
+            digital pathology.
+          </Paragraph>
         </Section>
 
         <Section delay={0.29}>
@@ -317,47 +174,22 @@ const Home = () => {
             Approach
           </Heading>
           <Paragraph>
-            The method depends on the question. I use matched interventions, architecture controls,
-            external-center tests, synthetic mechanism studies, adversarial falsifiers, frozen
-            protocols, provenance audits, and retained negative results. What matters is that the
-            evidence can be inspected and the claim stays within what the experiment establishes.
+            I treat the experimental design as part of the method. When studying scanner
+            effects, the central comparison is the same tissue observed under different
+            acquisitions. A model&apos;s improvement is meaningful only to the extent
+            that the evidence distinguishes it from simpler explanations.
           </Paragraph>
         </Section>
 
         <Section delay={0.3}>
           <Heading as="h2" variant="section-title">
-            Bio
-          </Heading>
-          <BioSection>
-            <BioYear>2006</BioYear>Born in Ontario, Canada.
-          </BioSection>
-          <BioSection>
-            <BioYear>2025 to present</BioYear>Independent computational pathology and machine-learning
-            research across representation learning, whole-slide models, federated learning,
-            quantitative measurement, adaptive systems, and scientific infrastructure.
-          </BioSection>
-          <BioSection>
-            <BioYear>2025</BioYear>Built an 18-node home lab with Security Onion and pfSense for
-            systems and security research.
-          </BioSection>
-          <BioSection>
-            <BioYear>2026</BioYear>Released the PA-NF public research record and began an active
-            technical collaboration with NucleoScope.ai.
-          </BioSection>
-          <BioSection>
-            <BioYear>Fall 2026</BioYear>Computer Programming at Conestoga College in Waterloo,
-            Ontario.
-          </BioSection>
-        </Section>
-
-        <Section delay={0.3}>
-          <Heading as="h2" variant="section-title">
-            I ♥
+            Background
           </Heading>
           <Paragraph>
-            Representation geometry, multiple-instance learning, spatial dynamics, federated
-            systems, adaptive computation, measurement theory, scientific programming languages,
-            experimental design, and reproducibility.
+            I conduct independent computational pathology research from Kitchener–Waterloo,
+            Ontario, while studying Computer Programming at Conestoga College. My earlier
+            work in systems engineering continues to inform how I develop and maintain
+            research software.
           </Paragraph>
         </Section>
 
