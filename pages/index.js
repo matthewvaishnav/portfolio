@@ -21,7 +21,6 @@ const Home = () => {
   const mutedText = useColorModeValue('gray.600', 'gray.400')
   const cardBorder = useColorModeValue('blackAlpha.200', 'whiteAlpha.200')
   const photoBorder = useColorModeValue('gray.200', 'whiteAlpha.800')
-  const footerBorder = useColorModeValue('blackAlpha.200', 'whiteAlpha.200')
 
   return (
     <Layout>
@@ -42,8 +41,8 @@ const Home = () => {
               Computational Pathology Researcher & Research Engineer
             </Text>
             <Text fontSize="sm" color={mutedText} lineHeight="1.75" maxW="620px">
-              I study how image acquisition changes what pathology models learn about tissue,
-              using matched scans of the same specimen to investigate that distinction.
+              I investigate how the conditions of image acquisition affect what
+              computational pathology models can infer from histological tissue.
             </Text>
           </Box>
           <Box flexShrink={0} mt={{ base: 5, md: 0 }} textAlign="center">
@@ -77,24 +76,23 @@ const Home = () => {
           </Heading>
 
           <Paragraph>
-            The tissue does not change when a slide is scanned on a different machine,
-            yet a model&apos;s representation of it often does. My research investigates
-            what can be attributed to the specimen and what arises from image acquisition.
-            Matched observations make that distinction possible to examine experimentally.
+            My research begins with a measurement problem. The specimen remains the same
+            when a histological slide is scanned on different instruments, but its digital
+            representation can change. I use matched observations of the same physical tissue
+            to examine which differences arise from acquisition rather than the specimen.
           </Paragraph>
           <Paragraph>
-            I developed Paired-Acquisition Neural Factorization (PA-NF) as a custom
-            computational pathology research framework for this problem. Rather than
-            treating scanner effects as a correction added at the end of an existing workflow,
-            I built the pipeline around observations of the same physical tissue.
-            Its neural models are studied through controlled acquisition changes to determine
-            what they actually learn about the specimen.
+            I developed Paired-Acquisition Neural Factorization (PA-NF) as a complete
+            experimental framework for this question. Its neural model and evaluation were
+            designed around the correspondence between scans, so a proposed separation
+            of tissue and acquisition information can be tested through controlled changes
+            in acquisition. Lower scanner predictability alone does not establish biological
+            preservation.
           </Paragraph>
           <Paragraph>
-            The work draws on paired human histopathology images and an independent
-            multi-scanner canine dataset. My broader aim is to understand when
-            acquisition-aware learning can preserve meaningful tissue information,
-            and what the experimental evidence is sufficient to establish.
+            Related work examines how quantitative nuclear measurements vary with the
+            computational conditions under which they are obtained. Across both lines of
+            research, the concern is what an observation permits us to conclude about tissue.
           </Paragraph>
 
           <Flex
@@ -155,29 +153,16 @@ const Home = () => {
             Research
           </Heading>
           <Paragraph>
-            PA-NF is the central project in my computational pathology research.
-            It studies the relationship between tissue information and scanner-dependent
-            variation using physical correspondence between acquisitions. Human and canine
-            multi-scanner datasets provide independent settings in which to examine
-            that question.
+            The public PA-NF studies use matched human H&amp;E acquisitions and an
+            independent multi-scanner canine dataset. The experimental question is
+            whether the model can account for observed acquisition changes without
+            relying on properties that a simpler scanner calibration already explains.
           </Paragraph>
           <Paragraph>
-            I have also studied the reliability of quantitative tissue measurements
-            when their computational context changes. This work has informed my interest
-            in how measurement procedures shape the biological conclusions drawn from
-            digital pathology.
-          </Paragraph>
-        </Section>
-
-        <Section delay={0.29}>
-          <Heading as="h2" variant="section-title">
-            Approach
-          </Heading>
-          <Paragraph>
-            I treat the experimental design as part of the method. When studying scanner
-            effects, the central comparison is the same tissue observed under different
-            acquisitions. A model&apos;s improvement is meaningful only to the extent
-            that the evidence distinguishes it from simpler explanations.
+            My work on computational measurement addresses a related issue: variation
+            in a reported tissue feature may come from the measurement procedure itself.
+            The research therefore examines the reliability of the measurement before
+            assigning biological significance to it.
           </Paragraph>
         </Section>
 
@@ -219,20 +204,6 @@ const Home = () => {
           </List>
         </Section>
 
-        <Box mt={6} pt={6} borderTop="1px solid" borderColor={footerBorder} textAlign="center">
-          <Text fontSize="sm" color={mutedText}>
-            Inspired by{' '}
-            <Link
-              href="https://www.craftz.dog/"
-              target="_blank"
-              rel="noopener noreferrer"
-              color="teal.500"
-              _hover={{ textDecoration: 'underline' }}
-            >
-              Takuya Matsuyama&apos;s homepage
-            </Link>
-          </Text>
-        </Box>
       </Container>
     </Layout>
   )
