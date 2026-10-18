@@ -38,39 +38,46 @@ const Research = () => {
           Research
         </Heading>
         <Paragraph>
-          My work in computational pathology begins with the distinction between
-          the tissue being observed and the imaging system used to observe it.
-          A slide may be scanned on several devices without changing the specimen,
-          yet the resulting digital representations can differ. Understanding those
-          differences is essential before treating a model&apos;s learned features
-          as measurements of tissue biology.
+          Digital histopathology depends on a sequence of observations and
+          computational decisions. A change in the resulting representation
+          need not correspond to a change in the tissue. My research examines
+          that distinction, particularly where repeated observations of the
+          same specimen make it possible to test.
         </Paragraph>
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            Paired-Acquisition Neural Factorization
+            Paired acquisition as an experiment
           </Heading>
           <Paragraph>
-            I developed Paired-Acquisition Neural Factorization (PA-NF) as a custom
-            research framework organized around repeated observations of the same
-            physical tissue. Its experimental design makes acquisition a variable
-            that can be investigated directly, rather than an unexplained difference
-            between unrelated datasets.
+            When a physical tissue region is scanned repeatedly, specimen
+            identity remains fixed while the acquisition conditions change.
+            This correspondence provides an unusually direct way to investigate
+            the effect of imaging on a learned representation. It also gives
+            a model a stricter test: a proposed acquisition transformation can
+            be compared with the change actually observed for that tissue.
           </Paragraph>
           <Paragraph>
-            PA-NF combines a purpose-built neural model with an experimental pipeline
-            that tests how tissue information behaves when acquisition changes.
-            The central question is whether useful biological structure can be
-            retained while acquisition-related variation is represented separately.
-            That question is investigated through controlled comparisons, not assumed
-            from a reduction in scanner predictability.
+            I developed Paired-Acquisition Neural Factorization (PA-NF) as a
+            complete experimental framework organized around this setting.
+            The framework and its neural factorization model were designed
+            together for paired observations. A tissue-oriented representation
+            and an acquisition representation are learned separately, but the
+            scientific question is whether those components remain meaningful
+            when acquisition is changed rather than merely when scanner
+            identity is predicted.
           </Paragraph>
           <Paragraph>
-            The public work includes matched acquisitions from 48 human H&amp;E slides
-            and an independent five-scanner canine study. Together they provide
-            distinct experimental settings for evaluating what the representation
-            captures and how far its interpretation can reasonably extend.
+            The public studies include matched observations from 48 human
+            H&amp;E slides acquired on five scanners and an independent
+            multi-scanner canine dataset. Their purpose is to test the
+            proposed separation against observed scanner changes and simpler
+            explanations. Suppressing scanner information alone does not
+            establish that biological information has been preserved, and
+            the performance of conventional scanner corrections limits what
+            can be claimed for a more complicated model.
           </Paragraph>
+
           <Box mt={5}>
             <ResearchLink href="https://matthewvaishnav.github.io/computational-pathology-research/">
               Read the PA-NF manuscript
@@ -78,7 +85,7 @@ const Research = () => {
           </Box>
           <Box mt={3}>
             <ResearchLink href="https://github.com/matthewvaishnav/computational-pathology-research">
-              Explore the public research repository
+              Examine the public research record
             </ResearchLink>
           </Box>
         </Box>
@@ -88,10 +95,13 @@ const Research = () => {
             Measurement in digital pathology
           </Heading>
           <Paragraph>
-            Alongside PA-NF, I have investigated how the computational conditions
-            used to analyze tissue images can influence quantitative nuclear
-            measurements. The work with NucleoScope considers the reliability of
-            a measurement before interpreting its relationship to tissue morphology.
+            A related line of research concerns the reliability of
+            quantitative measurements obtained from tissue images. In work
+            with NucleoScope, I examine how changes in computational context
+            can alter reported nuclear measurements, even when the underlying
+            tissue observation is held fixed. Such effects matter because a
+            numerical difference cannot be interpreted as biological until
+            its dependence on the measurement procedure is understood.
           </Paragraph>
           <Box mt={5}>
             <ResearchLink href="https://github.com/matthewvaishnav/nucleoscope">
@@ -102,19 +112,19 @@ const Research = () => {
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            Research methodology
+            Evidence and interpretation
           </Heading>
           <Paragraph>
-            I develop experimental software as part of the research itself.
-            In paired-acquisition studies, the identity of the specimen determines
-            which comparisons are meaningful. A credible method must account for
-            that structure when it is trained and when its behavior is evaluated.
-            This is why the public repositories document the experiments alongside
-            their resulting evidence.
+            The research record retains comparisons that challenge the
+            proposed method, including cases in which simpler models are
+            competitive. I regard those outcomes as necessary constraints on
+            interpretation. The current results concern the stated specimens,
+            acquisition systems and evaluation protocols; they do not
+            constitute clinical validation.
           </Paragraph>
           <Text color={muted} fontSize="sm" mt={5} lineHeight="1.8">
-            The published work is research-stage. Its results should be interpreted
-            within the datasets and experimental designs in which they were obtained.
+            Methods, manuscripts and reproducible evidence are available
+            through the public links above.
           </Text>
         </Box>
       </Container>
