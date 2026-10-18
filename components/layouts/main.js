@@ -12,7 +12,7 @@ const LazyVoxelDog = dynamic(() => import('../voxel-dog'), {
 })
 
 const SITE_DESCRIPTION =
-  "Matthew Vaishnav studies what computational pathology models and measurements actually encode, where apparent signal comes from, and which conclusions survive controlled nuisance shifts, mechanism falsification, and reproducibility audit."
+  "Matthew Vaishnav is an independent computational pathology researcher developing methods to study how image acquisition influences learned representations of histopathological tissue."
 
 const Main = ({ children, router }) => {
   const isResearchRoute = router.asPath.startsWith('/research')
