@@ -23,7 +23,7 @@ const SpeechBubble = () => {
       textAlign="center"
     >
       <Text fontSize={{ base: 'sm', md: 'md' }} lineHeight="1.6">
-        Hello, I&apos;m an applied ML and computational pathology research engineer based in Kitchener.
+        I&apos;m an independent computational pathology researcher based in Kitchener–Waterloo.
       </Text>
     </Box>
   )
