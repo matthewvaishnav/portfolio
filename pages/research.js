@@ -38,20 +38,22 @@ const Research = () => {
           Research
         </Heading>
         <Paragraph>
-          I develop computational pathology methods spanning image
-          acquisition, patch classification, whole-slide analysis and
-          learning across institutions. Each part of the pipeline has
-          its own experimental design and evaluation.
+          Paired-Acquisition Neural Factorization (PA-NF) is my
+          end-to-end computational pathology research pipeline.
+          It incorporates paired-scanner representation learning,
+          patch classification, whole-slide analysis and learning
+          across institutions. The component experiments are
+          assessed separately within this single research programme.
         </Paragraph>
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            PA-NF: SCORPION and independent paired-scanner studies
+            PA-NF acquisition stage: SCORPION and canine SCC
           </Heading>
           <Paragraph>
-            Paired-Acquisition Neural Factorization (PA-NF) is my custom
-            neural model for separating tissue-oriented information
-            from effects introduced during scanning. It learns
+            The paired-acquisition model is the foundation of PA-NF.
+            It separates tissue-oriented information from effects
+            introduced during scanning. It learns
             representations for each and reconstructs image features
             using both. Paired scans of the same physical tissue make
             it possible to test changes attributed to acquisition.
@@ -101,12 +103,12 @@ const Research = () => {
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            PCam: patch classification
+            PA-NF pipeline: PCam patch classification
           </Heading>
           <Paragraph>
-            I trained a ResNet18-based model with a transformer
-            encoder on PatchCamelyon (PCam) to classify tissue
-            patches. It achieved an ROC AUC of 0.9394 and
+            For the patch-classification stage of the PA-NF
+            programme, I trained a ResNet18-based model with a
+            transformer encoder on PatchCamelyon (PCam). It achieved an ROC AUC of 0.9394 and
             85.26% accuracy on the official test split. This
             is a patch-level result, distinct from whole-slide
             or clinical validation.
@@ -120,12 +122,13 @@ const Research = () => {
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            PANDA: whole-slide modeling and TransnnMIL
+            PA-NF pipeline: PANDA and TransnnMIL whole-slide modeling
           </Heading>
           <Paragraph>
-            I developed TransnnMIL, a model that combines
-            transformer-based and gated-attention approaches to
-            analyzing whole slides. My PANDA experiments use
+            TransnnMIL is the custom whole-slide component
+            of PA-NF. It combines transformer-based and
+            gated-attention approaches to analyzing whole slides.
+            The PANDA experiments use
             10,611 readable prostate pathology slides and
             compare different ways of combining patch features.
             The repaired TransnnMIL architecture is implemented,
@@ -142,10 +145,11 @@ const Research = () => {
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            PathologyFL, FAIR-WEIGHTS-H and CAMELYON17
+            PA-NF pipeline: PathologyFL, FAIR-WEIGHTS-H and CAMELYON17
           </Heading>
           <Paragraph>
-            PathologyFL is my research framework for training
+            PathologyFL is the institutional-learning component
+            of the PA-NF pipeline, designed for training
             models across institutions while keeping data at
             their respective sites. Within it, FAIR-WEIGHTS-H
             investigates how institutions should contribute
