@@ -41,8 +41,8 @@ const Home = () => {
               Computational Pathology Researcher & Research Engineer
             </Text>
             <Text fontSize="sm" color={mutedText} lineHeight="1.75" maxW="620px">
-              I develop PA-NF, an end-to-end pathology pipeline spanning
-              image acquisition, whole-slide analysis and institutional learning.
+              I develop and study PA-NF, an end-to-end computational
+              pathology pipeline spanning imaging, whole slides and institutions.
             </Text>
           </Box>
           <Box flexShrink={0} mt={{ base: 5, md: 0 }} textAlign="center">
@@ -76,24 +76,26 @@ const Home = () => {
           </Heading>
 
           <Paragraph>
-            My research centres on Paired-Acquisition Neural Factorization
-            (PA-NF), an end-to-end computational pathology pipeline I developed.
-            It studies how tissue information is represented, from the
-            conditions of imaging to whole-slide analysis and learning
-            across institutions.
+            I developed Paired-Acquisition Neural Factorization (PA-NF)
+            as an end-to-end computational pathology research pipeline.
+            Its starting point is a measurement problem: the same tissue
+            can produce different digital images when scanned using
+            different instruments, and those differences can influence
+            models further along the analysis process.
           </Paragraph>
           <Paragraph>
-            The foundation of PA-NF is a custom neural model that separates
-            tissue-oriented and scanner-related information. It reconstructs
-            image features using both representations, while matched scans
-            of the same tissue allow their behaviour to be tested.
+            The pipeline begins with a neural model designed to distinguish
+            tissue-oriented information from scanner-related variation.
+            It extends to whole-slide analysis through TransnnMIL and
+            to institutional learning through PathologyFL and
+            FAIR-WEIGHTS-H. These are components of the same research
+            programme, developed and tested using distinct experiments.
           </Paragraph>
           <Paragraph>
-            The same PA-NF pipeline includes TransnnMIL for whole-slide
-            modeling, PathologyFL for institutional learning and
-            FAIR-WEIGHTS-H for evaluating institutional contributions.
-            I develop the experiments and software used to study
-            these systems together within the wider research programme.
+            I build the models, training software and reproducibility
+            systems used throughout PA-NF. My work examines not just
+            whether the models perform well, but what their results
+            actually establish about the tissue and its observation.
           </Paragraph>
 
           <Flex
@@ -154,22 +156,22 @@ const Home = () => {
             Research
           </Heading>
           <Paragraph>
-            PA-NF acquisition experiments include SCORPION, with
-            48 human H&amp;E slides scanned on five instruments,
-            and an independent canine SCC study. In 175 registered
-            SCORPION model fits, scanner identity became 31.1
-            percentage points less recoverable than in an equal-capacity
-            neural control, while same-tissue retrieval met the
-            predefined margin. Other studies test how training pairs
-            are selected and how simpler scanner corrections compare.
+            SCORPION provides the primary paired-scanner experiment:
+            48 human H&amp;E slides scanned on five instruments.
+            In 175 registered model fits, the PA-NF factorization model
+            reduced recoverable scanner identity by 31.1 percentage
+            points against an equal-capacity neural control while
+            meeting its same-region retrieval requirement.
+            Independent canine SCC experiments and stronger simple
+            scanner corrections establish additional limits.
           </Paragraph>
           <Paragraph>
-            Other stages of the same PA-NF programme use PCam for patch
-            classification, PANDA for TransnnMIL whole-slide experiments
-            and CAMELYON17 for variation between institutions.
-            The PCam classifier achieved 0.9394 ROC AUC on its official
-            test split; PathologyFL and FAIR-WEIGHTS-H have their own
-            institutional-learning evaluations.
+            The same PA-NF programme includes the PCam patch benchmark,
+            TransnnMIL experiments on 10,611 PANDA slides, and
+            PathologyFL studies of institutional weighting using
+            simulated PANDA sites and real centre differences from
+            CAMELYON17. Each result supports its own specific
+            experimental conclusion.
           </Paragraph>
         </Section>
 
