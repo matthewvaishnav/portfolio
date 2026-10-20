@@ -35,11 +35,11 @@ const ComputationalPathology = () => {
           Computational pathology
         </Heading>
         <Paragraph>
-          My research studies what digital pathology models learn from tissue
-          images and how imaging conditions can affect their conclusions.
-          I developed an end-to-end experimental pipeline to investigate
-          acquisition effects alongside whole-slide analysis and differences
-          between institutions.
+          I develop computational pathology models and the experiments
+          needed to evaluate them, from small tissue-image patches to
+          whole-slide analysis and data collected across institutions.
+          A recurring question is whether a result reflects tissue
+          biology, image acquisition or the way a model was tested.
         </Paragraph>
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
@@ -47,18 +47,18 @@ const ComputationalPathology = () => {
             Paired-Acquisition Neural Factorization
           </Heading>
           <Paragraph>
-            PA-NF is a custom neural model that learns separate representations
-            of tissue-oriented and acquisition-related information, then
-            reconstructs image features using both. By training and testing
-            with repeated scans of the same physical tissue, I can investigate
-            whether predicted scanner changes match observed differences.
+            PA-NF learns separate tissue-oriented and acquisition-related
+            representations, then reconstructs image features from both.
+            Matched scans of the same physical tissue make it possible
+            to test whether predicted changes between scanners correspond
+            to observed ones.
           </Paragraph>
           <Paragraph>
-            The registered five-scanner human study established a controlled
-            advantage over an equally sized neural model on its defined
-            separation objective. Independent canine studies, conventional
-            correction methods and direct acquisition-change experiments
-            provide additional tests of the model and its limits.
+            Its registered five-scanner human study established a controlled
+            advantage over an equally sized neural model on a defined
+            separation objective. Independent canine studies, different
+            image models and simpler scanner-correction methods provide
+            additional tests.
           </Paragraph>
           <Box mt={5}>
             <ResearchLink href="https://matthewvaishnav.github.io/computational-pathology-research/">
@@ -74,14 +74,27 @@ const ComputationalPathology = () => {
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            Whole-slide and multi-institutional research
+            Patch and whole-slide studies
           </Heading>
           <Paragraph>
-            The broader pipeline includes custom whole-slide modeling and
-            software for examining how models behave across institutions.
-            Research on the PANDA, CAMELYON17 and patch-level datasets
-            investigates different parts of this process through separate
-            experiments.
+            On the PCam patch-classification benchmark, my model achieved
+            an ROC AUC of 0.9394 on the official test split. My whole-slide
+            research develops a custom approach to combining patch
+            information, with experiments using 10,611 PANDA slides.
+            These are distinct evaluations with different outcomes.
+          </Paragraph>
+        </Box>
+
+        <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
+          <Heading as="h2" size="md" mb={4}>
+            Institutional differences
+          </Heading>
+          <Paragraph>
+            My multi-institutional work examines how sites contribute
+            to model training and what happens when their data differ.
+            I study simulated site changes in PANDA and real
+            centre-to-centre variation in CAMELYON17. These experiments
+            assess research methods, not a deployed clinical system.
           </Paragraph>
         </Box>
 
