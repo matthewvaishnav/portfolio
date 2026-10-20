@@ -38,46 +38,43 @@ const Research = () => {
           Research
         </Heading>
         <Paragraph>
-          Digital histopathology depends on a sequence of observations and
-          computational decisions. A change in the resulting representation
-          need not correspond to a change in the tissue. My research examines
-          that distinction, particularly where repeated observations of the
-          same specimen make it possible to test.
+          I develop and test computational methods for digital pathology.
+          A central question is how to tell the difference between information
+          about tissue and changes caused by the way that tissue is imaged.
+          Repeated observations of the same specimen provide a way to test
+          that distinction directly.
         </Paragraph>
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            Paired acquisition as an experiment
+            Paired-Acquisition Neural Factorization
           </Heading>
           <Paragraph>
-            When a physical tissue region is scanned repeatedly, specimen
-            identity remains fixed while the acquisition conditions change.
-            This correspondence provides an unusually direct way to investigate
-            the effect of imaging on a learned representation. It also gives
-            a model a stricter test: a proposed acquisition transformation can
-            be compared with the change actually observed for that tissue.
+            I developed Paired-Acquisition Neural Factorization (PA-NF), a
+            custom neural model that learns separate tissue-oriented and
+            acquisition-related representations. It uses both to reconstruct
+            the original image features. The training and evaluation framework
+            was built around matched scans of the same physical tissue, so
+            changes attributed to acquisition can be tested against changes
+            actually observed between instruments.
           </Paragraph>
           <Paragraph>
-            I developed Paired-Acquisition Neural Factorization (PA-NF) as a
-            complete experimental framework organized around this setting.
-            The framework and its neural factorization model were designed
-            together for paired observations. A tissue-oriented representation
-            and an acquisition representation are learned separately, but the
-            scientific question is whether those components remain meaningful
-            when acquisition is changed rather than merely when scanner
-            identity is predicted.
+            A registered study used 48 human H&amp;E slides scanned on five
+            instruments. Across 175 controlled model fits, PA-NF reduced
+            recoverable scanner identity in its tissue-oriented representation
+            by 31.1 percentage points relative to an equal-capacity neural
+            control, while maintaining same-region retrieval within the
+            prespecified margin. Independent canine tissue studies and
+            comparisons with simpler scanner corrections test how far that
+            result extends.
           </Paragraph>
           <Paragraph>
-            The public studies include matched observations from 48 human
-            H&amp;E slides acquired on five scanners and an independent
-            multi-scanner canine dataset. Their purpose is to test the
-            proposed separation against observed scanner changes and simpler
-            explanations. Suppressing scanner information alone does not
-            establish that biological information has been preserved, and
-            the performance of conventional scanner corrections limits what
-            can be claimed for a more complicated model.
+            Further experiments examine whether changing the acquisition
+            representation produces an accurate prediction of another scan.
+            Reducing scanner predictability is not enough to establish
+            biological preservation or full separation; those remain distinct
+            questions in the research.
           </Paragraph>
-
           <Box mt={5}>
             <ResearchLink href="https://matthewvaishnav.github.io/computational-pathology-research/">
               Read the PA-NF manuscript
@@ -92,38 +89,37 @@ const Research = () => {
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            Measurement in digital pathology
+            Whole-slide and institutional learning
           </Heading>
           <Paragraph>
-            A related line of research concerns the reliability of
-            quantitative measurements obtained from tissue images. In work
-            with NucleoScope, I examine how changes in computational context
-            can alter reported nuclear measurements, even when the underlying
-            tissue observation is held fixed. Such effects matter because a
-            numerical difference cannot be interpreted as biological until
-            its dependence on the measurement procedure is understood.
+            My broader pipeline extends beyond paired scanner studies. I
+            developed a custom approach to combining information from image
+            patches across whole slides, alongside software for studying
+            learning across institutions. The work includes the 10,611-slide
+            PANDA prostate pathology collection, patch-level experiments and
+            CAMELYON17 data from five centres.
           </Paragraph>
-          <Box mt={5}>
-            <ResearchLink href="https://github.com/matthewvaishnav/nucleoscope">
-              View the NucleoScope research repository
-            </ResearchLink>
-          </Box>
+          <Paragraph>
+            These studies examine how information is combined across a slide
+            and how differences between institutions affect models. Each
+            component has its own experiments and conclusions, rather than
+            borrowing evidence from another part of the pipeline.
+          </Paragraph>
         </Box>
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            Evidence and interpretation
+            Experimental software and reproducibility
           </Heading>
           <Paragraph>
-            The research record retains comparisons that challenge the
-            proposed method, including cases in which simpler models are
-            competitive. I regard those outcomes as necessary constraints on
-            interpretation. The current results concern the stated specimens,
-            acquisition systems and evaluation protocols; they do not
-            constitute clinical validation.
+            I build the systems used to train, compare and audit these models.
+            The work includes controlled comparisons, consistent data splits,
+            checks against misleading results and the ability to reproduce
+            reported findings from saved models and experimental records.
+            Results that fail stronger tests remain part of the record.
           </Paragraph>
           <Text color={muted} fontSize="sm" mt={5} lineHeight="1.8">
-            Methods, manuscripts and reproducible evidence are available
+            Methods, manuscripts and supporting evidence are available
             through the public links above.
           </Text>
         </Box>
