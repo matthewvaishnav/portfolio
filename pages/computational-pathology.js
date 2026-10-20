@@ -35,20 +35,22 @@ const ComputationalPathology = () => {
           Computational pathology
         </Heading>
         <Paragraph>
-          My research includes paired-scanner experiments,
-          patch-level classification, whole-slide modeling
-          and learning across institutions. I developed
-          the methods and experimental software used to
-          investigate each part of this pipeline.
+          Paired-Acquisition Neural Factorization (PA-NF)
+          is the end-to-end computational pathology pipeline
+          I developed, spanning scanner acquisition, patch
+          classification, whole-slide analysis and learning
+          across institutions. Its components are supported
+          by distinct evaluations within the same programme.
         </Paragraph>
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            PA-NF: SCORPION and canine SCC
+            PA-NF acquisition stage: SCORPION and canine SCC
           </Heading>
           <Paragraph>
-            PA-NF separates tissue-oriented and acquisition-related
-            image information using a custom neural model. The
+            The paired-acquisition model within PA-NF separates
+            tissue-oriented and acquisition-related image
+            information using a custom neural architecture. The
             SCORPION study examines 48 human H&amp;E slides across
             five scanners and establishes a controlled improvement
             on its defined separation objective. Independent
@@ -70,12 +72,12 @@ const ComputationalPathology = () => {
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            PCam, PANDA and TransnnMIL
+            PA-NF patch and whole-slide stages: PCam and TransnnMIL
           </Heading>
           <Paragraph>
-            My PCam classifier achieved an ROC AUC of 0.9394
-            on its official patch-level test split. For
-            whole-slide analysis, I developed TransnnMIL,
+            The PCam patch-classification work achieved an ROC AUC
+            of 0.9394 on its official test split. The
+            PA-NF whole-slide component is TransnnMIL,
             which brings together two methods of combining
             patch information. The PANDA research uses
             10,611 slides; new controlled evaluation of
@@ -85,12 +87,12 @@ const ComputationalPathology = () => {
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            PathologyFL, FAIR-WEIGHTS-H and CAMELYON17
+            PA-NF institutional stage: PathologyFL and FAIR-WEIGHTS-H
           </Heading>
           <Paragraph>
-            PathologyFL and FAIR-WEIGHTS-H study collaborative
-            model training and how to account for differences
-            between institutions. Related experiments use
+            The PA-NF pipeline incorporates PathologyFL and
+            FAIR-WEIGHTS-H to study collaborative model training
+            and differences between institutions. Related experiments use
             simulated site changes in PANDA and actual
             centre differences in CAMELYON17.
           </Paragraph>
