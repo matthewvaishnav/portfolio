@@ -35,12 +35,11 @@ const ComputationalPathology = () => {
           Computational pathology
         </Heading>
         <Paragraph>
-          My research examines how the act of observing tissue affects its
-          computational representation. Digital pathology makes it possible
-          to analyze the same specimen at scale, but differences in imaging
-          conditions can be difficult to distinguish from differences in
-          biological material. That ambiguity is a methodological problem,
-          not merely a source of model error.
+          My research studies what digital pathology models learn from tissue
+          images and how imaging conditions can affect their conclusions.
+          I developed an end-to-end experimental pipeline to investigate
+          acquisition effects alongside whole-slide analysis and differences
+          between institutions.
         </Paragraph>
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
@@ -48,20 +47,18 @@ const ComputationalPathology = () => {
             Paired-Acquisition Neural Factorization
           </Heading>
           <Paragraph>
-            I developed PA-NF to study this problem through repeated scans
-            of the same physical tissue. Its custom experimental pipeline
-            and neural factorization model treat acquisition as an observable
-            source of variation. The framework makes it possible to examine
-            whether a change in acquisition can be represented independently
-            of the information retained about a specimen.
+            PA-NF is a custom neural model that learns separate representations
+            of tissue-oriented and acquisition-related information, then
+            reconstructs image features using both. By training and testing
+            with repeated scans of the same physical tissue, I can investigate
+            whether predicted scanner changes match observed differences.
           </Paragraph>
           <Paragraph>
-            The work has been evaluated using paired human H&amp;E
-            acquisitions and an independent five-scanner canine study.
-            Comparisons with conventional scanner correction are important
-            to its interpretation: a useful learned representation need not
-            imply that a more complicated correction is necessary, and
-            scanner invariance is not itself proof of preserved biology.
+            The registered five-scanner human study established a controlled
+            advantage over an equally sized neural model on its defined
+            separation objective. Independent canine studies, conventional
+            correction methods and direct acquisition-change experiments
+            provide additional tests of the model and its limits.
           </Paragraph>
           <Box mt={5}>
             <ResearchLink href="https://matthewvaishnav.github.io/computational-pathology-research/">
@@ -77,25 +74,20 @@ const ComputationalPathology = () => {
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            Quantitative measurement
+            Whole-slide and multi-institutional research
           </Heading>
           <Paragraph>
-            Related work on nuclear measurements addresses a different
-            aspect of the same epistemic problem. When a reported feature
-            depends on the computational setting in which it was measured,
-            its apparent relationship to tissue structure requires additional
-            scrutiny. My work with NucleoScope investigates that dependence.
+            The broader pipeline includes custom whole-slide modeling and
+            software for examining how models behave across institutions.
+            Research on the PANDA, CAMELYON17 and patch-level datasets
+            investigates different parts of this process through separate
+            experiments.
           </Paragraph>
-          <Box mt={5}>
-            <ResearchLink href="https://github.com/matthewvaishnav/nucleoscope">
-              Nuclear measurement research
-            </ResearchLink>
-          </Box>
         </Box>
 
         <Box mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Text fontSize="sm">
-            A fuller discussion of the research and its limitations appears on the{' '}
+            A fuller discussion of the research appears on the{' '}
             <Link as={NextLink} href="/research" color="teal.500">
               Research page
             </Link>.
