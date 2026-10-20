@@ -76,24 +76,24 @@ const Home = () => {
           </Heading>
 
           <Paragraph>
-            My research examines what computational pathology models can learn
-            from tissue images, and how the conclusions change with the way
-            those images are acquired or analyzed. I study these questions
-            across individual image patches, whole slides and data from
-            different institutions.
+            I study how computational pathology models interpret tissue
+            images, from individual patches and whole slides to data
+            collected across institutions. My research examines what
+            these methods learn and how imaging conditions influence
+            the results.
           </Paragraph>
           <Paragraph>
-            I developed Paired-Acquisition Neural Factorization (PA-NF) to
-            study the difference between tissue information and scanner
-            effects. It learns separate representations of the two, then
-            reconstructs image features using both. Repeated scans of the
-            same tissue provide a direct way to test the proposed separation.
+            I developed Paired-Acquisition Neural Factorization (PA-NF),
+            a custom model that separates tissue-oriented and acquisition
+            information and reconstructs image features using both.
+            Paired scans of the same physical tissue allow this
+            separation to be tested directly.
           </Paragraph>
           <Paragraph>
-            My broader work includes a custom whole-slide model and methods
-            for examining how institutions contribute to a shared model.
-            I build the training, evaluation and reproducibility software
-            supporting these experiments.
+            My wider pipeline includes TransnnMIL for whole-slide modeling
+            and PathologyFL for research on learning across institutions.
+            I build the training and evaluation software used across
+            SCORPION, canine SCC, PCam, PANDA and CAMELYON17 studies.
           </Paragraph>
 
           <Flex
@@ -154,19 +154,20 @@ const Home = () => {
             Research
           </Heading>
           <Paragraph>
-            In a registered study of matched human tissue scanned on five
-            instruments, PA-NF reduced recoverable scanner identity by 31.1
-            percentage points against an equal-capacity neural control,
-            while preserving same-region retrieval within the study's
-            predefined margin. Independent canine studies test the approach
-            under different conditions.
+            In the SCORPION study, 48 human H&amp;E slides were scanned
+            on five instruments. Across 175 registered model fits,
+            PA-NF reduced recoverable scanner identity by 31.1
+            percentage points against an equally sized neural control
+            while preserving same-tissue retrieval within the predefined
+            margin. Independent canine SCC experiments and a separate
+            pair-repeat allocation study test other aspects of the method.
           </Paragraph>
           <Paragraph>
-            At the patch level, I evaluated classification on PCam, achieving
-            an ROC AUC of 0.9394 on its official test split. My whole-slide
-            research uses the 10,611-slide PANDA collection, while
-            multi-institutional experiments examine simulated site changes
-            and real centre differences in CAMELYON17.
+            The PCam patch-classification benchmark achieved a
+            0.9394 ROC AUC on its official test split. My broader work
+            includes TransnnMIL experiments using 10,611 PANDA slides,
+            and PathologyFL and FAIR-WEIGHTS-H research on institutional
+            weighting, including CAMELYON17 studies across five centres.
           </Paragraph>
         </Section>
 
