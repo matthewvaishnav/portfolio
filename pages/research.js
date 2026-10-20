@@ -38,25 +38,32 @@ const Research = () => {
           Research
         </Heading>
         <Paragraph>
-          Paired-Acquisition Neural Factorization (PA-NF) is my
-          end-to-end computational pathology research pipeline.
-          It incorporates paired-scanner representation learning,
-          patch classification, whole-slide analysis and learning
-          across institutions. The component experiments are
-          assessed separately within this single research programme.
+          Paired-Acquisition Neural Factorization (PA-NF) is the name
+          of my complete computational pathology research pipeline.
+          The name began with a neural model for paired scanner
+          observations, but the published work extends from image
+          representations to whole-slide predictions and then to
+          learning across institutions. TransnnMIL, PathologyFL and
+          FAIR-WEIGHTS-H are parts of that same programme.
+        </Paragraph>
+        <Paragraph>
+          I designed these methods and the software used to test them.
+          The studies below evaluate different stages of PA-NF;
+          results from one stage are not treated as validation of
+          the others.
         </Paragraph>
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            PA-NF acquisition stage: SCORPION and canine SCC
+            Paired-acquisition model: SCORPION and canine SCC
           </Heading>
           <Paragraph>
-            The paired-acquisition model is the foundation of PA-NF.
-            It separates tissue-oriented information from effects
-            introduced during scanning. It learns
-            representations for each and reconstructs image features
-            using both. Paired scans of the same physical tissue make
-            it possible to test changes attributed to acquisition.
+            I developed the paired-acquisition model to examine
+            changes caused by scanning the same tissue on different
+            instruments. It learns tissue-oriented and scanner-related
+            representations, then uses both to reconstruct image
+            features. Matching the same physical regions across
+            scanners makes the proposed separation testable.
           </Paragraph>
           <Paragraph>
             SCORPION provides 48 human H&amp;E slides, 480 matched
@@ -69,15 +76,15 @@ const Research = () => {
             Phikon and ResNet50 representations.
           </Paragraph>
           <Paragraph>
-            Independent experiments on the five-scanner canine
-            squamous cell carcinoma (SCC) dataset test how the
-            method transfers to other tissue. A separate study
-            examines the trade-off between using more distinct
-            tissue pairs and repeating a smaller number of pairs.
-            Comparisons with simpler scanner correction methods
-            test what the neural factorization adds, while ongoing
-            experiments examine whether it can accurately predict
-            scanner changes without losing tissue information.
+            Independent experiments using five-scanner canine
+            squamous cell carcinoma (SCC) tissue test the model
+            outside SCORPION, while allocation experiments examine
+            the effect of choosing and repeating tissue pairs.
+            Simpler scanner corrections have matched or exceeded
+            PA-NF on some endpoints. Its strongest established
+            advantage is therefore the registered SCORPION neural
+            comparison, not universal superiority or proof of
+            independent control over acquisition.
           </Paragraph>
           <Box mt={5}>
             <ResearchLink href="https://matthewvaishnav.github.io/computational-pathology-research/">
@@ -103,7 +110,7 @@ const Research = () => {
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            PA-NF pipeline: PCam patch classification
+            Patch-classification foundation: PCam
           </Heading>
           <Paragraph>
             For the patch-classification stage of the PA-NF
@@ -122,19 +129,18 @@ const Research = () => {
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            PA-NF pipeline: PANDA and TransnnMIL whole-slide modeling
+            Whole-slide modeling: TransnnMIL and PANDA
           </Heading>
           <Paragraph>
-            TransnnMIL is the custom whole-slide component
-            of PA-NF. It combines transformer-based and
-            gated-attention approaches to analyzing whole slides.
-            The PANDA experiments use
-            10,611 readable prostate pathology slides and
-            compare different ways of combining patch features.
-            The repaired TransnnMIL architecture is implemented,
-            with fresh controlled evaluations still in progress;
-            earlier scores are not used as evidence of its
-            superiority.
+            TransnnMIL is the custom whole-slide architecture
+            developed within PA-NF. It combines two approaches
+            to selecting and aggregating information from
+            image patches, and includes experimental spatial
+            extensions. Its PANDA studies use 10,611 readable
+            prostate pathology slides. The corrected architecture
+            has been implemented, but a matched evaluation
+            establishing its advantage over competing whole-slide
+            methods remains pending.
           </Paragraph>
           <Box mt={5}>
             <ResearchLink href="https://github.com/matthewvaishnav/computational-pathology-research/blob/main/docs/results/panda-slide-level-baselines.md">
@@ -145,26 +151,27 @@ const Research = () => {
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            PA-NF pipeline: PathologyFL, FAIR-WEIGHTS-H and CAMELYON17
+            Institutional learning: PathologyFL and FAIR-WEIGHTS-H
           </Heading>
           <Paragraph>
-            PathologyFL is the institutional-learning component
-            of the PA-NF pipeline, designed for training
-            models across institutions while keeping data at
-            their respective sites. Within it, FAIR-WEIGHTS-H
-            investigates how institutions should contribute
-            when their datasets differ in size and reliability.
-            PANDA provides controlled experiments with simulated
-            site differences.
+            PathologyFL is the institutional-learning framework
+            developed within PA-NF. It provides a way to study
+            training across participating sites, while
+            FAIR-WEIGHTS-H examines how much influence a site
+            should have when its data become less reliable.
+            PANDA experiments use simulated sites and test
+            when changing institutional weights improves
+            performance under controlled corruption.
           </Paragraph>
           <Paragraph>
-            CAMELYON17 provides a separate test of variation
-            between real centres. My experiments examine how
-            the weighting of source centres affects results
-            at a held-out centre, using a dataset with
-            455,954 image patches from five centres.
-            This is research on institutional variation,
-            not a deployed multi-hospital training system.
+            CAMELYON17 provides a different setting with
+            455,954 image patches from five real centres.
+            In one frozen-feature comparison, equal weighting
+            of the training centres increased held-out-centre
+            accuracy from 0.8312 to 0.9132 relative to
+            sample-proportional weighting. This was a
+            centralized experiment on institutional influence,
+            not a deployed multi-hospital system.
           </Paragraph>
           <Box mt={5}>
             <ResearchLink href="https://github.com/matthewvaishnav/computational-pathology-research/blob/main/docs/federated/pathologyfl.md">
@@ -188,11 +195,12 @@ const Research = () => {
             Experimental software and reproducibility
           </Heading>
           <Paragraph>
-            I develop the software needed to train models,
-            verify the original data and reproduce the results.
-            The experimental record includes controlled
-            comparisons, independent checks and results
-            that challenge the proposed methods.
+            I develop and audit the software used throughout
+            PA-NF, including data preparation, model training,
+            controlled comparisons and reproducible releases.
+            The research record preserves negative results,
+            implementation corrections and exact evidence
+            for the claims retained in the manuscript.
           </Paragraph>
           <Text color={muted} fontSize="sm" mt={5} lineHeight="1.8">
             Methods, manuscripts and evidence are linked above.
