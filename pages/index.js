@@ -41,8 +41,8 @@ const Home = () => {
               Computational Pathology Researcher & Research Engineer
             </Text>
             <Text fontSize="sm" color={mutedText} lineHeight="1.75" maxW="620px">
-              I develop and evaluate computational pathology methods, from image
-              patches and whole slides to differences between scanners and institutions.
+              I develop PA-NF, an end-to-end pathology pipeline spanning
+              image acquisition, whole-slide analysis and institutional learning.
             </Text>
           </Box>
           <Box flexShrink={0} mt={{ base: 5, md: 0 }} textAlign="center">
@@ -76,24 +76,24 @@ const Home = () => {
           </Heading>
 
           <Paragraph>
-            I study how computational pathology models interpret tissue
-            images, from individual patches and whole slides to data
-            collected across institutions. My research examines what
-            these methods learn and how imaging conditions influence
-            the results.
+            My research centres on Paired-Acquisition Neural Factorization
+            (PA-NF), an end-to-end computational pathology pipeline I developed.
+            It studies how tissue information is represented, from the
+            conditions of imaging to whole-slide analysis and learning
+            across institutions.
           </Paragraph>
           <Paragraph>
-            I developed Paired-Acquisition Neural Factorization (PA-NF),
-            a custom model that separates tissue-oriented and acquisition
-            information and reconstructs image features using both.
-            Paired scans of the same physical tissue allow this
-            separation to be tested directly.
+            The foundation of PA-NF is a custom neural model that separates
+            tissue-oriented and scanner-related information. It reconstructs
+            image features using both representations, while matched scans
+            of the same tissue allow their behaviour to be tested.
           </Paragraph>
           <Paragraph>
-            My wider pipeline includes TransnnMIL for whole-slide modeling
-            and PathologyFL for research on learning across institutions.
-            I build the training and evaluation software used across
-            SCORPION, canine SCC, PCam, PANDA and CAMELYON17 studies.
+            The same PA-NF pipeline includes TransnnMIL for whole-slide
+            modeling, PathologyFL for institutional learning and
+            FAIR-WEIGHTS-H for evaluating institutional contributions.
+            I develop the experiments and software used to study
+            these systems together within the wider research programme.
           </Paragraph>
 
           <Flex
@@ -154,20 +154,22 @@ const Home = () => {
             Research
           </Heading>
           <Paragraph>
-            In the SCORPION study, 48 human H&amp;E slides were scanned
-            on five instruments. Across 175 registered model fits,
-            PA-NF reduced recoverable scanner identity by 31.1
-            percentage points against an equally sized neural control
-            while preserving same-tissue retrieval within the predefined
-            margin. Independent canine SCC experiments and a separate
-            pair-repeat allocation study test other aspects of the method.
+            PA-NF acquisition experiments include SCORPION, with
+            48 human H&amp;E slides scanned on five instruments,
+            and an independent canine SCC study. In 175 registered
+            SCORPION model fits, scanner identity became 31.1
+            percentage points less recoverable than in an equal-capacity
+            neural control, while same-tissue retrieval met the
+            predefined margin. Other studies test how training pairs
+            are selected and how simpler scanner corrections compare.
           </Paragraph>
           <Paragraph>
-            The PCam patch-classification benchmark achieved a
-            0.9394 ROC AUC on its official test split. My broader work
-            includes TransnnMIL experiments using 10,611 PANDA slides,
-            and PathologyFL and FAIR-WEIGHTS-H research on institutional
-            weighting, including CAMELYON17 studies across five centres.
+            Other stages of the same PA-NF programme use PCam for patch
+            classification, PANDA for TransnnMIL whole-slide experiments
+            and CAMELYON17 for variation between institutions.
+            The PCam classifier achieved 0.9394 ROC AUC on its official
+            test split; PathologyFL and FAIR-WEIGHTS-H have their own
+            institutional-learning evaluations.
           </Paragraph>
         </Section>
 
