@@ -38,11 +38,11 @@ const Research = () => {
           Research
         </Heading>
         <Paragraph>
-          I develop and test computational methods for digital pathology.
-          A central question is how to tell the difference between information
-          about tissue and changes caused by the way that tissue is imaged.
-          Repeated observations of the same specimen provide a way to test
-          that distinction directly.
+          My computational pathology research spans individual image patches,
+          whole-slide analysis and learning across institutions. I develop
+          neural models and the experimental software needed to determine
+          what each method actually learns and whether its results hold
+          under controlled evaluation.
         </Paragraph>
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
@@ -50,30 +50,29 @@ const Research = () => {
             Paired-Acquisition Neural Factorization
           </Heading>
           <Paragraph>
-            I developed Paired-Acquisition Neural Factorization (PA-NF), a
-            custom neural model that learns separate tissue-oriented and
-            acquisition-related representations. It uses both to reconstruct
-            the original image features. The training and evaluation framework
-            was built around matched scans of the same physical tissue, so
-            changes attributed to acquisition can be tested against changes
-            actually observed between instruments.
+            I developed Paired-Acquisition Neural Factorization (PA-NF) to
+            separate tissue-oriented information from changes introduced by
+            scanning. The model learns two representations and uses them
+            together to reconstruct the original image features. Its
+            experimental pipeline uses repeated scans of the same physical
+            tissue, allowing predicted acquisition changes to be compared
+            with differences actually observed between scanners.
           </Paragraph>
           <Paragraph>
-            A registered study used 48 human H&amp;E slides scanned on five
-            instruments. Across 175 controlled model fits, PA-NF reduced
-            recoverable scanner identity in its tissue-oriented representation
-            by 31.1 percentage points relative to an equal-capacity neural
-            control, while maintaining same-region retrieval within the
-            prespecified margin. Independent canine tissue studies and
-            comparisons with simpler scanner corrections test how far that
-            result extends.
+            A registered study of 48 human H&amp;E slides scanned on five
+            instruments completed 175 controlled model fits. PA-NF reduced
+            recoverable scanner identity by 31.1 percentage points relative
+            to an equal-capacity neural control while keeping same-region
+            retrieval within the predefined margin. Independent canine
+            tissue experiments, comparisons with simpler corrections and
+            tests using different image models examine the limits of
+            this result.
           </Paragraph>
           <Paragraph>
-            Further experiments examine whether changing the acquisition
-            representation produces an accurate prediction of another scan.
-            Reducing scanner predictability is not enough to establish
-            biological preservation or full separation; those remain distinct
-            questions in the research.
+            Further experiments test whether the model can predict the
+            effect of changing scanners while retaining useful tissue
+            information. These are stronger requirements than simply
+            making scanner identity difficult to predict.
           </Paragraph>
           <Box mt={5}>
             <ResearchLink href="https://matthewvaishnav.github.io/computational-pathology-research/">
@@ -89,21 +88,37 @@ const Research = () => {
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            Whole-slide and institutional learning
+            Patch classification and whole-slide modeling
           </Heading>
           <Paragraph>
-            My broader pipeline extends beyond paired scanner studies. I
-            developed a custom approach to combining information from image
-            patches across whole slides, alongside software for studying
-            learning across institutions. The work includes the 10,611-slide
-            PANDA prostate pathology collection, patch-level experiments and
-            CAMELYON17 data from five centres.
+            In PCam, I evaluated classification of small pathology image
+            patches. The model achieved an ROC AUC of 0.9394 and 85.26%
+            accuracy on one official test split. This is a patch-level
+            benchmark, not a clinical validation.
           </Paragraph>
           <Paragraph>
-            These studies examine how information is combined across a slide
-            and how differences between institutions affect models. Each
-            component has its own experiments and conclusions, rather than
-            borrowing evidence from another part of the pipeline.
+            Whole-slide analysis asks a different question: how to combine
+            information from thousands of patches to assess an entire slide.
+            I developed a custom model that brings together two ways of
+            summarizing those patches, with training and evaluation
+            experiments on the 10,611-slide PANDA prostate pathology
+            collection. Controlled comparisons of the repaired model
+            remain in progress.
+          </Paragraph>
+        </Box>
+
+        <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
+          <Heading as="h2" size="md" mb={4}>
+            Learning across institutions
+          </Heading>
+          <Paragraph>
+            I built research software to study how models should use data
+            contributed by different institutions. With PANDA, I tested
+            how different ways of weighting participating sites respond
+            to corrupted data and changes in grading. Related CAMELYON17
+            experiments examine how the influence of source centres
+            affects performance on a held-out centre, using a centralized
+            experimental setup rather than a deployed hospital network.
           </Paragraph>
         </Box>
 
@@ -112,14 +127,15 @@ const Research = () => {
             Experimental software and reproducibility
           </Heading>
           <Paragraph>
-            I build the systems used to train, compare and audit these models.
-            The work includes controlled comparisons, consistent data splits,
-            checks against misleading results and the ability to reproduce
-            reported findings from saved models and experimental records.
-            Results that fail stronger tests remain part of the record.
+            I develop the training and evaluation systems behind these
+            studies, including controls for misleading comparisons,
+            consistent data splits and records that allow results to be
+            checked against saved models and original experiments.
+            Findings that fail stronger tests remain in the research
+            record rather than being replaced by more favourable numbers.
           </Paragraph>
           <Text color={muted} fontSize="sm" mt={5} lineHeight="1.8">
-            Methods, manuscripts and supporting evidence are available
+            The manuscript, software and supporting evidence are available
             through the public links above.
           </Text>
         </Box>
