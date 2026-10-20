@@ -35,22 +35,24 @@ const ComputationalPathology = () => {
           Computational pathology
         </Heading>
         <Paragraph>
-          Paired-Acquisition Neural Factorization (PA-NF)
-          is the end-to-end computational pathology pipeline
-          I developed, spanning scanner acquisition, patch
-          classification, whole-slide analysis and learning
-          across institutions. Its components are supported
-          by distinct evaluations within the same programme.
+          Paired-Acquisition Neural Factorization (PA-NF) is my
+          end-to-end computational pathology research pipeline.
+          It begins with paired-scanner representation learning,
+          continues through whole-slide modeling and examines
+          how differences between institutions affect the
+          models they train. The components are connected
+          by one research framework but tested through
+          separate experiments.
         </Paragraph>
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            PA-NF acquisition stage: SCORPION and canine SCC
+            Paired-acquisition representation learning
           </Heading>
           <Paragraph>
-            The paired-acquisition model within PA-NF separates
-            tissue-oriented and acquisition-related image
-            information using a custom neural architecture. The
+            The first PA-NF stage uses a custom neural model
+            to learn tissue-oriented and acquisition-related
+            image representations. The
             SCORPION study examines 48 human H&amp;E slides across
             five scanners and establishes a controlled improvement
             on its defined separation objective. Independent
@@ -72,29 +74,32 @@ const ComputationalPathology = () => {
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            PA-NF patch and whole-slide stages: PCam and TransnnMIL
+            Patch and whole-slide research: PCam, PANDA, TransnnMIL
           </Heading>
           <Paragraph>
-            The PCam patch-classification work achieved an ROC AUC
-            of 0.9394 on its official test split. The
-            PA-NF whole-slide component is TransnnMIL,
-            which brings together two methods of combining
-            patch information. The PANDA research uses
-            10,611 slides; new controlled evaluation of
-            the repaired architecture remains in progress.
+            PCam provides an independently measured patch
+            benchmark, with ROC AUC 0.9394 on its official
+            test split. TransnnMIL is the custom whole-slide
+            architecture within PA-NF, studied using
+            10,611 readable PANDA slides. The corrected
+            architecture still requires a matched
+            performance evaluation.
           </Paragraph>
         </Box>
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            PA-NF institutional stage: PathologyFL and FAIR-WEIGHTS-H
+            Institutional learning: PathologyFL and FAIR-WEIGHTS-H
           </Heading>
           <Paragraph>
-            The PA-NF pipeline incorporates PathologyFL and
-            FAIR-WEIGHTS-H to study collaborative model training
-            and differences between institutions. Related experiments use
-            simulated site changes in PANDA and actual
-            centre differences in CAMELYON17.
+            PA-NF includes PathologyFL and FAIR-WEIGHTS-H
+            for studying training and influence across
+            institutions. PANDA experiments test
+            controlled changes in simulated sites,
+            while CAMELYON17 supplies a real five-centre
+            setting for separate source-weighting tests.
+            These results do not constitute a
+            clinical federated deployment.
           </Paragraph>
         </Box>
 
