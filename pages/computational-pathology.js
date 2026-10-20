@@ -35,66 +35,64 @@ const ComputationalPathology = () => {
           Computational pathology
         </Heading>
         <Paragraph>
-          I develop computational pathology models and the experiments
-          needed to evaluate them, from small tissue-image patches to
-          whole-slide analysis and data collected across institutions.
-          A recurring question is whether a result reflects tissue
-          biology, image acquisition or the way a model was tested.
+          My research includes paired-scanner experiments,
+          patch-level classification, whole-slide modeling
+          and learning across institutions. I developed
+          the methods and experimental software used to
+          investigate each part of this pipeline.
         </Paragraph>
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            Paired-Acquisition Neural Factorization
+            PA-NF: SCORPION and canine SCC
           </Heading>
           <Paragraph>
-            PA-NF learns separate tissue-oriented and acquisition-related
-            representations, then reconstructs image features from both.
-            Matched scans of the same physical tissue make it possible
-            to test whether predicted changes between scanners correspond
-            to observed ones.
-          </Paragraph>
-          <Paragraph>
-            Its registered five-scanner human study established a controlled
-            advantage over an equally sized neural model on a defined
-            separation objective. Independent canine studies, different
-            image models and simpler scanner-correction methods provide
-            additional tests.
+            PA-NF separates tissue-oriented and acquisition-related
+            image information using a custom neural model. The
+            SCORPION study examines 48 human H&amp;E slides across
+            five scanners and establishes a controlled improvement
+            on its defined separation objective. Independent
+            canine SCC experiments, comparisons across DINOv2,
+            Phikon and ResNet50, and pair-repeat allocation
+            studies test other aspects of the method.
           </Paragraph>
           <Box mt={5}>
-            <ResearchLink href="https://matthewvaishnav.github.io/computational-pathology-research/">
-              Read the PA-NF manuscript
+            <ResearchLink href="https://github.com/matthewvaishnav/paired-acquisition-factorization-scorpion">
+              SCORPION study
             </ResearchLink>
           </Box>
           <Box mt={3}>
-            <ResearchLink href="https://github.com/matthewvaishnav/computational-pathology-research">
-              Public methods and evidence
+            <ResearchLink href="https://github.com/matthewvaishnav/paired-acquisition-factorization-caninescc">
+              Canine SCC study
             </ResearchLink>
           </Box>
         </Box>
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            Patch and whole-slide studies
+            PCam, PANDA and TransnnMIL
           </Heading>
           <Paragraph>
-            On the PCam patch-classification benchmark, my model achieved
-            an ROC AUC of 0.9394 on the official test split. My whole-slide
-            research develops a custom approach to combining patch
-            information, with experiments using 10,611 PANDA slides.
-            These are distinct evaluations with different outcomes.
+            My PCam classifier achieved an ROC AUC of 0.9394
+            on its official patch-level test split. For
+            whole-slide analysis, I developed TransnnMIL,
+            which brings together two methods of combining
+            patch information. The PANDA research uses
+            10,611 slides; new controlled evaluation of
+            the repaired architecture remains in progress.
           </Paragraph>
         </Box>
 
         <Box as="section" mt={10} pt={6} borderTop="1px solid" borderColor={rule}>
           <Heading as="h2" size="md" mb={4}>
-            Institutional differences
+            PathologyFL, FAIR-WEIGHTS-H and CAMELYON17
           </Heading>
           <Paragraph>
-            My multi-institutional work examines how sites contribute
-            to model training and what happens when their data differ.
-            I study simulated site changes in PANDA and real
-            centre-to-centre variation in CAMELYON17. These experiments
-            assess research methods, not a deployed clinical system.
+            PathologyFL and FAIR-WEIGHTS-H study collaborative
+            model training and how to account for differences
+            between institutions. Related experiments use
+            simulated site changes in PANDA and actual
+            centre differences in CAMELYON17.
           </Paragraph>
         </Box>
 
