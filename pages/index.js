@@ -41,8 +41,8 @@ const Home = () => {
               Computational Pathology Researcher & Research Engineer
             </Text>
             <Text fontSize="sm" color={mutedText} lineHeight="1.75" maxW="620px">
-              I investigate how the conditions of image acquisition affect what
-              computational pathology models can infer from histological tissue.
+              I develop and evaluate computational pathology methods, from image
+              patches and whole slides to differences between scanners and institutions.
             </Text>
           </Box>
           <Box flexShrink={0} mt={{ base: 5, md: 0 }} textAlign="center">
@@ -76,24 +76,24 @@ const Home = () => {
           </Heading>
 
           <Paragraph>
-            My research examines how biological information is represented in
-            computational pathology. The same physical tissue can look different
-            when scanned with different instruments. I study which changes come
-            from the tissue and which come from the way it was imaged.
+            My research examines what computational pathology models can learn
+            from tissue images, and how the conclusions change with the way
+            those images are acquired or analyzed. I study these questions
+            across individual image patches, whole slides and data from
+            different institutions.
           </Paragraph>
           <Paragraph>
             I developed Paired-Acquisition Neural Factorization (PA-NF) to
-            investigate this difference. Its custom neural model learns separate
-            tissue-oriented and acquisition-related representations, then uses
-            both to reconstruct the original image features. Matched scans let
-            me test whether those parts behave as intended, rather than only
-            checking whether scanner identity becomes harder to predict.
+            study the difference between tissue information and scanner
+            effects. It learns separate representations of the two, then
+            reconstructs image features using both. Repeated scans of the
+            same tissue provide a direct way to test the proposed separation.
           </Paragraph>
           <Paragraph>
-            PA-NF sits within an end-to-end computational pathology pipeline I
-            developed, extending from image features to whole-slide analysis
-            and learning across institutions. I also build the training,
-            evaluation and reproducibility software needed to test each part.
+            My broader work includes a custom whole-slide model and methods
+            for examining how institutions contribute to a shared model.
+            I build the training, evaluation and reproducibility software
+            supporting these experiments.
           </Paragraph>
 
           <Flex
@@ -154,20 +154,19 @@ const Home = () => {
             Research
           </Heading>
           <Paragraph>
-            The paired-acquisition studies use matched H&amp;E scans of the
-            same human tissue across five instruments and an independently
-            collected canine dataset. In a registered 175-fit comparison, PA-NF
-            reduced recoverable scanner identity in its tissue-oriented
-            representation by 31.1 percentage points against an equally sized
-            neural control, while maintaining same-region retrieval within the
-            prespecified margin.
+            In a registered study of matched human tissue scanned on five
+            instruments, PA-NF reduced recoverable scanner identity by 31.1
+            percentage points against an equal-capacity neural control,
+            while preserving same-region retrieval within the study's
+            predefined margin. Independent canine studies test the approach
+            under different conditions.
           </Paragraph>
           <Paragraph>
-            The wider pipeline includes my work on whole-slide modeling and
-            learning across institutions, with studies involving the
-            10,611-slide PANDA collection and multi-centre CAMELYON17 data.
-            Each stage is evaluated separately, including comparisons with
-            simpler methods and tests of where the proposed approach fails.
+            At the patch level, I evaluated classification on PCam, achieving
+            an ROC AUC of 0.9394 on its official test split. My whole-slide
+            research uses the 10,611-slide PANDA collection, while
+            multi-institutional experiments examine simulated site changes
+            and real centre differences in CAMELYON17.
           </Paragraph>
         </Section>
 
