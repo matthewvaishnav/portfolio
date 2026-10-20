@@ -76,23 +76,24 @@ const Home = () => {
           </Heading>
 
           <Paragraph>
-            My research begins with a measurement problem. The specimen remains the same
-            when a histological slide is scanned on different instruments, but its digital
-            representation can change. I use matched observations of the same physical tissue
-            to examine which differences arise from acquisition rather than the specimen.
+            My research examines how biological information is represented in
+            computational pathology. The same physical tissue can look different
+            when scanned with different instruments. I study which changes come
+            from the tissue and which come from the way it was imaged.
           </Paragraph>
           <Paragraph>
-            I developed Paired-Acquisition Neural Factorization (PA-NF) as a complete
-            experimental framework for this question. Its neural model and evaluation were
-            designed around the correspondence between scans, so a proposed separation
-            of tissue and acquisition information can be tested through controlled changes
-            in acquisition. Lower scanner predictability alone does not establish biological
-            preservation.
+            I developed Paired-Acquisition Neural Factorization (PA-NF) to
+            investigate this difference. Its custom neural model learns separate
+            tissue-oriented and acquisition-related representations, then uses
+            both to reconstruct the original image features. Matched scans let
+            me test whether those parts behave as intended, rather than only
+            checking whether scanner identity becomes harder to predict.
           </Paragraph>
           <Paragraph>
-            Related work examines how quantitative nuclear measurements vary with the
-            computational conditions under which they are obtained. Across both lines of
-            research, the concern is what an observation permits us to conclude about tissue.
+            PA-NF sits within an end-to-end computational pathology pipeline I
+            developed, extending from image features to whole-slide analysis
+            and learning across institutions. I also build the training,
+            evaluation and reproducibility software needed to test each part.
           </Paragraph>
 
           <Flex
@@ -153,16 +154,20 @@ const Home = () => {
             Research
           </Heading>
           <Paragraph>
-            The public PA-NF studies use matched human H&amp;E acquisitions and an
-            independent multi-scanner canine dataset. The experimental question is
-            whether the model can account for observed acquisition changes without
-            relying on properties that a simpler scanner calibration already explains.
+            The paired-acquisition studies use matched H&amp;E scans of the
+            same human tissue across five instruments and an independently
+            collected canine dataset. In a registered 175-fit comparison, PA-NF
+            reduced recoverable scanner identity in its tissue-oriented
+            representation by 31.1 percentage points against an equally sized
+            neural control, while maintaining same-region retrieval within the
+            prespecified margin.
           </Paragraph>
           <Paragraph>
-            My work on computational measurement addresses a related issue: variation
-            in a reported tissue feature may come from the measurement procedure itself.
-            The research therefore examines the reliability of the measurement before
-            assigning biological significance to it.
+            The wider pipeline includes my work on whole-slide modeling and
+            learning across institutions, with studies involving the
+            10,611-slide PANDA collection and multi-centre CAMELYON17 data.
+            Each stage is evaluated separately, including comparisons with
+            simpler methods and tests of where the proposed approach fails.
           </Paragraph>
         </Section>
 
